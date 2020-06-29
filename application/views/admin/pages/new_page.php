@@ -53,6 +53,8 @@ event.preventDefault();
 var post_url = $(this).attr("action"); 
 var request_method = $(this).attr("method"); 
 var form_data = $(this).serialize(); 
+console.log(form_data)
+$('#response').html('<center><div class="spinner-border text-warning" role="status"><span class="sr-only">Loading...</span></div></center>');
 
 $.ajax({
     url : post_url,

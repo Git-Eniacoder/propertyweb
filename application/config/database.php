@@ -76,9 +76,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => '64.20.38.219',
-	'username' => 'namecom_testing',
+	'username' => 'namecom_mlm',
 	'password' => '@navneet1',
-	'database' => 'namecom_testing',
+	'database' => 'namecom_mlm',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -94,3 +94,10 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+
+
+// 'hostname' => '64.20.38.219',
+// 'username' => 'namecom_testing',
+// 'password' => '@navneet1',
+// 'database' => 'namecom_testing',

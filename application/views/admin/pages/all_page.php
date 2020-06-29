@@ -2,6 +2,7 @@
 <main>
    <div class="container-fluid">
    <div class="card m-4 border-0">
+   <span id="response" class="text-center"></span>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table " id="dataTable" width="100%" cellspacing="0">
@@ -41,13 +42,16 @@
 <script type="text/javascript">
 
 $(".del").click(function(){
+    $('#response').html('<center><div class="spinner-border text-warning" role="status"><span class="sr-only">Loading...</span></div></center>');
     i=$(this).data("value");
     $("#hide"+i).fadeOut();
     console.log(i);
   $.ajax({
     url: "<?php echo base_url() ;?>admin/pages/all_page/delete/"+i, 
     success: function(result){
-      console.log(result);  
+        if(result == true){
+        $('#response').html('<p class="text-success">Record Deleted</p>');
+    }
       
   }});
 });

@@ -13,7 +13,6 @@ class My_Controller extends CI_Controller {
         $this->data['url'] = $this->config->item("url");
     }
     
-
 }
 
 /* End of file My_COntroller.php */

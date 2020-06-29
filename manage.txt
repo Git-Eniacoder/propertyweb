@@ -1,0 +1,8 @@
+
+// Follow points
+
+1. controller
+
+   extend your class with App_Controller (Its Our own Contoller in core)
+
+   

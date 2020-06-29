@@ -55,6 +55,13 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
+
+//Post Request module 
+$route['post'] = 'postreq_mod/Post_req';
+$route['post/view'] = 'postreq_mod/Post_req/callview';
+// $route['post/get'] = 'postreq_mod/Post_req/get';
+
+
 // ****************  Dynamic Pages ************* 
 
 
