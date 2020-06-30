@@ -40,7 +40,9 @@ class Post_req extends My_Controller {
         $info['furnished'] = $this->input->post('furnished');
         $info['expected_price'] = $this->input->post('expected_price');        
 
+        echo '<pre>';
         print_r($info);
+        echo '</pre>';
 
     }
 
