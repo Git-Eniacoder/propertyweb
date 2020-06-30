@@ -62,6 +62,10 @@ $route['post/view'] = 'admin/postreq_mod/Post_req/callview';
 // $route['post/get'] = 'postreq_mod/Post_req/get';
 
 
+//listing module 
+$route['list'] = 'list_mod/listing';
+$route['list/view'] = 'admin/list_mod/listing/callview';
+
 // ****************  Dynamic Pages ************* 
 
 
