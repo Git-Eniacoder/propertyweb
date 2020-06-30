@@ -14,8 +14,8 @@ $config['login_check'] = base_url().'login/login_check/';
 
 
 // Post Req Controller
-$config['post_req'] = base_url().'postreq_mod/Post_req/index.';
-$config['getreq'] = base_url().'postreq_mod/Post_req/get';
+$config['post_req'] = base_url().'admin/postreq_mod/Post_req/index.';
+$config['getreq'] = base_url().'admin/postreq_mod/Post_req/get';
 
 
 // Register
