@@ -14,12 +14,28 @@ $config['login_check'] = base_url().'login/login_check/';
 
 
 // Post Req Controller
-$config['post_req'] = base_url().'admin/postreq_mod/Post_req/index.';
+// $config['post_req'] = base_url().'admin/postreq_mod/Post_req';
+// $config['inreq'] = base_url().'admin/postreq_mod/Post_req/insert';
+// $config['delreq'] = base_url().'admin/postreq_mod/Post_req/delete/';
+// $config['updatereq'] = base_url().'admin/postreq_mod/Post_req/update';
+
+// Post Req Controller
+$config['post_req'] = base_url().'admin/postreq_mod/Post_req';
+$config['inreq'] = base_url().'admin/postreq_mod/Post_req/insert';
 $config['getreq'] = base_url().'admin/postreq_mod/Post_req/get';
+$config['delreq'] = base_url().'admin/postreq_mod/Post_req/delete/';
+$config['updatereq'] = base_url().'admin/postreq_mod/Post_req/update/';
+$config['updateinreq'] = base_url().'admin/postreq_mod/Post_req/updateinsert/';
+
+
 
 // Plisting Controller
 $config['listing'] = base_url().'admin/list_mod/Listing/index.';
 
+
+
+// payment Controller
+$config['payment'] = base_url().'admin/payment_mod/Payment/index.';
 
 // Register
 $config['register'] = base_url().'register/';

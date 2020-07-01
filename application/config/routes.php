@@ -56,15 +56,25 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
+
+
 //Post Request module 
-$route['post'] = 'admin/postreq_mod/Post_req';
+$route['post'] = 'admin/postreq_mod/Post_req/index';
 $route['post/view'] = 'admin/postreq_mod/Post_req/callview';
+$route['get'] = 'admin/postreq_mod/Post_req/get_data';
+
 // $route['post/get'] = 'postreq_mod/Post_req/get';
 
 
 //listing module 
 $route['list'] = 'admin/list_mod/listing';
 $route['list/view'] = 'admin/list_mod/listing/callview';
+
+
+//payment module 
+$route['payment'] = 'admin/payment_mod/Payment';
+$route['payment/view'] = 'admin/payment_mod/Payment/callview';
+
 
 // ****************  Dynamic Pages ************* 
 
