@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://localhost/admin-panel/';
-$config['base_url'] = 'http://rechargeapp.test/';
-$config['css'] = $config['base_url'].'assets/css/';
+$config['base_url'] = 'http://localhost/propertyweb/';
+
 /*
 |--------------------------------------------------------------------------
 | Index File

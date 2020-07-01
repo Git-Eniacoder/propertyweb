@@ -19,7 +19,7 @@ $config['getreq'] = base_url().'admin/postreq_mod/Post_req/get';
 
 // Plisting Controller
 $config['listing'] = base_url().'admin/list_mod/Listing/index.';
-$config['getreq'] = base_url().'admin/list_mod/Listing/get';
+
 
 // Register
 $config['register'] = base_url().'register/';
