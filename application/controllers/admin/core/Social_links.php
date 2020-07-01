@@ -28,16 +28,16 @@ class Social_links extends CI_Controller {
         
         
             
-           $data['twitter_url'] = $this->input->post('twitter_url');
-           $data['facebook_url'] = $this->input->post('facebook_url');
-           $data['youtube_url'] = $this->input->post('youtube_url');
-           $data['instagram_url'] = $this->input->post('instagram_url');
-           $data['pinterest_url'] = $this->input->post('pinterest_url');
-           $data['linkedin_url'] = $this->input->post('linkedin_url');
+        $data['twitter_url'] = $this->input->post('twitter_url');
+        $data['facebook_url'] = $this->input->post('facebook_url');
+        $data['youtube_url'] = $this->input->post('youtube_url');
+        $data['instagram_url'] = $this->input->post('instagram_url');
+        $data['pinterest_url'] = $this->input->post('pinterest_url');
+        $data['linkedin_url'] = $this->input->post('linkedin_url');
 
-           if($this->db_login->update_links($data)){
-             redirect(base_url().'admin/core/social_links');
-           }
+        if($this->db_login->update_links($data)){
+            redirect(base_url().'admin/core/social_links');
+        }
         
     } 
 
