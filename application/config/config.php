@@ -23,13 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< HEAD
 // $config['base_url'] = 'http://localhost/admin-panel/';
 $config['base_url'] = 'http://localhost/propertyweb/';
-=======
-// $config['base_url'] = 'http://localhost/propertyweb/';
-$config['base_url'] = 'http://rechargeapp.test/';
->>>>>>> 104fc4380e30d54a132ea3100b5d42872a4016ba
 
 /*
 |--------------------------------------------------------------------------
