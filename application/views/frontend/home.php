@@ -366,7 +366,7 @@
                 
             </div>
           </div>
-          <center><a href="posttable"><button>Post</button></a></center>
+          <center><button>Post</button></center>
         </div>
       </div>
 

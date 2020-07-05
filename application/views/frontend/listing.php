@@ -95,7 +95,7 @@
                             <input type="text" name="Locality" placeholder="Locality">
                             <label>Rent<span style="color: red;">*</label></br>
                             <input type="number" name="rent" id="rent"> /month</br>
-                            <button>Submit</button>
+                            <a href="posttable"><button>Submit</button></a>
                         </div>
                     </div>
                     <div class="col-md-4">

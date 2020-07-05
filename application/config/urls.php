@@ -31,13 +31,13 @@ $config['updateinreq'] = base_url().'admin/postreq_mod/Post_req/updateinsert/';
 $config['post_list'] = base_url().'admin/postreq_mod/Post_list/index.';
 
 // recharge Controller
-$config['post_list'] = base_url().'admin/wallet/Recharge/index.';
+$config['recharge'] = base_url().'admin/wallet/Recharge/index.';
 
 // refferal Controller
-$config['post_list'] = base_url().'admin/wallet/Refferal/index.';
+$config['refferal'] = base_url().'admin/wallet/Refferal/index.';
 
 // field Controller
-$config['post_list'] = base_url().'admin/wallet/Field/index.';
+$config['field'] = base_url().'admin/wallet/Field/index.';
 
 // Plisting Controller
 $config['listing'] = base_url().'admin/list_mod/Listing/index.';
