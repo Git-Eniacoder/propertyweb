@@ -67,8 +67,11 @@ $route['get'] = 'admin/postreq_mod/Post_req/get_data';
 
 
 //listing module 
-$route['list'] = 'list_mod/listing';
+$route['list'] = 'admin/list_mod/listing';
 $route['list/view'] = 'admin/list_mod/listing/callview';
+//Home module 
+$route['home'] = 'home';
+$route['home/view'] = 'home/callview';
 
 
 //payment module 

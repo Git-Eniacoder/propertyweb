@@ -31,8 +31,9 @@ $config['updateinreq'] = base_url().'admin/postreq_mod/Post_req/updateinsert/';
 
 // Plisting Controller
 $config['listing'] = base_url().'admin/list_mod/Listing/index.';
-$config['getreq'] = base_url().'admin/list_mod/Listing/get';
 
+// Plisting Controller
+$config['home'] = base_url().'Home/index.';
 
 // payment Controller
 $config['payment'] = base_url().'admin/payment_mod/Payment/index.';
