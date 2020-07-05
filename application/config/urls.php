@@ -20,6 +20,9 @@ $config['login_check'] = base_url().'login/login_check/';
 // $config['updatereq'] = base_url().'admin/postreq_mod/Post_req/update';
 
 // Post Req Controller
+
+$config['test'] = base_url().'admin/postreq_mod/Post_req/demo';
+
 $config['post_req'] = base_url().'admin/postreq_mod/Post_req';
 $config['inreq'] = base_url().'admin/postreq_mod/Post_req/insert';
 $config['getreq'] = base_url().'admin/postreq_mod/Post_req/get';

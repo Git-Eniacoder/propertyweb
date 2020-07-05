@@ -11,7 +11,6 @@ class Db_postreq extends CI_Model {
         $this->db->insert('post_request', $info);
         echo "data successfully inserted";
 
-        
     }
 
 

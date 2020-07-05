@@ -62,6 +62,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['post'] = 'admin/postreq_mod/Post_req/index';
 $route['post/view'] = 'admin/postreq_mod/Post_req/callview';
 $route['get'] = 'admin/postreq_mod/Post_req/get_data';
+$route['test'] = 'admin/postreq_mod/Post_req/demo';
 
 // $route['post/get'] = 'postreq_mod/Post_req/get';
 
