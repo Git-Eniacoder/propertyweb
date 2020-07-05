@@ -47,7 +47,7 @@
                       
                       
                       <li   class="  nav-item">
-                        <a title="Recharge" href="#" class="nav-link">
+                        <a title="Recharge" href="recharge" class="nav-link">
                           Recharge
                         </a>
                       </li>
@@ -105,7 +105,7 @@
                     
                     <p >Some example text some example text. John Doe is an architect and engineer</p>
                     <div class="text-center">
-                      <button>Recharge</button>
+                     <a href="recharge"> <button>Recharge</button></a>
                     </div>  
                   </div>
                 </div>
@@ -366,7 +366,7 @@
                 
             </div>
           </div>
-          <center><button>Post</button></center>
+          <center><a href="posttable"><button>Post</button></a></center>
         </div>
       </div>
 

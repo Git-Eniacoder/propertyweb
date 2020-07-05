@@ -27,12 +27,25 @@ $config['delreq'] = base_url().'admin/postreq_mod/Post_req/delete/';
 $config['updatereq'] = base_url().'admin/postreq_mod/Post_req/update/';
 $config['updateinreq'] = base_url().'admin/postreq_mod/Post_req/updateinsert/';
 
+// Posttable Controller
+$config['post_list'] = base_url().'admin/postreq_mod/Post_list/index.';
 
+// recharge Controller
+$config['post_list'] = base_url().'admin/wallet/Recharge/index.';
+
+// refferal Controller
+$config['post_list'] = base_url().'admin/wallet/Refferal/index.';
+
+// field Controller
+$config['post_list'] = base_url().'admin/wallet/Field/index.';
 
 // Plisting Controller
 $config['listing'] = base_url().'admin/list_mod/Listing/index.';
 
-// Plisting Controller
+// Recharge Controller
+$config['recharge'] = base_url().'admin/recharge_mod/Recharge/index.';
+
+// home Controller
 $config['home'] = base_url().'Home/index.';
 
 // payment Controller
