@@ -10,128 +10,128 @@ class Post_req extends My_Controller
 {
 
 
-    public function __construct()
-    {
+    // public function __construct()
+    // {
 
-        parent::__construct();
+    //     parent::__construct();
 
-        $this->load->model('pages/Db_postreq');
-    }
-
-
-    public function demo()
-    {
-
-        echo "demo";
-    }
-
-    public function index()
-    {
-        $data['url'] = $this->config->item('urls');
-        $data['post'] = $this->Db_postreq->get_data();
-        // $this->load->view('postreq_v/postreq', $data);
-        $this->load->view('frontend/listing', $data);
-    }
+    //     $this->load->model('pages/Db_postreq');
+    // }
 
 
-    public function insert()
-    {
+    // public function index()
+    // {
+    //     $data['url'] = $this->config->item('urls');
+    //     $data['post'] = $this->Db_postreq->get_data();
 
-        $this->form_validation->set_rules('city', 'city', 'required');
-        $this->form_validation->set_rules('description', 'description', 'required');
-        $this->form_validation->set_rules('rent', 'rent', 'required');
-        $this->form_validation->set_rules('bhk', 'bhk', 'required');
-        $this->form_validation->set_rules('furnished', 'furnished', 'required');
-        $this->form_validation->set_rules('forwhom', 'forwhom', 'required');
-        $this->form_validation->set_rules('area', 'area', 'required');
-        // $this->form_validation->set_rules('list_img', 'list_img', 'required');
+    //     $this->load->view('frontend/common/header',$data);
+    //     $this->load->view('frontend/listing', $data); 
+    //     $this->load->view('frontend/common/footer',$data);
+    // }
 
 
-        if ($this->form_validation->run()) {
+    // public function insert()
+    // {
 
-            # code...
-            $info = array(
-                "city" => $this->input->post('city'),
-                "description" => $this->input->post('description'),
-                "rent" => $this->input->post('rent'),
-                "bhk" => $this->input->post('bhk'),
-                "furnished" => $this->input->post('furnished'),
-                "forwhom" => $this->input->post('forwhom'),
-                "area" => $this->input->post('area'),
-            );
-        } else {
-            # code...
-
-            echo "the validation is misiing";
-        }
+    //     $this->form_validation->set_rules('city', 'city', 'required');
+    //     $this->form_validation->set_rules('description', 'description', 'required');
+    //     $this->form_validation->set_rules('rent', 'rent', 'required');
+    //     $this->form_validation->set_rules('bhk', 'bhk', 'required');
+    //     $this->form_validation->set_rules('furnished', 'furnished', 'required');
+    //     $this->form_validation->set_rules('forwhom', 'forwhom', 'required');
+    //     $this->form_validation->set_rules('area', 'area', 'required');
+    //     // $this->form_validation->set_rules('list_img', 'list_img', 'required');
 
 
+    //     if ($this->form_validation->run()) {
 
-        // insert Img Config that help to upload path
-        $config['upload_path']          = './uploads/';
-        $config['allowed_types']        = 'gif|jpg|png';
-
-        $this->load->library('upload', $config);
-        // $this->upload->do_upload('list_img');
-
-        if ($this->upload->do_upload('list_img')) {
-
-            $data = $this->upload->data();
-            $info['list_img'] = base_url('uploads/' . $data['raw_name'] . $data['file_ext']);
-
-            // Insert this data to our database
-            $this->Db_postreq->insert($info);
-            // redirect to the index page
-            $this->index();
-        } else {
-
-            print_r($this->upload->display_errors());
-        }
-    }
+    //         # code...
+    //         $info = array(
+    //             "city" => $this->input->post('city'),
+    //             "description" => $this->input->post('description'),
+    //             "rent" => $this->input->post('rent'),
+    //             "bhk" => $this->input->post('bhk'),
+    //             "furnished" => $this->input->post('furnished'),
+    //             "forwhom" => $this->input->post('forwhom'),
+    //             "area" => $this->input->post('area'),
+    //         );
 
 
+    //         // insert Img Config that help to upload path
+    //         $config['upload_path']          = './uploads/';
+    //         $config['allowed_types']        = 'gif|jpg|png';
 
 
-    public function updateinsert($id)
-    {
-
-        // Get the data from the view
-
-        $info = array(
-            "city" => $this->input->post('city'),
-            "description" => $this->input->post('description'),
-            "rent" => $this->input->post('rent'),
-            "bhk" => $this->input->post('bhk'),
-            "furnished" => $this->input->post('furnished'),
-            "forwhom" => $this->input->post('forwhom'),
-            "area" => $this->input->post('area'),
-        );
+    //         $this->load->library('upload', $config);
+    //         // $this->upload->do_upload('list_img');
 
 
-        // update the data at that particular id from where you are recieving
-        $this->Db_postreq->updateinsert($id, $info);
+    //         if ($this->upload->do_upload('list_img')) {
 
-        // redirect to the index page
-        $this->index();
-    }
+    //             $data = $this->upload->data();
+    //             $info['list_img'] = base_url('uploads/' . $data['raw_name'] . $data['file_ext']);
+
+    //             // Insert this data to our database
+    //             $this->Db_postreq->insert($info);
+    //             $this->index();
+
+    //         } else {
+
+    //             $this->index();
+    //             print_r($this->upload->display_errors());
+    //         }
+
+
+    //     } else {
+    //         # code...
+
+    //         echo "the validation is misiing";
+    //     }
+    // }
 
 
 
-    public function delete($id)
-    {
 
-        $this->Db_postreq->delete($id);
-        $this->index();
-    }
+    // public function updateinsert($id)
+    // {
+
+    //     // Get the data from the view
+
+    //     $info = array(
+    //         "city" => $this->input->post('city'),
+    //         "description" => $this->input->post('description'),
+    //         "rent" => $this->input->post('rent'),
+    //         "bhk" => $this->input->post('bhk'),
+    //         "furnished" => $this->input->post('furnished'),
+    //         "forwhom" => $this->input->post('forwhom'),
+    //         "area" => $this->input->post('area'),
+    //     );
 
 
-    public function update($id)
-    {
+    //     // update the data at that particular id from where you are recieving
+    //     $this->Db_postreq->updateinsert($id, $info);
 
-        $data['update'] = $this->Db_postreq->update($id);
-        $this->load->view('postreq_v/postreq', $data, true);
-        $this->index();
-    }
+    //     // redirect to the index page
+    //     $this->index();
+    // }
+
+
+    // public function update($id)
+    // {
+
+    //     $data['update'] = $this->Db_postreq->update($id);
+    //     $this->load->view('postreq_v/postreq', $data, true);
+    //     $this->index();
+    // }
+
+
+
+    // public function delete($id)
+    // {
+
+    //     $this->Db_postreq->delete($id);
+    //     $this->index();
+    // }
 }
 
 /* End of file All_blog.php */

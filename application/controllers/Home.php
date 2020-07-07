@@ -21,7 +21,9 @@ class Home extends My_Controller {
     {
         $data['url'] = $this->config->item('urls');
         
+        $this->load->view('frontend/common/header',$data);
         $this->load->view('frontend/home',$data);
+        $this->load->view('frontend/common/footer',$data);
 
     }
 
