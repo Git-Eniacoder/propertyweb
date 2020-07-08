@@ -966,3 +966,101 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 .price-card{
   margin-top: 3rem;
 }
+
+
+
+
+/* modal box */
+
+.modal{
+  margin-top: 4rem;
+}
+.modal .modal-content{
+  width: 100%;
+  height: auto;
+  
+}
+.modal .modal-content .left{
+  width: 30%;
+  height: 500px;
+  background-color: #FF5757;
+  padding-top:3rem;
+  padding-bottom:2rem;
+  margin-left: -23px;
+  margin-top: -16px;
+  
+  float: left;
+}
+.modal .modal-content .left h5{
+  color: white;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-left: 2rem;
+  
+}
+.modal .modal-content .right{
+  width: 70%;
+  height: auto;
+  float: right;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  
+}
+.modal .modal-content .right h5{
+  color: #413F3F;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
+  
+}
+.modal .modal-content .right p{
+  color: grey;
+ 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 2rem;
+  
+}
+.modal .modal-content .right input[type=email], input[type=text], input[type=number]{
+  width: 100%;
+  height: auto;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border: 1px solid #FF5757;
+ 
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.modal .modal-content .right button{
+    width: 100%;
+    height: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border: 2px solid #FF5757;
+    outline: none;
+    background-color: #FF5757;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: .5s;
+  
+}
+.modal .modal-content .right button:hover{
+  
+  border: 2px solid #313061;
+ 
+  background-color: transparent;
+  color: #313061;
+  
+
+}
+.modal .modal-content .right a{
+  
+  text-transform: none;
+  text-decoration: none;
+
+  color: #FF5757;
+}
+.modal .modal-content .right a:hover{
+
+  color: #313061;
+}
