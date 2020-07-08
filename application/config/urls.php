@@ -20,8 +20,11 @@ $config['home'] = base_url();   // Done
 $config['list'] = base_url().'admin/list_mod/Listing';    // Done
 $config['inreq'] = base_url().'admin/list_mod/Listing/insert'; 
 
+// wallet Controller
+$config['wallet'] = base_url().'admin/wallet/Recharge';  
+
 // recharge Controller
-$config['recharge'] = base_url().'admin/recharge_mod/Recharge';   // Done
+$config['recharge'] = base_url().'admin/recharge_mod/Recharge';  // Done
 
 // Posttable
 $config['posttable'] = base_url().'admin/postreq_mod/Post_table'; 
@@ -36,9 +39,6 @@ $config['wallet'] = base_url().'admin/wallet/recharge';   // Done
 
 //image url
 $config['image'] = base_url().'assets/img/';
-
-
-
 
 
 
