@@ -944,6 +944,25 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   }
   
 
-.problem{
-  color: #FF5757;
+.refferal{
+
+  margin: 2rem 0;
+}
+
+.level-text{
+  margin: 1.5rem 0;
+}
+
+.greenicon{
+  margin-right: .6rem;
+}
+
+.refferal-link{
+
+  background-color: #FFFBFB;
+  padding: .5rem;
+}
+
+.price-card{
+  margin-top: 3rem;
 }
