@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Tirupati Insurance</title>
+  <title>Wallet Recharge</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsive.css">
+  <!-- <link rel="stylesheet" href="<?php // echo base_url(); ?>assets/css/responsive.css"> -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
@@ -59,7 +60,7 @@
                   </a>
                 </li>
                 <li class="  nav-item">
-                  <a title="Recharge" href="wallet" class="nav-link">
+                  <a title="Recharge" href="<?php echo $url['wallet']; ?>" class="nav-link">
                     Wallet
                   </a>
                 </li>
