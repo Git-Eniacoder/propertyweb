@@ -24,7 +24,7 @@
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
             <div class="logo">
-              <a class="custom-logo-link " rel="home" href="home">
+              <a class="custom-logo-link " rel="<?php echo $url['home']; ?>" href="home">
                 <!-- <img width="133" height="55" src="assets/img/headlogo.svg" alt="Logo" class="custom-logo"> -->
                 LOGO
               </a>
@@ -72,9 +72,16 @@
                 </li>
 
 
-                <li class="  nav-item">
-                  <button>Register/Login</button>
-
+                <li class="nav-item dropdown">
+                  <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    My account
+                  </button>
+                  <div class="dropdown-menu">
+                    
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Login">Login</a>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register">Register</a>
+                    
+                  </div>
                 </li>
               </ul>
             </div>
@@ -84,3 +91,73 @@
     </div> <!-- container -->
   </header>
   <!-- Header end -->
+  <div class="modal fade" id="register">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class=" container-fluid modal-body">
+          <div class="left">
+            <h5>Register</h5>
+          </div>
+          <div class="right">
+            <h5>Let we help you to search your property here</h5>
+            <p>Register</p>
+            <input type="text" placeholder="your name">
+            <input type="email" placeholder="your email">
+            <input type="number" placeholder="Your Number">
+            <button>Register</button>
+
+            <p>If you have an account just Login here</p>
+            <center><a href="#">login</a></center>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class=" container-fluid modal-body">
+          <div class="left">
+            <h5>Register</h5>
+          </div>
+          <div class="right">
+            <h5>login into your account</h5>
+            <p>Login with mobile</p>
+            
+            <input type="number" placeholder="Your Number">
+            <a data-toggle="modal" data-target="#otp"><button>Login</button></a>
+
+            <p>New here ? Register with us</p>
+            <center><a href="#">Register</a></center>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="otp">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class=" container-fluid modal-body">
+          <div class="left">
+            <h5>Register</h5>
+          </div>
+          <div class="right">
+            <h5>login into your account</h5>
+            <p>Login with mobile</p>
+            
+            <input type="number" placeholder="verify">
+            <button>Login</button>
+
+            <p>New here ? Register with us</p>
+            <center><a href="#">Register</a></center>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
