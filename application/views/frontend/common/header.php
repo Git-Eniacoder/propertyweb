@@ -24,7 +24,7 @@
           <nav class="navbar navbar-expand-lg">
             <div class="logo">
               <a class="custom-logo-link " rel="home" href="home">
-                <img width="133" height="55" src="assets/img/headlogo.svg" alt="Logo" class="custom-logo">
+                <img width="133" height="55" src="https://solotechinc.in/wp-content/uploads/2019/08/Solotech-logo.png" alt="Logo" class="custom-logo">
               </a>
             </div>
             <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
