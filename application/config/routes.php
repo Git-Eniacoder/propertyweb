@@ -60,6 +60,10 @@ $route['home'] = 'home';        // Working
 // $route['home/view'] = 'home/callview';
 
 
+//Home module 
+$route['admin'] = 'login';      // Working
+
+
 //listing module 
 $route['list'] = 'admin/list_mod/listing';      // Working
 // $route['list/view'] = 'admin/list_mod/listing/callview';
@@ -78,11 +82,6 @@ $route['recharge'] = 'admin/recharge_mod/Recharge';     // Working
 
 
 
-
-
-
-
-
 //Post Request module 
 $route['post'] = 'admin/postreq_mod/Post_req/index';
 $route['post/view'] = 'admin/postreq_mod/Post_req/callview';
@@ -94,11 +93,8 @@ $route['test'] = 'admin/postreq_mod/Post_req/demo';
 // $route['post/get'] = 'postreq_mod/Post_req/get';
 
 //Recharge module 
-$route['wallet'] = 'admin/wallet/Recharge/index';
-$route['wallet/view'] = 'admin/wallet/Recharge/callview';
-
-
-
+$route['wallet'] = 'admin/wallet/Recharge';
+// $route['wallet/view'] = 'admin/wallet/Recharge/callview';
 
 
 

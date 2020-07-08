@@ -12,8 +12,6 @@ $config['image'] = base_url().'assets/img/';
 $config['login'] = base_url().'login/';
 $config['login_check'] = base_url().'login/login_check/';
 
-
-
 // home Controller
 $config['home'] = base_url();   // Done
 
@@ -29,6 +27,11 @@ $config['posttable'] = base_url().'admin/postreq_mod/Post_table';
 $config['delreq'] = base_url().'admin/postreq_mod/Post_table/delete/';
 $config['updatereq'] = base_url().'admin/postreq_mod/Post_table/update/';
 $config['updateinreq'] = base_url().'admin/postreq_mod/Post_table/updateinsert/';
+
+
+
+// recharge Controller
+$config['wallet'] = base_url().'admin/wallet/recharge';   // Done
 
 
 

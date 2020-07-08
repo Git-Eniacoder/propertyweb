@@ -58,6 +58,7 @@ class Listing extends My_Controller
 
 
         // Get AllImages first
+        
         // 1. Load Upload Liberary
         $this->load->library('upload');
 
@@ -103,12 +104,12 @@ class Listing extends My_Controller
                 $imageData = $this->upload->data();
 
                 // 9. get the image name and 
-                $info['image_name'] = $imageData['file_name'];
+                $img['image_name'] = $imageData['file_name'];
 
 
-                echo "<pre>";
-                print_r($info);
-                die();
+                // echo "<pre>";
+                // print_r($info);
+                // die();
 
             }else {
 
