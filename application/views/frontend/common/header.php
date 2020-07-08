@@ -23,7 +23,7 @@
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
             <div class="logo">
-              <a class="custom-logo-link " rel="home" href="#">
+              <a class="custom-logo-link " rel="home" href="home">
                 <img width="133" height="55" src="assets/img/headlogo.svg" alt="Logo" class="custom-logo">
               </a>
             </div>
@@ -33,7 +33,7 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
               <ul id="nav" class="navbar-nav ml-auto ">
                 <li class=" nav-item">
-                  <a title="Home" href="#" class="nav-link">
+                  <a title="Home" href="home" class="nav-link">
                     Home
                   </a>
                 </li>
@@ -54,8 +54,13 @@
 
 
                 <li class="  nav-item">
-                  <a title="Recharge" href="recharge" class="nav-link">
+                  <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
                     Recharge
+                  </a>
+                </li>
+                <li class="  nav-item">
+                  <a title="Recharge" href="wallet" class="nav-link">
+                    Wallet
                   </a>
                 </li>
                 <li class="  nav-item">

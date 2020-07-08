@@ -196,42 +196,38 @@
 
 <div class="post">
   <div class="container">
+    
     <h2 class="text-center">Post Your Property</h2>
     <hr class="style1">
     <div class="row justify-content-center">
       <div class="col-md-4">
+      <h5>Enter Below Details</h5>
         <label for="person">Person <span style="color: red;">*</span></label>
-        <input list="persons" name="person" id="person" class="lis">
+        <input list="persons" name="person" id="person" class="lis" placeholder="owner/dealer">
 
         <datalist id="persons">
           <option value="Owner">
           <option value="Dealer">
         </datalist>
         <label for="listpp">List property for <span style="color: red;">*</span></label>
-        <input list="listpps" name="listpp" id="listpp" class="lis">
+        <input list="listpps" name="listpp" id="listpp" class="lis" placeholder="List property">
 
         <datalist id="listpps">
           <option value="Sell">
           <option value="Rent">
         </datalist>
         <label for="ptype">Property type <span style="color: red;">*</span></label>
-        <input list="ptypes" name="ptype" id="ptype" class="lis">
+        <input list="ptypes" name="ptype" id="ptype" class="lis" placeholder="property type">
 
         <datalist id="ptypes">
           <option value="Regidential">
           <option value="Commercial">
         </datalist>
-        <label for="pintrest">property interest <span style="color: red;">*</span></label>
-        <input list="pintrests" name="pintrest" id="pintrest" class="lis">
+        
 
-        <datalist id="pintrests">
-          <option value="Apartment Flet">
-          <option value="Residential Land">
-          <option value="House/Villa">
-          <option value="Others">
-        </datalist>
+       
         <label for="bhk">BHK <span style="color: red;">*</span></label>
-        <input list="bhks" name="bhk" id="bhk" class="lis">
+        <input list="bhks" name="bhk" id="bhk" class="lis" placeholder="BHK">
 
         <datalist id="bhks">
           <option value="1 BHK">
@@ -240,52 +236,11 @@
           <option value="4 BHK">
           <option value="5 BHK">
         </datalist>
-        <label for="pintrest">property interest <span style="color: red;">*</span></label>
-        <input list="pintrests" name="pintrest" id="pintrest" class="lis">
+        
 
-        <datalist id="pintrests">
-          <option value="Apartment Flet">
-          <option value="Residential Land">
-          <option value="House/Villa">
-          <option value="Others">
-        </datalist>
-        <label>Expected Price <span style="color: red;">*</span></label>
-        <input type="number" name="exprice" placeholder="Expected Price">
-      </div>
-      <div class="col-md-4">
-        <h5>Where Is the property located?</h5>
-        <label>City<span style="color: red;">*</span></label>
-        <input type="text" name="pcity" placeholder="Enter City">
-        <label>Locality<span style="color: red;">*</span></label>
-        <input type="text" name="pcity" placeholder="Locality">
-        <label>Project Name<span style="color: red;">*</span></label>
-        <input type="text" name="pcity" placeholder="Project Name">
-        <h5>Description about property</h5>
-        <label>Area<span style="color: red;">*</span></label>
-        <input type="number" name="pcity" placeholder="Area">
-
-        <label for="aunit">Area unit<span style="color: red;">*</span></label>
-        <input list="aunits" name="aunit" id="aunit" class="lis">
-
-        <datalist id="aunits">
-          <option value="sq.fit">
-          <option value="sq.m">
-          <option value="sq.yard">
-
-        </datalist>
-        <label for="bedroom">Bedrooms <span style="color: red;">*</span></label>
-        <input list="bedrooms" name="bedroom" id="bedroom" class="lis">
-
-        <datalist id="bedrooms">
-          <option value="1">
-          <option value="2">
-          <option value="3">
-          <option value="4">
-          <option value="5">
-          <option value="6">
-        </datalist>
+        
         <label for="furnished">Furnished <span style="color: red;">*</span></label>
-        <input list="furnisheds" name="furnished" id="furnished" class="lis">
+        <input list="furnisheds" name="furnished" id="furnished" class="lis" placeholder="Furnished type">
 
         <datalist id="furnisheds">
           <option value="Furnished">
@@ -293,6 +248,29 @@
           <option value="Unfurnished">
 
         </datalist>
+      </div>
+      <div class="col-md-4">
+        <h5>Where Is the property located?</h5>
+        <label>City<span style="color: red;">*</span></label>
+        <input type="text" name="pcity" placeholder="Enter City">
+        <label>Locality<span style="color: red;">*</span></label>
+        <input type="text" name="pcity" placeholder="Locality">
+        
+        
+        <label>Area<span style="color: red;">*</span></label>
+        <input type="number" name="pcity" placeholder="Area">
+
+        <label for="aunit">Area unit<span style="color: red;">*</span></label>
+        <input list="aunits" name="aunit" id="aunit" class="lis" placeholder="Area unit">
+
+        <datalist id="aunits">
+          <option value="sq.fit">
+          <option value="sq.m">
+          <option value="sq.yard">
+
+        </datalist>
+        
+        
 
       </div>
     </div>

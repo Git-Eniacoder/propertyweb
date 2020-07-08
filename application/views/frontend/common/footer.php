@@ -3,23 +3,13 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
           <h5>Links</h5>
           <hr class="style1">
 
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-          <h5>products</h5>
-          <hr class="style1">
-          <div class="links">
-            <a href="#">Link1</a></br>
-            <a href="#">Link2</a></br>
-            <a href="#">Link3</a></br>
-            <a href="#">Link4</a></br>
-            <a href="#">Link5</a></br>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
           <h5>quick links</h5>
           <hr class="style1">
           <div class="links">
@@ -32,7 +22,7 @@
             <a href="#">site map</a></br>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
           <h5>get in touch</h5>
           <hr class="style1">
           <input type="email" name="email" placeholder="Email here...">

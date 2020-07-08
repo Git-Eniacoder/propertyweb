@@ -98,20 +98,13 @@ $route['wallet'] = 'admin/wallet/Recharge/index';
 $route['wallet/view'] = 'admin/wallet/Recharge/callview';
 
 
-//field module 
-$route['wallet/field'] = 'admin/wallet/Field/index';
-$route['wallet/field/view'] = 'admin/wallet/Field/callview';
 
-
-//Refferal module 
-$route['wallet/refferal'] = 'admin/wallet/Refferal/index';
-$route['wallet/refferal/view'] = 'admin/wallet/Refferal/callview';
 
 
 
 //Recharge module 
 $route['recharge'] = 'admin/recharge_mod/Recharge';
-$route['recharge/view'] = 'admin/recharge_mod/recharge/callview';
+$route['recharge/view'] = 'admin/recharge_mod/Recharge/callview';
 
 
 
