@@ -55,6 +55,31 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
+//Home module 
+$route['home'] = 'home';        // Working
+// $route['home/view'] = 'home/callview';
+
+
+//listing module 
+$route['list'] = 'admin/list_mod/listing';      // Working
+// $route['list/view'] = 'admin/list_mod/listing/callview';
+
+
+
+//Post table module 
+$route['posttable'] = 'admin/postreq_mod/Posttable';        // Working
+// $route['posttable/view'] = 'admin/postreq_mod/Post_list/callview';
+
+
+
+//Recharge module 
+$route['recharge'] = 'admin/recharge_mod/Recharge';     // Working
+// $route['recharge/view'] = 'admin/recharge_mod/recharge/callview';
+
+
+
+
+
 
 
 
@@ -62,34 +87,33 @@ $route['translate_uri_dashes'] = FALSE;
 $route['post'] = 'admin/postreq_mod/Post_req/index';
 $route['post/view'] = 'admin/postreq_mod/Post_req/callview';
 $route['get'] = 'admin/postreq_mod/Post_req/get_data';
+$route['test'] = 'admin/postreq_mod/Post_req/demo';
 
-//Post table module 
-$route['posttable'] = 'admin/postreq_mod/Post_list/index';
-$route['posttable/view'] = 'admin/postreq_mod/Post_list/callview';
+
 
 // $route['post/get'] = 'postreq_mod/Post_req/get';
 
 //Recharge module 
 $route['wallet'] = 'admin/wallet/Recharge/index';
 $route['wallet/view'] = 'admin/wallet/Recharge/callview';
+
+
 //field module 
 $route['wallet/field'] = 'admin/wallet/Field/index';
 $route['wallet/field/view'] = 'admin/wallet/Field/callview';
+
+
 //Refferal module 
 $route['wallet/refferal'] = 'admin/wallet/Refferal/index';
 $route['wallet/refferal/view'] = 'admin/wallet/Refferal/callview';
 
-//listing module 
-$route['list'] = 'admin/list_mod/listing';
-$route['list/view'] = 'admin/list_mod/listing/callview';
+
 
 //Recharge module 
-$route['recharge'] = 'admin/recharge_mod/recharge';
+$route['recharge'] = 'admin/recharge_mod/Recharge';
 $route['recharge/view'] = 'admin/recharge_mod/recharge/callview';
 
-//Home module 
-$route['home'] = 'home';
-$route['home/view'] = 'home/callview';
+
 
 
 //payment module 
