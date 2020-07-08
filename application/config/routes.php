@@ -104,7 +104,6 @@ $route['recharge/view'] = 'admin/recharge_mod/Recharge/callview';
 
 
 
-
 //payment module 
 $route['payment'] = 'admin/payment_mod/Payment';
 $route['payment/view'] = 'admin/payment_mod/Payment/callview';

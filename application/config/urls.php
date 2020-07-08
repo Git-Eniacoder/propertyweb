@@ -4,6 +4,7 @@
 
 //  Site Settings 
 $config['css'] = base_url().'assets/css/styles.css';
+$config['stylecss'] = base_url().'assets/css/style.css';
 $config['js'] = base_url().'assets/js/';
 $config['image'] = base_url().'assets/img/';
 
@@ -29,9 +30,12 @@ $config['updatereq'] = base_url().'admin/postreq_mod/Post_table/update/';
 $config['updateinreq'] = base_url().'admin/postreq_mod/Post_table/updateinsert/';
 
 
-
 // recharge Controller
 $config['wallet'] = base_url().'admin/wallet/recharge';   // Done
+
+
+//image url
+$config['image'] = base_url().'assets/img/';
 
 
 

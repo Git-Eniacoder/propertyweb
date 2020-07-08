@@ -1,4 +1,7 @@
 
+        <h1 class="problem">css problem</h1>
+        
+        
         <div class="wallet-main">
             <div class="container">
                 <div class="row ">
@@ -19,7 +22,7 @@
                             <button>ADD money</button>
                             <div class="wallet-content">
                                 <p>Recharge Wallet Balance</p>
-                                <img class="re" src="assets/img/Group45.svg" ><input type="number" placeholder="14000" name="ttpp" disabled> Points
+                                <img class="wallet_icon" src="<?php echo $url['image'].'recharge.png'; ?>" ><input type="number" placeholder="14000" name="ttpp" disabled> Points
                                 <h3>Recharges</h3>
                                 <hr class="style1">
                                 <div class="row ">

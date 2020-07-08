@@ -10,10 +10,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-  <!-- <link rel="stylesheet" href="<?php // echo base_url(); ?>assets/css/responsive.css"> -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/styles.css">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo $url['css']; ?>">
+  <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
 </head>
 
 <body>
@@ -25,7 +25,8 @@
           <nav class="navbar navbar-expand-lg">
             <div class="logo">
               <a class="custom-logo-link " rel="home" href="home">
-                <img width="133" height="55" src="assets/img/headlogo.svg" alt="Logo" class="custom-logo">
+                <!-- <img width="133" height="55" src="assets/img/headlogo.svg" alt="Logo" class="custom-logo"> -->
+                LOGO
               </a>
             </div>
             <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +35,7 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
               <ul id="nav" class="navbar-nav ml-auto ">
                 <li class=" nav-item">
-                  <a title="Home" href="home" class="nav-link">
+                  <a title="Home" href="<?php echo $url['home']; ?>" class="nav-link">
                     Home
                   </a>
                 </li>
