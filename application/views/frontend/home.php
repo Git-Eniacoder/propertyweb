@@ -52,6 +52,11 @@
                         </a>
                       </li>
                       <li   class="  nav-item">
+                        <a title="Recharge" href="wallet" class="nav-link">
+                          wallet
+                        </a>
+                      </li>
+                      <li   class="  nav-item">
                         <a title="Refer & earn" href="#" class="nav-link">
                           Refer & earn
                         </a>
