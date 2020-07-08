@@ -1,4 +1,7 @@
 
+        <h1 class="problem">css problem</h1>
+        
+        
         <div class="wallet-main">
             <div class="container">
                 <div class="row ">
@@ -19,20 +22,20 @@
                             <button>ADD money</button>
                             <div class="wallet-content">
                                 <p>Recharge Wallet Balance</p>
-                                <img class="re" src="assets/img/Group 45.svg" ><input type="number" placeholder="14000" name="ttpp" disabled> Points
+                                <img class="wallet_icon" src="<?php echo $url['image'].'recharge.png'; ?>" ><input type="number" placeholder="14000" name="ttpp" disabled> Points
                                 <h3>Recharges</h3>
                                 <hr class="style1">
                                 <div class="row ">
                                     <div class="col-md-3">
-                                        <center><img src="assets/img/Group 45.svg" width="60px"></center>
+                                        <center><img src="assets/img/Group45.svg" width="60px"></center>
                                         <p class="cc">Mobile Recharge</p>
                                     </div>
                                     <div class="col-md-3">
-                                        <center><img src="assets/img/Group 45.svg" width="60px"></center>
+                                        <center><img src="assets/img/Group45.svg" width="60px"></center>
                                         <p class="cc">DTH Recharge</p>
                                     </div>
                                     <div class="col-md-3">
-                                        <center><img src="assets/img/Group 45.svg" width="60px"></center>
+                                        <center><img src="assets/img/Group45.svg" width="60px"></center>
                                         <p class="cc">Data Card Recharge</p>
                                     </div>
                                 </div>
@@ -49,19 +52,19 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><img src="assets/img/Group 45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
+                                                <td><img src="assets/img/Group45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
                                                 <td>-300</td>
                                                 <td>sucess</td>
                                                 <td> -</td>
                                             </tr>
                                             <tr>
-                                                <td><img src="assets/img/Group 45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
+                                                <td><img src="assets/img/Group45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
                                                 <td>-300</td>
                                                 <td>sucess</td>
                                                 <td> -</td>
                                             </tr>
                                             <tr>
-                                                <td><img src="assets/img/Group 45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
+                                                <td><img src="assets/img/Group45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
                                                 <td>-300</td>
                                                 <td>sucess</td>
                                                 <td> -</td>
@@ -81,16 +84,16 @@
                             
                             <div class="wallet-content">
                                 <p>Refferal Wallet Balance</p>
-                                <img class="re" src="assets/img/Group 45.svg" ><input type="number" placeholder="14000" name="ttpp" disabled> Points
+                                <img class="re" src="assets/img/Group45.svg" ><input type="number" placeholder="14000" name="ttpp" disabled> Points
                                 <p>Refferal Link</p>
                                 <h6>www.yoursite.com/refer/adfrd</h6>
                                 <h3>Share with friends</h3>
-                                <img src="assets/img/Group 45.svg" width="60px">
-                                <img src="assets/img/Group 45.svg" width="60px">
-                                <img src="assets/img/Group 45.svg" width="60px">
-                                <img src="assets/img/Group 45.svg" width="60px">
-                                <img src="assets/img/Group 45.svg" width="60px">
-                                <img src="assets/img/Group 45.svg" width="60px">
+                                <img src="assets/img/Group45.svg" width="60px">
+                                <img src="assets/img/Group45.svg" width="60px">
+                                <img src="assets/img/Group45.svg" width="60px">
+                                <img src="assets/img/Group45.svg" width="60px">
+                                <img src="assets/img/Group45.svg" width="60px">
+                                <img src="assets/img/Group45.svg" width="60px">
                                 
                                 <div class="wallet-history">
                                     <table class="table table-borderless">
@@ -105,19 +108,19 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><img src="assets/img/Group 45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
+                                                <td><img src="assets/img/Group45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
                                                 <td>-300</td>
                                                 <td>sucess</td>
                                               
                                             </tr>
                                             <tr>
-                                                <td><img src="assets/img/Group 45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
+                                                <td><img src="assets/img/Group45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
                                                 <td>-300</td>
                                                 <td>sucess</td>
                                                 
                                             </tr>
                                             <tr>
-                                                <td><img src="assets/img/Group 45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
+                                                <td><img src="assets/img/Group45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
                                                 <td>-300</td>
                                                 <td>sucess</td>
                                                 
@@ -138,7 +141,7 @@
                             <div class="wallet-content">
                                 <p>Feild Wallet Balance</p>
 
-                                <img class="re" src="assets/img/Group 45.svg" ><input type="number" placeholder="14000" name="ttpp" disabled> Points <span style="color: #FF5757; margin-left:1rem; font-size:1.3rem;"> Level 1</span></br>
+                                <img class="re" src="assets/img/Group45.svg" ><input type="number" placeholder="14000" name="ttpp" disabled> Points <span style="color: #FF5757; margin-left:1rem; font-size:1.3rem;"> Level 1</span></br>
                                 <div class="level">
                                 <img src="assets/img/Group 45.svg" width="20px"><span style="color: grey; margin-left:2px;">After Refering 6 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 2</sapn></br>
                                 <img src="assets/img/Group 45.svg" width="20px"><span style="color: grey; margin-left:2px;">After Refering 36 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 3</sapn></br>
@@ -166,7 +169,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><img src="assets/img/Group 45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
+                                                <td><img src="assets/img/Group45.svg" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
                                                 <td>-300</td>
                                                 <td>sucess</td>
                                               
