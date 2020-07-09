@@ -66,7 +66,7 @@
                   </a>
                 </li>
                 <li class="  nav-item">
-                  <a title="Refer & earn" href="#" class="nav-link">
+                  <a title="Refer & earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
                     Refer & earn
                   </a>
                 </li>
