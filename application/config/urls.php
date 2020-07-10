@@ -41,6 +41,11 @@ $config['wallet'] = base_url().'admin/wallet/recharge';   // Done
 $config['image'] = base_url().'assets/img/';
 
 
+//Referand earn
+$config['referandearn'] = base_url().'admin/referandearn_mod/referandearn';
+
+
+
 
 
 

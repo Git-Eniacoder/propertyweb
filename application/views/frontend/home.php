@@ -15,7 +15,9 @@
     <div class="flex justify-content-center ">
       <div class="col-md-3">
         <div class="card">
-          <img class="card-img-top" src="assets/img/002-discount.svg" alt="Card image" style="width:100%">
+          <div class="card-img">
+            <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
+          </div>
           <div class="card-body">
 
             <p>Some example text some example text. John Doe is an architect and engineer</p>
@@ -30,7 +32,9 @@
 
       <div class="col-md-3">
         <div class="card">
-          <img class="card-img-top" src="assets/img/002-discount.svg" alt="Card image" style="width:100%">
+          <div class="card-img">
+            <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
+          </div>
           <div class="card-body">
 
             <p>Some example text some example text. John Doe is an architect and engineer</p>
@@ -42,7 +46,9 @@
       </div>
       <div class="col-md-3">
         <div class="card">
-          <img class="card-img-top" src="assets/img/002-discount.svg" alt="Card image" style="width:100%">
+          <div class="card-img">
+            <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
+          </div>
           <div class="card-body">
 
             <p>Some example text some example text. John Doe is an architect and engineer</p>
@@ -54,7 +60,9 @@
       </div>
       <div class="col-md-3">
         <div class="card">
-          <img class="card-img-top" src="assets/img/002-discount.svg" alt="Card image" style="width:100%">
+          <div class="card-img">
+            <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
+          </div>
           <div class="card-body">
 
             <p>Some example text some example text. John Doe is an architect and engineer</p>
@@ -196,12 +204,12 @@
 
 <div class="post">
   <div class="container">
-    
+
     <h2 class="text-center">Post Your Property</h2>
     <hr class="style1">
     <div class="row justify-content-center">
       <div class="col-md-4">
-      <h5>Enter Below Details</h5>
+        <h5>Enter Below Details</h5>
         <label for="person">Person <span style="color: red;">*</span></label>
         <input list="persons" name="person" id="person" class="lis" placeholder="owner/dealer">
 
@@ -223,9 +231,9 @@
           <option value="Regidential">
           <option value="Commercial">
         </datalist>
-        
 
-       
+
+
         <label for="bhk">BHK <span style="color: red;">*</span></label>
         <input list="bhks" name="bhk" id="bhk" class="lis" placeholder="BHK">
 
@@ -236,9 +244,9 @@
           <option value="4 BHK">
           <option value="5 BHK">
         </datalist>
-        
 
-        
+
+
         <label for="furnished">Furnished <span style="color: red;">*</span></label>
         <input list="furnisheds" name="furnished" id="furnished" class="lis" placeholder="Furnished type">
 
@@ -255,8 +263,8 @@
         <input type="text" name="pcity" placeholder="Enter City">
         <label>Locality<span style="color: red;">*</span></label>
         <input type="text" name="pcity" placeholder="Locality">
-        
-        
+
+
         <label>Area<span style="color: red;">*</span></label>
         <input type="number" name="pcity" placeholder="Area">
 
@@ -269,8 +277,8 @@
           <option value="sq.yard">
 
         </datalist>
-        
-        
+
+
 
       </div>
     </div>

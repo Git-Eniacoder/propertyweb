@@ -1064,3 +1064,12 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
   color: #313061;
 }
+
+.hero_icons{
+  width: 5rem;
+  margin-top: 1rem;
+}
+
+.card-img{
+  text-align: center;
+}

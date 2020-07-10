@@ -30,22 +30,26 @@
                     <div class="wallet-content">
                         <p>Recharge Wallet Balance</p>
                         <img class="re" src="<?php echo $url['image'] . 'wallet.png'; ?>"><input type="number" placeholder="14000" name="ttpp" disabled> Points
-                        <h3>Recharges</h3>
-                        <hr class="style1">
-                        <div class="row ">
-                            <div class="col-md-3">
-                                <center><img src="<?php echo $url['image'] . 'mobile.png'; ?>" width="60px"></center>
-                                <p class="cc">Mobile Recharge</p>
-                            </div>
-                            <div class="col-md-3">
-                                <center><img src="<?php echo $url['image'] . 'DTH.png'; ?>" width="60px"></center>
-                                <p class="cc">DTH Recharge</p>
-                            </div>
-                            <div class="col-md-3">
-                                <center><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="60px"></center>
-                                <p class="cc">Data Card Recharge</p>
+
+                        <div class="recharges">
+                            <h3>Recharges</h3>
+                            <hr class="style1">
+                            <div class="row ">
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'mobile.png'; ?>" width="60px"></center>
+                                    <p class="cc">Mobile Recharge</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'DTH.png'; ?>" width="60px"></center>
+                                    <p class="cc">DTH Recharge</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="60px"></center>
+                                    <p class="cc">Data Card Recharge</p>
+                                </div>
                             </div>
                         </div>
+
                         <div class="wallet-history">
                             <table class="table table-borderless">
                                 <thead>
@@ -86,19 +90,60 @@
 
                 </div>
 
+
+
+
+
+
                 <div id="Paris" class="tabcontent">
+
+                    <div class="total_balance">
+                        <div class="wallet-head">
+                            <h3>Total Balance</h3>
+                            <hr class="style1">
+                        </div>
+                        <!-- <p>Total Balance</p> -->
+                        <input type="number" placeholder="14000" name="ttpp" disabled>
+                        <button>ADD money</button>
+                    </div>
+
                     <h5>Refer your friend and earn point</h5>
 
                     <div class="wallet-content">
                         <p>Refferal Wallet Balance</p>
                         <img class="re" src="<?php echo $url['image'] . 'wallet.png'; ?>"><input type="number" placeholder="14000" name="ttpp" disabled> Points
-                        <p class="refferal">Refferal Link</p>
-                        <h6 class="refferal-link">www.yoursite.com/refer/adfrd</h6>
-                        <h3>Share with friends</h3>
-                        <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                        <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                        <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                        <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+
+                        <div class="referal-part">
+                            <p class="refferal">Refferal Link</p>
+                            <h6 class="refferal-link">www.yoursite.com/refer/adfrd</h6>
+                        </div>
+
+                        <div class="recharges">
+                            <h3>Recharges</h3>
+                            <hr class="style1">
+                            <div class="row ">
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'mobile.png'; ?>" width="60px"></center>
+                                    <p class="cc">Mobile Recharge</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'DTH.png'; ?>" width="60px"></center>
+                                    <p class="cc">DTH Recharge</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="60px"></center>
+                                    <p class="cc">Data Card Recharge</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="share">
+                            <h3>Share with friends</h3>
+                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+                        </div>
 
 
                         <div class="wallet-history">
@@ -141,6 +186,15 @@
                 </div>
 
                 <div id="Tokyo" class="tabcontent">
+                    <div class="total_balance">
+                        <div class="wallet-head">
+                            <h3>Total Balance</h3>
+                            <hr class="style1">
+                        </div>
+                        <!-- <p>Total Balance</p> -->
+                        <input type="number" placeholder="14000" name="ttpp" disabled>
+                        <button>ADD money</button>
+                    </div>
                     <h5>Refer your friend and earn point</h5>
 
 
@@ -148,6 +202,8 @@
                         <p>Feild Wallet Balance</p>
 
                         <img class="re" src="<?php echo $url['image'] . 'wallet.png'; ?>"><input type="number" placeholder="14000" name="ttpp" disabled> Points <span style="color: #FF5757; margin-left:1rem; font-size:1.3rem;"> Level 1</span></br>
+
+
                         <div class="level">
                             <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 6 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 2</sapn></br>
                                 <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 36 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 3</sapn></br>
@@ -155,11 +211,38 @@
                                         <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 6 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 5</sapn></br>
                                             <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 6 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 6</sapn></br>
                         </div>
-                        <h3>Share with friends</h3>
-                        <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                        <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                        <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                        <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+
+                        <div class="recharges">
+                            <h3>Recharges</h3>
+                            <hr class="style1">
+                            <div class="row ">
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'mobile.png'; ?>" width="60px"></center>
+                                    <p class="cc">Mobile Recharge</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'DTH.png'; ?>" width="60px"></center>
+                                    <p class="cc">DTH Recharge</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <center><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="60px"></center>
+                                    <p class="cc">Data Card Recharge</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="share">
+                            <h3>Share with friends</h3>
+                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
+                        </div>
+
+
+
+
                         <div class="wallet-history">
                             <table class="table table-borderless">
                                 <thead>
