@@ -1073,3 +1073,20 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 .card-img{
   text-align: center;
 }
+
+.property-radio{
+  margin-right: 1rem;
+}
+
+.rent-lis{
+  width: 40%;
+  display: inline-block;
+  height: auto;
+  border: 1px solid #313061;
+  border-radius: 3px;
+  outline-color: #46A6FF;
+  padding-left: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-bottom: 1rem;
+}
