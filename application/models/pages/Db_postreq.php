@@ -8,8 +8,57 @@ class Db_postreq extends CI_Model {
     public function insert($info){
 
         // var_dump($info);
+        $this->db->trans_start();
         $this->db->insert('post_request', $info);
-        echo "data successfully inserted";
+        $id = $this->db->insert_id();
+        // echo "data successfully inserted";
+        $this->load->library("upload");
+        if(!empty($_FILES))
+          {
+            $files  = $_FILES['list_img'];
+            // print_r($files);die;
+                  
+            for($i = 0; $i < count($files['name']); $i++)
+            {
+              $_FILES['list_img'] = [
+                "name" => $files['name'][$i],
+                "type" => $files['type'][$i],
+                "tmp_name" => $files['tmp_name'][$i],
+                "error" => $files['error'][$i],
+                "size" => $files['size'][$i],
+              ];
+                     
+              $config['file_name'] = "post_img";
+              $config['allowed_types'] = "jpg|jpeg|JPEG|png|gif|svg";
+              $config['max_size'] = '10240';
+              $config['upload_path'] = "./uploads/";
+              $this->upload->initialize($config);
+            
+              if($this->upload->do_upload('list_img'))
+              {
+                
+                $upload_data =  $this->upload->data();
+                $file_name = $upload_data['file_name'];
+                // print_r($file_name);die;
+                  $name[] = [                      
+                               "list_imgs" => $file_name,
+                               "id" => $id,
+                            ]; 
+              }
+              else
+              {
+                print_r($this->upload->display_errors());
+              }
+            }
+              
+          }
+
+
+
+        $this->db->insert_batch("post_imgs", $name);
+        $this->db->trans_complete();
+        return $this->db->insert_id(); 
+        $this->db->trans_status();
 
     }
 
@@ -44,6 +93,34 @@ class Db_postreq extends CI_Model {
     }
 
     
+    public function add($field){
+        $this->db->insert('post_req', $field);
+
+    }
+
+    public function fetch_req()
+    {
+        return  $this->db->get("post_req")->result_array();
+        // prnt($a);
+        // print_r($a);die;
+    }
+
+    public function fetch_list()
+    {
+        return  $this->db->get("post_request")->result_array();
+        // prnt($a);
+        // print_r($a);die;
+    }
+
+    public function del_list($id){
+     return $this->db->where("id",$id)->delete("post_request");
+      
+    }
+
+    public function del_post($id){
+      return $this->db->where("id",$id)->delete("post_req");
+       
+     }
 
 }
 

@@ -55,75 +55,81 @@ class Listing extends My_Controller
             "area" => $this->input->post('area'),
         );
 
+       
 
 
         // Get AllImages first
         
-        // 1. Load Upload Liberary
-        $this->load->library('upload');
+        // // 1. Load Upload Liberary
+        // $this->load->library('upload');
 
-        // 2. All Images in Img_data
-        $img_data = $_FILES['list_img']['name'];
+        // // 2. All Images in Img_data
+        // $img_data = $_FILES['list_img']['name'];
 
-        // NOTE :  ALL image_data is in $_FILES
-        // echo '<pre>';
-        // print_r($_FILES);
-        // die();
+        // // NOTE :  ALL image_data is in $_FILES
+        // // echo '<pre>';
+        // // print_r($_FILES);
+        // // die();
 
-        // 3. COUNT the number of files
-        $number_of_files = count($_FILES['list_img']['name']);
+        // // 3. COUNT the number of files
+        // $number_of_files = count($_FILES['list_img']['name']);
 
-        // 4. Store global files to local variable
-        $files = $_FILES;
+        // // 4. Store global files to local variable
+        // $files = $_FILES;
 
-        // 5. Upload files one by one
-        for($i = 0; $i < $number_of_files; $i++){
+        // // 5. Upload files one by one
+        // for($i = 0; $i < $number_of_files; $i++){
 
-            $_FILES['list_img']['name'] = $files['list_img']['name'][$i];
-            $_FILES['list_img']['type'] = $files['list_img']['type'][$i];
-            $_FILES['list_img']['tmp_name'] = $files['list_img']['tmp_name'][$i];
-            $_FILES['list_img']['error'] = $files['list_img']['error'][$i];
-            $_FILES['list_img']['size'] = $files['list_img']['size'][$i];
+        //     $_FILES['list_img']['name'] = $files['list_img']['name'][$i];
+        //     $_FILES['list_img']['type'] = $files['list_img']['type'][$i];
+        //     $_FILES['list_img']['tmp_name'] = $files['list_img']['tmp_name'][$i];
+        //     $_FILES['list_img']['error'] = $files['list_img']['error'][$i];
+        //     $_FILES['list_img']['size'] = $files['list_img']['size'][$i];
 
-            $config['upload_path'] = './uploads/';
-            $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = '0';
-            $config['max_width'] = '0';
-            $config['max_width'] = '0';
+        //     $config['upload_path'] = './uploads/';
+        //     $config['allowed_types'] = 'gif|jpg|png';
+        //     $config['max_size'] = '0';
+        //     $config['max_width'] = '0';
+        //     $config['max_width'] = '0';
 
-            // 6. initialize Upload
-            $this->upload->initialize($config);
+        //     // 6. initialize Upload
+        //     $this->upload->initialize($config);
 
 
-            // 7. Upload to the server
-            if($this->upload->do_upload('list_img')){
+        //     // 7. Upload to the server
+        //     if($this->upload->do_upload('list_img')){
 
-                // $imageData = $this->upload->data();
+        //         // $imageData = $this->upload->data();
      
-                // 8. We get the image data 
-                $imageData = $this->upload->data();
+        //         // 8. We get the image data 
+        //         $imageData = $this->upload->data();
 
-                // 9. get the image name and 
-                $img['image_name'] = $imageData['file_name'];
+        //         // 9. get the image name and 
+        //         $img['image_name'] = $imageData['file_name'];
 
 
                 // echo "<pre>";
                 // print_r($info);
                 // die();
+                $this->Db_postreq->insert($info);
+                
+                redirect($this->data['list'],'refresh');
 
-            }else {
+            }
+            // else {
 
 
                 
-            }
+            // }
 
 
 
 
-        }
+            
+        
 
 
-    }
+    
 
 
 

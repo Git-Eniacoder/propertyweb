@@ -17,14 +17,14 @@ $config['login_check'] = base_url().'login/login_check/';
 $config['home'] = base_url();   // Done
 
 // listing Controller
-$config['list'] = base_url().'admin/list_mod/Listing';    // Done
-$config['inreq'] = base_url().'admin/list_mod/Listing/insert'; 
+$config['list'] = base_url().'list_mod/Listing';    // Done
+$config['inreq'] = base_url().'list_mod/Listing/insert'; 
 
 // wallet Controller
-$config['wallet'] = base_url().'admin/wallet/Recharge';  
+$config['wallet'] = base_url().'wallet/Recharge';  
 
 // recharge Controller
-$config['recharge'] = base_url().'admin/recharge_mod/Recharge';  // Done
+$config['recharge'] = base_url().'recharge_mod/Recharge';  // Done
 
 // Posttable
 $config['posttable'] = base_url().'admin/postreq_mod/Post_table'; 
@@ -34,7 +34,7 @@ $config['updateinreq'] = base_url().'admin/postreq_mod/Post_table/updateinsert/'
 
 
 // recharge Controller
-$config['wallet'] = base_url().'admin/wallet/recharge';   // Done
+$config['wallet'] = base_url().'wallet/recharge';   // Done
 
 
 //image url
