@@ -205,86 +205,186 @@
 <div class="post">
   <div class="container">
 
-    <h2 class="text-center">Post Your Property</h2>
+    <h2 class="text-center">Post your requirement</h2>
     <hr class="style1">
     <div class="row justify-content-center">
+
+
+      <!-- Column 1  -->
+      <form method="post" action="<?php echo "http://localhost/propertyweb/home"?>/add" >
       <div class="col-md-4">
+
         <h5>Enter Below Details</h5>
-        <label for="person">Person <span style="color: red;">*</span></label>
-        <input list="persons" name="person" id="person" class="lis" placeholder="owner/dealer">
+        <div>
+          <label>Name<span style="color: red;">*</span></label>
+          <input type="text" name="post-name" placeholder="Enter Name">
+        </div>
 
-        <datalist id="persons">
-          <option value="Owner">
-          <option value="Dealer">
-        </datalist>
-        <label for="listpp">List property for <span style="color: red;">*</span></label>
-        <input list="listpps" name="listpp" id="listpp" class="lis" placeholder="List property">
+        <div>
+          <label>Email<span style="color: red;">*</span></label>
+          <input type="text" name="post-email" placeholder="Enter Email">
+        </div>
 
-        <datalist id="listpps">
-          <option value="Sell">
-          <option value="Rent">
-        </datalist>
-        <label for="ptype">Property type <span style="color: red;">*</span></label>
-        <input list="ptypes" name="ptype" id="ptype" class="lis" placeholder="property type">
+        <div>
+          <label>Mobile<span style="color: red;">*</span></label>
+          <input type="text" name="post-mobile" placeholder="Enter Mobile">
+        </div>
 
-        <datalist id="ptypes">
-          <option value="Regidential">
-          <option value="Commercial">
-        </datalist>
+        <!-- Looking For -->
+        <div>
+          <label for="Property-For">Looking For<span style="color: red;">*</span></label>
+          <div>
+            <label for="commercial">Commercial</label>
+            <input type="radio" name="property-for" value="commercial" class="property-radio">
 
-
-
-        <label for="bhk">BHK <span style="color: red;">*</span></label>
-        <input list="bhks" name="bhk" id="bhk" class="lis" placeholder="BHK">
-
-        <datalist id="bhks">
-          <option value="1 BHK">
-          <option value="2 BHK">
-          <option value="3 BHK">
-          <option value="4 BHK">
-          <option value="5 BHK">
-        </datalist>
+            <label for="residential">Residential</label>
+            <input type="radio" name="property-for" value="residential">
+          </div>
+        </div>
 
 
+        <!-- Property Type -->
+        <div>
+          <label for="ptype">Property type <span style="color: red;">*</span></label>
+          <input list="ptypes" name="ptype" id="ptype" class="lis" placeholder="property type">
 
-        <label for="furnished">Furnished <span style="color: red;">*</span></label>
-        <input list="furnisheds" name="furnished" id="furnished" class="lis" placeholder="Furnished type">
+          <datalist id="ptypes" class="datalist-active">
+            <option value="Residential Apartment">
+            <option value="Independent House/villa">
+            <option value="Serviced Apartment">
+            <option value="Commercial Shops">
+            <option value="Commercial Showrooms">
+            <option value="Industrial Lands">
+            <option value="Ware House">
+            <option value="Agricultural farm">
+            <option value="Guest-house">
+            <option value="Hotel/Resort">
+          </datalist>
+        </div>
 
-        <datalist id="furnisheds">
-          <option value="Furnished">
-          <option value="Semi-furnished">
-          <option value="Unfurnished">
 
-        </datalist>
+
+
+
       </div>
+      <!-- Column 1  end -->
+
+
+
+
+      <!-- Column 2  -->
       <div class="col-md-4">
+
         <h5>Where Is the property located?</h5>
+
+                <!-- BHK -->
+                <div>
+          <label for="bhk">BHK <span style="color: red;">*</span></label>
+          <input list="bhks" name="bhk" id="bhk" class="lis" placeholder="BHK">
+
+          <datalist id="bhks">
+            <option value="1 BHK">
+            <option value="2 BHK">
+            <option value="3 BHK">
+            <option value="4 BHK">
+            <option value="5 BHK">
+          </datalist>
+        </div>
+
+
+
+        <!-- Furnished -->
+        <div>
+          <label for="furnished">Furnished <span style="color: red;">*</span></label>
+          <input list="furnisheds" name="furnished" id="furnished" class="lis" placeholder="Furnished type">
+
+          <datalist id="furnisheds">
+            <option value="Furnished">
+            <option value="Semi-furnished">
+            <option value="Unfurnished">
+          </datalist>
+        </div>
+
+        <!-- Rent -->
+        <div>
+          <label for="rent">Rent <span style="color: red;">*</span></label>
+          <div>
+            <input list="rent-min" name="rent" id="rent" class="rent-lis" placeholder="Min">
+            <input list="rent-max" name="rent" id="rent" class="rent-lis" placeholder="Max">
+          </div>
+
+          <datalist id="rent-min">
+            <option value="3000">
+            <option value="4000">
+            <option value="5000">
+            <option value="10000">
+            <option value="20000">
+          </datalist>
+
+          <datalist id="rent-max">
+            <option value="3000">
+            <option value="4000">
+            <option value="5000">
+            <option value="10000">
+            <option value="20000">
+          </datalist>
+        </div>
+
+
+
+
         <label>City<span style="color: red;">*</span></label>
         <input type="text" name="pcity" placeholder="Enter City">
+
         <label>Locality<span style="color: red;">*</span></label>
         <input type="text" name="pcity" placeholder="Locality">
 
 
-        <label>Area<span style="color: red;">*</span></label>
-        <input type="number" name="pcity" placeholder="Area">
 
-        <label for="aunit">Area unit<span style="color: red;">*</span></label>
-        <input list="aunits" name="aunit" id="aunit" class="lis" placeholder="Area unit">
-
-        <datalist id="aunits">
-          <option value="sq.fit">
-          <option value="sq.m">
-          <option value="sq.yard">
-
-        </datalist>
 
 
 
       </div>
     </div>
-    <center><button>Post</button></center>
+    <center><button>Post Your Request</button></center>
   </div>
+</form>
 </div>
 
 
 <!-- End Home -->
+
+
+
+<!-- <input list="persons" name="person" id="person" class="lis" placeholder="owner/dealer"> -->
+
+
+
+
+<!-- <datalist id="persons">
+          <option value="Owner">
+          <option value="Dealer">
+        </datalist> -->
+
+
+
+<!-- <label for="listpp">List property for <span style="color: red;">*</span></label>
+        <input list="listpps" name="listpp" id="listpp" class="lis" placeholder="List property"> -->
+
+<!-- <datalist id="listpps">
+          <option value="Sell">
+          <option value="Rent">
+        </datalist> -->
+
+
+<!-- <label>Area<span style="color: red;">*</span></label>
+        <input type="number" name="pcity" placeholder="Area">
+
+        <label for="aunit">Area unit<span style="color: red;">*</span></label>
+        <input list="aunits" name="aunit" id="aunit" class="lis" placeholder="Area unit"> -->
+
+<!-- <datalist id="aunits">
+          <option value="sq.fit">
+          <option value="sq.m">
+          <option value="sq.yard">
+        </datalist> -->

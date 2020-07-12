@@ -29,7 +29,28 @@
                                 <a class="nav-link" href="<?php echo base_url();?>admin/blog/cat_blog">Categories</a>
                             </nav>
                     
+                            </div> -->
+
+                            <div class="sb-sidenav-menu-heading">View request</div>
+                            
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseblog" aria-expanded="false" aria-controls="collapseblog"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Request
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <div class="collapse" id="collapseblog" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="<?php echo base_url();?>admin/post/post_req">home Post</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/post/list_req">list Posts</a>
+                            
+                            </nav>
+                    
                             </div>
+
+
+
+
+
                             <div class="sb-sidenav-menu-heading">Page Part</div>
                             
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
