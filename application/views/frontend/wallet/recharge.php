@@ -22,7 +22,7 @@
                         <hr class="style1">
                     </div>
                     <!-- <p>Total Balance</p> -->
-                    <input type="number" placeholder="14000" name="ttpp" disabled>
+                    <input type="number" placeholder="<?php print_r($post['all_data'][0]->recharge_wallet);?>" name="ttpp" disabled>
                     <button>ADD money</button>
 
 
@@ -103,7 +103,8 @@
                             <hr class="style1">
                         </div>
                         <!-- <p>Total Balance</p> -->
-                        <input type="number" placeholder="14000" name="ttpp" disabled>
+                        
+                        <input type="number" placeholder="<?php print_r($post['all_data'][0]->refferal_wallet);?>" name="ttpp" disabled>
                         <button>ADD money</button>
                     </div>
 
@@ -192,7 +193,7 @@
                             <hr class="style1">
                         </div>
                         <!-- <p>Total Balance</p> -->
-                        <input type="number" placeholder="14000" name="ttpp" disabled>
+                        <input type="number" placeholder="<?php print_r($post['all_data'][0]->filed_wallet);?>" name="ttpp" disabled>
                         <button>ADD money</button>
                     </div>
                     <h5>Refer your friend and earn point</h5>
@@ -318,3 +319,5 @@
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 </script>
+
+<a href="http://www.login.imwallet.in/API/APIService.aspx?userid=7392900007&pass=693655&mob=7665501828.&opt=AR&amt=Amount&agentid=TX1234&optional1=Value&fmt=JSON"></a>

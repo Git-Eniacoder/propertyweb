@@ -19,8 +19,9 @@ class Recharge extends My_Controller {
 
     public function index()
     {
+        $this->load->model('Db_wallet');
+        $data['post'] = $this->Db_wallet->get_balance("9784020309");
         $data['url'] = $this->config->item('urls');
-
         $this->load->view('frontend/common/header',$data);
         $this->load->view('frontend/wallet/recharge',$data);
         $this->load->view('frontend/common/footer',$data);
