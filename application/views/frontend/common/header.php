@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -101,11 +102,12 @@
           <div class="right">
             <h5>Let we help you to search your property here</h5>
             <p>Register</p>
-            <input type="text" placeholder="your name">
-            <input type="email" placeholder="your email">
-            <input type="number" placeholder="Your Number">
-            <button>Register</button>
-
+            <div id="status" class="text-center"></div>
+            <form id="reg" action="<?php echo base_url().'otp/send_otp'; ?>" method="post">
+              <input type="text" name="uname" placeholder="Your Name">
+              <input type="number" name="mno" placeholder="Your Number">
+              <button>Register</button>
+            </form>
             <p>If you have an account just Login here</p>
             <center><a href="#">login</a></center>
           </div>
@@ -125,10 +127,10 @@
           <div class="right">
             <h5>login into your account</h5>
             <p>Login with mobile</p>
-            
+            <form action="" method="post">
             <input type="number" placeholder="Your Number">
             <a data-toggle="modal" data-target="#otp"><button>Login</button></a>
-
+            </form>
             <p>New here ? Register with us</p>
             <center><a href="#">Register</a></center>
           </div>
@@ -148,7 +150,7 @@
           <div class="right">
             <h5>login into your account</h5>
             <p>Login with mobile</p>
-            
+            <input type="number" placeholder="verify">
             <input type="number" placeholder="verify">
             <button>Login</button>
 

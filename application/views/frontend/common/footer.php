@@ -1,3 +1,33 @@
+  
+  
+  <script>
+
+$("#reg").submit(function(event){
+event.preventDefault();
+var post_url = $(this).attr("action"); 
+var request_method = $(this).attr("method"); 
+var form_data = $(this).serialize(); 
+$('#status').html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+$.ajax({
+    url : post_url,
+    type: request_method,
+    dataType:"json",
+    data : form_data, 
+}).done(function(response){ 
+  console.log(response);
+  if(response.form){
+    $('#status').html(response.msg);
+  }if(response.status){
+    console.log(response);
+    $('#status').html('');
+    $('#reg').attr('action', '<?php echo base_url()."otp/verify" ;?>');
+    $('#reg').html('<input type="text" name="otp" required><button>Verify Otp</button>');
+  }if(response.otp){
+    $('#status').html(response.msg);
+  }
+});
+});
+</script>
   <!-- footer starts -->
   <div class="shadow-lg foot">
     <div class="container">
