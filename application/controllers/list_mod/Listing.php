@@ -17,12 +17,12 @@ class Listing extends My_Controller
 
     public function index()
     {
-        $data['url'] = $this->config->item('urls');
-        $data['post'] = $this->Db_postreq->get_data();
+     
+        $this->data['post'] = $this->Db_postreq->get_data();
 
-        $this->load->view('frontend/common/header', $data);
-        $this->load->view('frontend/listing', $data);
-        $this->load->view('frontend/common/footer', $data);
+        $this->load->view('frontend/common/header', $this->data);
+        $this->load->view('frontend/listing', $this->data);
+        $this->load->view('frontend/common/footer', $this->data);
     }
 
 

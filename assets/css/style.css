@@ -1062,7 +1062,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   /* margin-top: 2rem; */
   
 }
-.modal .modal-content .right input[type=email], input[type=text], input[type=number]{
+.modal .modal-content .right input[type=email],input[type=password], input[type=text], input[type=number]{
   width: 100%;
   height: auto;
   padding-top: .5rem;

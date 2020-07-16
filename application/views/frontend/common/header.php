@@ -55,7 +55,7 @@
                   </div>
                 </li>
 
-
+        <?php if($status==true){ ?>
                 <li class="  nav-item">
                   <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
                     Recharge
@@ -66,6 +66,7 @@
                     Wallet
                   </a>
                 </li>
+        <?php } ?>
                 <li class="  nav-item">
                   <a title="Refer & earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
                     Refer & earn
@@ -75,13 +76,16 @@
 
                 <li class="nav-item dropdown">
                   <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    My account
+                   <?php echo isset($status)?  'My account' : 'Manage' ; ?>
                   </button>
                   <div class="dropdown-menu">
-                    
+                  
+                  <?php if($status==false){ ?>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Login">Login</a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register">Register</a>
-                    
+                  <?php } else{?>
+                    <a class="dropdown-item" href="<?php echo base_url().'login/logout' ; ?>">Logout</a>
+                  <?php } ?>
                   </div>
                 </li>
               </ul>
@@ -106,6 +110,8 @@
             <form id="reg" action="<?php echo base_url().'otp/send_otp'; ?>" method="post">
               <input type="text" name="uname" placeholder="Your Name">
               <input type="number" name="mno" placeholder="Your Number">
+              <input type="password" name="password" placeholder="Password">
+              <input type="password" name="confirm_password" placeholder="Confirm Password">
               <button>Register</button>
             </form>
             <p>If you have an account just Login here</p>
@@ -122,14 +128,16 @@
       <div class="modal-content">
         <div class=" container-fluid modal-body">
           <div class="left">
-            <h5>Register</h5>
+            <h5>Login</h5>
           </div>
           <div class="right">
             <h5>login into your account</h5>
             <p>Login with mobile</p>
-            <form action="" method="post">
-            <input type="number" placeholder="Your Number">
-            <a data-toggle="modal" data-target="#otp"><button>Login</button></a>
+            <div id="logsts" class="text-center"></div>
+            <form id="login" action="<?php echo base_url().'login/user_login'; ?>" method="post">
+            <input type="password" name="pno" placeholder="Your Number">
+            <input type="password" name="password" placeholder="Your Password">
+            <button>Login</button>
             </form>
             <p>New here ? Register with us</p>
             <center><a href="#">Register</a></center>

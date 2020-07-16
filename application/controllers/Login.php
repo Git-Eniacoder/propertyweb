@@ -52,6 +52,45 @@ class Login extends CI_Controller {
     } 
          echo json_encode($array);
     }
+    public function user_login(){
+        $this->form_validation->set_rules('pno', 'Mobile', 'trim|required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        
+        if ($this->form_validation->run()) {
+        $data['mobile_no'] = $this->input->post('pno');
+        $data['password'] = $this->input->post('password');
+        $check =  $this->db_login->user_check($data);
+            if(!is_null($check))
+            {
+                $this->session->set_userdata("id",$check['mobile_no']);
+                $this->session->set_userdata("name",$check['user_name']);
+                $array = array(
+                    'error'   => false,
+                    'msg'     => $check,
+                );
+            }
+            else
+            {
+                $array = array(
+                    'error'   => true,
+                    'msg'     => '<p class="text-center text-danger">Wrong Username Or Password</p>'
+                );
+            }
+      
+    }
+    else 
+    {
+        $array = array(
+            'form'   => true,
+            'msg'   => '<p class="text-center text-danger">Please Fill All Fields</p>',
+           );
+    } 
+         echo json_encode($array);
+    }
+    public function logout(){
+        $this->session->unset_userdata('id');
+        redirect('#', 'refresh'); 
+    }
 
 }
 
