@@ -32,7 +32,7 @@ $.ajax({
 </script>
 <script>
 
-$("#login").submit(function(event){
+$("#loginn").submit(function(event){
 event.preventDefault();
 var post_url = $(this).attr("action"); 
 var request_method = $(this).attr("method"); 

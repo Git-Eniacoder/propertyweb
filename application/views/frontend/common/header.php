@@ -135,7 +135,7 @@
             <h5>login into your account</h5>
             <p>Login with mobile</p>
             <div id="logsts" class="text-center"></div>
-            <form id="login" action="<?php echo base_url().'login/user_login'; ?>" method="post">
+            <form id="loginn" action="<?php echo base_url().'login/user_login'; ?>" method="post">
             <input type="password" name="pno" placeholder="Your Number">
             <input type="password" name="password" placeholder="Your Password">
             <button>Login</button>

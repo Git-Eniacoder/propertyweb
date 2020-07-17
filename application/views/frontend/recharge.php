@@ -1,5 +1,5 @@
 <!-- Recharge Section -->
-
+<!-- <?php print_r($post['all_data']->recharge_wallet) ?> -->
 <div class="recharge-main">
   <div class="container">
     <div class="row">
