@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '64.20.38.219',
-	'username' => 'namecom_mlm',
-	'password' => '@navneet1',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'namecom_mlm',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

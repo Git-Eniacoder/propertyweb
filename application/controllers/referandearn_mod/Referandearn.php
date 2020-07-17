@@ -14,10 +14,10 @@ class Referandearn extends My_Controller
     function index()
     {
 
-        $data['url'] = $this->config->item('urls');
-        $this->load->view('frontend/common/header', $data);
-        $this->load->view('frontend/referandearn', $data);
-        $this->load->view('frontend/common/footer', $data);
+        
+        $this->load->view('frontend/common/header', $this->data);
+        $this->load->view('frontend/referandearn', $this->data);
+        $this->load->view('frontend/common/footer', $this->data);
     }
 }
 ?>

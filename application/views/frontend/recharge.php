@@ -22,7 +22,7 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industr. Lorem</p>
                 <form method="post" action="<?php echo $url['buyplan']; ?>">
                   <input type="hidden" value="recharge_wallet" name="wallet">
-                  <input type="hidden" value="<?php echo $post['all_data'][0]->recharge_wallet;?>" name="balance">
+                  <input type="hidden" value="" name="balance">
                   <button type="submit">Recharge Rs. 960</button>
                 </form>
                 
