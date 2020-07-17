@@ -14,7 +14,7 @@ class Db_Wallet extends CI_Model
         return array("all_data"=>$result,"num_rows"=>$num_rows);
     }
     public function update_wallet($wallet,$balance){
-        $mobile="9784020309";
+        $mobile=$this->session->userdata("id");
         $this->db->where('mobileno', $mobile);
         echo $data->balance;
         $update_data=array($wallet=>$balance);
