@@ -32,12 +32,12 @@ $.ajax({
 </script>
 <script>
 
-$("#login").submit(function(event){
+$("#loginn").submit(function(event){
 event.preventDefault();
 var post_url = $(this).attr("action"); 
 var request_method = $(this).attr("method"); 
 var form_data = $(this).serialize(); 
-    console.log(form_data);
+    console.log(request_method);
 $('#logsts').html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
 $.ajax({
     url : post_url,
@@ -63,6 +63,16 @@ $.ajax({
   $('#para').click(function(){
     $('#otp').modal('show');
     $('#login').modal('hide');
+  });
+  $('#mreg').click(function(){
+    $('#otp').modal('hide');
+    $('#login').modal('hide');
+    $('#register').modal('show');
+  });
+  $('#mlog').click(function(){
+    $('#otp').modal('hide');
+    $('#login').modal('show');
+    $('#register').modal('hide');
   });
 </script>
 
@@ -124,7 +134,7 @@ $.ajax({
         <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
       </div>
 
-      <p class="reserved">@2020 All Rights Reserved. Developed By <span><a href="#" class="lik">Eniacoder</a></span></p>
+      <p class="reserved">@2020 All Rights Reserved. Developed By <span><a href="#" class="lik">Hisarfever</a></span></p>
     </div>
   </section>
 
