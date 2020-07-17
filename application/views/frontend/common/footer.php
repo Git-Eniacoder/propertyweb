@@ -59,6 +59,13 @@ $.ajax({
 });
 });
 </script>
+<script>
+  $('#para').click(function(){
+    $('#otp').modal('show');
+    $('#login').modal('hide');
+  });
+</script>
+
   <!-- footer starts -->
   <div class="shadow-lg foot">
     <div class="container">

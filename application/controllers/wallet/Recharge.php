@@ -25,4 +25,4 @@ class Recharge extends My_Controller {
         $this->load->view('frontend/wallet/recharge',$this->data);
         $this->load->view('frontend/common/footer',$this->data);
     }
-}    
+}   

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,7 +82,7 @@
                   <div class="dropdown-menu">
                   
                   <?php if($status==false){ ?>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Login">Login</a>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#login">Login</a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register">Register</a>
                   <?php } else{?>
                     <a class="dropdown-item" href="<?php echo base_url().'login/logout' ; ?>">Logout</a>
@@ -123,7 +124,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="Login">
+  <div class="modal fade" id="login">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class=" container-fluid modal-body">
@@ -139,6 +140,7 @@
             <input type="password" name="password" placeholder="Your Password">
             <button>Login</button>
             </form>
+            <a class="p-1"  id="para"><p>Forgot Password ?</p></a>
             <p>New here ? Register with us</p>
             <center><a href="#">Register</a></center>
           </div>
