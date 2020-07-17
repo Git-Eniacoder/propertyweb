@@ -82,31 +82,49 @@
 </div>
   <!-- sidebar-wrapper  -->
   <main class="page-content">
-  <div id="recharge" class="tabcontent">
-    <button><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Wallet 850</button>
-    <button>Add money</button>
+  <div id="recharge" class="tabcontent rechar">
+    <button class="top"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Wallet 850</button>
+    <button class="top2">Add money</button>
     <h5>Mobile Recharges</h5>
+    <div class="rechar-box">
     <div class="tab">
-            <button class="tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe">Mobile</button>
-            <button class="tablink" onclick="opnCity(event, 'dth')">DTH</button>
-            <button class="tablink" onclick="opnCity(event, 'data')">Data</button>
+        <div class="row ">
+            <div class="col-md-2">
+                <button class="tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Mobile</button>
+            </div>
+            <div class="col-md-2">
+                <button class="tablink" onclick="opnCity(event, 'dth')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">DTH</button>
+            </div>
+            <div class="col-md-2">
+                <button class="tablink" onclick="opnCity(event, 'data')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Data</button>
+            </div>
+        </div>
+            
+            
+            
     </div>
     <div id="mobile" class="tabcon">
-        <div class="contentrr" >
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
             <div class="container">
                 
-                <input type="number" name="m_number" placeholder="Number">
-                
-                <input list="operater" name="operater" placeholder="enter operator" >
-
-                    <datalist id="operater">
-                        <option value="idea">
-                        <option value="vodafone">
-                        <option value="airtel">
-                        <option value="jio">
-                        <option value="relience">
-                    </datalist>
-                    <input list="state" name="state" placeholder="enter state" >
+            <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <input type="number" name="m_number" placeholder="Number" class="inpu">
+                    </div>
+                    <div class="col-md-3">
+                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                            <datalist id="operater">
+                                <option value="idea">
+                                <option value="vodafone">
+                                <option value="airtel">
+                                <option value="jio">
+                                <option value="relience">
+                            </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input list="state" name="state" placeholder="enter state" class="inpu">
 
                         <datalist id="state">
                             <option value="rajasthan">
@@ -115,30 +133,42 @@
                             <option value="punjab">
                             <option value="up">
                         </datalist>
-                    <input type="number" placeholder="enter ammount">    
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                    </div>
+                </div>   
                     <input type="checkbox" > Prepaid
                     <input type="checkbox" > Postpaid</br>
-                    <button>Pay now</button>
+                    <button class="pay">Pay now</button>
             </div>
         </div>
+            </div>
+        </div>
+        
     </div>
 
     <div id="dth" class="tabcon">
-        <div class="contentrr" >
+    <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
             <div class="container">
-                
-                <input type="number" name="m_number" placeholder="Number">
-                
-                <input list="operater" name="operater" placeholder="enter operator" >
-
-                    <datalist id="operater">
-                        <option value="idea">
-                        <option value="vodafone">
-                        <option value="airtel">
-                        <option value="jio">
-                        <option value="relience">
-                    </datalist>
-                    <input list="state" name="state" placeholder="enter state" >
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <input type="number" name="m_number" placeholder="Number" class="inpu">
+                    </div>
+                    <div class="col-md-3">
+                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                            <datalist id="operater">
+                                <option value="idea">
+                                <option value="vodafone">
+                                <option value="airtel">
+                                <option value="jio">
+                                <option value="relience">
+                            </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input list="state" name="state" placeholder="enter state" class="inpu">
 
                         <datalist id="state">
                             <option value="rajasthan">
@@ -147,29 +177,48 @@
                             <option value="punjab">
                             <option value="up">
                         </datalist>
-                    <input type="number" placeholder="enter ammount">    
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                    </div>
+                </div>
+                
+                
+                
+
+                    
+                    
+                      
                     <input type="checkbox" > Prepaid
                     <input type="checkbox" > Postpaid</br>
-                    <button>Pay now</button>
+                    <button class="pay">Pay now</button>
+            </div>
+        </div>
             </div>
         </div>
     </div>
     <div id="data" class="tabcon">
-        <div class="contentrr" >
+    <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
             <div class="container">
                 
-                <input type="number" name="m_number" placeholder="Number">
-                
-                <input list="operater" name="operater" placeholder="enter operator" >
-
-                    <datalist id="operater">
-                        <option value="idea">
-                        <option value="vodafone">
-                        <option value="airtel">
-                        <option value="jio">
-                        <option value="relience">
-                    </datalist>
-                    <input list="state" name="state" placeholder="enter state" >
+            <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <input type="number" name="m_number" placeholder="Number" class="inpu">
+                    </div>
+                    <div class="col-md-3">
+                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                            <datalist id="operater">
+                                <option value="idea">
+                                <option value="vodafone">
+                                <option value="airtel">
+                                <option value="jio">
+                                <option value="relience">
+                            </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input list="state" name="state" placeholder="enter state" class="inpu">
 
                         <datalist id="state">
                             <option value="rajasthan">
@@ -178,73 +227,97 @@
                             <option value="punjab">
                             <option value="up">
                         </datalist>
-                    <input type="number" placeholder="enter ammount">    
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                    </div>
+                </div>    
                     <input type="checkbox" > Prepaid
                     <input type="checkbox" > Postpaid</br>
-                    <button data-toggle="modal" data-target="#myModal">Pay now</button>
-                    <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
-    </div>
+                    <button class="pay">Pay now</button>
+            </div>
         </div>
             </div>
-            
-        
-  </div>
+        </div> 
     </div>
-  <div id="wallet" class="tabcontent">
+    </div> 
+    <h6>How to payment with fast mode</h6>
+    <p>With money loaded in your wallet, it takes seconds to make phone and DTH recharges!</p>
+    <h6>How to payment with fast mode</h6>
+    <p>With money loaded in your wallet, it takes seconds to make phone and DTH recharges!</p>
+  </div>   
+  <div id="wallet" class="tabcontent rechar">
   <div class="container-fluid">
-        <button><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Wallet 850</button>
-        <button>Add money</button>
+        <button class="top"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Wallet 850</button>
+        <button class="top2">Buy plan</button>
         <h5>Wallets</h5>
-        <div class="tab">
-            <button class="tablink" onclick="opnCity(event, 'London')" id="defaultOpe">Recharge</button>
-            <button class="tablink" onclick="opnCity(event, 'Paris')">Refferal</button>
-            <button class="tablink" onclick="opnCity(event, 'Tokyo')">Field</button>
-        </div>
-        <div id="London" class="tabcon">
-            <div class="contentrr" >
-                <div class="container">
-                    <p>Recharge wallet Available balance</p>
-                    <input type="number" disabled placeholder="156000"> <span>Points</span>
-                </div>
+        <div class="rechar-box">
+    <div class="tab">
+        <div class="row ">
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'London')" id="defautOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Recharge</button>
+            </div>
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'Paris')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Refferal</button>
+                
+            </div>
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'Tokyo')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Field</button>
             </div>
         </div>
-        <div id="Paris" class="tabcon">
+            
+            
+            
+    </div>
+    <div id="London" class="tabco">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
             <div class="contentrr" >
-                <div class="container">
-                    <p>Refferal wallet Available balance</p>
-                    <input type="number" disabled placeholder="156000"> <span>Points</span>
-                </div>
-            </div>     
+            <div class="container">
+                <p>Total balance<p>
+                <input type="number" placeholder="15000" disabled>
+                <p>Recharge Wallet Available balance</p>
+                <input type="number" placeholder="1500" disabled>
+            </div>
         </div>
-        <div id="Tokyo" class="tabcon">
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="Paris" class="tabco">
+    <div class="row justify-content-center">
+            <div class="col-md-11">
             <div class="contentrr" >
-                <div class="container">
-                    <p>Field wallet Available balance</p>
-                    <input type="number" disabled placeholder="156000"> <span>Points</span>
-                </div>
-            </div>      
+            <div class="container">
+            <p>Total balance<p>
+                <input type="number" placeholder="15000" disabled>
+                <p>Refferal Wallet Available balance</p>
+                <input type="number" placeholder="150" disabled>
+            </div>
         </div>
-        <h4>How to Recharge prepaid mobile online</h4>
+            </div>
+        </div>
+    </div>
+    <div id="Tokyo" class="tabco">
+    <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+                <p>Total balance<p>
+                <input type="number" placeholder="15000" disabled>
+                <p>Feild Wallet Available balance</p>
+                <input type="number" placeholder="1400" disabled>
+            </div>
+        </div>
+            </div>
+        </div> 
+    </div>
+    </div>
+        
+       
+        
+        <h6>How to Recharge prepaid mobile online</h6>
         <p>You can now carry out your prepaid online recharge and bill payments for any number, for your friends and family using MobiKwik. Online recharges can be done through Net Banking, Debit Card.</p>
     </div>
   </div>
@@ -384,6 +457,23 @@ function openCity(evt, cityName) {
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpe").click();
+   
+    function onCity(eve, cityM) {
+        var j, tabco, tablin;
+        tabco = document.getElementsByClassName("tabco");
+        for (j = 0; j < tabco.length; j++) {
+            tabco[j].style.display = "none";
+        }
+       
+        tablin = document.getElementsByClassName("tablin");
+        for (j = 0; j < tablin.length; j++) {
+            tablin[j].className = tablin[j].className.replace(" active", "");
+        }
+       
+        document.getElementById(cityM).style.display = "block";
+        eve.currentTarget.className += " active";
+    }
+    document.getElementById("defautOpe").click();
 </script>   
 
 
