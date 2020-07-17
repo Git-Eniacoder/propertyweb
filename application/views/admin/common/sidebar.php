@@ -27,8 +27,8 @@
                             ></a>
                             <div class="collapse" id="collapseblog" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?php echo base_url();?>admin/post/post_req">home Post</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/post/list_req">list Posts</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/post/post_req">Requirements Posted</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/post/list_req">Listed Property</a>
                             
                             </nav>
                     

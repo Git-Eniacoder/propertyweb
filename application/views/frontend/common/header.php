@@ -41,34 +41,28 @@
                     Home
                   </a>
                 </li>
+                <li class=" nav-item">
+                  <a title="Home" href="<?php echo $url['list']; ?>" class="nav-link">
+                    List Property
+                  </a>
+                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                     Properties
                   </a>
                   <div class="dropdown-menu">
-                    <!-- <a class="dropdown-item" href="#">Rented</a>
-                    <a class="dropdown-item" href="#">Sell</a>
-                    <a class="dropdown-item" href="#">Buy</a> -->
-                    <a class="dropdown-item" href="<?php echo $url['home']; ?>">Home</a>
-                    <a class="dropdown-item" href="<?php echo $url['list']; ?>">list</a>
-                    <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">posttable</a>
-                    <a class="dropdown-item" href="<?php echo $url['recharge']; ?>">recharge</a>
+                    <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">Posted Property</a>
                   </div>
                 </li>
-
         <?php if($status==true){ ?>
-                <li class="  nav-item">
+                <li class="nav-item">
                   <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
                     Recharge
                   </a>
                 </li>
-                <li class="  nav-item">
-                  <a title="Recharge" href="<?php echo $url['wallet']; ?>" class="nav-link">
-                    Wallet
-                  </a>
-                </li>
+                
         <?php } ?>
-                <li class="  nav-item">
+                <li class="nav-item">
                   <a title="Refer & earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
                     Refer & earn
                   </a>
@@ -77,7 +71,7 @@
 
                 <li class="nav-item dropdown">
                   <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                   <?php echo isset($status)?  'My account' : 'Manage' ; ?>
+                   <?php echo isset($uname)?  $uname : 'My Account' ; ?>
                   </button>
                   <div class="dropdown-menu">
                   
@@ -85,6 +79,7 @@
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#login">Login</a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register">Register</a>
                   <?php } else{?>
+                    <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
                     <a class="dropdown-item" href="<?php echo base_url().'login/logout' ; ?>">Logout</a>
                   <?php } ?>
                   </div>
@@ -135,7 +130,7 @@
             <h5>login into your account</h5>
             <p>Login with mobile</p>
             <div id="logsts" class="text-center"></div>
-            <form id="login" action="<?php echo base_url().'login/user_login'; ?>" method="post">
+            <form id="loginn" action="<?php echo base_url().'login/user_login'; ?>" method="post">
             <input type="password" name="pno" placeholder="Your Number">
             <input type="password" name="password" placeholder="Your Password">
             <button>Login</button>

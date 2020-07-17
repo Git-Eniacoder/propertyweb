@@ -46,7 +46,7 @@
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="<?php echo $url['register'] ;?>">Need an account? Sign up!</a></div>
+                                        <!-- <div class="small"><a href="<?php echo $url['register'] ;?>">Need an account? Sign up!</a></div> -->
                                     </div>
                                 </div>
                             </div>

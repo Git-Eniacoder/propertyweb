@@ -22,12 +22,12 @@ class Post_table extends My_Controller
 
     public function index()
     {
-        $data['url'] = $this->config->item('urls');
-        $data['post'] = $this->Db_postreq->get_data();
 
-        $this->load->view('frontend/common/header', $data);
-        $this->load->view('frontend/posttable', $data);
-        $this->load->view('frontend/common/footer', $data);
+        $this->data['post'] = $this->Db_postreq->get_data();
+
+        $this->load->view('frontend/common/header', $this->data);
+        $this->load->view('frontend/posttable', $this->data);
+        $this->load->view('frontend/common/footer', $this->data);
     }
 
 

@@ -14,6 +14,14 @@ class My_Controller extends CI_Controller {
         $this->data['url'] = $this->config->item("urls");
         if($this->session->userdata("id")){
             $this->data['status'] = true;
+            $name = strpos($this->session->userdata("name"),' ');
+                if($name){
+                $name = substr($this->session->userdata("name"),0,$name);
+                }else{
+                $name =$this->session->userdata("name");
+                }
+            
+            $this->data['uname'] = 'Hey, '.$name;
          }
     }
     
