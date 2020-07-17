@@ -64,6 +64,16 @@ $.ajax({
     $('#otp').modal('show');
     $('#login').modal('hide');
   });
+  $('#mreg').click(function(){
+    $('#otp').modal('hide');
+    $('#login').modal('hide');
+    $('#register').modal('show');
+  });
+  $('#mlog').click(function(){
+    $('#otp').modal('hide');
+    $('#login').modal('show');
+    $('#register').modal('hide');
+  });
 </script>
 
   <!-- footer starts -->

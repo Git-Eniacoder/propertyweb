@@ -54,14 +54,14 @@
                     <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">Posted Property</a>
                   </div>
                 </li>
-        <?php if($status==true){ ?>
+      
                 <li class="nav-item">
                   <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
                     Recharge
                   </a>
                 </li>
                 
-        <?php } ?>
+       
                 <li class="nav-item">
                   <a title="Refer & earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
                     Refer & earn
@@ -100,7 +100,7 @@
             <h5>Register</h5>
           </div>
           <div class="right">
-            <h5>Let we help you to search your property here</h5>
+            <h5>Register Your Account With Us</h5>
             <p>Register</p>
             <div id="status" class="text-center"></div>
             <form id="reg" action="<?php echo base_url().'otp/send_otp'; ?>" method="post">
@@ -111,7 +111,7 @@
               <button>Register</button>
             </form>
             <p>If you have an account just Login here</p>
-            <center><a href="#">login</a></center>
+            <center><a class="btn" id="mlog">login</a></center>
           </div>
         </div>
         
@@ -135,9 +135,9 @@
             <input type="password" name="password" placeholder="Your Password">
             <button>Login</button>
             </form>
-            <a class="p-1"  id="para"><p>Forgot Password ?</p></a>
+            <a class="p-1 btn" id="para"><p>Forgot Password ?</p></a>
             <p>New here ? Register with us</p>
-            <center><a href="#">Register</a></center>
+            <center><a class="btn" id="mreg">Register</a></center>
           </div>
         </div>
         
@@ -150,17 +150,16 @@
       <div class="modal-content">
         <div class=" container-fluid modal-body">
           <div class="left">
-            <h5>Register</h5>
+            <h5>Rest Password</h5>
           </div>
           <div class="right">
-            <h5>login into your account</h5>
-            <p>Login with mobile</p>
-            <input type="number" placeholder="verify">
-            <input type="number" placeholder="verify">
-            <button>Login</button>
+            <h5>Forget Password ? Don't Worry</h5>
+            <p>Enter Your Registered Number</p>
+            <input type="number" placeholder="Mobile no">
+            <button>Submit</button>
 
             <p>New here ? Register with us</p>
-            <center><a href="#">Register</a></center>
+            <center><a class="btn" id="mreg">Register</a></center>
           </div>
         </div>
         

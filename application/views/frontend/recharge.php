@@ -23,7 +23,12 @@
                 <form method="post" action="<?php echo $url['buyplan']; ?>">
                   <input type="hidden" value="recharge_wallet" name="wallet">
                   <input type="hidden" value="" name="balance">
+                  <?php
+                  if($status){ ?>
                   <button type="submit">Recharge Rs. 960</button>
+                  <?php } else{?>
+                    <button data-toggle="modal" data-target="#login">Recharge Rs. 960</button>
+                  <?php } ?>
                 </form>
                 
               </div>
