@@ -25,6 +25,7 @@ $config['wallet'] = base_url().'wallet/Recharge';
 
 // recharge Controller
 $config['recharge'] = base_url().'recharge_mod/Recharge';  // Done
+$config['buyplan'] = base_url().'recharge_mod/Recharge/buyplan';
 
 // Posttable
 $config['posttable'] = base_url().'admin/postreq_mod/Post_table'; 
@@ -43,6 +44,8 @@ $config['image'] = base_url().'assets/img/';
 
 //Referand earn
 $config['referandearn'] = base_url().'admin/referandearn_mod/referandearn';
+
+
 
 
 

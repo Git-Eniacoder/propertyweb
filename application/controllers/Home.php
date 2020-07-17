@@ -12,16 +12,16 @@ class Home extends My_Controller {
     public function __construct() {
 
         parent::__construct();
+        
         $this->load->model('pages/Db_postreq');
     }
 
     public function index()
     {
-        $data['url'] = $this->config->item('urls');
-        
-        $this->load->view('frontend/common/header',$data);
-        $this->load->view('frontend/home',$data);
-        $this->load->view('frontend/common/footer',$data);
+
+        $this->load->view('frontend/common/header',$this->data);
+        $this->load->view('frontend/home',$this->data);
+        $this->load->view('frontend/common/footer',$this->data);
 
     }
 

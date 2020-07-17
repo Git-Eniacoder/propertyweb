@@ -15,21 +15,8 @@
                                 ><div class="sb-nav-link-icon"><i class="fa fa-link" aria-hidden="true"></i></div>
                                 Social Links
                             </a>
-                            <!-- <div class="sb-sidenav-menu-heading">Blog Part</div>
+                           
                             
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseblog" aria-expanded="false" aria-controls="collapseblog"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Blog
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
-                            <div class="collapse" id="collapseblog" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?php echo base_url();?>admin/blog/new_blog">New Post</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/blog/all_blog">All Posts</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/blog/cat_blog">Categories</a>
-                            </nav>
-                    
-                            </div> -->
 
                             <div class="sb-sidenav-menu-heading">View request</div>
                             
