@@ -322,7 +322,26 @@
     </div>
   </div>
   <div id="refer" class="tabcontent">
-    eretetev
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <h1>REFER AND EARN</h1>
+            </div>
+            <div class="col-md-6">
+                <img src="<?php echo $url['image'] . 'refer.png'; ?>">
+            </div>
+        </div>
+        <p>When you refer a friend and invite them to sign up with, both you and your friend earn money by referral code. You earn Rs 100 SuperCash each, when your friend adds Rs 50 in their wallet. You can earn up to Rs 5,000 SuperCash through Refer and Earn. Now earn money by referring your friends to.</br>
+
+How to refer and earn in two simple steps?
+Make money with friends in just a few clicks. Refer a friend and earn money.</br>
+
+Click on the Refer & Earn App Card</br>
+Share via WhatsApp or any other medium</br>
+Share your referral code and earn money by referring your friends now! Earn money endlessly!
+
+</p>
+    </div>
   </div>
   <div id="history" class="tabcontent">
     <div class="container-fluid">
