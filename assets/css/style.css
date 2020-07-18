@@ -454,14 +454,7 @@
 .foot{
   background-color:#313061 ;
   padding-top: 15px;
-<<<<<<< HEAD
   padding-bottom: 2rem;
-=======
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: +2;
->>>>>>> 4940fa899e1abb0060260fb174ff02f1ca09a64d
 }
 .foot .style1 {
 
@@ -1503,6 +1496,14 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-top: .5rem;
   padding-bottom: .5rem;
   margin-bottom: 1rem;
+}
+
+.fqs{
+  margin-top: 1.5rem;
+
+}
+.fqs-head{
+    font-size: 1.3rem;
 }
 
 
