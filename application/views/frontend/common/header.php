@@ -155,9 +155,11 @@
           <div class="right">
             <h5>Forget Password ? Don't Worry</h5>
             <p>Enter Your Registered Number</p>
-            <input type="number" placeholder="Mobile no">
+            <div id="resetid" class="text-center"></div>
+            <form id="frest" action="<?php echo base_url().'otp/reset' ;?>" method="post">
+            <input type="number" name="mobile" placeholder="Mobile no">
             <button>Submit</button>
-
+            </form>
             <p>New here ? Register with us</p>
             <center><a class="btn" id="mreg">Register</a></center>
           </div>
