@@ -18,6 +18,9 @@ class Home extends My_Controller {
 
     public function index()
     {
+        // echo "<pre>";
+        // print_r($this->data);
+        // die;
 
         $this->load->view('frontend/common/header',$this->data);
         $this->load->view('frontend/home',$this->data);

@@ -8,6 +8,7 @@ class My_Controller extends CI_Controller {
     
     protected $data;
     public function __construct(){
+        
         $this->data['status'] = false;
         parent::__construct();
         $this->config->load("urls", true);
@@ -23,6 +24,9 @@ class My_Controller extends CI_Controller {
             
             $this->data['uname'] = 'Hey, '.$name;
          }
+        //   echo "<pre>";
+        // print_r($this->data);
+        // die;
     }
     
 }
