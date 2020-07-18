@@ -12,7 +12,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
  
 
-
+<div class="wallet">
 
 <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -25,22 +25,7 @@
           <i class="fas fa-times"></i>
         </div>
       </div>
-      <!-- <div class="sidebar-header">
-        <div class="user-pic">
-          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-            alt="User picture">
-        </div>
-        <div class="user-info">
-          <span class="user-name">Jhon
-            <strong>Smith</strong>
-          </span>
-          <span class="user-role">Administrator</span>
-          <span class="user-status">
-            <i class="fa fa-circle"></i>
-            <span>Online</span>
-          </span>
-        </div>
-      </div> -->
+      
       <!-- sidebar-header  -->
       
       <!-- sidebar-search  -->
@@ -138,7 +123,7 @@
                 </div>   
                     <input type="checkbox" > Prepaid
                     <input type="checkbox" > Postpaid</br>
-                    <button class="pay">Pay now</button>
+                    <button class="pay" data-toggle="modal" data-target="#myModal">Pay now</button>
             </div>
         </div>
             </div>
@@ -228,6 +213,46 @@
     <p>With money loaded in your wallet, it takes seconds to make phone and DTH recharges!</p>
     <h6>How to payment with fast mode</h6>
     <p>With money loaded in your wallet, it takes seconds to make phone and DTH recharges!</p>
+
+    <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        
+       
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5>Confirm Recharge</h5>
+          <div class="row">
+            <div class="col-md-6">
+                <p>Mobile Number</p>
+                <p>operator</p>
+                <p>plan</p>
+                <p>validity</p>
+                <p>TalkTime</p>
+                <p>Plan Discription</p>
+            </div>
+            <div class="col-md-6">
+                <p>8463774215</p>
+                <P>Idea | Rajasthan</P>
+                <P>Special Offer</P>
+                <P>2 days</P>
+                <P>0</P>
+                <P>Now get Truly Unlimited Local/National Calls to all Networks+200MB Data.</P>
+            </div>
+          </div>
+          <button>Proceed</button>
+          <p>Coupon is Applied ! you will get 5 rupess cashback</p>
+          <a href="#">Apply coupon</a>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  
   </div>   
   <div id="wallet" class="tabcontent rechar">
   <div class="container-fluid">
@@ -374,6 +399,7 @@ Share your referral code and earn money by referring your friends now! Earn mone
   </div>
   </main>
   <!-- page-content" -->
+</div>
 </div>
 <!-- page-wrapper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

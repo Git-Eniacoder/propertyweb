@@ -192,39 +192,3 @@ class Listing extends My_Controller
 
 
 ?>
-
-
-
-
-<!-- 
-
-$this->Db_postreq->insert($info);
-
-
-// insert Img Config that help to upload path
-$config['upload_path']          = './assets/img/property_list/';
-$config['allowed_types']        = 'gif|jpg|png';
-
-$info['list_img'] =  $config['file_name'];
-$this->load->library('upload', $config);
-// $this->upload->do_upload('list_img');
-
-
-if ($this->upload->do_upload('list_img')) {
-
-    $data = $this->upload->data();
-
-    // echo "<pre>";
-    // print_r($data);
-    // die();
-
-    $info['list_img'] = base_url('uploads/' . $data['raw_name'] . $data['file_ext']);
-
-    // Insert this data to our database
-
-    $this->index();
-} else {
-
-    $this->index();
-    print_r($this->upload->display_errors());
-} -->

@@ -1,6 +1,17 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+/* load class in core folder */
+function my_load($class) {        
 
+    if (strpos($class, 'CI_') !== 0) {            
+        if (is_readable(APPPATH . 'core' . DIRECTORY_SEPARATOR . $class . '.php' )) {                
+            require_once (APPPATH . 'core' . DIRECTORY_SEPARATOR . $class . '.php');                
+        }
+    }
+
+}
+
+spl_autoload_register('my_load');
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -23,8 +34,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'http://localhost/admin-panel/';
 $config['base_url'] = 'http://localhost/propertyweb/';
+// $config['base_url'] = 'http://testing.eniacoder.com/propertyweb/';
 
 /*
 |--------------------------------------------------------------------------

@@ -1,5 +1,3 @@
-
-
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Referandearn extends My_Controller
