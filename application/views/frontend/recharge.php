@@ -1,5 +1,6 @@
 <!-- Recharge Section -->
 <!-- <?php print_r($post['all_data']->recharge_wallet) ?> -->
+<main class="main">
 <div class="recharge-main">
   <div class="container">
     <div class="row">
@@ -49,6 +50,8 @@
     </div>
   </div>
 </div>
+
+</main>
 
 
 

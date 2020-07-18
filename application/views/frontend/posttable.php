@@ -1,5 +1,5 @@
 <!-- PostTable  -->
-
+<main class="main">
 <div class="posttable">
   <div class="container">
 
@@ -51,5 +51,5 @@
     </table>
   </div>
 </div>
-
+</main>
 <!-- End of PostTable  -->

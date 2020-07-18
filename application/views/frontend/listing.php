@@ -7,7 +7,7 @@
 // die();
 
 ?>
-
+<main class="main">
 <div class="list-main">
   <div class="container">
     <div class="row">
@@ -101,5 +101,6 @@
   </div>
 </div>
 
+</main>
 
 <!-- End Of List -->
