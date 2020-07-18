@@ -454,6 +454,10 @@
 .foot{
   background-color:#313061 ;
   padding-top: 15px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: +2;
 }
 .foot .style1 {
 
@@ -916,13 +920,15 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 /*----------------sidebar-wrapper----------------*/
 
+
 .sidebar-wrapper {
   width: 260px;
-  height: auto;
+  height: 110%;
  
-  position: absolute;
-  z-index: +2;
+  position: absolute;;
+  z-index: +1;
   left: -300px;
+  
   
 }
 
