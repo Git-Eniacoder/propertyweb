@@ -28,6 +28,8 @@
 
         </div>
 
+      </div>
+
 
         <div class="col-md-3">
           <div class="card">
@@ -42,12 +44,13 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-img">
-              <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
-            </div>
-            <div class="card-body">
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-img">
+            <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
+          </div>
+          <div class="card-body">
 
             <p>Selling property online was never so easy and is now just a click. a leading property site to rent your property</p>
             <div class="text-center">
@@ -55,12 +58,13 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-img">
-              <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
-            </div>
-            <div class="card-body">
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-img">
+            <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
+          </div>
+          <div class="card-body">
 
               <p>Shop Online for men, women and kids fashion, home décor and furnishings, kitchen apppliances</p>
               <div class="text-center">
@@ -199,12 +203,11 @@
 
   </div>
 
-  <div class="post">
-    <div class="container">
-
 <div id="pproperty" class="post">
   <div class="container">
 
+    <h2 class="text-center">Post your requirement</h2>
+    <hr class="style1">
 
 
       <!-- Column 1  -->

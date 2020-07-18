@@ -897,7 +897,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .page-wrapper.toggled .sidebar-wrapper {
   left: 0px;
-  
+  height: 48rem;
+  /* z-index: -1; */
 }
 
 @media screen and (min-width: 768px) {
@@ -1190,7 +1191,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   background-color: #FF5757;
   padding-bottom: 2rem;
   border-radius: 5px;
-  padding-left: 1.5rem;
+  /* padding-left: 1.5rem; */
 }
 .page-wrapper .page-content  .rechar .rechar-box a{
   width: 100%;
@@ -1539,11 +1540,11 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 .wallet{
-  padding-top: 5.5rem;
+  padding-top: 3.5rem;
 }
 
 .main{
-  padding: 5rem;
+  padding-top: 3rem;
 }
 
 .wal-main-icon{
@@ -1578,12 +1579,35 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   border-bottom: 1px solid #FF5757 !important;
 }
 
+.show_head{
+  border-bottom: 1px solid #eee;
+}
+
+/* Show property CSS */
+.show_head {
+    border-bottom: 1px solid #eee;
+}
+
+.show-title {
+    margin-bottom: 0.4rem !important;
+}
+
+.base-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    ;
+}
+
+/* // end of show property CSS */
+
 @media screen and (max-width: 600px){
 
 
 
   .main{
-      padding: 5rem 1rem 0rem 1rem;
+      padding: 3rem 1rem 0rem 1rem;
   }
 
   .page-wrapper .page-content  .rechar .rechar-box .contentrr{ 

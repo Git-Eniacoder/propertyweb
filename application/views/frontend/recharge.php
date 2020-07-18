@@ -6,7 +6,6 @@
   $id='rzp_test_ZDu7FphXqoq9vd';
   $key='xCHB8eYRtg2hoXn8fCHN7yMC';
   $api=new Api($id,$key);
-
   $order=$api->order->create(array(
   'receipt'=>12323,
   'amount'=>90000,
@@ -14,6 +13,7 @@
   'currency'=>'INR',)
   );
 ?>
+<main class="main">
 <div class="recharge-main">
   <div class="container">
     <div class="row">
@@ -76,3 +76,5 @@
     </div>
   </div>
 </div>
+</main>
+<!-- end Of recharge -->
