@@ -9,8 +9,8 @@
       <ol class="breadcrumb mb-4">
          <li class="breadcrumb-item active">Site Setting</li>
       </ol>
-      <div class="container">
-         <form action="<?php echo base_url().'admin/core/site_setting/update_site/';?>" method="post">
+      <div class="container py-4">
+         <form action="<?php echo base_url().'admin/core/site_setting/update_site/';?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                <label for="exampleFormControlInput1">Site Title</label>
                <input type="text" class="form-control" name="site_title" value="<?php echo $site['site_title']; ?>" id="exampleFormControlInput1" placeholder="Site Title">
@@ -27,10 +27,8 @@
               </div>
             </div>
             <div class="form-group">
-               <label for="exampleFormControlSelect">Example select</label>
-               <textarea class="form-control" name ="eg_select"  id="exampleFormControlTextarea1" rows="1">
-                 <?php echo $site['eg_select']; ?>
-               </textarea>
+               <label for="exampleFormControlSelect">Extra Css</label>
+               <textarea class="form-control" name ="eg_select"  id="" rows="3"><?php echo $site['eg_select']; ?></textarea>
             </div>
             <button type="submit" class="btn btn-success">Update</button>
          </form>
@@ -44,13 +42,18 @@
     
     reader.onload = function(e) {
       $('#blah').attr('src', e.target.result);
+      
     }
     
     reader.readAsDataURL(input.files[0]); // convert to base64 string
+    console.log(input.files[0].name)
   }
 }
 
 $("#imagepreview").change(function() {
   readURL(this);
 });
+</script>
+<script>
+$("#blah").attr("src", "<?php echo base_url().'assets/img/logo/'.$site['site_logo']; ;?>");
 </script>

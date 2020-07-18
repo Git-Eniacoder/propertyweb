@@ -27,8 +27,8 @@
           <nav class="navbar navbar-expand-lg">
             <div class="logo">
               <a class="custom-logo-link " rel="<?php echo $url['home']; ?>" href="home">
-                <!-- <img width="133" height="55" src="assets/img/headlogo.svg" alt="Logo" class="custom-logo"> -->
-                LOGO
+                <img width="133" height="55" src="<?php echo $url['image'].'logo/'.$site['site_logo'] ?>" alt="Logo" class="custom-logo">
+                
               </a>
             </div>
             <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -155,9 +155,11 @@
           <div class="right">
             <h5>Forget Password ? Don't Worry</h5>
             <p>Enter Your Registered Number</p>
-            <input type="number" placeholder="Mobile no">
+            <div id="resetid" class="text-center"></div>
+            <form id="frest" action="<?php echo base_url().'otp/reset' ;?>" method="post">
+            <input type="number" name="mobile" placeholder="Mobile no">
             <button>Submit</button>
-
+            </form>
             <p>New here ? Register with us</p>
             <center><a class="btn" id="mreg">Register</a></center>
           </div>

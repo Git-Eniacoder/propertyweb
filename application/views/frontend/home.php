@@ -20,10 +20,9 @@
             </div>
             <div class="card-body">
 
-              <p>Home seekers get a virtual tour of your property. Only those with genuine interest approach you.</p>
-              <div class="text-center">
-                <a href="list"><button>List Property</button></a>
-              </div>
+            <p>Home seekers get a virtual tour of your property. Only those with genuine interest approach you.</p>
+            <div class="text-center">
+              <a href="<?php echo $url['list']; ?>"><button>List Property</button></a>
             </div>
           </div>
 
@@ -37,10 +36,9 @@
             </div>
             <div class="card-body">
 
-              <p>Fast & Easy Recharge for Prepaid Mobile, Postpaid Mobile, Datacard & DTH. T & C apply. </p>
-              <div class="text-center">
-                <a href="recharge"> <button>Recharge</button></a>
-              </div>
+            <p>Fast & Easy Recharge for Prepaid Mobile, Postpaid Mobile, Datacard & DTH. T & C apply. </p>
+            <div class="text-center">
+              <a href="<?php echo $url['recharge']; ?>"> <button>Recharge</button></a>
             </div>
           </div>
         </div>
@@ -51,10 +49,9 @@
             </div>
             <div class="card-body">
 
-              <p>Selling property online was never so easy and is now just a click. a leading property site to rent your property</p>
-              <div class="text-center">
-                <button>Post Property</button>
-              </div>
+            <p>Selling property online was never so easy and is now just a click. a leading property site to rent your property</p>
+            <div class="text-center">
+            <a href="#pproperty"><button>Post Property</button></a>
             </div>
           </div>
         </div>
@@ -205,21 +202,21 @@
   <div class="post">
     <div class="container">
 
-      <h2 class="text-center">Post your requirement</h2>
-      <hr class="style1">
+<div id="pproperty" class="post">
+  <div class="container">
 
 
 
       <!-- Column 1  -->
-      <form method="post" action="<?php echo "http://localhost/propertyweb/home" ?>/add">
-        <div class="row justify-content-center">
-          <div class="col-md-4">
+      <form method="post"  action="<?php echo base_url();?>home/add" >
+    <div class="row justify-content-center">
+      <div class="col-md-4">
 
-            <h5>Enter Below Details</h5>
-            <div>
-              <label>Name<span style="color: red;">*</span></label>
-              <input type="text" name="post-name" placeholder="Enter Name">
-            </div>
+        <h5>Enter Below Details</h5>
+        <div>
+          <label>Name<span style="color: red;">*</span></label>
+          <input type="text" name="post-name" placeholder="Enter Name">
+        </div>
 
             <div>
               <label>Email<span style="color: red;">*</span></label>

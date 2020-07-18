@@ -16,7 +16,16 @@ class Db_register extends CI_Model {
         }
         
     }
-
+    public function reset_password($no,$pass){
+        $this->db->set('password',md5($pass))->where('mobile_no',$no)->update('user_register');
+        
+        if($this->db->affected_rows()){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
 }
 
 /* End of file Db_register.php */
