@@ -454,6 +454,7 @@
 .foot{
   background-color:#313061 ;
   padding-top: 15px;
+  padding-bottom: 2rem;
 }
 .foot .style1 {
 
@@ -916,13 +917,15 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 /*----------------sidebar-wrapper----------------*/
 
+
 .sidebar-wrapper {
   width: 260px;
-  height: auto;
+  height: 110%;
  
-  position: absolute;
-  z-index: +2;
+  position: absolute;;
+  z-index: +1;
   left: -300px;
+  
   
 }
 
@@ -1493,6 +1496,14 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-top: .5rem;
   padding-bottom: .5rem;
   margin-bottom: 1rem;
+}
+
+.fqs{
+  margin-top: 1.5rem;
+
+}
+.fqs-head{
+    font-size: 1.3rem;
 }
 
 
