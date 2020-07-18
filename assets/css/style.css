@@ -40,6 +40,7 @@
     height: auto;
     background-color: white;
     padding: 1rem;
+    box-shadow: 1px 1px 3px rgba( 0, 0, 0 , 0.3);
   }        
   .head .nav-link{
     color: #413F3F;
@@ -266,7 +267,7 @@
   padding-bottom: 2rem;
 }
 .pro-card .card{
-  width: 100%;
+  width: 93%;
   height: auto;
   border: none;
   background-color:#FFFBFB;
@@ -295,7 +296,7 @@
 }
 .pro-card .card .city-tag{
   position: absolute;
-  top: 14rem;
+  top: 12.3rem;
   left: 0;
   background-color: #FF5757;
   color: white;
@@ -644,6 +645,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-bottom: 2rem;
   background-color: rgba(175, 175, 175, 0.5);
   border: none;
+  margin-top: 1.6rem;
   margin-bottom: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1090,3 +1092,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-bottom: .5rem;
   margin-bottom: 1rem;
 }
+
+
+/* .property-column{
+  padding-top: 3rem;
+} */

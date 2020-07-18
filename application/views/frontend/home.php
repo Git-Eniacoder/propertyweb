@@ -20,7 +20,7 @@
           </div>
           <div class="card-body">
 
-            <p>Some example text some example text. John Doe is an architect and engineer</p>
+            <p>Home seekers get a virtual tour of your property. Only those with genuine interest approach you.</p>
             <div class="text-center">
               <a href="list"><button>List Property</button></a>
             </div>
@@ -37,7 +37,7 @@
           </div>
           <div class="card-body">
 
-            <p>Some example text some example text. John Doe is an architect and engineer</p>
+            <p>Fast & Easy Recharge for Prepaid Mobile, Postpaid Mobile, Datacard & DTH. T & C apply. </p>
             <div class="text-center">
               <a href="recharge"> <button>Recharge</button></a>
             </div>
@@ -51,7 +51,7 @@
           </div>
           <div class="card-body">
 
-            <p>Some example text some example text. John Doe is an architect and engineer</p>
+            <p>Selling property online was never so easy and is now just a click. a leading property site to rent your property</p>
             <div class="text-center">
               <button>Post Property</button>
             </div>
@@ -65,7 +65,7 @@
           </div>
           <div class="card-body">
 
-            <p>Some example text some example text. John Doe is an architect and engineer</p>
+            <p>Shop Online for men, women and kids fashion, home décor and furnishings, kitchen apppliances</p>
             <div class="text-center">
               <button>Shopping</button>
             </div>
@@ -99,7 +99,7 @@
     <div class="row justify-content-center">
       <div class="col-md-7">
         <h1>Search For your property</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam qui repudiandae quis debitis neque repellat odio eos fugiat beatae nesciunt.</p>
+        <p>Find your perfect home on Housing.com - the only property app you need for your home purchase or rental needs. If you are looking to buy or rent a ready</p>
         <center><input type="text" name="list" placeholder="Enter city.."> <button>Search</button></center>
       </div>
 
@@ -124,7 +124,7 @@
               <span class="print-subs">Rent</span>
             </div></br>
             <div class="text-center">
-              <button>Shopping</button>
+              <button>Contact</button>
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@
               <span class="print-subs">Rent</span>
             </div></br>
             <div class="text-center">
-              <button>Shopping</button>
+              <button>Contact</button>
             </div>
           </div>
         </div>
@@ -158,7 +158,7 @@
               <span class="print-subs">Rent</span>
             </div></br>
             <div class="text-center">
-              <button>Shopping</button>
+              <button>Contact</button>
             </div>
           </div>
         </div>
@@ -175,7 +175,7 @@
               <span class="print-subs">Rent</span>
             </div></br>
             <div class="text-center">
-              <button>Shopping</button>
+              <button>Contact</button>
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@
               <span class="print-subs">Rent</span>
             </div></br>
             <div class="text-center">
-              <button>Shopping</button>
+              <button>Contact</button>
             </div>
           </div>
         </div>
@@ -210,6 +210,7 @@
     <div class="row justify-content-center">
 
 
+  
       <!-- Column 1  -->
       <div class="col-md-4">
 
@@ -268,8 +269,6 @@
 
       </div>
       <!-- Column 1  end -->
-
-
 
 
       <!-- Column 2  -->
@@ -345,6 +344,7 @@
 
 
       </div>
+    
     </div>
     <center><button>Post Your Request</button></center>
   </div>
