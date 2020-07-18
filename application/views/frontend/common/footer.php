@@ -60,6 +60,39 @@ $.ajax({
 });
 </script>
 <script>
+
+$("#frest").submit(function(event){
+event.preventDefault();
+var post_url = $(this).attr("action"); 
+var request_method = $(this).attr("method"); 
+var form_data = $(this).serialize(); 
+    console.log(request_method);
+$('#resetid').html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+$.ajax({
+    url : post_url,
+    type: request_method,
+    dataType:"json",
+    data : form_data, 
+}).done(function(response){ 
+ console.log(response); 
+ if(response.form){
+ $('#resetid').html(response.msg);
+ }
+ if(response.status){
+    console.log(response);
+    $('#resetid').html('');
+    $('#frest').attr('action', '<?php echo base_url()."otp/verify_reset" ;?>');
+    $('#frest').html('<input type="text" name="rotp" required><button>Verify Otp</button>');
+  }
+  if(response.otp){
+    console.log(response);
+    $('#resetid').html(response.msg);
+   
+  }
+});
+});
+</script>
+<script>
   $('#para').click(function(){
     $('#otp').modal('show');
     $('#login').modal('hide');
