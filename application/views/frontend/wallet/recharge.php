@@ -162,14 +162,26 @@
                 <div class="rechar-box">
                     <div class="tab">
                         <div class="row ">
-                            <div class="col-md-2">
-                                <button class="tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Mobile</button>
-                            </div>
-                            <div class="col-md-2">
-                                <button class="tablink" onclick="opnCity(event, 'dth')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">DTH</button>
-                            </div>
-                            <div class="col-md-2">
-                                <button class="tablink" onclick="opnCity(event, 'data')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Data</button>
+                            <div class="wal-main-icon">
+                                <div class="wal-icons-bx tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe">
+
+                                    <img src="<?php echo $url['image'] . 'wal-mobile.svg'; ?>" alt="">
+                                    <p class="wlicon">Mobile</p>
+
+                                </div>
+                                <div class="wal-icons-bx tablink" onclick="opnCity(event, 'dth')">
+
+
+                                    <img src="<?php echo $url['image'] . 'wal-dth.svg'; ?>" alt="">
+                                    <p class="wlicon">DTH</p>
+
+                                </div>
+                                <div class="wal-icons-bx tablink" onclick="opnCity(event, 'data')">
+
+                                    <img src="<?php echo $url['image'] . 'wal-data-2.svg'; ?>" alt="">
+                                    <p class="wlicon">Data Card</p>
+
+                                </div>
                             </div>
                         </div>
 
@@ -232,7 +244,7 @@
                                     <div class="container">
                                         <div class="row justify-content-center">
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <label for="state">Select Operator</label>
                                                 <input list="operater" name="operater" placeholder="Operator" class="inpu">
                                                 <datalist id="operater">
@@ -244,12 +256,12 @@
                                                 </datalist>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <label for="state">Mobile Number / Customer Id</label>
                                                 <input type="number" name="m_number" placeholder="Mobile Number / Customer Id" class="inpu">
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <label for="state">Enter Amount</label>
                                                 <input type="number" placeholder="Enter Ammount" class="inpu">
                                             </div>
@@ -474,6 +486,10 @@
     </div>
 
             </div>
+
+
+
+
             <div id="wallet" class="tabcontent rechar">
                 <div class="container-fluid">
                     <button class="top"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Wallet 850</button>
@@ -481,18 +497,32 @@
                     <h5>Wallets</h5>
                     <div class="rechar-box">
                         <div class="tab">
-                            <div class="row ">
-                                <div class="col-md-2">
-                                    <button class="tablin" onclick="onCity(event, 'London')" id="defautOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Recharge</button>
-                                </div>
-                                <div class="col-md-2">
-                                    <button class="tablin" onclick="onCity(event, 'Paris')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Refferal</button>
 
-                                </div>
-                                <div class="col-md-2">
-                                    <button class="tablin" onclick="onCity(event, 'Tokyo')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Field</button>
+                            <div class="row ">
+                                <div class="wal-main-icon">
+                                    <div class="wal-icons-bx tablink" onclick="onCity(event, 'London')" id="defautOpe">
+
+                                        <img src="<?php echo $url['image'] . 'wal-wallet-2.svg'; ?>" alt="">
+                                        <p class="wlicon">Recharge Wallet</p>
+
+                                    </div>
+                                    <div class="wal-icons-bx tablink" onclick="onCity(event, 'Paris')">
+
+
+                                        <img src="<?php echo $url['image'] . 'wal-wallet-2.svg'; ?>" alt="">
+                                        <p class="wlicon">Referal Wallet</p>
+
+                                    </div>
+                                    <div class="wal-icons-bx tablink" onclick="onCity(event, 'Tokyo')">
+
+                                        <img src="<?php echo $url['image'] . 'wal-wallet-2.svg'; ?>" alt="">
+                                        <p class="wlicon">Field Wallet</p>
+
+                                    </div>
                                 </div>
                             </div>
+
+
 
 
 
@@ -503,9 +533,9 @@
                                     <div class="contentrr">
                                         <div class="container">
                                             <p>Total balance<p>
-                                                    <input type="number" placeholder="15000" disabled>
-                                                    <p>Recharge Wallet Available balance</p>
-                                                    <input type="number" placeholder="1500" disabled>
+                                            <input type="number" placeholder="15000" disabled class="wal-input">
+                                            <p>Recharge Wallet Available balance</p>
+                                            <input type="number" placeholder="1500" disabled class="wal-input">
                                         </div>
                                     </div>
                                 </div>
@@ -519,9 +549,9 @@
                                     <div class="contentrr">
                                         <div class="container">
                                             <p>Total balance<p>
-                                                    <input type="number" placeholder="15000" disabled>
+                                                    <input type="number" placeholder="15000" disabled class="wal-input">
                                                     <p>Refferal Wallet Available balance</p>
-                                                    <input type="number" placeholder="150" disabled>
+                                                    <input type="number" placeholder="150" disabled class="wal-input">
                                         </div>
                                     </div>
                                 </div>
@@ -533,9 +563,9 @@
                                     <div class="contentrr">
                                         <div class="container">
                                             <p>Total balance<p>
-                                                    <input type="number" placeholder="15000" disabled>
-                                                    <p>Feild Wallet Available balance</p>
-                                                    <input type="number" placeholder="1400" disabled>
+                                            <input type="number" placeholder="15000" disabled class="wal-input">
+                                            <p>Feild Wallet Available balance</p>
+                                            <input type="number" placeholder="1400" disabled class="wal-input">
                                         </div>
                                     </div>
                                 </div>
@@ -721,3 +751,26 @@
     }
     document.getElementById("defautOpe").click();
 </script>
+
+<!--
+<div class="row ">
+    <div class="wal-main-icon">
+    <div class="col-md-2 tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe">
+        <button class="tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe"><img src="<?php //echo $url['image'] . 'wallet.png'; 
+                                                                                                ?>" style="width:25px">Mobile</button>
+        <img src="<?php // echo $url['image'] . 'wal-mobile.svg'; 
+                    ?>" alt="">
+        <p class="wlicon">Mobile</p>
+    </div>
+    <div class="col-md-2">
+        <button class="tablink" onclick="opnCity(event, 'dth')"><img src="<?php // echo $url['image'] . 'wallet.png'; 
+                                                                            ?>" style="width:25px">DTH</button>
+    </div>
+    <div class="col-md-2">
+        <button class="tablink" onclick="opnCity(event, 'data')"><img src="<?php // echo $url['image'] . 'wallet.png'; 
+                                                                            ?>" style="width:25px">Data</button>
+    </div>
+    </div>
+</div>
+
+-->

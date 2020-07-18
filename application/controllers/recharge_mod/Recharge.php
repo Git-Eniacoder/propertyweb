@@ -12,8 +12,6 @@ class Recharge extends My_Controller {
         $this->load->view('frontend/common/footer', $this->data);
     }
      function buyplan(){
-        echo '<pre>';print_r($_POST);
-
         $this->load->model('Db_Wallet');
         $wallet=$this->input->post('wallet');
         $update_bal=$this->input->post('balance')+1200;
