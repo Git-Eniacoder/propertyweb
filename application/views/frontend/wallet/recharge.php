@@ -13,15 +13,110 @@
 
 <div class="wallet">
 
-    <div class="page-wrapper chiller-theme toggled">
-        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-            <i class="fas fa-bars"></i>
-        </a>
-        <div id="sidebar" class="sidebar-wrapper">
-            <div class="sidebar-content">
-                <div class="sidebar-brand">
-                    <div id="close-sidebar">
-                        <i class="fas fa-times"></i>
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <div id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="#">pro sidebar</a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      
+      <!-- sidebar-header  -->
+      
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          
+          
+          
+          
+         
+          <li>
+            <a href="#" class="tablinks" onclick="openCity(event, 'recharge')" id="defaultOpen">
+                Recharges
+            </a>
+          </li>
+          
+          <li>
+            <a href="#" class="tablinks" onclick="openCity(event, 'wallet')" >
+                Wallets
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tablinks" onclick="openCity(event, 'refer')" >
+                Refer and earn
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tablinks" onclick="openCity(event, 'history')">
+                History
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    
+</div>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+  <div id="recharge" class="tabcontent rechar">
+    <button class="top"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Wallet 850</button>
+    <button class="top2">Add money</button>
+    <h5>Mobile Recharges</h5>
+    <div class="rechar-box">
+    <div class="tab">
+        <div class="row ">
+            <div class="col-md-1">
+                <a href="#" class="tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:40px">Mobile Recharge</a>
+            </div>
+            <div class="col-md-1">
+                <a href="#" class="tablink" onclick="opnCity(event, 'dth')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:40px">DTH</a>
+            </div>
+            <div class="col-md-1">
+                <a href="#" class="tablink" onclick="opnCity(event, 'data')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:40px">Data</a>
+            </div>
+        </div>
+            
+            
+            
+    </div>
+    <div id="mobile" class="tabcon">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+                
+            <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <input type="number" name="m_number" placeholder="Number" class="inpu">
+                    </div>
+                    <div class="col-md-3">
+                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                            <datalist id="operater">
+                                <option value="idea">
+                                <option value="vodafone">
+                                <option value="airtel">
+                                <option value="jio">
+                                <option value="relience">
+                            </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input list="state" name="state" placeholder="enter state" class="inpu">
+
+                        <datalist id="state">
+                            <option value="rajasthan">
+                            <option value="hariyana">
+                            <option value="delhi">
+                            <option value="punjab">
+                            <option value="up">
+                        </datalist>
                     </div>
                 </div>
 
@@ -262,7 +357,121 @@
 
                         </div>
                     </div>
-                </div>
+                </div>    
+                    <input type="checkbox" > Prepaid
+                    <input type="checkbox" > Postpaid</br>
+                    <button class="pay">Pay now</button>
+            </div>
+        </div>
+            </div>
+        </div> 
+    </div>
+    </div> 
+    <h6>How to payment with fast mode</h6>
+    <p>With money loaded in your wallet, it takes seconds to make phone and DTH recharges!</p>
+    <h6>How to payment with fast mode</h6>
+    <p>With money loaded in your wallet, it takes seconds to make phone and DTH recharges!</p>
+
+    <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        
+       
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5>Confirm Recharge</h5>
+          <div class="row">
+            <div class="col-md-6">
+                <p>Mobile Number</p>
+                <p>operator</p>
+                <p>plan</p>
+                <p>validity</p>
+                <p>TalkTime</p>
+                <p>Plan Discription</p>
+            </div>
+            <div class="col-md-6">
+                <p>8463774215</p>
+                <P>Idea | Rajasthan</P>
+                <P>Special Offer</P>
+                <P>2 days</P>
+                <P>0</P>
+                <P>Now get Truly Unlimited Local/National Calls to all Networks+200MB Data.</P>
+            </div>
+          </div>
+          <button>Proceed</button>
+          <p>Coupon is Applied ! you will get 5 rupess cashback</p>
+          <a href="#" data-toggle="modal" data-target="#coupon">Apply coupon</a>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="coupon">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        
+       
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <input class="coupon" type="text" placeholder="coupon code" name="coupon">
+          <button>Apply</button>
+          <ul>
+            <li>First25</br> Get 20% off</li>
+            <li>First25</br> Get 20% off</li>
+            <li>First25</br> Get 20% off</li>
+            </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  </div>   
+  <div id="wallet" class="tabcontent rechar">
+  <div class="container-fluid">
+        <button class="top"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Wallet 850</button>
+        <button class="top2">Buy plan</button>
+        <h5>Wallets</h5>
+        <div class="rechar-box">
+    <div class="tab">
+        <div class="row ">
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'London')" id="defautOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Recharge</button>
+            </div>
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'Paris')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Refferal</button>
+                
+            </div>
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'Tokyo')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Field</button>
+            </div>
+        </div>
+            
+            
+            
+    </div>
+    <div id="London" class="tabco">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+                <p>Total balance<p>
+                <input type="number" placeholder="15000" disabled>
+                <p>Recharge Wallet Available balance</p>
+                <input type="number" placeholder="1500" disabled>
+            </div>
+        </div>
+            </div>
+        </div>
+        
+    </div>
 
             </div>
             <div id="wallet" class="tabcontent rechar">
