@@ -74,14 +74,14 @@
     <div class="rechar-box">
     <div class="tab">
         <div class="row ">
-            <div class="col-md-2">
-                <button class="tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Mobile</button>
+            <div class="col-md-1">
+                <a href="#" class="tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:40px">Mobile Recharge</a>
             </div>
-            <div class="col-md-2">
-                <button class="tablink" onclick="opnCity(event, 'dth')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">DTH</button>
+            <div class="col-md-1">
+                <a href="#" class="tablink" onclick="opnCity(event, 'dth')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:40px">DTH</a>
             </div>
-            <div class="col-md-2">
-                <button class="tablink" onclick="opnCity(event, 'data')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Data</button>
+            <div class="col-md-1">
+                <a href="#" class="tablink" onclick="opnCity(event, 'data')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:40px">Data</a>
             </div>
         </div>
             
@@ -261,7 +261,7 @@
           </div>
           <button>Proceed</button>
           <p>Coupon is Applied ! you will get 5 rupess cashback</p>
-          <a href="#">Apply coupon</a>
+          <a href="#" data-toggle="modal" data-target="#coupon">Apply coupon</a>
         </div>
         
         
@@ -269,7 +269,29 @@
       </div>
     </div>
   </div>
-  
+  <div class="modal fade" id="coupon">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        
+       
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <input class="coupon" type="text" placeholder="coupon code" name="coupon">
+          <button>Apply</button>
+          <ul>
+            <li>First25</br> Get 20% off</li>
+            <li>First25</br> Get 20% off</li>
+            <li>First25</br> Get 20% off</li>
+            </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
   </div>   
   <div id="wallet" class="tabcontent rechar">
   <div class="container-fluid">
