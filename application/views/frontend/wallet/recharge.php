@@ -21,12 +21,11 @@
   <div id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="#">pro sidebar</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
       </div>
-      <div class="sidebar-header">
+      <!-- <div class="sidebar-header">
         <div class="user-pic">
           <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
             alt="User picture">
@@ -41,7 +40,7 @@
             <span>Online</span>
           </span>
         </div>
-      </div>
+      </div> -->
       <!-- sidebar-header  -->
       
       <!-- sidebar-search  -->
@@ -78,7 +77,6 @@
       <!-- sidebar-menu  -->
     </div>
     <!-- sidebar-content  -->
-    
 </div>
   <!-- sidebar-wrapper  -->
   <main class="page-content">
@@ -111,10 +109,10 @@
                 
             <div class="row justify-content-center">
                     <div class="col-md-3">
-                        <input type="number" name="m_number" placeholder="Number" class="inpu">
+                        <input type="number" name="m_number" placeholder=" Mobile Number" class="inpu">
                     </div>
                     <div class="col-md-3">
-                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                        <input list="operater" name="operater" placeholder="Operator" class="inpu">
                             <datalist id="operater">
                                 <option value="idea">
                                 <option value="vodafone">
@@ -124,7 +122,7 @@
                             </datalist>
                     </div>
                     <div class="col-md-3">
-                        <input list="state" name="state" placeholder="enter state" class="inpu">
+                        <input list="state" name="state" placeholder="Select Circle" class="inpu">
 
                         <datalist id="state">
                             <option value="rajasthan">
@@ -135,7 +133,7 @@
                         </datalist>
                     </div>
                     <div class="col-md-3">
-                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                        <input type="number" placeholder="Amount" class="inpu"> 
                     </div>
                 </div>   
                     <input type="checkbox" > Prepaid
@@ -154,11 +152,9 @@
             <div class="contentrr" >
             <div class="container">
                 <div class="row justify-content-center">
+
                     <div class="col-md-3">
-                        <input type="number" name="m_number" placeholder="Number" class="inpu">
-                    </div>
-                    <div class="col-md-3">
-                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                        <input list="operater" name="operater" placeholder="Operator" class="inpu">
                             <datalist id="operater">
                                 <option value="idea">
                                 <option value="vodafone">
@@ -167,28 +163,15 @@
                                 <option value="relience">
                             </datalist>
                     </div>
-                    <div class="col-md-3">
-                        <input list="state" name="state" placeholder="enter state" class="inpu">
 
-                        <datalist id="state">
-                            <option value="rajasthan">
-                            <option value="hariyana">
-                            <option value="delhi">
-                            <option value="punjab">
-                            <option value="up">
-                        </datalist>
-                    </div>
                     <div class="col-md-3">
-                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                        <input type="number" name="m_number" placeholder="Mobile Number / Customer Id" class="inpu">
                     </div>
-                </div>
-                
-                
-                
 
-                    
-                    
-                      
+                    <div class="col-md-3">
+                        <input type="number" placeholder="Enter Ammount" class="inpu"> 
+                    </div>
+                </div>  
                     <input type="checkbox" > Prepaid
                     <input type="checkbox" > Postpaid</br>
                     <button class="pay">Pay now</button>
@@ -205,10 +188,10 @@
                 
             <div class="row justify-content-center">
                     <div class="col-md-3">
-                        <input type="number" name="m_number" placeholder="Number" class="inpu">
+                        <input type="number" name="m_number" placeholder=" Data Card Number" class="inpu">
                     </div>
                     <div class="col-md-3">
-                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                        <input list="operater" name="operater" placeholder="Enter Operator" class="inpu">
                             <datalist id="operater">
                                 <option value="idea">
                                 <option value="vodafone">
@@ -218,7 +201,7 @@
                             </datalist>
                     </div>
                     <div class="col-md-3">
-                        <input list="state" name="state" placeholder="enter state" class="inpu">
+                        <input list="state" name="state" placeholder="Select Circle" class="inpu">
 
                         <datalist id="state">
                             <option value="rajasthan">
@@ -229,7 +212,7 @@
                         </datalist>
                     </div>
                     <div class="col-md-3">
-                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                        <input type="number" placeholder="Amount" class="inpu"> 
                     </div>
                 </div>    
                     <input type="checkbox" > Prepaid
