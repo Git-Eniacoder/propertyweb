@@ -22,7 +22,7 @@
 
             <p>Home seekers get a virtual tour of your property. Only those with genuine interest approach you.</p>
             <div class="text-center">
-              <a href="list"><button>List Property</button></a>
+              <a href="<?php echo $url['list']; ?>"><button>List Property</button></a>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
 
             <p>Fast & Easy Recharge for Prepaid Mobile, Postpaid Mobile, Datacard & DTH. T & C apply. </p>
             <div class="text-center">
-              <a href="recharge"> <button>Recharge</button></a>
+              <a href="<?php echo $url['recharge']; ?>"> <button>Recharge</button></a>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
 
             <p>Selling property online was never so easy and is now just a click. a leading property site to rent your property</p>
             <div class="text-center">
-              <button>Post Property</button>
+            <a href="#pproperty"><button>Post Property</button></a>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@
 
 </div>
 
-<div class="post">
+<div id="pproperty" class="post">
   <div class="container">
 
     <h2 class="text-center">Post your requirement</h2>
@@ -211,7 +211,7 @@
 
   
       <!-- Column 1  -->
-      <form method="post" action="<?php echo "http://localhost/propertyweb/home"?>/add" >
+      <form method="post"  action="<?php echo base_url();?>home/add" >
     <div class="row justify-content-center">
       <div class="col-md-4">
 

@@ -168,7 +168,7 @@ $.ajax({
         <a href="<?php echo $social['pinterest_url']; ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
       </div>
 
-      <p class="reserved">@2020 All Rights Reserved. Developed By <span><a href="#" class="lik">Hisarfever</a></span></p>
+      <p class="reserved">@<?php echo '20'.date('y'); ?> All Rights Reserved. Developed By <span><a href="#" class="lik">Hisarfever</a></span></p>
     </div>
   </section>
 
