@@ -1,4 +1,5 @@
 <!-- Home  -->
+
 <main class="main">
   <div class="top-text">
     <div class="container">
@@ -27,7 +28,6 @@
           </div>
 
         </div>
-
 
         <div class="col-md-3">
           <div class="card">
@@ -348,41 +348,3 @@
   </div>
   </form>
 </main>
-
-
-<!-- End Home -->
-
-
-
-<!-- <input list="persons" name="person" id="person" class="lis" placeholder="owner/dealer"> -->
-
-
-
-
-<!-- <datalist id="persons">
-          <option value="Owner">
-          <option value="Dealer">
-        </datalist> -->
-
-
-
-<!-- <label for="listpp">List property for <span style="color: red;">*</span></label>
-        <input list="listpps" name="listpp" id="listpp" class="lis" placeholder="List property"> -->
-
-<!-- <datalist id="listpps">
-          <option value="Sell">
-          <option value="Rent">
-        </datalist> -->
-
-
-<!-- <label>Area<span style="color: red;">*</span></label>
-        <input type="number" name="pcity" placeholder="Area">
-
-        <label for="aunit">Area unit<span style="color: red;">*</span></label>
-        <input list="aunits" name="aunit" id="aunit" class="lis" placeholder="Area unit"> -->
-
-<!-- <datalist id="aunits">
-          <option value="sq.fit">
-          <option value="sq.m">
-          <option value="sq.yard">
-        </datalist> -->

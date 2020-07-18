@@ -71,7 +71,7 @@
 
                 <li class="nav-item dropdown">
                   <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                   <?php echo isset($uname)?  $uname : 'My Account' ; ?>
+                   <?php echo isset($uname)?  'Hey, '.$uname : 'My Account' ; ?>
                   </button>
                   <div class="dropdown-menu">
                   
