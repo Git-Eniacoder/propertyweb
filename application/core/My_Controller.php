@@ -11,6 +11,9 @@ class My_Controller extends CI_Controller {
         
         $this->data['status'] = false;
         parent::__construct();
+        $this->load->model('db_login');
+        $this->data['site'] = $this->db_login->fetch_site();
+        $this->data['social'] = $this->db_login->fetch_links();
         $this->config->load("urls", true);
         $this->data['url'] = $this->config->item("urls");
         if($this->session->userdata("id")){
