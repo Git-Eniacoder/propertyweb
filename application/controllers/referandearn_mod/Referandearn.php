@@ -2,7 +2,7 @@
 
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Recharge extends My_Controller
+class Referandearn extends My_Controller
 {
     // Handler Himanshu Goyal
     public function __construct()
@@ -14,10 +14,10 @@ class Recharge extends My_Controller
     function index()
     {
 
-        $data['url'] = $this->config->item('urls');
-        $this->load->view('frontend/common/header', $data);
-        $this->load->view('frontend/recharge', $data);
-        $this->load->view('frontend/common/footer', $data);
+        
+        $this->load->view('frontend/common/header', $this->data);
+        $this->load->view('frontend/referandearn', $this->data);
+        $this->load->view('frontend/common/footer', $this->data);
     }
 }
 ?>

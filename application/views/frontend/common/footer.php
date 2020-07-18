@@ -1,3 +1,81 @@
+  
+  
+  <script>
+
+$("#reg").submit(function(event){
+event.preventDefault();
+var post_url = $(this).attr("action"); 
+var request_method = $(this).attr("method"); 
+var form_data = $(this).serialize(); 
+    console.log(form_data);
+$('#status').html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+$.ajax({
+    url : post_url,
+    type: request_method,
+    dataType:"json",
+    data : form_data, 
+}).done(function(response){ 
+  console.log(response);
+  if(response.form){
+    $('#status').html(response.msg);
+  }if(response.status){
+    console.log(response);
+    $('#status').html('');
+    $('#reg').attr('action', '<?php echo base_url()."otp/verify" ;?>');
+    $('#reg').html('<input type="text" name="otp" required><button>Verify Otp</button>');
+  }if(response.otp){
+    $('#reg').html('');
+    $('#status').html(response.msg);
+  }
+});
+});
+</script>
+<script>
+
+$("#loginn").submit(function(event){
+event.preventDefault();
+var post_url = $(this).attr("action"); 
+var request_method = $(this).attr("method"); 
+var form_data = $(this).serialize(); 
+    console.log(request_method);
+$('#logsts').html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+$.ajax({
+    url : post_url,
+    type: request_method,
+    dataType:"json",
+    data : form_data, 
+}).done(function(response){ 
+ console.log(response); 
+ if(response.form){
+  $('#logsts').html(response.msg);
+ }
+ if(response.error){
+  $('#logsts').html(response.msg);
+ }
+ if(response.error==false){
+    location.reload(true);
+ }
+ 
+});
+});
+</script>
+<script>
+  $('#para').click(function(){
+    $('#otp').modal('show');
+    $('#login').modal('hide');
+  });
+  $('#mreg').click(function(){
+    $('#otp').modal('hide');
+    $('#login').modal('hide');
+    $('#register').modal('show');
+  });
+  $('#mlog').click(function(){
+    $('#otp').modal('hide');
+    $('#login').modal('show');
+    $('#register').modal('hide');
+  });
+</script>
+
   <!-- footer starts -->
   <div class="shadow-lg foot">
     <div class="container">
@@ -56,7 +134,7 @@
         <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
       </div>
 
-      <p class="reserved">@2020 All Rights Reserved. Developed By <span><a href="#" class="lik">Eniacoder</a></span></p>
+      <p class="reserved">@2020 All Rights Reserved. Developed By <span><a href="#" class="lik">Hisarfever</a></span></p>
     </div>
   </section>
 

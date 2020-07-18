@@ -1,5 +1,5 @@
 <!-- Recharge Section -->
-
+<!-- <?php print_r($post['all_data']->recharge_wallet) ?> -->
 <div class="recharge-main">
   <div class="container">
     <div class="row">
@@ -20,7 +20,17 @@
               <div class="card price-card">
                 <h5>Lorem Ipsum</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industr. Lorem</p>
-                <button>Recharge Rs. 960</button>
+                <form method="post" action="<?php echo $url['buyplan']; ?>">
+                  <input type="hidden" value="recharge_wallet" name="wallet">
+                  <input type="hidden" value="" name="balance">
+                  <?php
+                  if($status){ ?>
+                  <button type="submit">Recharge Rs. 960</button>
+                  <?php } else{?>
+                    <button data-toggle="modal" data-target="#login">Recharge Rs. 960</button>
+                  <?php } ?>
+                </form>
+                
               </div>
             </div>
           </div>

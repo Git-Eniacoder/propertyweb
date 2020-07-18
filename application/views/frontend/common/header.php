@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -39,33 +41,28 @@
                     Home
                   </a>
                 </li>
+                <li class=" nav-item">
+                  <a title="Home" href="<?php echo $url['list']; ?>" class="nav-link">
+                    List Property
+                  </a>
+                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                     Properties
                   </a>
                   <div class="dropdown-menu">
-                    <!-- <a class="dropdown-item" href="#">Rented</a>
-                    <a class="dropdown-item" href="#">Sell</a>
-                    <a class="dropdown-item" href="#">Buy</a> -->
-                    <a class="dropdown-item" href="<?php echo $url['home']; ?>">Home</a>
-                    <a class="dropdown-item" href="<?php echo $url['list']; ?>">list</a>
-                    <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">posttable</a>
-                    <a class="dropdown-item" href="<?php echo $url['recharge']; ?>">recharge</a>
+                    <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">Posted Property</a>
                   </div>
                 </li>
-
-
-                <li class="  nav-item">
+      
+                <li class="nav-item">
                   <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
                     Recharge
                   </a>
                 </li>
-                <li class="  nav-item">
-                  <a title="Recharge" href="<?php echo $url['wallet']; ?>" class="nav-link">
-                    Wallet
-                  </a>
-                </li>
-                <li class="  nav-item">
+                
+       
+                <li class="nav-item">
                   <a title="Refer & earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
                     Refer & earn
                   </a>
@@ -74,13 +71,17 @@
 
                 <li class="nav-item dropdown">
                   <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    My account
+                   <?php echo isset($uname)?  $uname : 'My Account' ; ?>
                   </button>
                   <div class="dropdown-menu">
-                    
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Login">Login</a>
+                  
+                  <?php if($status==false){ ?>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#login">Login</a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register">Register</a>
-                    
+                  <?php } else{?>
+                    <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
+                    <a class="dropdown-item" href="<?php echo base_url().'login/logout' ; ?>">Logout</a>
+                  <?php } ?>
                   </div>
                 </li>
               </ul>
@@ -99,15 +100,18 @@
             <h5>Register</h5>
           </div>
           <div class="right">
-            <h5>Let we help you to search your property here</h5>
+            <h5>Register Your Account With Us</h5>
             <p>Register</p>
-            <input type="text" placeholder="your name">
-            <input type="email" placeholder="your email">
-            <input type="number" placeholder="Your Number">
-            <button>Register</button>
-
+            <div id="status" class="text-center"></div>
+            <form id="reg" action="<?php echo base_url().'otp/send_otp'; ?>" method="post">
+              <input type="text" name="uname" placeholder="Your Name">
+              <input type="number" name="mno" placeholder="Your Number">
+              <input type="password" name="password" placeholder="Password">
+              <input type="password" name="confirm_password" placeholder="Confirm Password">
+              <button>Register</button>
+            </form>
             <p>If you have an account just Login here</p>
-            <center><a href="#">login</a></center>
+            <center><a class="btn" id="mlog">login</a></center>
           </div>
         </div>
         
@@ -115,22 +119,25 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="Login">
+  <div class="modal fade" id="login">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class=" container-fluid modal-body">
           <div class="left">
-            <h5>Register</h5>
+            <h5>Login</h5>
           </div>
           <div class="right">
             <h5>login into your account</h5>
             <p>Login with mobile</p>
-            
-            <input type="number" placeholder="Your Number">
-            <a data-toggle="modal" data-target="#otp"><button>Login</button></a>
-
+            <div id="logsts" class="text-center"></div>
+            <form id="loginn" action="<?php echo base_url().'login/user_login'; ?>" method="post">
+            <input type="password" name="pno" placeholder="Your Number">
+            <input type="password" name="password" placeholder="Your Password">
+            <button>Login</button>
+            </form>
+            <a class="p-1 btn" id="para"><p>Forgot Password ?</p></a>
             <p>New here ? Register with us</p>
-            <center><a href="#">Register</a></center>
+            <center><a class="btn" id="mreg">Register</a></center>
           </div>
         </div>
         
@@ -143,17 +150,16 @@
       <div class="modal-content">
         <div class=" container-fluid modal-body">
           <div class="left">
-            <h5>Register</h5>
+            <h5>Rest Password</h5>
           </div>
           <div class="right">
-            <h5>login into your account</h5>
-            <p>Login with mobile</p>
-            
-            <input type="number" placeholder="verify">
-            <button>Login</button>
+            <h5>Forget Password ? Don't Worry</h5>
+            <p>Enter Your Registered Number</p>
+            <input type="number" placeholder="Mobile no">
+            <button>Submit</button>
 
             <p>New here ? Register with us</p>
-            <center><a href="#">Register</a></center>
+            <center><a class="btn" id="mreg">Register</a></center>
           </div>
         </div>
         

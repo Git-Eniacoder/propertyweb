@@ -21,13 +21,7 @@
         </div>
 
         <div class="list-form">
-
-
-
-
-
-
-          <!-- List Form -->
+        <!-- List Form -->
           <form action="<?php echo $url['inreq']; ?>" enctype="multipart/form-data" method="post">
 
             <?php echo validation_errors(); ?>

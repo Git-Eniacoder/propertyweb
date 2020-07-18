@@ -1,57 +1,352 @@
-<div class="wallet-main">
-    <div class="container">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+ 
+
+
+
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <div id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="#">pro sidebar</a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+            alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name">Jhon
+            <strong>Smith</strong>
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          
+          
+          
+          
+         
+          <li>
+            <a href="#" class="tablinks" onclick="openCity(event, 'recharge')" id="defaultOpen">
+                Recharges
+            </a>
+          </li>
+          
+          <li>
+            <a href="#" class="tablinks" onclick="openCity(event, 'wallet')" >
+                Wallets
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tablinks" onclick="openCity(event, 'refer')" >
+                Refer and earn
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tablinks" onclick="openCity(event, 'history')">
+                History
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    
+</div>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+  <div id="recharge" class="tabcontent rechar">
+    <button class="top"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Wallet 850</button>
+    <button class="top2">Add money</button>
+    <h5>Mobile Recharges</h5>
+    <div class="rechar-box">
+    <div class="tab">
         <div class="row ">
-            <div class="col-md-8">
-                <div class="wallet-head">
-                    <h3>My Wallet</h3>
-                    <hr class="style1">
-                </div>
-
-                <div>
-                    <p> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed</p>
-                </div>
-                <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Recharge</button>
-                    <button class="tablinks" onclick="openCity(event, 'Paris')">Refferal</button>
-                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Field</button>
-                </div>
-
-                <div id="London" class="tabcontent">
-                    <div class="wallet-head">
-                        <h3>Total Balance</h3>
-                        <hr class="style1">
+            <div class="col-md-2">
+                <button class="tablink" onclick="opnCity(event, 'mobile')" id="defaultOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Mobile</button>
+            </div>
+            <div class="col-md-2">
+                <button class="tablink" onclick="opnCity(event, 'dth')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">DTH</button>
+            </div>
+            <div class="col-md-2">
+                <button class="tablink" onclick="opnCity(event, 'data')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:25px">Data</button>
+            </div>
+        </div>
+            
+            
+            
+    </div>
+    <div id="mobile" class="tabcon">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+                
+            <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <input type="number" name="m_number" placeholder="Number" class="inpu">
                     </div>
-                    <!-- <p>Total Balance</p> -->
-                    <input type="number" placeholder="14000" name="ttpp" disabled>
-                    <button>ADD money</button>
+                    <div class="col-md-3">
+                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                            <datalist id="operater">
+                                <option value="idea">
+                                <option value="vodafone">
+                                <option value="airtel">
+                                <option value="jio">
+                                <option value="relience">
+                            </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input list="state" name="state" placeholder="enter state" class="inpu">
 
+                        <datalist id="state">
+                            <option value="rajasthan">
+                            <option value="hariyana">
+                            <option value="delhi">
+                            <option value="punjab">
+                            <option value="up">
+                        </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                    </div>
+                </div>   
+                    <input type="checkbox" > Prepaid
+                    <input type="checkbox" > Postpaid</br>
+                    <button class="pay">Pay now</button>
+            </div>
+        </div>
+            </div>
+        </div>
+        
+    </div>
 
+    <div id="dth" class="tabcon">
+    <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <input type="number" name="m_number" placeholder="Number" class="inpu">
+                    </div>
+                    <div class="col-md-3">
+                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                            <datalist id="operater">
+                                <option value="idea">
+                                <option value="vodafone">
+                                <option value="airtel">
+                                <option value="jio">
+                                <option value="relience">
+                            </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input list="state" name="state" placeholder="enter state" class="inpu">
 
-                    <div class="wallet-content">
-                        <p>Recharge Wallet Balance</p>
-                        <img class="re" src="<?php echo $url['image'] . 'wallet.png'; ?>"><input type="number" placeholder="14000" name="ttpp" disabled> Points
+                        <datalist id="state">
+                            <option value="rajasthan">
+                            <option value="hariyana">
+                            <option value="delhi">
+                            <option value="punjab">
+                            <option value="up">
+                        </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                    </div>
+                </div>
+                
+                
+                
 
-                        <div class="recharges">
-                            <h3>Recharges</h3>
-                            <hr class="style1">
-                            <div class="row ">
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'mobile.png'; ?>" width="60px"></center>
-                                    <p class="cc">Mobile Recharge</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'DTH.png'; ?>" width="60px"></center>
-                                    <p class="cc">DTH Recharge</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="60px"></center>
-                                    <p class="cc">Data Card Recharge</p>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    
+                      
+                    <input type="checkbox" > Prepaid
+                    <input type="checkbox" > Postpaid</br>
+                    <button class="pay">Pay now</button>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <div id="data" class="tabcon">
+    <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+                
+            <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <input type="number" name="m_number" placeholder="Number" class="inpu">
+                    </div>
+                    <div class="col-md-3">
+                        <input list="operater" name="operater" placeholder="enter operator" class="inpu">
+                            <datalist id="operater">
+                                <option value="idea">
+                                <option value="vodafone">
+                                <option value="airtel">
+                                <option value="jio">
+                                <option value="relience">
+                            </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input list="state" name="state" placeholder="enter state" class="inpu">
 
-                        <div class="wallet-history">
-                            <table class="table table-borderless">
+                        <datalist id="state">
+                            <option value="rajasthan">
+                            <option value="hariyana">
+                            <option value="delhi">
+                            <option value="punjab">
+                            <option value="up">
+                        </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" placeholder="enter ammount" class="inpu"> 
+                    </div>
+                </div>    
+                    <input type="checkbox" > Prepaid
+                    <input type="checkbox" > Postpaid</br>
+                    <button class="pay">Pay now</button>
+            </div>
+        </div>
+            </div>
+        </div> 
+    </div>
+    </div> 
+    <h6>How to payment with fast mode</h6>
+    <p>With money loaded in your wallet, it takes seconds to make phone and DTH recharges!</p>
+    <h6>How to payment with fast mode</h6>
+    <p>With money loaded in your wallet, it takes seconds to make phone and DTH recharges!</p>
+  </div>   
+  <div id="wallet" class="tabcontent rechar">
+  <div class="container-fluid">
+        <button class="top"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Wallet 850</button>
+        <button class="top2">Buy plan</button>
+        <h5>Wallets</h5>
+        <div class="rechar-box">
+    <div class="tab">
+        <div class="row ">
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'London')" id="defautOpe"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Recharge</button>
+            </div>
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'Paris')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Refferal</button>
+                
+            </div>
+            <div class="col-md-2">
+            <button class="tablin" onclick="onCity(event, 'Tokyo')"><img src="<?php echo $url['image'] . 'wallet.png'; ?>" style="width:30px">Field</button>
+            </div>
+        </div>
+            
+            
+            
+    </div>
+    <div id="London" class="tabco">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+                <p>Total balance<p>
+                <input type="number" placeholder="15000" disabled>
+                <p>Recharge Wallet Available balance</p>
+                <input type="number" placeholder="1500" disabled>
+            </div>
+        </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="Paris" class="tabco">
+    <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+            <p>Total balance<p>
+                <input type="number" placeholder="15000" disabled>
+                <p>Refferal Wallet Available balance</p>
+                <input type="number" placeholder="150" disabled>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <div id="Tokyo" class="tabco">
+    <div class="row justify-content-center">
+            <div class="col-md-11">
+            <div class="contentrr" >
+            <div class="container">
+                <p>Total balance<p>
+                <input type="number" placeholder="15000" disabled>
+                <p>Feild Wallet Available balance</p>
+                <input type="number" placeholder="1400" disabled>
+            </div>
+        </div>
+            </div>
+        </div> 
+    </div>
+    </div>
+        
+       
+        
+        <h6>How to Recharge prepaid mobile online</h6>
+        <p>You can now carry out your prepaid online recharge and bill payments for any number, for your friends and family using MobiKwik. Online recharges can be done through Net Banking, Debit Card.</p>
+    </div>
+  </div>
+  <div id="refer" class="tabcontent">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <h1>REFER AND EARN</h1>
+            </div>
+            <div class="col-md-6">
+                <img src="<?php echo $url['image'] . 'refer.png'; ?>">
+            </div>
+        </div>
+        <p>When you refer a friend and invite them to sign up with, both you and your friend earn money by referral code. You earn Rs 100 SuperCash each, when your friend adds Rs 50 in their wallet. You can earn up to Rs 5,000 SuperCash through Refer and Earn. Now earn money by referring your friends to.</br>
+
+How to refer and earn in two simple steps?
+Make money with friends in just a few clicks. Refer a friend and earn money.</br>
+
+Click on the Refer & Earn App Card</br>
+Share via WhatsApp or any other medium</br>
+Share your referral code and earn money by referring your friends now! Earn money endlessly!
+
+</p>
+    </div>
+  </div>
+  <div id="history" class="tabcontent">
+    <div class="container-fluid">
+        <h4>History</h4>
+        <table class="table table-borderless">
                                 <thead>
                                     <tr>
                                         <th>Transaction</th>
@@ -63,258 +358,141 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
+                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
                                         <td>-300</td>
                                         <td>sucess</td>
-                                        <td> -</td>
+                                        <td>-</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
+                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
                                         <td>-300</td>
                                         <td>sucess</td>
-                                        <td> -</td>
+                                        <td>-</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Recharge 250</td>
+                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
                                         <td>-300</td>
                                         <td>sucess</td>
-                                        <td> -</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
+                                        <td>-300</td>
+                                        <td>sucess</td>
+                                        <td>-</td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
 
-
-                    </div>
-
-
-                </div>
-
-
-
-
-
-
-                <div id="Paris" class="tabcontent">
-
-                    <div class="total_balance">
-                        <div class="wallet-head">
-                            <h3>Total Balance</h3>
-                            <hr class="style1">
-                        </div>
-                        <!-- <p>Total Balance</p> -->
-                        <input type="number" placeholder="14000" name="ttpp" disabled>
-                        <button>ADD money</button>
-                    </div>
-
-                    <h5>Refer your friend and earn point</h5>
-
-                    <div class="wallet-content">
-                        <p>Refferal Wallet Balance</p>
-                        <img class="re" src="<?php echo $url['image'] . 'wallet.png'; ?>"><input type="number" placeholder="14000" name="ttpp" disabled> Points
-
-                        <div class="referal-part">
-                            <p class="refferal">Refferal Link</p>
-                            <h6 class="refferal-link">www.yoursite.com/refer/adfrd</h6>
-                        </div>
-
-                        <div class="recharges">
-                            <h3>Recharges</h3>
-                            <hr class="style1">
-                            <div class="row ">
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'mobile.png'; ?>" width="60px"></center>
-                                    <p class="cc">Mobile Recharge</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'DTH.png'; ?>" width="60px"></center>
-                                    <p class="cc">DTH Recharge</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="60px"></center>
-                                    <p class="cc">Data Card Recharge</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="share">
-                            <h3>Share with friends</h3>
-                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                        </div>
-
-
-                        <div class="wallet-history">
-                            <table class="table table-borderless">
-                                <thead>
-                                    <tr>
-                                        <th>Referals</th>
-                                        <th>Ammount</th>
-                                        <th>Status</th>
-
-                                    </tr>
-
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
-                                        <td>-300</td>
-                                        <td>sucess</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
-                                        <td>-300</td>
-                                        <td>sucess</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
-                                        <td>-300</td>
-                                        <td>sucess</td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-                <div id="Tokyo" class="tabcontent">
-                    <div class="total_balance">
-                        <div class="wallet-head">
-                            <h3>Total Balance</h3>
-                            <hr class="style1">
-                        </div>
-                        <!-- <p>Total Balance</p> -->
-                        <input type="number" placeholder="14000" name="ttpp" disabled>
-                        <button>ADD money</button>
-                    </div>
-                    <h5>Refer your friend and earn point</h5>
-
-
-                    <div class="wallet-content">
-                        <p>Feild Wallet Balance</p>
-
-                        <img class="re" src="<?php echo $url['image'] . 'wallet.png'; ?>"><input type="number" placeholder="14000" name="ttpp" disabled> Points <span style="color: #FF5757; margin-left:1rem; font-size:1.3rem;"> Level 1</span></br>
-
-
-                        <div class="level">
-                            <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 6 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 2</sapn></br>
-                                <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 36 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 3</sapn></br>
-                                    <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 6 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 4</sapn></br>
-                                        <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 6 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 5</sapn></br>
-                                            <img src="<?php echo $url['image'] . 'greenicon.png'; ?>" width="20px" class="greenicon"><span style="color: grey; margin-left:2px;" class="level-text">After Refering 6 members sucessfully you will be on</span> <span style="margin-left: 5px;;">Level 6</sapn></br>
-                        </div>
-
-                        <div class="recharges">
-                            <h3>Recharges</h3>
-                            <hr class="style1">
-                            <div class="row ">
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'mobile.png'; ?>" width="60px"></center>
-                                    <p class="cc">Mobile Recharge</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'DTH.png'; ?>" width="60px"></center>
-                                    <p class="cc">DTH Recharge</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <center><img src="<?php echo $url['image'] . 'wallet.png'; ?>" width="60px"></center>
-                                    <p class="cc">Data Card Recharge</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="share">
-                            <h3>Share with friends</h3>
-                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                            <img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="60px">
-                        </div>
-
-
-
-
-                        <div class="wallet-history">
-                            <table class="table table-borderless">
-                                <thead>
-                                    <tr>
-                                        <th>Referals</th>
-                                        <th>Ammount</th>
-                                        <th>Status</th>
-
-                                    </tr>
-
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
-                                        <td>-300</td>
-                                        <td>sucess</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
-                                        <td>-300</td>
-                                        <td>sucess</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><img src="<?php echo $url['image'] . 'redicon.png'; ?>" width="30px"> <span style="color: grey; margin-left:5px;">Id Referals</td>
-                                        <td>-300</td>
-                                        <td>sucess</td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="container">
-                    <div class="card">
-                        <h5>what is recharge wallet ?</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, cupiditate voluptate officiis error nisi dignissimos molestiae ducimus blanditiis sequi necessitatibus, dolores ex quas aut sunt libero culpa veritatis obcaecati eaque, vitae iusto in earum aliquam maiores. Natus totam aliquid animi!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <h4>How to Recharge prepaid mobile online</h4>
+        <p>You can now carry out your prepaid online recharge and bill payments for any number, for your friends and family using MobiKwik. Online recharges can be done through Net Banking, Debit Card.</p>               
+        
     </div>
+  </div>
+  </main>
+  <!-- page-content" -->
 </div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        jQuery(function ($) {
+
+$(".sidebar-dropdown > a").click(function() {
+$(".sidebar-submenu").slideUp(200);
+if (
+$(this)
+  .parent()
+  .hasClass("active")
+) {
+$(".sidebar-dropdown").removeClass("active");
+$(this)
+  .parent()
+  .removeClass("active");
+} else {
+$(".sidebar-dropdown").removeClass("active");
+$(this)
+  .next(".sidebar-submenu")
+  .slideDown(200);
+$(this)
+  .parent()
+  .addClass("active");
+}
+});
+
+$("#close-sidebar").click(function() {
+$(".page-wrapper").removeClass("toggled");
+});
+$("#show-sidebar").click(function() {
+$(".page-wrapper").addClass("toggled");
+});
+
+
+
+
+});
 
 
 
 
 
-
-
-<script>
-    function openCity(evt, cityName) {
+function openCity(evt, cityName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
         }
+       
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
+       
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
     }
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
-</script>
+
+    function opnCity(ev, cityMe) {
+        var j, tabcon, tablink;
+        tabcon = document.getElementsByClassName("tabcon");
+        for (j = 0; j < tabcon.length; j++) {
+            tabcon[j].style.display = "none";
+        }
+       
+        tablink = document.getElementsByClassName("tablink");
+        for (j = 0; j < tablink.length; j++) {
+            tablink[j].className = tablink[j].className.replace(" active", "");
+        }
+       
+        document.getElementById(cityMe).style.display = "block";
+        ev.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpe").click();
+   
+    function onCity(eve, cityM) {
+        var j, tabco, tablin;
+        tabco = document.getElementsByClassName("tabco");
+        for (j = 0; j < tabco.length; j++) {
+            tabco[j].style.display = "none";
+        }
+       
+        tablin = document.getElementsByClassName("tablin");
+        for (j = 0; j < tablin.length; j++) {
+            tablin[j].className = tablin[j].className.replace(" active", "");
+        }
+       
+        document.getElementById(cityM).style.display = "block";
+        eve.currentTarget.className += " active";
+    }
+    document.getElementById("defautOpe").click();
+</script>   
+
+

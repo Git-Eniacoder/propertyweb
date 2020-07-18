@@ -207,15 +207,15 @@
 
     <h2 class="text-center">Post your requirement</h2>
     <hr class="style1">
-    <div class="row justify-content-center">
 
 
   
       <!-- Column 1  -->
+      <form method="post" action="<?php echo "http://localhost/propertyweb/home"?>/add" >
+    <div class="row justify-content-center">
       <div class="col-md-4">
 
         <h5>Enter Below Details</h5>
-
         <div>
           <label>Name<span style="color: red;">*</span></label>
           <input type="text" name="post-name" placeholder="Enter Name">
@@ -349,6 +349,7 @@
     <center><button>Post Your Request</button></center>
   </div>
 </div>
+</form>
 
 
 <!-- End Home -->
