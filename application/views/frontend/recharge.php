@@ -1,5 +1,19 @@
+
 <!-- Recharge Section -->
-<!-- <?php print_r($post['all_data']->recharge_wallet) ?> -->
+<?php 
+  require_once(APPPATH.'libraries/razorpay-php/Razorpay.php');
+  use Razorpay\Api\Api;
+  $id='rzp_test_ZDu7FphXqoq9vd';
+  $key='xCHB8eYRtg2hoXn8fCHN7yMC';
+  $api=new Api($id,$key);
+
+  $order=$api->order->create(array(
+  'receipt'=>12323,
+  'amount'=>90000,
+  'payment_capture'=>1,
+  'currency'=>'INR',)
+  );
+?>
 <div class="recharge-main">
   <div class="container">
     <div class="row">
@@ -21,11 +35,24 @@
                 <h5>Lorem Ipsum</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industr. Lorem</p>
                 <form method="post" action="<?php echo $url['buyplan']; ?>">
+                <?php if($status){ ?>
+                <script
+                    src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key=<?php echo $id;?> 
+                    data-amount=<?php echo $order->amount;?> 
+                    data-currency="INR"
+                    data-order_id=<?php echo $order->id;?>	
+                    data-buttontext="Pay with Razorpay"
+                    data-name="Acme Corp"
+                    data-description="Test transaction"
+                    data-image="https://example.com/your_logo.jpg"
+                    data-prefill.name="Gaurav Kumar"
+                    data-prefill.email="gaurav.kumar@example.com"
+                    data-prefill.contact="9999999999"
+                    data-theme.color="#F37254"
+                    ></script>
                   <input type="hidden" value="recharge_wallet" name="wallet">
-                  <input type="hidden" value="" name="balance">
-                  <?php
-                  if($status){ ?>
-                  <button type="submit">Recharge Rs. 960</button>
+                  <input type="hidden" value="<?php echo $post['all_data'][0]->recharge_wallet; ?>" name="balance">
                   <?php } else{?>
                     <button data-toggle="modal" data-target="#login">Recharge Rs. 960</button>
                   <?php } ?>
@@ -49,7 +76,3 @@
     </div>
   </div>
 </div>
-
-
-
-<!-- end Of recharge -->
