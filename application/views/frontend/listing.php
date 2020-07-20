@@ -7,7 +7,7 @@
 // die();
 
 ?>
-<main class="main">
+<main class="main sub-main">
 <div class="list-main">
   <div class="container">
     <div class="row">

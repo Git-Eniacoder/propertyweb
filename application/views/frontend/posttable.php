@@ -1,5 +1,5 @@
 <!-- PostTable  -->
-<main class="main">
+<main class="main sub-main">
 <div class="posttable">
   <div class="container">
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -27,8 +26,8 @@
           <nav class="navbar navbar-expand-lg">
             <div class="logo">
               <a class="custom-logo-link " rel="<?php echo $url['home']; ?>" href="home">
-                <img width="133" height="55" src="<?php echo $url['image'].'logo/'.$site['site_logo'] ?>" alt="Logo" class="custom-logo">
-                
+                <img width="133" height="55" src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="Logo" class="custom-logo">
+
               </a>
             </div>
             <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,34 +53,26 @@
                     <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">Posted Property</a>
                   </div>
                 </li>
-      
+
                 <li class="nav-item">
                   <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
                     Recharge
                   </a>
                 </li>
-                
-       
-                <li class="nav-item">
-                  <a title="Refer & earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
-                    Refer & earn
-                  </a>
-                </li>
-
 
                 <li class="nav-item dropdown">
                   <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                    <?php echo isset($uname)?  'Hey, '.$uname : 'My Account' ; ?>
                   </button>
                   <div class="dropdown-menu">
-                  
-                  <?php if($status==false){ ?>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#login">Login</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register">Register</a>
-                  <?php } else{?>
-                    <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
-                    <a class="dropdown-item" href="<?php echo base_url().'login/logout' ; ?>">Logout</a>
-                  <?php } ?>
+
+                    <?php if ($status == false) { ?>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#login">Login</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register">Register</a>
+                    <?php } else { ?>
+                      <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
+                      <a class="dropdown-item" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
+                    <?php } ?>
                   </div>
                 </li>
               </ul>
@@ -92,56 +83,79 @@
     </div> <!-- container -->
   </header>
   <!-- Header end -->
+
   <div class="modal fade" id="register">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class=" container-fluid modal-body">
-          <div class="left">
-            <h5>Register</h5>
+
+          <div class="row">
+            <div class="col login_bx">
+
+              <div class="login_head">
+                <h5>Register Your Account With Us</h5>
+              </div>
+
+              <p>Create Your Account to Avail Best Deal</p>
+              <div id="status" class="text-center"></div>
+              <form id="reg" action="<?php echo base_url() . 'otp/send_otp'; ?>" method="post">
+                <input type="text" name="uname" placeholder="Your Name" class="login_inp">
+                <input type="number" name="mno" placeholder="Your Number" class="login_inp">
+                <input type="password" name="password" placeholder="Password" class="login_inp">
+                <input type="password" name="confirm_password" placeholder="Confirm Password" class="login_inp">
+                <div>
+                  <button class="login_btn">Registration</button>
+                </div>
+              </form>
+
+              <div class="login_bot">
+                <p>If you have an account just <a href="#"> Login here</a></p>
+              </div>
+
+
+            </div>
           </div>
-          <div class="right">
-            <h5>Register Your Account With Us</h5>
-            <p>Register</p>
-            <div id="status" class="text-center"></div>
-            <form id="reg" action="<?php echo base_url().'otp/send_otp'; ?>" method="post">
-              <input type="text" name="uname" placeholder="Your Name">
-              <input type="number" name="mno" placeholder="Your Number">
-              <input type="password" name="password" placeholder="Password">
-              <input type="password" name="confirm_password" placeholder="Confirm Password">
-              <button>Register</button>
-            </form>
-            <p>If you have an account just Login here</p>
-            <center><a class="btn" id="mlog">login</a></center>
-          </div>
+
+
         </div>
-        
-        
       </div>
     </div>
   </div>
+
+
   <div class="modal fade" id="login">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class=" container-fluid modal-body">
-          <div class="left">
+          <!-- <div class="left">
             <h5>Login</h5>
-          </div>
-          <div class="right">
-            <h5>login into your account</h5>
-            <p>Login with mobile</p>
-            <div id="logsts" class="text-center"></div>
-            <form id="loginn" action="<?php echo base_url().'login/user_login'; ?>" method="post">
-            <input type="password" name="pno" placeholder="Your Number">
-            <input type="password" name="password" placeholder="Your Password">
-            <button>Login</button>
-            </form>
-            <a class="p-1 btn" id="para"><p>Forgot Password ?</p></a>
-            <p>New here ? Register with us</p>
-            <center><a class="btn" id="mreg">Register</a></center>
+          </div> -->
+
+
+          <div class="row">
+            <div class="col login_bx">
+              <div class="login_head">
+                <h5>Login into your account</h5>
+              </div>
+              <!-- <p>Login with mobile</p> -->
+              <div id="logsts" class="text-center"></div>
+              <form id="loginn" action="<?php echo base_url() . 'login/user_login'; ?>" method="post">
+                <input type="password" name="pno" placeholder="Your Number" class="login_inp">
+                <input type="password" name="password" placeholder="Your Password" class="login_inp">
+                <div>
+                  <button class="login_btn">Login</button>
+                </div>
+              </form>
+              <a class="p-1 btn login_forgot" id="para">
+                <p>Forgot Password ?</p>
+              </a>
+              <p>If you dont have an account just <a href="#">Register here</a></p>
+              <!-- <center><a class="btn" id="mreg">Register</a></center> -->
+            </div>
           </div>
         </div>
-        
-        
+
+
       </div>
     </div>
   </div>
@@ -156,16 +170,16 @@
             <h5>Forget Password ? Don't Worry</h5>
             <p>Enter Your Registered Number</p>
             <div id="resetid" class="text-center"></div>
-            <form id="frest" action="<?php echo base_url().'otp/reset' ;?>" method="post">
-            <input type="number" name="mobile" placeholder="Mobile no">
-            <button>Submit</button>
+            <form id="frest" action="<?php echo base_url() . 'otp/reset'; ?>" method="post">
+              <input type="number" name="mobile" placeholder="Mobile no">
+              <button>Submit</button>
             </form>
             <p>New here ? Register with us</p>
             <center><a class="btn" id="mreg">Register</a></center>
           </div>
         </div>
-        
-        
+
+
       </div>
     </div>
   </div>
