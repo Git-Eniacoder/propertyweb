@@ -27,8 +27,8 @@
           <nav class="navbar navbar-expand-lg">
             <div class="logo">
               <a class="custom-logo-link " rel="<?php echo $url['home']; ?>" href="home">
-                <!-- <img width="133" height="55" src="assets/img/headlogo.svg" alt="Logo" class="custom-logo"> -->
-                LOGO
+                <img width="133" height="55" src="<?php echo $url['image'].'logo/'.$site['site_logo'] ?>" alt="Logo" class="custom-logo">
+                
               </a>
             </div>
             <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +71,7 @@
 
                 <li class="nav-item dropdown">
                   <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                   <?php echo isset($uname)?  $uname : 'My Account' ; ?>
+                   <?php echo isset($uname)?  'Hey, '.$uname : 'My Account' ; ?>
                   </button>
                   <div class="dropdown-menu">
                   

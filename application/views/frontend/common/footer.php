@@ -117,7 +117,8 @@ $.ajax({
         <div class="col-lg-4 col-md-4 col-sm-6 col-12">
           <h5>Links</h5>
           <hr class="style1">
-
+          <h4 class="text-white"><?php echo $site['site_title'] ;?></h4>
+          <p><?php echo $site['site_desc'] ;?></p>
         </div>
         
         <div class="col-lg-4 col-md-4 col-sm-6 col-12">
@@ -153,21 +154,21 @@ $.ajax({
       <div class="text-center">
 
 
+      
+        <a href="<?php echo $social['youtube_url']; ?>" target="_blank"> <i class="fa fa-youtube "></i></a>
 
-        <a href="#" target="_blank"> <i class="fa fa-youtube "></i></a>
+        <a href="<?php echo $social['twitter_url']; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
 
-        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="<?php echo $social['linkedin_url']; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
 
-        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="<?php echo $social['facebook_url']; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
 
-        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="<?php echo $social['instagram_url']; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
 
-        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-
-        <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+        <a href="<?php echo $social['pinterest_url']; ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
       </div>
 
-      <p class="reserved">@2020 All Rights Reserved. Developed By <span><a href="#" class="lik">Hisarfever</a></span></p>
+      <p class="reserved">@<?php echo '20'.date('y'); ?> All Rights Reserved. Developed By <span><a href="#" class="lik">Hisarfever</a></span></p>
     </div>
   </section>
 

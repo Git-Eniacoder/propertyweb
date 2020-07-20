@@ -16,8 +16,8 @@ class Recharge extends My_Controller {
         $wallet=$this->input->post('wallet');
         $update_bal=$this->input->post('balance')+1200;
         if($this->Db_Wallet->update_wallet($wallet,$update_bal)){
-            $this->session->set_flashdata('success','User Added Succefully'); 
-            redirect(base_url());
+            $this->session->set_flashdata('success',true); 
+            redirect(base_url().'recharge_mod/recharge');
         }
      }
 

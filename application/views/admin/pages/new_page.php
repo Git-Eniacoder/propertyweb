@@ -13,8 +13,9 @@
                </div>
                <div class="form-group">
                  <label for="">Page Content</label>
-                 <textarea name="pcontent" id="textareaContent"><?php echo isset($update)? $update['page_desc'] : '' ;?></textarea>
-               </div>  
+                 <textarea  id="textareaContent"><?php echo isset($update)? $update['page_desc'] : '' ;?></textarea>
+               </div>
+                 
             </div>
             <div class="col-md-2">
                <div class="form-group">
@@ -53,6 +54,8 @@ event.preventDefault();
 var post_url = $(this).attr("action"); 
 var request_method = $(this).attr("method"); 
 var form_data = $(this).serialize(); 
+var cont = CKEDITOR.instances["textareaContent"].getData();
+form_data += '&pcontent='+cont;
 console.log(form_data)
 $('#response').html('<center><div class="spinner-border text-warning" role="status"><span class="sr-only">Loading...</span></div></center>');
 

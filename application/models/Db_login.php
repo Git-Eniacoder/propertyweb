@@ -51,10 +51,9 @@ class Db_login extends CI_Model
     return $data;
   }
 
-  public function update_site($data)
-  {
-    return $this->db->UPDATE('site_setting', $data);
-  }
+  public function update_site($data){
+    return $this->db->UPDATE('site_setting',$data);
+}
 }
 
 

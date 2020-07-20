@@ -24,21 +24,27 @@ class Site_setting extends CI_Controller {
 
     public function update_site(){
         
-        
+        $config['upload_path']          = './assets/img/logo';
+        $config['file_name']            = 'logo'.rand().'.png';
+        $config['allowed_types']        = 'gif|jpg|png';
             
         $data['site_title'] = $this->input->post('site_title');
         $data['site_desc'] = $this->input->post('site_desc');
-        // $data['site_logo'] = $this->input->post('site_logo');
+        $data['site_logo'] = $config['file_name'];
         $data['eg_select'] = $this->input->post('eg_select');
 
-
-        if($this->db_login->update_site($data)){
-          redirect(base_url().'admin/core/site_setting');
+        $this->load->library('upload', $config);
+        if($this->upload->do_upload('site_logo')){
+            if($this->db_login->update_site($data)){
+            redirect(base_url().'admin/core/site_setting');
+            }else{
+                echo "error";
+            }
+        }else{
+            echo "error";
         }
 
     }
-
-    
 
 }
 
