@@ -15,9 +15,14 @@ class Recharge extends My_Controller {
         $this->load->model('Db_Wallet');
         $wallet=$this->input->post('wallet');
         $update_bal=$this->input->post('balance')+1200;
-        if($this->Db_Wallet->update_wallet($wallet,$update_bal)){
-            $this->session->set_flashdata('success','User Added Succefully'); 
-            redirect(base_url());
+        $refer_id=$this->input->post('refer_id');
+        //getting refer data
+        $refer_table_data=$this->Db_Wallet->get_refer_table($refer_id);
+        $update_data_refer=array('points'=> 100,
+                                  "total_refer"=>$refer_table_data["all_data"][0]->total_refer+1);
+        if($this->Db_Wallet->update_wallet($wallet,$update_bal,$refer_id,$update_data_refer)){
+            $this->session->set_flashdata('success',true); 
+            redirect(base_url().'recharge_mod/recharge');
         }
      }
 

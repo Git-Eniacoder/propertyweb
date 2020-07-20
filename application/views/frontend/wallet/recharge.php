@@ -5,6 +5,7 @@
 
 
 
+    
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -307,22 +308,22 @@
                                 </div>
                             </div> -->
 
-                                <div class="row ">
-                                    <div class="wal-main-icon">
-                                        <div class="wal-icons-bx tablink" onclick="onCity(event, 'London')" id="defautOpe">
+                            <div class="row ">
+                                <div class="wal-main-icon">
+                                    <div class="wal-icons-bx tablink btn" onclick="onCity(event, 'London')" id="defautOpe">
 
                                             <img src="<?php echo $url['image'] . 'wal-wallet-2.svg'; ?>" alt="">
                                             <p class="wlicon">Recharge Wallet</p>
 
-                                        </div>
-                                        <div class="wal-icons-bx tablink" onclick="onCity(event, 'Paris')">
+                                    </div>
+                                    <div class="wal-icons-bx tablink btn" onclick="onCity(event, 'Paris')">
 
 
                                             <img src="<?php echo $url['image'] . 'wal-wallet-2.svg'; ?>" alt="">
                                             <p class="wlicon">Referal Wallet</p>
 
-                                        </div>
-                                        <div class="wal-icons-bx tablink" onclick="onCity(event, 'Tokyo')">
+                                    </div>
+                                    <div class="wal-icons-bx tablink btn" onclick="onCity(event, 'Tokyo')">
 
                                             <img src="<?php echo $url['image'] . 'wal-wallet-2.svg'; ?>" alt="">
                                             <p class="wlicon">Field Wallet</p>
@@ -591,3 +592,6 @@
 </div>
 
 -->
+
+
+

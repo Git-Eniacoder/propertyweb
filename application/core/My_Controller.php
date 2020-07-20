@@ -25,7 +25,7 @@ class My_Controller extends CI_Controller {
                 $name =$this->session->userdata("name");
                 }
             
-            $this->data['uname'] = 'Hey, '.$name;
+            $this->data['uname'] = $name;
          }
         //   echo "<pre>";
         // print_r($this->data);
