@@ -1,4 +1,3 @@
-
 <!-- Home  -->
 <main class="main sub-main">
   <div class="hero_section">
@@ -14,9 +13,6 @@
       </div>
     </div>
 
-
-
-
     <div class="top-main">
       <div class="container">
         <div class="flex justify-content-center ">
@@ -27,9 +23,9 @@
               </div>
               <div class="card-body">
 
-                <p>Home seekers get a virtual tour of your property.</p>
+                <!-- <p>Home seekers get a virtual tour of your property.</p> -->
                 <div class="text-center">
-                  <a href="<?php echo $url['list']; ?>"><button>List Property</button></a>
+                  <a href="<?php echo $url['list']; ?>" class="hero_card-text">List Property</a>
                 </div>
               </div>
 
@@ -45,9 +41,9 @@
               </div>
               <div class="card-body">
 
-                <p>Fast & Easy Recharge for Prepaid Mobile</p>
+                <!-- <p>Fast & Easy Recharge for Prepaid Mobile</p> -->
                 <div class="text-center">
-                  <a href="<?php echo $url['recharge']; ?>"> <button>Recharge</button></a>
+                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
                 </div>
               </div>
             </div>
@@ -59,9 +55,9 @@
               </div>
               <div class="card-body">
 
-                <p>Selling property online was never so easy</p>
+                <!-- <p>Selling property online was never so easy</p> -->
                 <div class="text-center">
-                  <a href="#pproperty"><button>Post Property</button></a>
+                <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
                 </div>
               </div>
             </div>
@@ -73,9 +69,9 @@
               </div>
               <div class="card-body">
 
-                <p>Shop Online for men, women and kids fashion</p>
+                <!-- <p>Shop Online for men, women and kids fashion</p> -->
                 <div class="text-center">
-                  <button>Shopping</button>
+                <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
                 </div>
               </div>
             </div>
@@ -83,6 +79,26 @@
         </div>
       </div>
     </div>
+
+    <div class="call_box">
+      <div class="row justify-content-center">
+        <div class="col-md-10 home_head">
+          <h1 class="home_head_h1">Still in Doubt? Why Don't We Speak On Call?</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center call_actions">
+        <div class="col-sm-2 call_bx">
+          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Give Us a Call</a>
+        </div>
+        <div class="col-sm-1 call_bx">
+          <p>OR</p>
+        </div>
+        <div class="col-sm-2 call_bx">
+        <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Get A Call Back</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="main-refer">
@@ -301,7 +317,8 @@
       <hr class="style1">
 
 
-      <form method="post" action="<?php // echo base_url(); ?>home/add">
+      <form method="post" action="<?php // echo base_url(); 
+                                  ?>home/add">
         <div class="row justify-content-center">
           <div class="col-md-4">
 
