@@ -1,0 +1,384 @@
+<html>
+    <head>
+        <title>Wallet Recharge</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-color: rgba(233, 227, 227, 0.555);
+            }
+            .wallet-op{
+                width: 100%;
+                height: auto;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                background-color: rgb( 245, 57, 61 );
+            }
+            .wallet-op button{
+                width: 100%;
+                height: auto;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                transition: .5s;
+                border-bottom: 2px solid rgb( 245, 57, 61 );
+            }
+            .wallet-op button:hover{
+                border-bottom: 2px solid white;
+            }
+            .wallet-op .active{
+                border-bottom: 2px solid white;
+            }
+            .recha{
+                width: 100%;
+                height: auto;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+            .recha .card{
+                width: 100%;
+                height: auto;
+                padding:1rem;
+                background-color: white;
+            }
+            .recha .card h4{
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: rgb( 65, 65, 65 );
+            }
+            .recha .card .style1 {
+                border-top: 2px solid rgb( 212, 212, 212 );
+                margin-top: 5px;
+            }
+            .recha .card .radi {
+                width: 100%;
+                height: auto;
+                margin-top: 1.5rem;
+            }
+            .recha .card .inp {
+                width: 100%;
+                height: auto;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .recha .card .inp .sel{
+                width: 100%;
+                height: auto;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                border: 1px solid rgba(184, 182, 182, 0.692);
+                border-radius: 3px;
+                padding-left: .5rem;
+                
+            }
+            .recha .card .inp .top{
+                margin-bottom: 1rem;
+            }
+            .recha .card .inp input[type=number]{
+                width: 100%;
+                height: auto;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                
+            }
+            
+            .recha .card .re-bu{
+                width: 100%;
+                height: auto;
+            }
+            .recha .card button{
+                width: 100%;
+                height: auto;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                color: white;
+                background-color: rgb( 245, 57, 61 );
+                border: 2px solid rgb( 245, 57, 61 );
+                outline: none;
+                border-radius: 4px;
+                transition: .5s;
+            }
+            .recha .card button:hover{
+                color: #313061;
+                background-color: transparent;
+                border: 2px solid #313061;
+            }
+                .meu{
+  position: relative;
+  z-index: +2;
+  
+}
+.meu p{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb( 237, 237, 237 );
+  text-transform: uppercase;
+  line-height: 1.4;
+  
+    float:left;
+    
+font-size:larger;
+margin-top: 50px;
+padding-bottom: 30px;
+margin-right: 12px;
+    
+}
+.meu .nav-link:hover{
+ color: rgb( 239, 69, 84 )
+}
+
+.meu .nav-link{
+ 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb( 95, 96, 96 );
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 12px;
+}
+.meu .brk{
+  color: rgba(161, 159, 159, 0.356);
+}
+            
+        </style>    
+    </head>
+    <body>
+        <header class="header-area bg-white meu ">
+
+            <div class="navbar-area ">
+      
+                <div class="container">
+      
+                    <div class="row">
+      
+                        <div class="col-lg-12">
+      
+                            <nav class="navbar navbar-expand-lg">
+      
+                                <div class="logo">
+                                <a class="custom-logo-link " rel="home" href="#"><img width="133" height="55" src="#" alt="Hello Rent india" class="custom-logo" ></a>
+                                   
+                                        <a class="navbar-brand"  href="#" rel="home">
+      
+                                              
+      
+                                        </a>
+      
+                                        
+                                </div>
+      
+                                
+      
+                                <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                  <i class="fa fa-bars"></i>
+                                    
+      
+                                </button>
+      
+      
+      
+                                <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
+                                  <ul id="nav" class="navbar-nav ml-auto ">
+                                  
+                                    <li class=" nav-item">
+                                      <a title="Refer and Earn" href="#" class="nav-link">
+                                        Refer and Earn
+                                      </a>
+                                    </li>
+                                    <li   class="  nav-item m-1 brk ">
+                                      |
+                                    </li>
+                                    <li class=" nav-item">
+                                      <a title="Balance" href="#" class="nav-link">
+                                      Balance <img src="assets/img/rupee.svg" width="10px" > 0.00
+                                      </a>
+                                    </li>
+                                    <li   class="  nav-item m-1 brk ">
+                                      |
+                                    </li>
+                                    <li class="dropdown nav-item">
+                                        
+                                            <img src="assets/img/flag.png" width="30px" class=" dropdown-toggle" data-toggle="dropdown">
+                                             
+                                            
+                                            <div class="dropdown-menu">
+                                              <a class="dropdown-item" href="#">usa</a>
+                                              <a class="dropdown-item" href="#">nepal</a>
+                                              
+                                            </div>
+                                          
+                                        
+                                       
+                                    </li>
+                                    <li   class="  nav-item m-1 brk ">
+                                      |
+                                    </li>
+                                    <li class=" nav-item">
+                                        <img src="assets/img/flag.png" width="30px" class=" dropdown-toggle" data-toggle="dropdown">
+                                             
+                                            
+                                        <div class="dropdown-menu">
+                                          <a class="dropdown-item" href="#">login</a>
+                                          <a class="dropdown-item" href="#">register</a>
+                                          
+                                        </div>
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+                            
+                                 
+                                  </ul>
+                                </div>
+                                
+                              
+      
+      
+      
+      
+                            </nav> <!-- navbar -->
+      
+                        </div>
+      
+                    </div> <!-- row -->
+      
+                </div> <!-- container -->
+      
+            </div> <!-- navbar area -->
+      
+        </header>
+          
+
+
+
+
+        <div class="wallet-op">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <center><img src="assets/img/rupee.svg" width="15px"><span style="color: white;">0.00</span></center>
+                        <button class="active">Recharge wallet</button>
+                    </div>
+                    <div class="col-md-3">
+                        <center><img src="assets/img/rupee.svg" width="15px"><span style="color: white;">0.00</span></center>
+                        <button>Refer & Earn wallet</button>
+                    </div>
+                    <div class="col-md-3">
+                        <center><img src="assets/img/rupee.svg" width="15px"><span style="color: white;">0.00</span></center>
+                        <button>Field Expenses</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button>Add Money</button>
+                    </div>    
+                </div>    
+            </div>    
+
+        </div>  
+        
+        
+        <div class="recha">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h4>Recharge & PayBills</h4>
+                            <hr class="style1">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="#">Mobile</a>
+                                    <a href="#">Landline</a>
+                                    <a href="#">DTH</a>
+                                     
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#">Datacard</a>
+                                </div>    
+                            </div> 
+                            <div class="radi">
+                                <label><input type="radio" name="optradio" checked>Prepaid</label>
+                                <label><input type="radio" name="optradio" >Postpaid</label>
+                            </div> 
+                            <div class="inp">
+                                
+                                    <div class="row top">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text">+91</span>
+                                                </div>
+                                                <input type="number" class="form-control" placeholder="Mobile Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select class="sel">
+                                                <option value="volvo">select operator</option>
+                                                <option value="saab">idea</option>
+                                                <option value="opel">jio</option>
+                                                <option value="audi">vodafone</option>
+                                            </select>
+
+                                        </div>    
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <select class="sel">
+                                                <option value="volvo">select circle</option>
+                                                <option value="saab">rajasthan </option>
+                                                <option value="opel">hariyana</option>
+                                                <option value="audi">delhi</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><img src="assets/img/rupee.svg" width="10px"></span>
+                                                </div>
+                                                <input type="number" class="form-control" placeholder="Ammount">
+                                                
+                                                
+                                            </div>
+
+                                        </div>    
+                                    </div>
+                                         
+                                   
+                            </div> 
+                            <div class="re-bu">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button>Recharge Now</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        
+
+                                    </div>    
+                                </div> 
+                            </div>    
+                        </div> 
+                           
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>    
+                </div>  
+                
+                    
+            </div> 
+               
+        </div>  
+         
+    </body>
+        
+</html>
