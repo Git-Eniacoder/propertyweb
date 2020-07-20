@@ -7,21 +7,12 @@
 
     
 
-<<<<<<< HEAD
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
- 
-
-<div class="wallet">
-=======
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
 <main class="main">
     <div class="wallet">
->>>>>>> 6c5eda98202a8120cacce45f1b737a017d06d9b0
 
 <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -44,12 +35,6 @@
                     <button class="pay" data-toggle="modal" data-target="#myModal">Pay now</button>
             </div>
         </div>
-<<<<<<< HEAD
-            </div>
-        </div>
-        
-    </div>
-=======
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div id="recharge" class="tabcontent rechar">
@@ -83,7 +68,6 @@
                         </div>
 
 
->>>>>>> 6c5eda98202a8120cacce45f1b737a017d06d9b0
 
     <div id="dth" class="tabcon">
     <div class="row justify-content-center">
@@ -107,15 +91,6 @@
                     <div class="col-md-3">
                         <input list="state" name="state" placeholder="enter state" class="inpu">
 
-<<<<<<< HEAD
-                        <datalist id="state">
-                            <option value="rajasthan">
-                            <option value="hariyana">
-                            <option value="delhi">
-                            <option value="punjab">
-                            <option value="up">
-                        </datalist>
-=======
                     <div id="dth" class="tabcon">
                         <div class="row justify-content-center">
                             <div class="col-md-11">
@@ -151,7 +126,6 @@
                                 </div>
                             </div>
                         </div>
->>>>>>> 6c5eda98202a8120cacce45f1b737a017d06d9b0
                     </div>
                     <div class="col-md-3">
                         <input type="number" placeholder="enter ammount" class="inpu"> 
@@ -219,45 +193,6 @@
                 <p>Refferal Wallet Available balance</p>
                 <input type="number" placeholder="150" disabled>
             </div>
-<<<<<<< HEAD
-        </div>
-            </div>
-        </div>
-    </div>
-    <div id="Tokyo" class="tabco">
-    <div class="row justify-content-center">
-            <div class="col-md-11">
-            <div class="contentrr" >
-            <div class="container">
-                <p>Total balance<p>
-                <input type="number" placeholder="15000" disabled>
-                <p>Feild Wallet Available balance</p>
-                <input type="number" placeholder="1400" disabled>
-            </div>
-        </div>
-            </div>
-        </div> 
-    </div>
-    </div>
-        
-       
-        
-        <h6>How to Recharge prepaid mobile online</h6>
-        <p>You can now carry out your prepaid online recharge and bill payments for any number, for your friends and family using MobiKwik. Online recharges can be done through Net Banking, Debit Card.</p>
-    </div>
-  </div>
-  <div id="refer" class="tabcontent">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <h1>REFER AND EARN</h1>
-            </div>
-            <div class="col-md-6">
-                <img src="<?php echo $url['image'] . 'refer.png'; ?>">
-            </div>
-        </div>
-        <p>When you refer a friend and invite them to sign up with, both you and your friend earn money by referral code. You earn Rs 100 SuperCash each, when your friend adds Rs 50 in their wallet. You can earn up to Rs 5,000 SuperCash through Refer and Earn. Now earn money by referring your friends to.</br>
-=======
 
 
 
@@ -384,7 +319,6 @@
 
                         How to refer and earn in two simple steps?
                         Make money with friends in just a few clicks. Refer a friend and earn money.</br>
->>>>>>> 6c5eda98202a8120cacce45f1b737a017d06d9b0
 
 How to refer and earn in two simple steps?
 Make money with friends in just a few clicks. Refer a friend and earn money.</br>
@@ -547,11 +481,6 @@ function openCity(evt, cityName) {
         eve.currentTarget.className += " active";
     }
     document.getElementById("defautOpe").click();
-<<<<<<< HEAD
-</script>   
-
-
-=======
 </script>
 
 <!--
@@ -576,4 +505,6 @@ function openCity(evt, cityName) {
 </div>
 
 -->
->>>>>>> 6c5eda98202a8120cacce45f1b737a017d06d9b0
+
+
+
