@@ -13,7 +13,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php echo $url['css']; ?>">
+
   <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
 </head>
 
@@ -43,6 +43,11 @@
                 <li class=" nav-item">
                   <a title="Home" href="<?php echo $url['list']; ?>" class="nav-link">
                     List Property
+                  </a>
+                </li>
+                <li class=" nav-item">
+                  <a title="Home" href="<?php echo $url['post_property']; ?>" class="nav-link">
+                    Post Property
                   </a>
                 </li>
                 <li class="nav-item dropdown">

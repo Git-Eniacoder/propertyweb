@@ -3,7 +3,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Post_req extends CI_Controller {
+class Post_req extends My_Controller {
 
     public function index()
     {

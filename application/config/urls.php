@@ -29,6 +29,7 @@ $config['buyplan'] = base_url().'recharge_mod/recharge/buyplan';
 
 // Posttable
 $config['posttable'] = base_url().'postreq_mod/post_table'; 
+$config['post_property'] = base_url().'postreq_mod/post_req'; 
 $config['delreq'] = base_url().'admin/postreq_mod/Post_table/delete/';
 $config['updatereq'] = base_url().'admin/postreq_mod/Post_table/update/';
 $config['updateinreq'] = base_url().'admin/postreq_mod/Post_table/updateinsert/';
