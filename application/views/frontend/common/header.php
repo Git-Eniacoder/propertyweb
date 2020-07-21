@@ -12,7 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php echo $url['css']; ?>">
+  <!-- <link rel="stylesheet" href="<?php // echo $url['css']; ?>"> -->
   <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
 </head>
 
@@ -61,7 +61,7 @@
 
                 <li class="nav-item dropdown">
                   <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                   <?php echo isset($uname)?  'Hey, '.$uname : 'My Account' ; ?>
+                    <?php echo isset($uname) ?  'Hey, ' . $uname : 'My Account'; ?>
                   </button>
                   <div class="dropdown-menu">
 
@@ -158,24 +158,37 @@
       </div>
     </div>
   </div>
+
+
   <div class="modal fade" id="otp">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class=" container-fluid modal-body">
-          <div class="left">
-            <h5>Rest Password</h5>
+
+
+
+          <div class="row">
+            <div class="col login_bx">
+              <div class="login_head">
+                <h5>Login into your account</h5>
+              </div>
+
+
+              <div >
+                <h5>Forget Password ? Don't Worry</h5>
+                <p>Enter Your Registered Number</p>
+                <div id="resetid" class="text-center"></div>
+                <form id="frest" action="<?php echo base_url() . 'otp/reset'; ?>" method="post">
+                  <input type="number" name="mobile" placeholder="Mobile no" class="login_inp">
+                  <button class="login_btn">Submit</button>
+                </form>
+                <p class="reg_line">If you dont have an account just <a href="#">Register here</a></p>
+              </div>
+
+            </div>
           </div>
-          <div class="right">
-            <h5>Forget Password ? Don't Worry</h5>
-            <p>Enter Your Registered Number</p>
-            <div id="resetid" class="text-center"></div>
-            <form id="frest" action="<?php echo base_url() . 'otp/reset'; ?>" method="post">
-              <input type="number" name="mobile" placeholder="Mobile no">
-              <button>Submit</button>
-            </form>
-            <p>New here ? Register with us</p>
-            <center><a class="btn" id="mreg">Register</a></center>
-          </div>
+
+
         </div>
 
 

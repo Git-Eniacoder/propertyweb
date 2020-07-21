@@ -16,7 +16,7 @@
     <div class="top-main">
       <div class="container">
         <div class="flex justify-content-center ">
-          <div class="col-md-3">
+          <div class="col-md-3 hero_cards">
             <div class="card">
               <div class="card-img">
                 <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
@@ -34,7 +34,7 @@
           </div>
 
 
-          <div class="col-md-3">
+          <div class="col-md-3 hero_cards">
             <div class="card">
               <div class="card-img">
                 <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
@@ -48,7 +48,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 hero_cards">
             <div class="card">
               <div class="card-img">
                 <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
@@ -62,7 +62,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 hero_cards">
             <div class="card">
               <div class="card-img">
                 <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
@@ -79,42 +79,41 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="call_box">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-10 home_head">
-            <h1 class="home_head_h1">Still in Doubt? Why Don't We Chat?</h1>
-          </div>
+
+  <!-- Call Action Box -->
+  <div class="call_box">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10 home_head">
+          <h1 class="home_head_h1">Still in Doubt? Why Don't We Chat?</h1>
         </div>
-        <div class="row justify-content-center call_actions">
-          <div class="col-md-2 call_bx">
-            <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Let's Chat</a>
-          </div>
-          <div class="col-md-1 call_bx">
-            <p class="call_bx_or">OR</p>
-          </div>
-          <div class="col-md-2 call_bx">
-            <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Get A Call Back</a>
-          </div>
+      </div>
+      <div class="row justify-content-center call_actions">
+        <div class="col-md-2 call_bx">
+          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Let's Chat</a>
+        </div>
+        <div class="col-md-1 call_bx">
+          <p class="call_bx_or">OR</p>
+        </div>
+        <div class="col-md-2 call_bx">
+          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Get A Call Back</a>
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="main-refer">
     <div class="container fe">
       <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-5">
           <div class="card">
-            <h5>Refer your friend and earn 1200 pt</h5>
+            <h5>Refer your friend and earn upto &#8377; 50,000 per month</h5>
           </div>
         </div>
-        <div class="col-md-2" style="padding-left: 0px;">
-          <div class="card">
-            <button>Lets Go</button>
-          </div>
+        <div class="col-md-2 text-center">
+          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Lets Go</a>
         </div>
       </div>
     </div>
@@ -139,7 +138,8 @@
   <div class="pro-card blog_section">
     <div class="container">
       <div class="blog-head">
-        <h2>Blogs</h2>
+        <h2>Let Explore our Blogs</h2>
+        <p>Looking for some of our best blogs</p>
       </div>
       <div class="row justify-content-center">
         <div class="col-md-4">
@@ -167,7 +167,7 @@
             <img class="card-img-top" src="assets/img/money4.jpg" alt="">
             <div class="card-body">
               <h4 class="card-title">Best ways to earn money</h4>
-              <p class="card-text">The crazy thing is, earning money online isn't a pipe dream. I have been doing</p>
+              <p class="card-text">The crazy thing is, earning money online isn't a pipe dream. I have been doing real estate</p>
               <a href="#" class="btn btn-primary blog-btn">Read More...</a>
             </div>
           </div>
