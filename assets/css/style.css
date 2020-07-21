@@ -1751,16 +1751,20 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 /* Contact Css */
 .contact_inp {
   border: none !important;
-  width: 70%;
+  width: 100%;
   height: 12rem;
   border: 1px solid #C4C4C4 !important;
   border-radius: 2px;
 }
 
+.contact_head h2{
+  color: #413F3F;
+}
+
 .contact_btn {
   background-color: #FF5757;
   border: none;
-  width: 10rem;
+  width: 100%;
 }
 
 .contact_btn:hover {
@@ -1794,7 +1798,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 .contact_bx{
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
   padding: 1rem;
 }
 
@@ -1804,6 +1808,19 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .contact_side_top_h1{
   font-size: 1.3rem;
+}
+
+.getintouch{
+  width: 100%;
+  height: 9rem;
+  background-color: #dc3545;
+}
+
+.getintouch_h1{
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  padding-top: 3.5rem;
 }
 
 
