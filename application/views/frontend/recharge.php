@@ -1,4 +1,19 @@
-
+<?php
+  if(isset($_GET["id"]))
+  {
+    $refer_id=$_GET["id"];
+    setcookie('referid',$_GET["id"],time() + (86400 * 30), "/");
+  }
+  else if(isset($_COOKIE['referid'])){
+    $refer_id=$_COOKIE['referid'];
+  }
+  else
+  {
+    $refer_id=NULL;
+    echo $refer_id;
+   
+  }
+?>
 <!-- Recharge Section -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -137,6 +152,7 @@
                     ></script>
                   <input type="hidden" value="recharge_wallet" name="wallet">
                   <input type="hidden" value="<?php echo $post['all_data'][0]->recharge_wallet; ?>" name="balance">
+                  <input type="hidden" value="<?php echo $refer_id; ?>" name="refer_id">
                 </form>
                   <?php } else{?>
                     <button data-toggle="modal" data-target="#login">Recharge Rs. 960</button>

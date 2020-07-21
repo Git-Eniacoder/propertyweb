@@ -1,81 +1,104 @@
 <!-- Home  -->
-
-<main class="main">
-  <div class="top-text">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <h1>Let your Dream come True search for your own property</h1>
+<main class="main sub-main">
+  <div class="hero_section">
+    <div class="top-text">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10 home_head">
+            <h1 class="home_head_h1">Now Search <span class="home_head-span">Your Rental Property</span> With Helo Rent India </h1>
+            <p>India’s Most Trusted Rental Website</p>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-  <div class="top-main">
-    <div class="container">
-      <div class="flex justify-content-center ">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-img">
-              <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
-            </div>
-            <div class="card-body">
 
-            <p>Home seekers get a virtual tour of your property. Only those with genuine interest approach you.</p>
-            <div class="text-center">
-              <a href="<?php echo $url['list']; ?>"><button>List Property</button></a>
+    <div class="top-main">
+      <div class="container">
+        <div class="flex justify-content-center ">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
+              </div>
+              <div class="card-body">
+
+                <!-- <p>Home seekers get a virtual tour of your property.</p> -->
+                <div class="text-center">
+                  <a href="<?php echo $url['list']; ?>" class="hero_card-text">List Property</a>
+                </div>
+              </div>
+
             </div>
+
           </div>
 
-        </div>
 
-      </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
+              </div>
+              <div class="card-body">
 
-
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-img">
-              <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
-            </div>
-            <div class="card-body">
-
-            <p>Fast & Easy Recharge for Prepaid Mobile, Postpaid Mobile, Datacard & DTH. T & C apply. </p>
-            <div class="text-center">
-              <a href="<?php echo $url['recharge']; ?>"> <button>Recharge</button></a>
+                <!-- <p>Fast & Easy Recharge for Prepaid Mobile</p> -->
+                <div class="text-center">
+                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-img">
-            <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
-          </div>
-          <div class="card-body">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
+              </div>
+              <div class="card-body">
 
-            <p>Selling property online was never so easy and is now just a click. a leading property site to rent your property</p>
-            <div class="text-center">
-            <a href="#pproperty"><button>Post Property</button></a>
+                <!-- <p>Selling property online was never so easy</p> -->
+                <div class="text-center">
+                <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-img">
-            <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
-          </div>
-          <div class="card-body">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
+              </div>
+              <div class="card-body">
 
-              <p>Shop Online for men, women and kids fashion, home décor and furnishings, kitchen apppliances</p>
-              <div class="text-center">
-                <button>Shopping</button>
+                <!-- <p>Shop Online for men, women and kids fashion</p> -->
+                <div class="text-center">
+                <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="call_box">
+      <div class="row justify-content-center">
+        <div class="col-md-10 home_head">
+          <h1 class="home_head_h1">Still in Doubt? Why Don't We Speak On Call?</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center call_actions">
+        <div class="col-sm-2 call_bx">
+          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Give Us a Call</a>
+        </div>
+        <div class="col-sm-1 call_bx">
+          <p>OR</p>
+        </div>
+        <div class="col-sm-2 call_bx">
+        <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Get A Call Back</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="main-refer">
@@ -113,89 +136,37 @@
 
   <div class="pro-card">
     <div class="container">
+      <div class="blog-head">
+        <h2>Blogs</h2>
+      </div>
       <div class="row justify-content-center">
         <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
-            <span class="city-tag">Jaipur</span>
+          <div class="card text-center">
+            <img class="card-img-top" src="assets/img/youtube.jpg" alt="">
             <div class="card-body">
-              <p>3 Bedroom flat available in, jatpura</p>
-              <div class="rent-price">
-                <p class="head-price">12,000 <span class="price">/ month</span></p>
-                <p class="head-price">3 BHK</p>
-                <span class="print-subs">Rent</span>
-              </div></br>
-              <div class="text-center">
-                <button>Contact</button>
-              </div>
+              <h4 class="card-title">How to use google keep</h4>
+              <p class="card-text">Google Keep makes organizing information a cinch You can easily jot down ideas</p>
+              <a href="#" class="btn btn-primary blog-btn">Read More...</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
-            <span class="city-tag">Jaipur</span>
+          <div class="card text-center">
+            <img class="card-img-top" src="assets/img/property.jpg" alt="">
             <div class="card-body">
-              <p>3 Bedroom flat available in, jatpura</p>
-              <div class="rent-price">
-                <p class="head-price">12,000 <span class="price">/ month</span></p>
-                <p class="head-price">3 BHK</p>
-                <span class="print-subs">Rent</span>
-              </div></br>
-              <div class="text-center">
-                <button>Contact</button>
-              </div>
+              <h4 class="card-title">How to find property</h4>
+              <p class="card-text">It is important to check the land record before purchasing the property because real estate is a non-transparent</p>
+              <a href="#" class="btn btn-primary blog-btn">Read More...</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
-            <span class="city-tag">Jaipur</span>
+          <div class="card text-center">
+            <img class="card-img-top" src="assets/img/money3.jpg" alt="">
             <div class="card-body">
-              <p>3 Bedroom flat available in, jatpura</p>
-              <div class="rent-price">
-                <p class="head-price">12,000 <span class="price">/ month</span></p>
-                <p class="head-price">3 BHK</p>
-                <span class="print-subs">Rent</span>
-              </div></br>
-              <div class="text-center">
-                <button>Contact</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
-            <span class="city-tag">Jaipur</span>
-            <div class="card-body">
-              <p>3 Bedroom flat available in, jatpura</p>
-              <div class="rent-price">
-                <p class="head-price">12,000 <span class="price">/ month</span></p>
-                <p class="head-price">3 BHK</p>
-                <span class="print-subs">Rent</span>
-              </div></br>
-              <div class="text-center">
-                <button>Contact</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
-            <span class="city-tag">Jaipur</span>
-            <div class="card-body">
-              <p>3 Bedroom flat available in, jatpura</p>
-              <div class="rent-price">
-                <p class="head-price">12,000 <span class="price">/ month</span></p>
-                <p class="head-price">3 BHK</p>
-                <span class="print-subs">Rent</span>
-              </div></br>
-              <div class="text-center">
-                <button>Contact</button>
-              </div>
+              <h4 class="card-title">Best ways to earn money</h4>
+              <p class="card-text">The crazy thing is, earning money online isn't a pipe dream. I have been doing</p>
+              <a href="#" class="btn btn-primary blog-btn">Read More...</a>
             </div>
           </div>
         </div>
@@ -204,23 +175,158 @@
 
   </div>
 
-<div id="pproperty" class="post">
+
+</main>
+
+
+<!-- End Home -->
+
+
+
+<!-- <input list="persons" name="person" id="person" class="lis" placeholder="owner/dealer"> -->
+
+
+
+
+<!-- <datalist id="persons">
+          <option value="Owner">
+          <option value="Dealer">
+        </datalist> -->
+
+
+
+<!-- <label for="listpp">List property for <span style="color: red;">*</span></label>
+        <input list="listpps" name="listpp" id="listpp" class="lis" placeholder="List property"> -->
+
+<!-- <datalist id="listpps">
+          <option value="Sell">
+          <option value="Rent">
+        </datalist> -->
+
+
+<!-- <label>Area<span style="color: red;">*</span></label>
+        <input type="number" name="pcity" placeholder="Area">
+
+        <label for="aunit">Area unit<span style="color: red;">*</span></label>
+        <input list="aunits" name="aunit" id="aunit" class="lis" placeholder="Area unit"> -->
+
+<!-- <datalist id="aunits">
+          <option value="sq.fit">
+          <option value="sq.m">
+          <option value="sq.yard">
+        </datalist> -->
+
+<!-- <div class="pro-card">
   <div class="container">
-
-    <h2 class="text-center">Post your requirement</h2>
-    <hr class="style1">
-
-
-      <!-- Column 1  -->
-      <form method="post"  action="<?php echo base_url();?>home/add" >
     <div class="row justify-content-center">
       <div class="col-md-4">
-
-        <h5>Enter Below Details</h5>
-        <div>
-          <label>Name<span style="color: red;">*</span></label>
-          <input type="text" name="post-name" placeholder="Enter Name">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
+          <span class="city-tag">Jaipur</span>
+          <div class="card-body">
+            <p>3 Bedroom flat available in, jatpura</p>
+            <div class="rent-price">
+              <p class="head-price">12,000 <span class="price">/ month</span></p>
+              <p class="head-price">3 BHK</p>
+              <span class="print-subs">Rent</span>
+            </div></br>
+            <div class="text-center">
+              <button>Contact</button>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
+          <span class="city-tag">Jaipur</span>
+          <div class="card-body">
+            <p>3 Bedroom flat available in, jatpura</p>
+            <div class="rent-price">
+              <p class="head-price">12,000 <span class="price">/ month</span></p>
+              <p class="head-price">3 BHK</p>
+              <span class="print-subs">Rent</span>
+            </div></br>
+            <div class="text-center">
+              <button>Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
+          <span class="city-tag">Jaipur</span>
+          <div class="card-body">
+            <p>3 Bedroom flat available in, jatpura</p>
+            <div class="rent-price">
+              <p class="head-price">12,000 <span class="price">/ month</span></p>
+              <p class="head-price">3 BHK</p>
+              <span class="print-subs">Rent</span>
+            </div></br>
+            <div class="text-center">
+              <button>Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
+          <span class="city-tag">Jaipur</span>
+          <div class="card-body">
+            <p>3 Bedroom flat available in, jatpura</p>
+            <div class="rent-price">
+              <p class="head-price">12,000 <span class="price">/ month</span></p>
+              <p class="head-price">3 BHK</p>
+              <span class="print-subs">Rent</span>
+            </div></br>
+            <div class="text-center">
+              <button>Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/img2.jpg" alt="Card image">
+          <span class="city-tag">Jaipur</span>
+          <div class="card-body">
+            <p>3 Bedroom flat available in, jatpura</p>
+            <div class="rent-price">
+              <p class="head-price">12,000 <span class="price">/ month</span></p>
+              <p class="head-price">3 BHK</p>
+              <span class="print-subs">Rent</span>
+            </div></br>
+            <div class="text-center">
+              <button>Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+
+
+<!-- <div id="pproperty" class="post">
+    <div class="container">
+
+      <h2 class="text-center">Post your requirement</h2>
+      <hr class="style1">
+
+
+      <form method="post" action="<?php // echo base_url(); 
+                                  ?>home/add">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+
+            <h5>Enter Below Details</h5>
+            <div>
+              <label>Name<span style="color: red;">*</span></label>
+              <input type="text" name="post-name" placeholder="Enter Name">
+            </div>
 
             <div>
               <label>Email<span style="color: red;">*</span></label>
@@ -232,7 +338,7 @@
               <input type="text" name="post-mobile" placeholder="Enter Mobile">
             </div>
 
-            <!-- Looking For -->
+          
             <div>
               <label for="Property-For">Looking For<span style="color: red;">*</span></label>
               <div>
@@ -245,7 +351,7 @@
             </div>
 
 
-            <!-- Property Type -->
+          
             <div>
               <label for="ptype">Property type <span style="color: red;">*</span></label>
               <input list="ptypes" name="ptype" id="ptype" class="lis" placeholder="property type">
@@ -269,15 +375,14 @@
 
 
           </div>
-          <!-- Column 1  end -->
+         
 
 
-          <!-- Column 2  -->
+         
           <div class="col-md-4">
 
             <h5>Where Is the property located?</h5>
 
-            <!-- BHK -->
             <div>
               <label for="bhk">BHK <span style="color: red;">*</span></label>
               <input list="bhks" name="bhk" id="bhk" class="lis" placeholder="BHK">
@@ -293,7 +398,7 @@
 
 
 
-            <!-- Furnished -->
+         
             <div>
               <label for="furnished">Furnished <span style="color: red;">*</span></label>
               <input list="furnisheds" name="furnished" id="furnished" class="lis" placeholder="Furnished type">
@@ -305,7 +410,6 @@
               </datalist>
             </div>
 
-            <!-- Rent -->
             <div>
               <label for="rent">Rent <span style="color: red;">*</span></label>
               <div>
@@ -350,5 +454,4 @@
         <center><button>Post Your Request</button></center>
     </div>
   </div>
-  </form>
-</main>
+  </form> -->
