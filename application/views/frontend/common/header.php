@@ -75,6 +75,7 @@
                       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register">Register</a>
                     <?php } else { ?>
                       <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
+                      <a class="dropdown-item" href="<?php echo $url['support']; ?>">Raise Ticket</a>
                       <a class="dropdown-item" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
                     <?php } ?>
                   </div>
@@ -113,7 +114,7 @@
               </form>
 
               <div class="login_bot">
-                <p>If you have an account just <a href="#"> Login here</a></p>
+                <p>If you have an account just <a id="mlog" class="btn text-primary"> Login here</a></p>
               </div>
 
 
@@ -153,7 +154,7 @@
               <a class="p-1 btn login_forgot" id="para">
                 <p>Forgot Password ?</p>
               </a>
-              <p>If you dont have an account just <a href="#">Register here</a></p>
+              <p>If you dont have an account just <a id="mreg" class="btn text-primary">Register here</a></p>
               <!-- <center><a class="btn" id="mreg">Register</a></center> -->
             </div>
           </div>

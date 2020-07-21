@@ -38,6 +38,8 @@ $config['updateinreq'] = base_url().'admin/postreq_mod/Post_table/updateinsert/'
 // recharge Controller
 $config['wallet'] = base_url().'wallet/recharge';   // Done
 
+// support
+$config['support'] = base_url().'support';
 
 //image url
 $config['image'] = base_url().'assets/img/';

@@ -70,16 +70,30 @@ a.active{
                   <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active p-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <ul class="">
-                            <li>Coffee</li>
-                            <li>Tea</li>
-                            <li>Coca Cola</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Sed id enim sed lectus volutpat tempor vel elementum nisi.</li>
+                        <li>Nunc euismod urna id augue rhoncus, nec eleifend augue tincidunt.</li>
+                        <li>Duis et purus eget ante mollis finibus non et dui.</li>
+                        <li>Etiam et magna fermentum, pharetra turpis scelerisque, tincidunt turpis.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Sed id enim sed lectus volutpat tempor vel elementum nisi.</li>
+                        <li>Nunc euismod urna id augue rhoncus, nec eleifend augue tincidunt.</li>
+                        <li>Duis et purus eget ante mollis finibus non et dui.</li>
+                        <li>Etiam et magna fermentum, pharetra turpis scelerisque, tincidunt turpis.</li>
                           </ul>                          
                     </div>
                     <div class="tab-pane fade p-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <ul class="">
-                            <li>Coffee</li>
-                            <li>Tea</li>
-                            <li>Coca Cola</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Sed id enim sed lectus volutpat tempor vel elementum nisi.</li>
+                        <li>Nunc euismod urna id augue rhoncus, nec eleifend augue tincidunt.</li>
+                        <li>Duis et purus eget ante mollis finibus non et dui.</li>
+                        <li>Etiam et magna fermentum, pharetra turpis scelerisque, tincidunt turpis.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Sed id enim sed lectus volutpat tempor vel elementum nisi.</li>
+                        <li>Nunc euismod urna id augue rhoncus, nec eleifend augue tincidunt.</li>
+                        <li>Duis et purus eget ante mollis finibus non et dui.</li>
+                        <li>Etiam et magna fermentum, pharetra turpis scelerisque, tincidunt turpis.</li>
                           </ul>  
                     </div>
                   </div>

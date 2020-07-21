@@ -18,8 +18,6 @@ class Listing extends My_Controller
     public function index()
     {
      
-        $this->data['post'] = $this->Db_postreq->get_data();
-
         $this->load->view('frontend/common/header', $this->data);
         $this->load->view('frontend/listing', $this->data);
         $this->load->view('frontend/common/footer', $this->data);
@@ -28,111 +26,66 @@ class Listing extends My_Controller
 
     public function insert()
     {
-
-        //  Database Table
-        //  post_request
-        //  post_imgs
-
-
-        $this->form_validation->set_rules('city', 'city', 'required');
-        $this->form_validation->set_rules('description', 'description', 'required');
-        $this->form_validation->set_rules('rent', 'rent', 'required');
-        $this->form_validation->set_rules('bhk', 'bhk', 'required');
-        $this->form_validation->set_rules('furnished', 'furnished', 'required');
-        $this->form_validation->set_rules('forwhom', 'forwhom', 'required');
-        $this->form_validation->set_rules('area', 'area', 'required');
-
-
-
-        # code...
-        $info = array(
-            "city" => $this->input->post('city'),
-            "description" => $this->input->post('description'),
-            "rent" => $this->input->post('rent'),
-            "bhk" => $this->input->post('bhk'),
-            "furnished" => $this->input->post('furnished'),
-            "forwhom" => $this->input->post('forwhom'),
-            "area" => $this->input->post('area'),
-        );
-
-       
-
-
-        // Get AllImages first
+       $this->form_validation->set_rules('list_name', 'Name', 'required');
+       $this->form_validation->set_rules('list_mobile', 'Mobile', 'required');
+       $this->form_validation->set_rules('list_email', 'Email', 'required');
+       $this->form_validation->set_rules('list_city', 'City', 'required');
+       $this->form_validation->set_rules('list_locality', 'Locality', 'required');
+       $this->form_validation->set_rules('list_type', 'Property Type', 'required');
+       $this->form_validation->set_rules('list_furnished', 'Furnished Type', 'required');
+       $this->form_validation->set_rules('list_willing', 'Willing Out', 'required');
+       $this->form_validation->set_rules('list_messages', 'Message', 'required');
         
-        // // 1. Load Upload Liberary
-        // $this->load->library('upload');
-
-        // // 2. All Images in Img_data
-        // $img_data = $_FILES['list_img']['name'];
-
-        // // NOTE :  ALL image_data is in $_FILES
-        // // echo '<pre>';
-        // // print_r($_FILES);
-        // // die();
-
-        // // 3. COUNT the number of files
-        // $number_of_files = count($_FILES['list_img']['name']);
-
-        // // 4. Store global files to local variable
-        // $files = $_FILES;
-
-        // // 5. Upload files one by one
-        // for($i = 0; $i < $number_of_files; $i++){
-
-        //     $_FILES['list_img']['name'] = $files['list_img']['name'][$i];
-        //     $_FILES['list_img']['type'] = $files['list_img']['type'][$i];
-        //     $_FILES['list_img']['tmp_name'] = $files['list_img']['tmp_name'][$i];
-        //     $_FILES['list_img']['error'] = $files['list_img']['error'][$i];
-        //     $_FILES['list_img']['size'] = $files['list_img']['size'][$i];
-
-        //     $config['upload_path'] = './uploads/';
-        //     $config['allowed_types'] = 'gif|jpg|png';
-        //     $config['max_size'] = '0';
-        //     $config['max_width'] = '0';
-        //     $config['max_width'] = '0';
-
-        //     // 6. initialize Upload
-        //     $this->upload->initialize($config);
+        if ($this->form_validation->run()) {
+            $filesCount = count($_FILES['files']['name']); 
+            echo $filesCount;
+            $errorUploadType = '';
+            $images = '';
+            for($i = 0; $i < $filesCount; $i++){ 
+            $_FILES['file']['name']     = $_FILES['files']['name'][$i]; 
+            $_FILES['file']['type']     = $_FILES['files']['type'][$i]; 
+            $_FILES['file']['tmp_name'] = $_FILES['files']['tmp_name'][$i]; 
+            $_FILES['file']['error']     = $_FILES['files']['error'][$i]; 
+            $_FILES['file']['size']     = $_FILES['files']['size'][$i]; 
 
 
-        //     // 7. Upload to the server
-        //     if($this->upload->do_upload('list_img')){
+            $config['upload_path']           = "./assets/img/property_list/" ;
+            $config['file_name']            = 'list_property'.rand().'.png';
+            $config['allowed_types']        = 'jpg|png';
 
-        //         // $imageData = $this->upload->data();
-     
-        //         // 8. We get the image data 
-        //         $imageData = $this->upload->data();
-
-        //         // 9. get the image name and 
-        //         $img['image_name'] = $imageData['file_name'];
-
-
-                // echo "<pre>";
-                // print_r($info);
-                // die();
-                $this->Db_postreq->insert($info);
-                
-                redirect($this->data['list'],'refresh');
-
+            $this->load->library('upload', $config); 
+            $this->upload->initialize($config); 
+            if($this->upload->do_upload('file')){
+                 $images .= $config['file_name'].',';
+            }else{
+                $array = array(
+                    'form'   => true,
+                     'error' => $this->upload->display_errors(),
+                   );
+                break;
             }
-            // else {
-
-
-                
-            // }
-
-
-
-
+        $this->input->post('list_name');
+        $this->input->post('list_mobile');
+        $this->input->post('list_name');
+        $this->input->post('list_name');
+        $this->input->post('list_name');
+        $this->input->post('list_name');
+        $this->input->post('list_name');
+        $this->input->post('list_name');
+        $this->input->post('list_name');
+        }
             
-        
-
-
-    
-
-
-
+            
+        } else {
+            $array = array(
+                'form'   => true,
+                 'error' => validation_errors(),
+               );
+               
+            }
+            echo json_encode($array);
+       
+    }
     public function update($id)
     {
         $data['update'] = $this->Db_postreq->update($id);

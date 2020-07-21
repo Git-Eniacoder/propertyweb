@@ -39,90 +39,78 @@
         <div class="row">
             <div style="background-color: #fff;" class="p-4 col-md-9">
                 <h5 class="text-black">Requirement Details <span class="text-danger">*</span> </h5>
-                <form class="post-requirment my-3">
+                <form action="<?php echo $url['inreq']; ?>" method="post" class="post-requirment my-3" enctype="multipart/form-data">
                 <div class="form-row">
                         <div class="form-group col-md-6">
-                            <!-- <label for="inputEmail4">Email</label> -->
                             <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Your Name*">
+                        class="form-control" name="list_name" placeholder="Enter Your Name*">
                     </div>
                     <div class="form-group col-md-6">
-                        <!-- <label for="inputPassword4">Password</label> -->
                         <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Mobile Number*">
+                        class="form-control" name="list_mobile"  placeholder="Enter Mobile Number*">
                     </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
-                            <!-- <label for="inputEmail4">Email</label> -->
                             <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Your Email*">
+                        class="form-control" name="list_email"  placeholder="Enter Your Email*">
                     </div>
                     <div class="form-group col-md-6">
-                        <!-- <label for="inputPassword4">Password</label> -->
                         <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Your City*">
+                        class="form-control" name="list_city"  placeholder="Enter Your City*">
                     </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
-                            <!-- <label for="inputEmail4">Email</label> -->
                             <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Locality*">
+                        class="form-control" name="list_locality"  placeholder="Locality*">
                     </div>
                     <div class="form-group col-md-6">
-                        <!-- <label for="inputPassword4">Password</label> -->
-                        <select id="protype" onchange="myFunction()" class="form-control">
-                            <option selected>Select Property Type*</option>
+                        <select id="protype" name="list_type" onchange="myFunction()" class="form-control">
+                            <option disabled value="" selected>Select Property Type*</option>
                             <option value="commercial">Commercial</option>
                               <option value="residential">Residential</option>     
                         </select>
                   </div>
                 </div>
                         <div id="bhk" class="form-group">
-                            <!-- <label for="inputEmail4">Email</label> -->
-                            <select id="inputState" class="form-control">
-                            <option selected>BHK Size*</option>
-                            <option value="Sq.ft.">1 BHK</option>
-                              <option value="Cent">2 BHK</option>
-                              <option value="Sq. Yards">3 BHK</option>
-                              <option value="Ares">4 BHK</option>
+                            <select name="list_bhk" class="form-control">
+                            <option disabled value="" selected>BHK Size*</option>
+                            <option value="1">1 BHK</option>
+                              <option value="2">2 BHK</option>
+                              <option value="3">3 BHK</option>
+                              <option value="4">4 BHK</option>
                           </select>
                         </div>
                     <div id="unit" class="form-group">
-                        <!-- <label for="inputPassword4">Password</label> -->
                         <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Build Up Area in Sq. Ft*">
+                        class="form-control" name="list_area"  placeholder="Enter Build Up Area in Sq. Ft*">
                     </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
-                            <!-- <label for="inputEmail4">Email</label> -->
-                            <select id="inputState" class="form-control">
-                            <option selected>Furnished Type*</option>
-                            <option value="Sq.ft.">Furnished</option>
-                              <option value="Cent">Semi Furnished</option>
-                              <option value="Sq. Yards">Non-Furnished</option>
+                            <select name="list_furnished" class="form-control">
+                            <option disabled value="" selected>Furnished Type*</option>
+                            <option value="Furnished">Furnished</option>
+                              <option value="Semi-furnished">Semi-Furnished</option>
+                              <option value="Non-furnished">Non-Furnished</option>
                           </select>
                     </div>
              
                     <div class="form-group col-md-6">
-                        <!-- <label for="inputPassword4">Password</label> -->
-                        <select id="inputState" class="form-control">
-                            <option selected>Willing to Rent Out*</option>
+                        <select name="list_willing" class="form-control">
+                            <option disabled value="" selected>Willing to Rent Out*</option>
                             <option value="Sq.ft.">1 BHK</option>
-                              <option value="Cent">2 BHK</option>
-                              <option value="Sq. Yards">3 BHK</option>
-                              <option value="Ares">4 BHK</option>
+                              
                               
                           </select>
                     </div>
 </div>
           <div class="form-group">
-            <input type="file" class="form-control-file" name="" id="gallery-photo-add" placeholder="Upload Images" multiple aria-describedby="fileHelpId">
+            <input type="file" class="form-control-file" id="gallery-photo-add" name="files[]" placeholder="Upload Images" multiple>
           </div>
           <div class="gallery d-flex flex-wrap"></div>
                 <div class="form-group">
-                  <textarea class="form-control" name="" id="" rows="3">Brief Description or Message</textarea>
+                  <textarea class="form-control" name="list_messages"  placeholder="Brief Description or Message" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-danger w-100 my-4">List my Property</button>
                   </form>
