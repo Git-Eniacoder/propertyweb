@@ -88,13 +88,13 @@
           </div>
         </div>
         <div class="row justify-content-center call_actions">
-          <div class="col-sm-2 call_bx">
-            <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Lets Chat</a>
+          <div class="col-md-2 call_bx">
+            <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Let's Chat</a>
           </div>
-          <div class="col-sm-1 call_bx">
-            <p>OR</p>
+          <div class="col-md-1 call_bx">
+            <p class="call_bx_or">OR</p>
           </div>
-          <div class="col-sm-2 call_bx">
+          <div class="col-md-2 call_bx">
             <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Get A Call Back</a>
           </div>
         </div>
@@ -164,7 +164,7 @@
         </div>
         <div class="col-md-4">
           <div class="card text-center">
-            <img class="card-img-top" src="assets/img/money3.jpg" alt="">
+            <img class="card-img-top" src="assets/img/money4.jpg" alt="">
             <div class="card-body">
               <h4 class="card-title">Best ways to earn money</h4>
               <p class="card-text">The crazy thing is, earning money online isn't a pipe dream. I have been doing</p>
