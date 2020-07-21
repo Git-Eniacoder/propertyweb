@@ -25,7 +25,7 @@
 
                 <!-- <p>Home seekers get a virtual tour of your property.</p> -->
                 <div class="text-center">
-                  <a href="<?php echo $url['list']; ?>" class="hero_card-text">List Property</a>
+                  <a href="<?php echo $url['list']; ?>" class="hero_card-text">Recharge</a>
                 </div>
               </div>
 
@@ -43,7 +43,7 @@
 
                 <!-- <p>Fast & Easy Recharge for Prepaid Mobile</p> -->
                 <div class="text-center">
-                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
+                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">List Property</a>
                 </div>
               </div>
             </div>
@@ -57,7 +57,7 @@
 
                 <!-- <p>Selling property online was never so easy</p> -->
                 <div class="text-center">
-                <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
+                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Post Requirement</a>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@
 
                 <!-- <p>Shop Online for men, women and kids fashion</p> -->
                 <div class="text-center">
-                <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Recharge</a>
+                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Shopping</a>
                 </div>
               </div>
             </div>
@@ -81,20 +81,22 @@
     </div>
 
     <div class="call_box">
-      <div class="row justify-content-center">
-        <div class="col-md-10 home_head">
-          <h1 class="home_head_h1">Still in Doubt? Why Don't We Speak On Call?</h1>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10 home_head">
+            <h1 class="home_head_h1">Still in Doubt? Why Don't We Chat?</h1>
+          </div>
         </div>
-      </div>
-      <div class="row justify-content-center call_actions">
-        <div class="col-sm-2 call_bx">
-          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Give Us a Call</a>
-        </div>
-        <div class="col-sm-1 call_bx">
-          <p>OR</p>
-        </div>
-        <div class="col-sm-2 call_bx">
-        <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Get A Call Back</a>
+        <div class="row justify-content-center call_actions">
+          <div class="col-sm-2 call_bx">
+            <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Lets Chat</a>
+          </div>
+          <div class="col-sm-1 call_bx">
+            <p>OR</p>
+          </div>
+          <div class="col-sm-2 call_bx">
+            <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Get A Call Back</a>
+          </div>
         </div>
       </div>
     </div>
@@ -119,7 +121,7 @@
   </div>
 
 
-  <div class="main-search-text">
+  <!-- <div class="main-search-text">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-7">
@@ -131,10 +133,10 @@
       </div>
       <hr class="style1">
     </div>
-  </div>
+  </div> -->
 
 
-  <div class="pro-card">
+  <div class="pro-card blog_section">
     <div class="container">
       <div class="blog-head">
         <h2>Blogs</h2>

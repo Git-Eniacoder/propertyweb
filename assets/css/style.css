@@ -1683,6 +1683,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .call_btn{
  background-color: #FF5757;
+ font-size: 1.2rem;
 }
 
 .call_bx{
@@ -1703,6 +1704,10 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   color: #1e2229;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.blog_section{
+  margin: 4rem 0rem;
 }
 
 
