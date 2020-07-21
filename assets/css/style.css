@@ -136,7 +136,7 @@ input{
     text-align: center;
     color: #413F3F;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   /* top text end */
@@ -146,7 +146,7 @@ input{
   .top-main{
     width:100%;
     height: auto;
-    padding-top: 2rem;
+    padding-top: .5rem;
     padding-bottom: 2rem;
   }
   .top-main .card {
@@ -339,7 +339,7 @@ input{
 }
 .pro-card .card img{
   width:100%;
-  height: auto;
+  height: 13rem;
 
 }
 .pro-card .card .city-tag{
@@ -1606,7 +1606,6 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eee;
-    ;
 }
 
 .side_bar{
@@ -1660,6 +1659,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .home_head_h1{
   font-size: 2rem;
+  font-weight: 400;
 }
 
 .home_head-span{
@@ -1681,12 +1681,22 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 
 .call_box{
-  padding: 2rem 0rem;
+  padding-top: 1rem;
+  padding-bottom: 2.3rem;
 }
 
 .call_btn{
  background-color: #FF5757;
  font-size: 1.2rem;
+ border: none;
+ width: 10rem;
+}
+
+
+.call_btn:hover{
+  border: 1px solid #FF5757;
+  color: #FF5757;
+  background-color: #fff;
 }
 
 .call_bx{
@@ -1700,7 +1710,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 
 .call_actions{
-  margin: 1rem 0rem;
+  margin: 1.5rem 0rem;
 }
 
 .hero_card-text{
@@ -1711,6 +1721,22 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .blog_section{
   margin: 4rem 0rem;
+}
+
+
+.blog-btn{
+  border: none;
+}
+
+.blog-btn:hover{
+  border: 1px solid #FF5757 !important;
+  color: #FF5757 !important;
+  background-color: #fff !important;
+}
+
+.call_bx_or{
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 
