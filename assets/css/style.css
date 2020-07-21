@@ -146,7 +146,7 @@ input{
     width:100%;
     height: auto;
     padding-top: .5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
   }
   .top-main .card {
     width:  100%;
@@ -207,8 +207,7 @@ input{
   .main-refer .fe{
     width: 100%;
     height: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: .6rem 0;
     background-color: #313061;
   }
   .main-refer .fe .card{
@@ -1678,10 +1677,15 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   text-align: center;
 }
 
+ .blog-head p{
+   font-size: 1.2rem;
+   margin-top: 1rem;
+ }
+
 
 .call_box{
-  padding-top: 1rem;
-  padding-bottom: 2.3rem;
+  padding-top: 2rem;
+  padding-bottom: 0.3rem;
 }
 
 .call_btn{
@@ -1738,6 +1742,11 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   font-weight: 500;
 }
 
+.reg_line{
+  margin-top: .5rem;
+}
+
+
 
 /* // end of show property CSS */
 
@@ -1745,12 +1754,21 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 
 
+  .call_btn {
+    font-size: 1.5rem;
+    width: 13rem;
+  }
+
+  .hero_cards{
+    width: 90%;
+  }
+
   .main{
       padding: 3rem 0rem 0rem 0rem;
   }
 
   .sub-main{
-    padding-top: 6rem;
+    padding-top: 4rem;
   }
 
   .pro-card .card{
@@ -1771,6 +1789,17 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     margin-left: 1rem;
     background-color: white;
     
+   }
+
+   .letsgo_btn{
+    text-align: center;
+  }
+  
+
+   .main-refer .fe .card button{ 
+
+    width: 70%;
+
    }
 
 }
