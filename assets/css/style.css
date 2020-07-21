@@ -1748,6 +1748,65 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 
 
+/* Contact Css */
+.contact_inp {
+  border: none !important;
+  width: 70%;
+  height: 12rem;
+  border: 1px solid #C4C4C4 !important;
+  border-radius: 2px;
+}
+
+.contact_btn {
+  background-color: #FF5757;
+  border: none;
+  width: 10rem;
+}
+
+.contact_btn:hover {
+  background-color: #fff;
+  border: 1px solid #FF5757;
+  color: #FF5757;
+}
+
+.contact_btn:active {
+  background-color: #FF5757 !important;
+  border: 1px solid #FF5757 !important;
+}
+
+.contact_btn_bx {
+  margin-top: 1rem;
+}
+
+.contact {
+  background-color: #fff;
+  padding: .7rem;
+}
+
+.contact_side {
+  width: 20rem;
+  height: 100%;
+  background-color: #f8f5f5;
+}
+
+.insid {
+  padding: 3rem;
+}
+
+.contact_bx{
+  border: 1px solid #eee;
+  padding: 1rem;
+}
+
+.contact_side_top{
+  padding: 1.2rem;
+}
+
+.contact_side_top_h1{
+  font-size: 1.3rem;
+}
+
+
 /* // end of show property CSS */
 
 @media screen and (max-width: 600px){
