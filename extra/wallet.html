@@ -262,7 +262,7 @@ margin-right: 12px;
 
 #items {
   position: relative;
-    top: 5rem;
+    top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -271,7 +271,7 @@ margin-right: 12px;
 #items .item {
   position: relative;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-top: .5rem;
   margin-bottom: .5rem;
   padding-left: 2rem;
@@ -284,7 +284,18 @@ margin-right: 12px;
    
  transform: scale(1.1);
   color: white;
-}                        
+}   
+.meu .style1 {
+
+  border-top: 1px solid grey;
+  margin-top: 2rem;
+  
+  } 
+  @media screen and (max-width: 520px) {
+    .wallet-op{
+        display: none;
+    }
+}                    
 </style>    
     </head>
     <body>
@@ -298,11 +309,19 @@ margin-right: 12px;
                   </div>
                   <div id="box">
                     <div id="items">
-                      <div class="item">Item 1</div>
-                      <div class="item">Item 2</div>
-                      <div class="item">Item 3</div>
-                      <div class="item">Item 4</div>
-                      <div class="item">Item 5</div>
+                      <div class="item">Recharge & PayBills</div>
+                      <div class="item">Send Money</div>
+                      <div class="item">Prepaid Crads</div>
+                      <div class="item">Shopping</div>
+                      <div class="item">Add Money</div>
+                      <hr class="style1">
+                      <div class="item">Store Near You</div>
+                      <hr class="style1">
+                      <div class="item">Suppoprt</div>
+                      <div class="item">About us</div>
+                      <hr class="style1">
+                      <div class="item">connect & share on</div>
+                      
                     </div>
                   </div>
                 <div class="container">
@@ -327,11 +346,7 @@ margin-right: 12px;
       
                                 
       
-                                <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                  <i class="fa fa-bars"></i>
-                                    
-      
-                                </button>
+                                
       
       
       
@@ -487,7 +502,7 @@ margin-right: 12px;
                                 
                                     <div class="row top">
                                         <div class="col-md-6">
-                                            <div class="input-group">
+                                            <div class="input-group" style="margin-bottom: 1rem;">
                                                 <div class="input-group-prepend">
                                                   <span class="input-group-text">+91</span>
                                                 </div>
@@ -514,7 +529,7 @@ margin-right: 12px;
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="input-group">
+                                            <div class="input-group"  style="margin-top: 1rem;">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><img src="assets/img/rupee.svg" width="10px"></span>
                                                 </div>
@@ -597,3 +612,4 @@ margin-right: 12px;
         </script>
         
 </html>
+    
