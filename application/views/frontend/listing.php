@@ -1,106 +1,201 @@
-<!-- List Property -->
+<style>
+.post-requirment input{
+    padding: 0;
+    margin: 0;
+    outline-color: none;
+    border :1px solid #ced4da;
+    outline-color : red;
+    padding: .375rem .75rem;
+}
+#bhk{
+    display: none;
+}
+#unit{
+    display: none;
+}
+.list-img{
+  width : 4rem;
+  margin : 10px 4px;
+}
+.post-card
+{
+    border: none;
+    background: none;
+}
+.post-card .card-body{    
+    color: #6c757d!important;
+}
+.post-card img{
+    width: 3rem;
+}
 
-<?php
-
-// echo "<pre>";
-// print_r($update);
-// die();
-
-?>
-<main class="main sub-main">
-<div class="list-main">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="form-head">
-          <h3>List Your Property</h3>
-          <hr class="style1">
-        </div>
-        <div>
-          <p> The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed</p>
-        </div>
-
-        <div class="list-form">
-        <!-- List Form -->
-          <form action="<?php echo $url['inreq']; ?>" enctype="multipart/form-data" method="post">
-
-            <?php echo validation_errors(); ?>
-
-            <label>City<span style="color: red;">*</label>
-            <input type="text" name="city" placeholder="city" class="list_input">
-
-            <label>Description<span style="color: red;">*</label>
-            <input type="text" name="description" placeholder="Property Description" class="list_input">
-
-            <label>Rent<span style="color: red;">*</label>
-            <input type="number" name="rent" placeholder="Rent " class="list_input">
-
-            <label>BHK<span style="color: red;">*</label>
-            <select name="bhk" id="">
-              <option value="1">1 BHK</option>
-              <option value="2">2 BHK</option>
-              <option value="3">3 BHK</option>
-              <option value="4">4 BHK</option>
-            </select></br></br>
-
-
-            <label>Choose file<span style="color: red;">*</label>
-            <input type="file" name="list_img[]" placeholder="Choose File" class="list_input" multiple>
-
-            <div>
-              <?php if (isset($upload_error)) {
-                echo $upload_error;
-              } ?>
-            </div>
-
-            <label>Furnished<span style="color: red;">*</label></br>
-            <select name="furnished" id="">
-              <option value="furnished">furnished</option>
-              <option value="unfurnished">Unfurnished</option>
-            </select></br></br>
-
-
-
-            <label>For Whom<span style="color: red;">*</label></br>
-            <select name="forwhom" id="">
-              <option value="boys">Boys</option>
-              <option value="girls">Girls</option>
-              <option value="family">Family</option>
-            </select></br></br>
-
-
-
-            <label>Area<span style="color: red;">*</label></br>
-            <input type="number" name="area" id="rent"></br>
-
-            <button>Submit</button>
-
-          </form>
-
-
-
-
-
-
-
-        </div>
-
-
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <h6>How we solve your problem</h6>
-          <p>Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-        <div class="card">
-          <h6>How we solve your problem</h6>
-          <p>Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-      </div>
+</style>
+<section class="py-5 px-3" style="background-color: #fafafa;">
+    <div class="py-5 container text-center">
+        <h3 class="pt-5"><span class="text-danger">List Your Property</span> - Get Renters of your Choice</h3>
+        <h6 class="">Thousand of Renters Searching Daily</h6>
     </div>
-  </div>
+    <div style="border: 1px solid #ccc;" class="container form-padding">
+        <div class="row">
+            <div style="background-color: #fff;" class="p-4 col-md-9">
+                <h5 class="text-black">Requirement Details <span class="text-danger">*</span> </h5>
+                <form class="post-requirment my-3">
+                <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <!-- <label for="inputEmail4">Email</label> -->
+                            <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Your Name*">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <!-- <label for="inputPassword4">Password</label> -->
+                        <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Mobile Number*">
+                    </div>
+                </div>
+                <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <!-- <label for="inputEmail4">Email</label> -->
+                            <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Your Email*">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <!-- <label for="inputPassword4">Password</label> -->
+                        <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Your City*">
+                    </div>
+                </div>
+                <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <!-- <label for="inputEmail4">Email</label> -->
+                            <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Locality*">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <!-- <label for="inputPassword4">Password</label> -->
+                        <select id="protype" onchange="myFunction()" class="form-control">
+                            <option selected>Select Property Type*</option>
+                            <option value="commercial">Commercial</option>
+                              <option value="residential">Residential</option>     
+                        </select>
+                  </div>
+                </div>
+                        <div id="bhk" class="form-group">
+                            <!-- <label for="inputEmail4">Email</label> -->
+                            <select id="inputState" class="form-control">
+                            <option selected>BHK Size*</option>
+                            <option value="Sq.ft.">1 BHK</option>
+                              <option value="Cent">2 BHK</option>
+                              <option value="Sq. Yards">3 BHK</option>
+                              <option value="Ares">4 BHK</option>
+                          </select>
+                        </div>
+                    <div id="unit" class="form-group">
+                        <!-- <label for="inputPassword4">Password</label> -->
+                        <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Enter Build Up Area in Sq. Ft*">
+                    </div>
+                <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <!-- <label for="inputEmail4">Email</label> -->
+                            <select id="inputState" class="form-control">
+                            <option selected>Furnished Type*</option>
+                            <option value="Sq.ft.">Furnished</option>
+                              <option value="Cent">Semi Furnished</option>
+                              <option value="Sq. Yards">Non-Furnished</option>
+                          </select>
+                    </div>
+             
+                    <div class="form-group col-md-6">
+                        <!-- <label for="inputPassword4">Password</label> -->
+                        <select id="inputState" class="form-control">
+                            <option selected>Willing to Rent Out*</option>
+                            <option value="Sq.ft.">1 BHK</option>
+                              <option value="Cent">2 BHK</option>
+                              <option value="Sq. Yards">3 BHK</option>
+                              <option value="Ares">4 BHK</option>
+                              
+                          </select>
+                    </div>
 </div>
+          <div class="form-group">
+            <input type="file" class="form-control-file" name="" id="gallery-photo-add" placeholder="Upload Images" multiple aria-describedby="fileHelpId">
+          </div>
+          <div class="gallery d-flex flex-wrap"></div>
+                <div class="form-group">
+                  <textarea class="form-control" name="" id="" rows="3">Brief Description or Message</textarea>
+                </div>
+                <button type="submit" class="btn btn-danger w-100 my-4">List my Property</button>
+                  </form>
+            
+            </div>
+            <div style="border-left: 1px solid #ccc; background-color: #fafafa;" class="col-md-3 py-4 text-center">
+                <h4 class="text-secondary py-3">Why Post through us?</h4>
+                <div class="card post-card">
+                    <div class="card-image">
+                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_01.jpg">
+                      </div>                    
+                      <div class="card-body">
+                    <p class="card-title">Searching of your dream property ends here</p>
+                  </div>
+                </div>
+                <div class="card post-card">
+                    <div class="card-image">
+                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_04.jpg">
+                      </div>                      
+                      <div class="card-body">
+                      <p class="card-title">Get Properties in your Inbox</p>
+                    </div>
+                  </div>
+                  <div class="card post-card">
+                    <div class="card-image">
+                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_03.jpg">
+                      </div>                    
+                    <div class="card-body">
+                      <p class="card-title">Get Properties in your Inbox</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-</main>
+<script>
+    function myFunction(){
+        var v = $('#protype').val();
+        console.log(v)
+        if(v=='commercial'){
+            $('#unit').show();
+            $('#bhk').hide();
+        }
+        if(v=='residential'){
+            $('#bhk').show();
+            $('#unit').hide();
+        }
+    }
+</script>
+<script>
+  $(function() {
+    // Multiple images preview in browser
+    var imagesPreview = function(input, placeToInsertImagePreview) {
 
-<!-- End Of List -->
+        if (input.files) {
+            var filesAmount = input.files.length;
+
+            for (i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+
+                reader.onload = function(event) {
+                    $($.parseHTML('<img class="list-img">')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                }
+
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+
+    };
+
+    $('#gallery-photo-add').on('change', function() {
+        imagesPreview(this, 'div.gallery');
+    });
+});
+</script>

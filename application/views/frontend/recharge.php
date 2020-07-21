@@ -14,191 +14,77 @@
    
   }
 ?>
-<!-- Recharge Section -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <style>
-
-.pay-header{
-  background : #fff !important;
+.tab-custom{
+    color: gray;
+    padding: 7px;
 }
-.modal-confirm {		
-	color: #636363;
-	width: 325px;
-	font-size: 14px;
+a.active{
+    /* color: blue !important; */
+    border-bottom: 2px solid red;
 }
-.modal-confirm .modal-content {
-	padding: 20px;
-	border-radius: 5px;
-	border: none;
-}
-.modal-confirm .modal-header {
-	border-bottom: none;   
-	position: relative;
-}
-.modal-confirm h4 {
-	text-align: center;
-	font-size: 26px;
-	margin: 30px 0 -15px;
-}
-.modal-confirm .form-control, .modal-confirm .btn {
-	min-height: 40px;
-	border-radius: 3px; 
-}
-.modal-confirm .close {
-	position: absolute;
-	top: -5px;
-	right: -5px;
-}	
-.modal-confirm .modal-footer {
-	border: none;
-	text-align: center;
-	border-radius: 5px;
-	font-size: 13px;
-}	
-.modal-confirm .icon-box {
-	color: #fff;		
-	position: absolute;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-	top: -70px;
-	width: 95px;
-	height: 95px;
-	border-radius: 50%;
-	z-index: 9;
-	background: #82ce34;
-	padding: 15px;
-	text-align: center;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-}
-.modal-confirm .icon-box i {
-	font-size: 58px;
-	position: relative;
-	top: 3px;
-}
-.modal-confirm.modal-dialog {
-	margin-top: 80px;
-}
-.modal-confirm .btn {
-	color: #fff;
-	border-radius: 4px;
-	background: #82ce34;
-	text-decoration: none;
-	transition: all 0.4s;
-	line-height: normal;
-	border: none;
-}
-.modal-confirm .btn:hover, .modal-confirm .btn:focus {
-	background: #6fb32b;
-	outline: none;
-}
-.trigger-btn {
-	display: inline-block;
-	margin: 100px auto;
+.tab-custom:hover{
+    color: black;
+    text-decoration: none;
 }
 </style>
-
-<?php 
-  require_once(APPPATH.'libraries/razorpay-php/Razorpay.php');
-  use Razorpay\Api\Api;
-  $id='rzp_test_ZDu7FphXqoq9vd';
-  $key='xCHB8eYRtg2hoXn8fCHN7yMC';
-  $api=new Api($id,$key);
-  $order=$api->order->create(array(
-  'receipt'=>12323,
-  'amount'=>90000,
-  'payment_capture'=>1,
-  'currency'=>'INR',)
-  );
-?>
-<main class="main">
-<div class="recharge-main">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 ">
-        <div class="form-head">
-          <h3>Recharge</h3>
-          <hr class="style1">
-        </div>
-        <div class="plans">
-          <h6>Plans</h6>
-
-          <div>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-          </div>
-
-          <div class="row justify-content-start price-card">
-            <div class="col-md-4 lft">
-              <div class="card price-card">
-                <h5>Lorem Ipsum</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industr. Lorem</p>
-                <?php if($status){ ?>
-                  <form method="post" action="<?php echo $url['buyplan']; ?>">
-                <script
-                    src="https://checkout.razorpay.com/v1/checkout.js"
-                    data-key=<?php echo $id;?> 
-                    data-amount=<?php echo $order->amount;?> 
-                    data-currency="INR"
-                    data-order_id=<?php echo $order->id;?>	
-                    data-buttontext="Pay &#x20B9;960"
-                    data-name="<?php echo $site['site_title'] ;?>"
-                    data-description="fjhejfeh"
-                    data-image="<?php echo $url['image'].'logo/'.$site['site_logo'] ?>"
-                    data-prefill.name="<?php echo $uname ?>"
-                    data-prefill.contact="<?php echo $post['all_data'][0]->mobileno; ?>"
-                    data-prefill.email="ijkdijkfd@gmail.com"
-                    data-theme.color="#F37254"
-                    ></script>
-                  <input type="hidden" value="recharge_wallet" name="wallet">
-                  <input type="hidden" value="<?php echo $post['all_data'][0]->recharge_wallet; ?>" name="balance">
-                  <input type="hidden" value="<?php echo $refer_id; ?>" name="refer_id">
-                </form>
-                  <?php } else{?>
-                    <button data-toggle="modal" data-target="#login">Recharge Rs. 960</button>
-                  <?php } ?>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 rgt">
-        <div class="card">
-          <h6>How we solve your problem</h6>
-          <p>Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-        <div class="card">
-          <h6>How we solve your problem</h6>
-          <p>Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-      </div>
+<section class="py-5 px-2" style="background-color: #fafafa;">
+    <div class="py-5 container text-center">
+        <h3 class="pt-5">Bigger Saving Assured only on <span class="text-danger">Hello Rent India</span></h3>
+        <h6>Now you can get Recharge of 1200 just paying 960 Rupees</h6>
     </div>
-  </div>
-</div>
-<div id="payment" class="modal fade">
-	<div class="modal-dialog modal-confirm">
-		<div class="modal-content">
-			<div class="modal-header pay-header">
-				<div class="icon-box">
-					<i class="material-icons">&#xE876;</i>
+    <div class="container bg-white p-4 text-center">
+        <h5>Already Paid ? <a class="text-danger" href="">Click Here</a> to Login in to wallet</h5>
+    </div>
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                
+                <div class="card mx-3 p-3 text-secondary bg-white border-0">
+                    <h4 class="" >Scan QR Code</h4>
+                <hr>    
+                  <img class="card-img-top p-3" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt="">
+                  <div class="card-body py-0">
+                    <h6 class="text-primary">Or</h6>
+                    <p class="card-text">Pay Through UPI</p>
+                    <h4 class="card-title">7014162976@ybl</h4>
+                  </div>
+                </div>
+                <div class="card m-3 p-3 text-secondary bg-white border-0">
+                    <h4 class="" >Earn Big</h4> 
+                  <div class="card-body py-0">
+                    <h6 class="text-dark">Upto 1,00,000/month</h6>
+                    <p class="card-text">Wondering How ?</p>
+                    <h6 class="card-title"><a class="text-danger" href="">Click Here</a> for Details</h6>
+                  </div>
+                </div>
+               
+            </div>
+            <div class="col-md-8 bg-white">
+                <nav>
+                    <div class="nav nav-tabs p-3 text-center" id="nav-tab" role="tablist">
+                      <a class="nav-item w-50 active tab-custom" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">How to Avail Offer</a>
+                      <a class="nav-item w-50 tab-custom" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Terms and Condition</a>
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active p-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <ul class="">
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Coca Cola</li>
+                          </ul>                          
+                    </div>
+                    <div class="tab-pane fade p-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <ul class="">
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Coca Cola</li>
+                          </ul>  
+                    </div>
+                  </div>
+                
+            </div>
         </div>
-        				
-				<h4 class="modal-title w-100">Payment Successfull!</h4>	
-			</div>
-			<div class="modal-body">
-      <h5 class="modal-title w-100 text-center"><i class='fas fa-coins'></i> 1200 Points Added</h5>
-				<p class="text-center">Your order has been placed. Go to wallet to check your points</p>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
-			</div>
-		</div>
-	</div>
-</div>     
-<?php
-if($this->session->flashdata('success')){
-echo "<script>$('#payment').modal('show');</script>";
-}
-?>
-</main>
-<!-- end Of recharge -->
+    </div>
+</section>

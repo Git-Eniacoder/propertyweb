@@ -3,7 +3,6 @@
 
 <head>
   <title>Wallet Recharge</title>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -13,7 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php echo $url['css']; ?>">
+
   <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
 </head>
 
@@ -45,14 +44,19 @@
                     List Property
                   </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class=" nav-item">
+                  <a title="Home" href="<?php echo $url['post_property']; ?>" class="nav-link">
+                    Post Property
+                  </a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                     Properties
                   </a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">Posted Property</a>
                   </div>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                   <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">

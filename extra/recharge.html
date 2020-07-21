@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Wallet Recharge</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<style>
+.tab-custom{
+    color: gray;
+    padding: 7px;
+}
+a.active{
+    /* color: blue !important; */
+    border-bottom: 2px solid red;
+}
+.tab-custom:hover{
+    color: black;
+    text-decoration: none;
+}
+</style>
+<body>
+  <!-- Header Start -->
+  <header class="head">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <div class="logo">
+              <a class="custom-logo-link " rel="<?php echo $url['home']; ?>" href="home">
+                <img width="133" height="55" src="<?php echo $url['image'].'logo/'.$site['site_logo'] ?>" alt="Logo" class="custom-logo">
+                
+              </a>
+            </div>
+            <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
+              <ul id="nav" class="navbar-nav ml-auto ">
+                <li class=" nav-item">
+                  <a title="Home" href="<?php echo $url['home']; ?>" class="nav-link">
+                    Home
+                  </a>
+                </li>
+                <li class=" nav-item">
+                  <a title="Home" href="<?php echo $url['list']; ?>" class="nav-link">
+                    List Property
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Properties
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">Posted Property</a>
+                  </div>
+                </li>
+      
+                <li class="nav-item">
+                  <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
+                    Recharge
+                  </a>
+                </li>
+                
+       
+                <li class="nav-item">
+                  <a title="Refer & earn" href="" class="nav-link">
+                    Refer & earn
+                  </a>
+                </li>
+
+
+               
+              </ul>
+            </div>
+          </nav> <!-- navbar -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </header>
+  <!-- Header end -->
+<section class="py-5 px-2" style="background-color: #fafafa;">
+    <div class="py-5 container text-center">
+        <h3 class="pt-5">Bigger Saving Assured only on <span class="text-danger">Hello Rent India</span></h3>
+        <h6>Now you can get Recharge of 1200 just paying 960 Rupees</h6>
+    </div>
+    <div class="container bg-white p-4 text-center">
+        <h5>Already Paid ? <a class="text-danger" href="">Click Here</a> to Login in to wallet</h5>
+    </div>
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                
+                <div class="card mx-3 p-3 text-secondary bg-white border-0">
+                    <h4 class="" >Scan QR Code</h4>
+                <hr>    
+                  <img class="card-img-top p-3" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt="">
+                  <div class="card-body py-0">
+                    <h6 class="text-primary">Or</h6>
+                    <p class="card-text">Pay Through UPI</p>
+                    <h4 class="card-title">7014162976@ybl</h4>
+                  </div>
+                </div>
+                <div class="card m-3 p-3 text-secondary bg-white border-0">
+                    <h4 class="" >Earn Big</h4> 
+                  <div class="card-body py-0">
+                    <h6 class="text-dark">Upto 1,00,000/month</h6>
+                    <p class="card-text">Wondering How ?</p>
+                    <h6 class="card-title"><a class="text-danger" href="">Click Here</a> for Details</h6>
+                  </div>
+                </div>
+               
+            </div>
+            <div class="col-md-8 bg-white">
+                <nav>
+                    <div class="nav nav-tabs p-3 text-center" id="nav-tab" role="tablist">
+                      <a class="nav-item w-50 active tab-custom" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">How to Avail Offer</a>
+                      <a class="nav-item w-50 tab-custom" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Terms and Condition</a>
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active p-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <ul class="">
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Coca Cola</li>
+                          </ul>                          
+                    </div>
+                    <div class="tab-pane fade p-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <ul class="">
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Coca Cola</li>
+                          </ul>  
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- footer starts -->
+  <div class="shadow-lg foot">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+          <h5>Links</h5>
+          <hr class="style1">
+          <h4 class="text-white"><?php echo $site['site_title'] ;?></h4>
+          <p><?php echo $site['site_desc'] ;?></p>
+        </div>
+        
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+          <h5>quick links</h5>
+          <hr class="style1">
+          <div class="links">
+
+            <a href="#">blog</a></br>
+            <a href="#">privacy</a></br>
+            <a href="#">terms and condition</a></br>
+            <a href="#">code of coduct</a></br>
+            <a href="#">agent panel</a></br>
+            <a href="#">site map</a></br>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+          <h5>get in touch</h5>
+          <hr class="style1">
+          <input type="email" name="email" placeholder="Email here...">
+          <span class="arrow"><img src="assest/img/arrow.svg" width="100%"></span>
+          <!-- <p>Rajmahal Complex,Opp-PLA Petrol Pump,Delhi Road, Hisar-125001</p> -->
+          <p><i class="fa fa-phone" style="margin-right: 7px; font-size: 20px;"></i> 8950000000</p>
+          <p><i class="fa fa-envelope" style="margin-right: 7px; font-size: 20px;"></i> info@walletapp.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="last">
+    <div class="container">
+      <p>follow us on</p>
+
+
+      <div class="text-center">
+
+
+      
+        <a href="<?php echo $social['youtube_url']; ?>" target="_blank"> <i class="fa fa-youtube "></i></a>
+
+        <a href="<?php echo $social['twitter_url']; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+
+        <a href="<?php echo $social['linkedin_url']; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+
+        <a href="<?php echo $social['facebook_url']; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+
+        <a href="<?php echo $social['instagram_url']; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+
+        <a href="<?php echo $social['pinterest_url']; ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
+      </div>
+
+      <p class="reserved">@<?php echo '20'.date('y'); ?> All Rights Reserved. Developed By <span><a href="#" class="lik">Hisarfever</a></span></p>
+    </div>
+  </section>
+
+  <!-- footer ends  -->
