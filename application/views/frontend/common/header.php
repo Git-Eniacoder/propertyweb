@@ -62,6 +62,11 @@
                     Recharge
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a title="Recharge" href="<?php echo base_url().'contact' ?>" class="nav-link">
+                    Contact Us
+                  </a>
+                </li>
 
                 <li class="nav-item dropdown">
                   <button class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
