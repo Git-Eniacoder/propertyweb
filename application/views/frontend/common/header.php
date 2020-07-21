@@ -50,14 +50,14 @@
                     Post Property
                   </a>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                     Properties
                   </a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">Posted Property</a>
                   </div>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                   <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
