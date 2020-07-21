@@ -35,11 +35,11 @@
         <div class="row">
             <div style="background-color: #fff;" class="p-4 col-md-9">
                 <h5 class="text-black">Requirement Details <span class="text-danger">*</span> </h5>
-                <form class="post-requirment my-3">
+                <form action="<?php echo $url['post_req'];?>" method="post" class="post-requirment my-3">
                     <div class="form-group">
                         <!-- <label for="inputState">Property Type</label> -->
-                        <select id="protype" onchange="myFunction()" class="form-control">
-                          <option selected>Property Type*</option>
+                        <select id="protype" name="post_type" onchange="myFunction()" class="form-control">
+                          <option disabled value="" selected>Property Type*</option>
                           <option value="commercial">Commercial</option>
                           <option value="residential">Residential</option>
                         </select>

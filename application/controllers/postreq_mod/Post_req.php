@@ -11,6 +11,9 @@ class Post_req extends My_Controller {
         $this->load->view('frontend/postproperty', $this->data);
         $this->load->view('frontend/common/footer', $this->data);
     }
+    public function insert(){
+        echo "hi";
+    }
 
 }
 

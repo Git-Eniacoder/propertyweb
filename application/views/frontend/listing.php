@@ -28,6 +28,10 @@
 .post-card img{
     width: 3rem;
 }
+.response{
+    text-align : center;
+    color : red;
+}
 
 </style>
 <section class="py-5 px-3" style="background-color: #fafafa;">
@@ -39,31 +43,44 @@
         <div class="row">
             <div style="background-color: #fff;" class="p-4 col-md-9">
                 <h5 class="text-black">Requirement Details <span class="text-danger">*</span> </h5>
+                <div class="response">
+                <?php 
+                    if($this->session->flashdata('response')){
+                        echo $this->session->flashdata('response');
+                    }
+                ?>
+                </div>
                 <form action="<?php echo $url['inreq']; ?>" method="post" class="post-requirment my-3" enctype="multipart/form-data">
                 <div class="form-row">
                         <div class="form-group col-md-6">
                             <input type="text"
                         class="form-control" name="list_name" placeholder="Enter Your Name*">
+                        <?php echo form_error('list_name')? '<span class=" text-danger">'.form_error('list_name').'</span>' : '' ;?>
                     </div>
                     <div class="form-group col-md-6">
                         <input type="text"
                         class="form-control" name="list_mobile"  placeholder="Enter Mobile Number*">
+                        <?php echo form_error('list_mobile')? '<span class=" text-danger">'.form_error('list_mobile').'</span>' : '' ;?>
                     </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
                             <input type="text"
                         class="form-control" name="list_email"  placeholder="Enter Your Email*">
+                        <?php echo form_error('list_email')? '<span class=" text-danger">'.form_error('list_email').'</span>' : '' ;?>
                     </div>
                     <div class="form-group col-md-6">
                         <input type="text"
                         class="form-control" name="list_city"  placeholder="Enter Your City*">
+                        <?php echo form_error('list_city')? '<span class=" text-danger">'.form_error('list_city').'</span>' : '' ;?>
                     </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
                             <input type="text"
                         class="form-control" name="list_locality"  placeholder="Locality*">
+                        <?php echo form_error('list_locality')? '<span class=" text-danger">'.form_error('list_locality').'</span>' : '' ;?>
+
                     </div>
                     <div class="form-group col-md-6">
                         <select id="protype" name="list_type" onchange="myFunction()" class="form-control">
@@ -71,6 +88,7 @@
                             <option value="commercial">Commercial</option>
                               <option value="residential">Residential</option>     
                         </select>
+                        <?php echo form_error('list_type')? '<span class=" text-danger">'.form_error('list_type').'</span>' : '' ;?>
                   </div>
                 </div>
                         <div id="bhk" class="form-group">
@@ -94,6 +112,7 @@
                               <option value="Semi-furnished">Semi-Furnished</option>
                               <option value="Non-furnished">Non-Furnished</option>
                           </select>
+                          <?php echo form_error('list_furnished')? '<span class=" text-danger">'.form_error('list_furnished').'</span>' : '' ;?>
                     </div>
              
                     <div class="form-group col-md-6">
@@ -103,6 +122,8 @@
                               
                               
                           </select>
+                          <?php echo form_error('list_willing')? '<span class=" text-danger">'.form_error('list_willing').'</span>' : '' ;?>
+
                     </div>
 </div>
           <div class="form-group">
@@ -112,6 +133,7 @@
                 <div class="form-group">
                   <textarea class="form-control" name="list_messages"  placeholder="Brief Description or Message" rows="3"></textarea>
                 </div>
+                <?php echo form_error('list_messages')? '<span class=" text-danger">'.form_error('list_messages').'</span>' : '' ;?>
                 <button type="submit" class="btn btn-danger w-100 my-4">List my Property</button>
                   </form>
             

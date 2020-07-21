@@ -32,7 +32,7 @@ $config['posttable'] = base_url().'postreq_mod/post_table';
 $config['post_property'] = base_url().'postreq_mod/post_req'; 
 $config['delreq'] = base_url().'admin/postreq_mod/Post_table/delete/';
 $config['updatereq'] = base_url().'admin/postreq_mod/Post_table/update/';
-$config['updateinreq'] = base_url().'admin/postreq_mod/Post_table/updateinsert/';
+$config['post_req'] = base_url().'postreq_mod/post_req/insert/';
 
 
 // recharge Controller
