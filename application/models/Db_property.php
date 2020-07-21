@@ -15,6 +15,15 @@ class Db_property extends CI_Model {
         }
     }
 
+    public function post_property($data){
+        $this->db->insert('post_property', $data);
+        if($this->db->insert_id()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
 
 /* End of file Db_property.php */

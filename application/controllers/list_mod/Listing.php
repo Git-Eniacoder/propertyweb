@@ -58,6 +58,8 @@ class Listing extends My_Controller
                  $images[$i] = $config['file_name'];
             }else{
                    $this->session->set_flashdata('response', '<p class="text-center text-danger">'.display_errors().'</p>');
+                   redirect(base_url().'list_mod/listing');
+
                 break;
             }
         }
@@ -80,13 +82,16 @@ class Listing extends My_Controller
         $data['list_description'] = $this->input->post('list_messages');
             if($this->db_property->list_property($data)){
                 $this->session->set_flashdata('response', '<p class="text-center text-danger">Successfully Listed Your Property</p>');
+                redirect(base_url().'list_mod/listing');
             }else{
                 $this->session->set_flashdata('response', '<p class="text-center text-danger">Error In Listing Your Property</p>');
+                redirect(base_url().'list_mod/listing');
+
             }
         }else { 
                 $this->index();
             }
-            // redirect(base_url().'list_mod/listing');
+            
        
     }
     public function update($id)
