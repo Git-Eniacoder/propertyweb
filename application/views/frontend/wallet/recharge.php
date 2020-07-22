@@ -80,7 +80,7 @@
                               </li>
                               <li class=" nav-item">
                                  <a title="Balance" href="#" class="nav-link">
-                                 Balance &#x20B9; 0.00
+                                <img src="../assets/img/Balance.png" width="25px">  Balance &#x20B9; 0.00
                                  </a>
                               </li>
                               <li   class="  nav-item m-1 brk ">
@@ -125,18 +125,19 @@
          <div class="container">
             <div class="row">
                <div class="col-md-3">
-                  <center><span style="color: white;"> &#x20B9;0.00</span></center>
-                  <button class="active">Recharge wallet</button>
+                  <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
+                  <button class="active"><img src="../assets/img/Recharge Wallet.png" width="25px">Recharge wallet</button>
                </div>
                <div class="col-md-3">
-                  <center><span style="color: white;">&#x20B9;0.00</span></center>
-                  <button>Refer & Earn wallet</button>
+                  <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
+                  <button><img src="../assets/img/refer.png" width="25px">Refer & Earn wallet</button>
                </div>
                <div class="col-md-3">
-                  <center><span style="color: white;"> &#x20B9;0.00</span></center>
-                  <button>Field Expenses</button>
+                  <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
+                  <button><img src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
                <div class="col-md-3">
+                   <center><img src="../assets/img/Add-Money.svg" width="25px"></center>
                   <button>Add Money</button>
                </div>
             </div>
@@ -159,13 +160,13 @@
                                     </center>
                                  </div>
                                  <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'paris')"><img class="ima" src="../assets/img/landline.png" alt="landline" >
-                                       Landline</a>
+                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
+                                       DTH</a>
                                     </center>
                                  </div>
                                  <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
-                                       DTH</a>
+                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'datacard')"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
+                                       Datacard  </a>
                                     </center>
                                  </div>
                                  
@@ -175,9 +176,7 @@
                            <div class="col-md-6">
                               <div class="row tab">
                                  <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'datacard')"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
-                                       Datacard  </a>
-                                    </center>
+                                    
                                  </div>
                                  <div class="col-md-4">
                                  </div>
@@ -197,15 +196,7 @@
                            </center>
                         </div>
                         <div class="card">
-                           <center>
-                              <a href="#" class="tablinks"  onclick="openCity(event, 'paris')">
-                                 <img class="ima" src="../assets/img/landline.png" alt="landline" >
-                                 <p>Landline</p>
-                              </a>
-                           </center>
-                        </div>
-                        <div class="card">
-                           <center>
+                        <center>
                               <a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')">
                                  <img class="ima" src="../assets/img/dth.png" alt="Dth" >
                                  <p>DTH</p>
@@ -213,13 +204,14 @@
                            </center>
                         </div>
                         <div class="card">
-                           <center>
+                        <center>
                               <a href="#" class="tablinks"  onclick="openCity(event, 'datacard')">
                                  <img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
                                  <p>Datacard</p>
                               </a>
                            </center>
                         </div>
+                        
                      </div>
                      <div id="London" class="tabcontent">
                         <div class="radi">
@@ -275,44 +267,46 @@
                            </div>
                         </div>
                      </div>
-                     <div id="paris" class="tabcontent">
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="inp">
-                                 <select class="sel">
-                                    <option value="volvo">select operator</option>
-                                    <option value="saab">Docomo</option>
-                                    <option value="opel">Airtel</option>
-                                    <option value="audi">BSNL</option>
-                                 </select>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                           </div>
-                        </div>
-                        <div class="re-bu">
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <button>Pay Now</button>
-                              </div>
-                              <div class="col-md-6">
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                     
                      <div id="tokyo" class="tabcontent">
                         <div class="row">
                            <div class="col-md-6">
-                              <div class="inp">
-                                 <select class="sel">
+                              
+                              
+
+                                <div class="inp">
+                                 <select class="sel" >
                                     <option value="volvo">select operator</option>
-                                    <option value="saab">Airtel DTH</option>
-                                    <option value="opel">Sun dth</option>
-                                    <option value="audi">Videocon D2H</option>
+                                    <option value="aa-dd">Airtel DTH</option>
+                                    <option value="s-dd">Sun dth</option>
+                                    <option value="v-dd">Videocon D2H</option>
                                  </select>
-                              </div>
+                                </div>
                            </div>
+                           <div class="col-md-6"  >
+                               <div class="inp" >
+                                <input type="text" style=" border-color:grey;" placeholder="Subscriber id">
+                               </div>
+                           </div>
+                        </div>
+                        <div class="row">
                            <div class="col-md-6">
+                              
+                              <div class="inp" >
+                                <div class="input-group"   style=" margin-top:-1rem; border-color:grey;">
+                                    <div class="input-group-prepend">
+                                       <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Ammount">
+                                    
+                                 </div>
+                               </div>
+
+
+                               
+                           </div>
+                           <div class="col-md-6"  >
+                               
                            </div>
                         </div>
                         <div class="re-bu">
@@ -453,5 +447,10 @@
       evt.currentTarget.className += " active";
       }
       
+     
+
+
+
+
    </script>
 </html>
