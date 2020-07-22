@@ -138,12 +138,12 @@ $.ajax({
           <hr class="style1">
           <div class="links">
 
-            <a href="#">blog</a></br>
-            <a href="#">privacy</a></br>
-            <a href="#">terms and condition</a></br>
-            <a href="#">code of coduct</a></br>
-            <a href="#">agent panel</a></br>
-            <a href="#">site map</a></br>
+            <a href="#">About Us</a></br>
+            <a href="#">Refer and Earn</a></br>
+            <a href="#">Privacy Policy</a></br>
+            <a href="#">Terms and Condition</a></br>
+            <a href="#">Sitemap</a></br>
+            <a href="#">Blogs</a></br>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-12">
@@ -152,7 +152,7 @@ $.ajax({
           <input type="email" name="email" placeholder="Email here...">
           <span class="arrow"><img src="assest/img/arrow.svg" width="100%"></span>
           <!-- <p>Rajmahal Complex,Opp-PLA Petrol Pump,Delhi Road, Hisar-125001</p> -->
-          <p><i class="fa fa-phone" style="margin-right: 7px; font-size: 20px;"></i> 8950000000</p>
+          <p><i class="fa fa-phone" style="margin-right: 7px; font-size: 20px;"></i>7392900007</p>
           <p><i class="fa fa-envelope" style="margin-right: 7px; font-size: 20px;"></i> info@walletapp.com</p>
         </div>
       </div>

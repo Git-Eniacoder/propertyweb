@@ -80,7 +80,7 @@
                               </li>
                               <li class=" nav-item">
                                  <a title="Balance" href="#" class="nav-link">
-                                 Balance &#x20B9; 0.00
+                                <img src="../assets/img/Balance.png" width="25px">  Balance &#x20B9; 0.00
                                  </a>
                               </li>
                               <li   class="  nav-item m-1 brk ">
@@ -126,17 +126,18 @@
             <div class="row">
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;0.00</span></center>
-                  <button class="active">Recharge wallet</button>
+                  <button class="active"><img src="../assets/img/Recharge Wallet.png" width="25px">Recharge wallet</button>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;">&#x20B9;0.00</span></center>
-                  <button>Refer & Earn wallet</button>
+                  <button><img src="../assets/img/refer.png" width="25px">Refer & Earn wallet</button>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;0.00</span></center>
-                  <button>Field Expenses</button>
+                  <button><img src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
                <div class="col-md-3">
+                   <center><img src="../assets/img/Add Money.png" width="25px"></center>
                   <button>Add Money</button>
                </div>
             </div>
