@@ -68,7 +68,7 @@
       
       
       
-                                <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
+                                <div id="navbarSupportedContent" class=" collapse navbar-collapse sub-menu-bar">
                                   <ul id="nav" class="navbar-nav ml-auto ">
                                   
                                     <li class=" nav-item">
@@ -80,7 +80,8 @@
                                       |
                                     </li>
                                     <li class=" nav-item">
-                                      <a title="Balance" href="#" class="nav-link">
+                                        
+                                      <a title="Balance" href="#" class="nav-link"><img src="../assets/img/Balance.png" width="25px;">
                                       Balance <img src="../assets/img/rupee.svg" width="10px" > 0.00
                                       </a>
                                     </li>
@@ -159,17 +160,18 @@
                 <div class="row">
                     <div class="col-md-3">
                         <center><img src="../assets/img/rupee.svg" width="15px"><span style="color: white;">0.00</span></center>
-                        <button class="active">Recharge wallet</button>
+                        <button class="active"><img src="../assets/img/Recharge Wallet.png" width="20px">Recharge wallet</button>
                     </div>
                     <div class="col-md-3">
                         <center><img src="../assets/img/rupee.svg" width="15px"><span style="color: white;">0.00</span></center>
-                        <button>Refer & Earn wallet</button>
+                        <button><img src="../assets/img/refer.png" width="20px">Refer & Earn wallet</button>
                     </div>
                     <div class="col-md-3">
                         <center><img src="../assets/img/rupee.svg" width="15px"><span style="color: white;">0.00</span></center>
-                        <button>Field Expenses</button>
+                        <button><img src="../assets/img/Field Expense.png" width="20px">Field Expenses</button>
                     </div>
                     <div class="col-md-3">
+                        <center><img src="../assets/img/Add Money.png" width="25px"></center>
                         <button>Add Money</button>
                     </div>    
                 </div>    
