@@ -64,6 +64,11 @@
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a title="Recharge" href="<?php echo $url['referandearn']; ?>" class="nav-link">
+                    Refer and Earn
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a title="Recharge" href="<?php echo base_url().'contact' ?>" class="nav-link">
                     Contact Us
                   </a>

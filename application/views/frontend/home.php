@@ -17,64 +17,82 @@
       <div class="container">
         <div class="flex justify-content-center ">
           <div class="col-md-3 hero_cards">
-            <div class="card">
-              <div class="card-img">
-                <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
-              </div>
-              <div class="card-body">
 
-                <!-- <p>Home seekers get a virtual tour of your property.</p> -->
-                <div class="text-center">
-                  <a href="<?php echo $url['list']; ?>" class="hero_card-text">Recharge</a>
+            <a href="#" class="">
+              <div class="card">
+                <div class="card-img">
+                  <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
                 </div>
-              </div>
+                <div class="card-body">
 
-            </div>
+                  <!-- <p>Home seekers get a virtual tour of your property.</p> -->
+                  <div class="text-center">
+                    <a href="<?php echo $url['list']; ?>" class="hero_card-text">Recharge</a>
+                  </div>
+                </div>
+
+              </div>
+            </a>
 
           </div>
 
 
           <div class="col-md-3 hero_cards">
-            <div class="card">
-              <div class="card-img">
-                <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
-              </div>
-              <div class="card-body">
 
-                <!-- <p>Fast & Easy Recharge for Prepaid Mobile</p> -->
-                <div class="text-center">
-                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">List Property</a>
+            <a href="">
+              <div class="card">
+                <div class="card-img">
+                  <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
+                </div>
+                <div class="card-body">
+
+                  <!-- <p>Fast & Easy Recharge for Prepaid Mobile</p> -->
+                  <div class="text-center">
+                    <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">List Property</a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+
           </div>
-          <div class="col-md-3 hero_cards">
-            <div class="card">
-              <div class="card-img">
-                <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
-              </div>
-              <div class="card-body">
 
-                <!-- <p>Selling property online was never so easy</p> -->
-                <div class="text-center">
-                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Post Requirement</a>
+          <div class="col-md-3 hero_cards">
+
+            <a href="">
+              <div class="card">
+                <div class="card-img">
+                  <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
+                </div>
+                <div class="card-body">
+
+                  <!-- <p>Selling property online was never so easy</p> -->
+                  <div class="text-center">
+                    <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Post Requirement</a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+
           </div>
-          <div class="col-md-3 hero_cards">
-            <div class="card">
-              <div class="card-img">
-                <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
-              </div>
-              <div class="card-body">
 
-                <!-- <p>Shop Online for men, women and kids fashion</p> -->
-                <div class="text-center">
-                  <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Shopping</a>
+          <div class="col-md-3 hero_cards">
+
+
+            <a href="">
+              <div class="card">
+                <div class="card-img">
+                  <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
+                </div>
+                <div class="card-body">
+
+                  <!-- <p>Shop Online for men, women and kids fashion</p> -->
+                  <div class="text-center">
+                    <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Shopping</a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+
           </div>
         </div>
       </div>
