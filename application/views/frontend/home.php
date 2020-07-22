@@ -18,7 +18,7 @@
         <div class="flex justify-content-center ">
           <div class="col-md-3 hero_cards">
 
-            <a href="#" class="">
+            <a href="<?php echo $url['recharge']; ?>" class="">
               <div class="card">
                 <div class="card-img">
                   <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
@@ -39,7 +39,7 @@
 
           <div class="col-md-3 hero_cards">
 
-            <a href="">
+            <a href="<?php echo $url['list']; ?>">
               <div class="card">
                 <div class="card-img">
                   <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
@@ -58,7 +58,7 @@
 
           <div class="col-md-3 hero_cards">
 
-            <a href="">
+            <a href="<?php echo $url['post_property']; ?>">
               <div class="card">
                 <div class="card-img">
                   <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
@@ -131,7 +131,7 @@
           </div>
         </div>
         <div class="col-md-2 text-center">
-          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Lets Go</a>
+          <a name="" id="" class="btn btn-primary call_btn" href="<?php echo $url['referandearn']; ?>" role="button">Lets Go</a>
         </div>
       </div>
     </div>
