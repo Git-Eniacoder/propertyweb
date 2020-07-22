@@ -16,6 +16,7 @@
 
 
 
+
         </style>                   
     </head>
     <body>
@@ -54,12 +55,10 @@
       
                                 <div class="logo lo-mm">
                                 <a class="custom-logo-link " rel="<?php echo $url['home']; ?>" href="home">
-                <img width="133" height="55" src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="Logo" class="custom-logo">
+                <img width="133" height=30 src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="Logo" class="custom-logo">
 
               </a>
-              <a title="Balance" href="#" class="nav-link">
-                                      Balance <img src="../assets/img/rupee.svg" width="10px" > 0.00
-                                      </a>
+                            
                                         
                                 </div>
                                 
@@ -73,7 +72,7 @@
                                   <ul id="nav" class="navbar-nav ml-auto ">
                                   
                                     <li class=" nav-item">
-                                      <a title="Refer and Earn" href="#" class="nav-link">
+                                      <a style="color: rgb( 245, 57, 61 );" title="Refer and Earn" href="#" class="nav-link">
                                         Refer and Earn
                                       </a>
                                     </li>
@@ -90,7 +89,7 @@
                                     </li>
                                     <li class=" nav-item">
                                         <div class="dropdown">
-                                        <img src="../assets/img/flag.png" width="30px" class=" dropbtn" >
+                                        <img style=" margin-top: .3rem;" src="../assets/img/flag.png" width="30px" class=" dropbtn" >
                                             
                                             <div class="dropdown-content">
                                                 <a class="dropdown-item" href="#">usa</a>
@@ -110,7 +109,7 @@
                                     </li>
                                     <li class=" nav-item">
                                         <div class="dropdown">
-                                        <img src="../assets/img/user.svg" width="30px" class=" uu" >
+                                        <img style="margin-top: .3rem;" src="../assets/img/user.svg" width="30px" class=" uu" >
                                             
                                             <div class="dropdown-content">
                                                 <a class="dropdown-item" href="#">login</a>
@@ -191,28 +190,37 @@
                             <div class="row">
                                 <div class="col-md-6">
                                 
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <center><a href="#"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
+                                    <div class="tab row">
+                                        
+                                            
+                                            <div class="col-md-4">
+                                            <center><a href="#" class="tablinks"  onclick="openCity(event, 'London')"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
                                                 Mobile  </a>  </center> 
                                         </div>
                                         <div class="col-md-4">
-                                            <center><a href="#"><img class="ima" src="../assets/img/landline.png" alt="landline" >
+                                            <center><a href="#" class="tablinks"  onclick="openCity(event, 'paris')"><img class="ima" src="../assets/img/landline.png" alt="landline" >
                                                 Landline</a></center>
                                                 
                                         </div>
                                         <div class="col-md-4">
-                                            <center><a href="#"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
+                                            <center><a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
                                                 DTH</a></center>
-                                        </div>    
+                                        </div> 
+                                        
+
+<!-- Tab content -->
+
+
+
+                                          
                                     </div>
                                     
                                      
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="row">
+                                    <div class="row tab">
                                         <div class="col-md-4">
-                                            <center><a href="#"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
+                                            <center><a href="#" class="tablinks"  onclick="openCity(event, 'datacard')"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
                                                 Datacard  </a></center>   
                                         </div>
                                         <div class="col-md-4">
@@ -228,19 +236,19 @@
                             <div class="scrolling-wrapper">
                                 
                                     
-                                        <div class="card"> <center><a href="#"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
+                                        <div class="card"> <center><a href="#" class="tablinks"  onclick="openCity(event, 'London')"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
                                                 <p>Mobile</p>  </a>  </center> </div>
                                     
                                    
-                                        <div class="card"> <center><a href="#"><img class="ima" src="../assets/img/landline.png" alt="landline" >
+                                        <div class="card"> <center><a href="#" class="tablinks"  onclick="openCity(event, 'paris')"><img class="ima" src="../assets/img/landline.png" alt="landline" >
                                                 <p>Landline</p></a></center></div>
                                    
                                     
-                                        <div class="card"> <center><a href="#"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
+                                        <div class="card"> <center><a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
                                                 <p>DTH</p></a></center></div>
                                     
                                     
-                                        <div class="card"><center><a href="#"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
+                                        <div class="card"><center><a href="#" class="tablinks"  onclick="openCity(event, 'datacard')"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
                                                 <p>Datacard</p>  </a></center> </div>
 
                                     
@@ -249,11 +257,12 @@
                                 
                                                 
                             </div>
-                            <div class="radi">
-                                <label><input type="radio" name="optradio" checked>Prepaid</label>
-                                <label><input type="radio" name="optradio" >Postpaid</label>
-                            </div> 
-                            <div class="inp">
+                            <div id="London" class="tabcontent">
+                                <div class="radi">
+                                    <label style="margin-right:1rem;"><input type="radio" name="optradio" checked>Prepaid</label>
+                                    <label><input type="radio" name="optradio" >Postpaid</label>
+                                </div>
+                                <div class="inp">
                                 
                                     <div class="row top">
                                         <div class="col-md-6">
@@ -276,7 +285,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <select class="sel">
+                                            <select class="sel" style="margin-bottom: 1rem;">
                                                 <option value="volvo">select circle</option>
                                                 <option value="saab">rajasthan </option>
                                                 <option value="opel">hariyana</option>
@@ -284,12 +293,12 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="input-group"  style="margin-top: 1rem; border-color:grey;">
+                                            <div class="input-group"  style=" border-color:grey;">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                                 </div>
                                                 <input type="number" class="form-control" placeholder="Ammount">
-                                                
+                                                <input type="button" value="brwoser plan">
                                                 
                                             </div>
 
@@ -297,7 +306,7 @@
                                     </div>
                                          
                                    
-                            </div> 
+                            </div>
                             <div class="re-bu">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -308,7 +317,132 @@
 
                                     </div>    
                                 </div> 
-                            </div>    
+                            </div>
+                            </div>
+                            <div id="paris" class="tabcontent">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="inp">
+                                    <select class="sel">
+                                                <option value="volvo">select operator</option>
+                                                <option value="saab">Docomo</option>
+                                                <option value="opel">Airtel</option>
+                                                <option value="audi">BSNL</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                
+                            <div class="re-bu">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button>Pay Now</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        
+
+                                    </div>    
+                                </div> 
+                            </div>
+                            </div>
+                            <div id="tokyo" class="tabcontent">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="inp">
+                                    <select class="sel">
+                                                <option value="volvo">select operator</option>
+                                                <option value="saab">Airtel DTH</option>
+                                                <option value="opel">Sun dth</option>
+                                                <option value="audi">Videocon D2H</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                
+                            <div class="re-bu">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button>Pay Now</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        
+
+                                    </div>    
+                                </div> 
+                            </div>
+                            </div>
+                            <div id="datacard" class="tabcontent">
+                            <div class="radi">
+                                    <label><input type="radio" name="optradio" checked>Prepaid</label>
+                                    <label><input type="radio" name="optradio" >Postpaid</label>
+                                </div>
+                                <div class="inp">
+                                
+                                    <div class="row top">
+                                        <div class="col-md-6">
+                                            <div class="input-group" style="margin-bottom: 1rem;">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text">+91</span>
+                                                </div>
+                                                <input type="number" class="form-control" placeholder="Mobile Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select class="sel">
+                                                <option value="volvo">select operator</option>
+                                                <option value="saab">idea</option>
+                                                <option value="opel">jio</option>
+                                                <option value="audi">vodafone</option>
+                                            </select>
+
+                                        </div>    
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <select class="sel" style="margin-bottom: 1rem;">
+                                                <option value="volvo">select circle</option>
+                                                <option value="saab">rajasthan </option>
+                                                <option value="opel">hariyana</option>
+                                                <option value="audi">delhi</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <div class="input-group"  style=" border-color:grey;">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
+                                                </div>
+                                                <input type="number" class="form-control" placeholder="Ammount">
+                                                <input type="button" value="brwoser plan">
+                                                
+                                            </div>
+
+                                        </div>    
+                                    </div>
+                                         
+                                   
+                            </div>
+                                
+                            <div class="re-bu">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button>Recharge Now</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        
+
+                                    </div>    
+                                </div> 
+                            </div>
+                            </div>
+                             
+                             
+                                
                         </div> 
                            
                     </div>
@@ -363,6 +497,31 @@
         
           ga('create', 'UA-46156385-1', 'cssscript.com');
           ga('send', 'pageview');
+
+
+
+
+
+          function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
         
         </script>
         
