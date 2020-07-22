@@ -1823,6 +1823,9 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-top: 3.5rem;
 }
 
+.ticket_head{
+  font-size: 1.2rem;
+}
 
 /* // end of show property CSS */
 
