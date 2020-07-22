@@ -1721,6 +1721,10 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   font-size: 1.2rem;
   font-weight: 500;
 }
+.hero_card-text:hover{
+  color: #dc3545;
+  text-decoration: none;
+}
 
 .blog_section{
   margin: 4rem 0rem;
@@ -1826,6 +1830,41 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 .ticket_head{
   font-size: 1.2rem;
 }
+
+
+.ticket_img {
+  border: 1px dashed rgb(110, 105, 105) !important;
+  width: 10rem !important;
+  height: 8rem !important;
+  display: block;
+  text-align: center !important;
+  padding-top: 3rem !important;
+  background-color: rgb(241, 245, 234);
+}
+
+.message_area {
+  display: block;
+}
+
+.tickect-bx{
+  border: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.ticket_h2{
+  font-size: 1.2rem;
+
+}
+
+.ticket_head p{
+  font-size: 1rem;
+}
+
+.ticket_head{
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
 
 /* // end of show property CSS */
 
