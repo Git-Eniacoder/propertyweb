@@ -125,15 +125,15 @@
          <div class="container">
             <div class="row">
                <div class="col-md-3">
-                  <center><span style="color: white;"> &#x20B9;0.00</span></center>
+                  <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
                   <button class="active"><img src="../assets/img/Recharge Wallet.png" width="25px">Recharge wallet</button>
                </div>
                <div class="col-md-3">
-                  <center><span style="color: white;">&#x20B9;0.00</span></center>
+                  <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
                   <button><img src="../assets/img/refer.png" width="25px">Refer & Earn wallet</button>
                </div>
                <div class="col-md-3">
-                  <center><span style="color: white;"> &#x20B9;0.00</span></center>
+                  <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
                   <button><img src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
                <div class="col-md-3">
