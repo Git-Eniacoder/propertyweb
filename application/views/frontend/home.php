@@ -92,7 +92,7 @@
       </div>
       <div class="row justify-content-center call_actions">
         <div class="col-md-2 call_bx">
-          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Let's Chat</a>
+          <a name="" id="" href="javascript:void(Tawk_API.toggle())" class="btn btn-primary call_btn">Let's Chat</a>
         </div>
         <div class="col-md-1 call_bx">
           <p class="call_bx_or">OR</p>

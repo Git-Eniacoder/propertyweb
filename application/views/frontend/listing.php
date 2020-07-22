@@ -118,8 +118,9 @@
                     <div class="form-group col-md-6">
                         <select name="list_willing" class="form-control">
                             <option disabled value="" selected>Willing to Rent Out*</option>
-                            <option value="Sq.ft.">1 BHK</option>
-                              
+                            <option value="Family">Family</option>
+                            <option value="Family">Boys</option>
+                            <option value="Family">Girls</option>
                               
                           </select>
                           <?php echo form_error('list_willing')? '<span class=" text-danger">'.form_error('list_willing').'</span>' : '' ;?>
