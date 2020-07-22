@@ -1684,6 +1684,7 @@ transform: translateY(-10px) rotate(-45deg);
 
 #box {
 position: fixed;
+box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.5);
 z-index: 4;
 overflow: auto;
 top: 0px;

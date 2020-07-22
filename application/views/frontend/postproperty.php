@@ -56,6 +56,8 @@
                         </select>
                         <?php echo form_error('post_type')? '<span class=" text-danger">'.form_error('post_type').'</span>' : '' ;?>
                       </div>
+
+
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <input type="text" name="post_min" placeholder="Min Budget*" class="form-control">
@@ -67,17 +69,21 @@
 
                       </div>
                     </div>
-                    <div class="form-group">
+
+                    <div class="form-row">
+                    <div class="form-group col-md-6">
                       <input type="text" name="post_locality" class="form-control"  placeholder="Locality*">
                       <?php echo form_error('post_locality')? '<span class=" text-danger">'.form_error('post_locality').'</span>' : '' ;?>
 
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
                       <!-- <label for="inputAddress2">Address 2</label> -->
                       <input type="text" name="post_city" class="form-control"  placeholder="City*">
                       <?php echo form_error('post_city')? '<span class=" text-danger">'.form_error('post_city').'</span>' : '' ;?>
-
                     </div>
+                    </div>
+
+
                     <div id="unit">
                     <div class="form-row">
                       <div class="form-group col-md-4">
