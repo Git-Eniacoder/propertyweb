@@ -1280,7 +1280,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .ticket_img {
   border: 1px dashed rgb(110, 105, 105) !important;
-  width: 10rem !important;
+  /* width: 10rem !important; */
   height: 8rem !important;
   display: block;
   text-align: center !important;
