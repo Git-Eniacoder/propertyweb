@@ -24,6 +24,10 @@
 .post-card img{
     width: 3rem;
 }
+.response{
+    text-align : center;
+    color : red;
+}
 
 </style>
 <section class="py-5 px-3" style="background-color: #fafafa;">
@@ -35,45 +39,52 @@
         <div class="row">
             <div style="background-color: #fff;" class="p-4 col-md-9">
                 <h5 class="text-black">Requirement Details <span class="text-danger">*</span> </h5>
-                <form class="post-requirment my-3">
+                <div class="response">
+                <?php 
+                    if($this->session->flashdata('response')){
+                        echo $this->session->flashdata('response');
+                    }
+                ?>
+                </div>
+                <form action="<?php echo $url['post_req'];?>" method="post" class="post-requirment my-3">
                     <div class="form-group">
                         <!-- <label for="inputState">Property Type</label> -->
-                        <select id="protype" onchange="myFunction()" class="form-control">
-                          <option selected>Property Type*</option>
+                        <select id="protype" name="post_type" onchange="myFunction()" class="form-control">
+                          <option disabled value="" selected>Property Type*</option>
                           <option value="commercial">Commercial</option>
                           <option value="residential">Residential</option>
                         </select>
+                        <?php echo form_error('post_type')? '<span class=" text-danger">'.form_error('post_type').'</span>' : '' ;?>
                       </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <!-- <label for="inputEmail4">Email</label> -->
-                        <select id="inputState" class="form-control">
-                            <option selected>Min Budget*</option>
-                          
-                          </select>
+                        <input type="text" name="post_min" placeholder="Min Budget*" class="form-control">
+                        <?php echo form_error('post_min')? '<span class=" text-danger">'.form_error('post_min').'</span>' : '' ;?>
                       </div>
                       <div class="form-group col-md-6">
-                        <!-- <label for="inputPassword4">Password</label> -->
-                        <select id="inputState" class="form-control">
-                            <option selected>Max Budget*</option>
-                        </select>
+                      <input type="text" name="post_max" placeholder="Max Budget*" class="form-control">
+                      <?php echo form_error('post_max')? '<span class=" text-danger">'.form_error('post_max').'</span>' : '' ;?>
+
                       </div>
                     </div>
                     <div class="form-group">
-                      <!-- <label for="inputAddress">Address</label> -->
-                      <input type="email" class="form-control" id="inputAddress" placeholder="Locality*">
+                      <input type="text" name="post_locality" class="form-control"  placeholder="Locality*">
+                      <?php echo form_error('post_locality')? '<span class=" text-danger">'.form_error('post_locality').'</span>' : '' ;?>
+
                     </div>
                     <div class="form-group">
                       <!-- <label for="inputAddress2">Address 2</label> -->
-                      <input type="email" class="form-control" id="inputAddress2" placeholder="City*">
+                      <input type="text" name="post_city" class="form-control"  placeholder="City*">
+                      <?php echo form_error('post_city')? '<span class=" text-danger">'.form_error('post_city').'</span>' : '' ;?>
+
                     </div>
                     <div id="unit">
                     <div class="form-row">
                       <div class="form-group col-md-4">
                         <!-- <label for="inputState">State</label> -->
-                        <select id="inputState" class="form-control">
+                        <select  name="post_unit" class="form-control">
                           <option selected>Select Unit*</option>
-                        <option value="Sq.ft.">Sq.ft.</option>
+                           <option value="Sq.ft.">Sq.ft.</option>
                             <option value="Cent">Cent</option>
                             <option value="Sq. Yards">Sq. Yards</option>
                             <option value="Ares">Ares</option>
@@ -88,24 +99,21 @@
                         </select>
                       </div>
                       <div class="form-group col-md-2">
-                        <!-- <label for="inputZip">Zip</label> -->
-                        <input type="email" class="form-control" placeholder="Min" id="inputZip">
+                        <input type="text" name="post_req_min" class="form-control" placeholder="Min">
                       </div>
                       <div class="form-group col-md-2">
-                        <!-- <label for="inputZip">Zip</label> -->
-                        <input type="email" class="form-control" placeholder="Max" id="inputZip">
+                        <input type="text" name="post_req_max" class="form-control" placeholder="Max">
                       </div>
                     </div>
                 </div>
                     <div id="bhk" class="form-row">
                         <div class="form-group col-md-6">
-                          <!-- <label for="inputState">State</label> -->
-                          <select id="inputState" class="form-control">
-                            <option selected>Select BHK*</option>
-                            <option value="Sq.ft.">1 BHK</option>
-                              <option value="Cent">2 BHK</option>
-                              <option value="Sq. Yards">3 BHK</option>
-                              <option value="Ares">4 BHK</option>
+                          <select name="post_bhk" class="form-control">
+                            <option disabled value="" selected>Select BHK*</option>
+                            <option value="1">1 BHK</option>
+                              <option value="2">2 BHK</option>
+                              <option value="3">3 BHK</option>
+                              <option value="4">4 BHK</option>
                               
                           </select>
                         </div>
@@ -114,18 +122,22 @@
                    
                     <div class="form-group">
                         <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Name*">
+                        class="form-control" name="post_name"  placeholder="Name*">
+                        <?php echo form_error('post_name')? '<span class=" text-danger">'.form_error('post_name').'</span>' : '' ;?>
+
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <!-- <label for="inputEmail4">Email</label> -->
                             <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Email*">
+                        class="form-control" name="post_email"  placeholder="Email*">
+                        <?php echo form_error('post_email')? '<span class=" text-danger">'.form_error('post_email').'</span>' : '' ;?>
+
                     </div>
                     <div class="form-group col-md-6">
-                        <!-- <label for="inputPassword4">Password</label> -->
                         <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Phone no.*">
+                        class="form-control" name="post_phone"  placeholder="Phone no.*">
+                        <?php echo form_error('post_phone')? '<span class=" text-danger">'.form_error('post_phone').'</span>' : '' ;?>
+
                     </div>
                 </div>
                 <button type="submit" class="btn btn-danger w-100 my-4">Post my Requirement</button>

@@ -9,8 +9,7 @@ class Listing extends My_Controller
 
         parent::__construct();
 
-        $this->load->model('pages/Db_fillter');
-        $this->load->model('pages/Db_postreq');
+        $this->load->model('db_property');
         $this->load->library('upload');
     }
 
@@ -40,7 +39,7 @@ class Listing extends My_Controller
             $filesCount = count($_FILES['files']['name']); 
             echo $filesCount;
             $errorUploadType = '';
-            $images = '';
+            $images = array();
             for($i = 0; $i < $filesCount; $i++){ 
             $_FILES['file']['name']     = $_FILES['files']['name'][$i]; 
             $_FILES['file']['type']     = $_FILES['files']['type'][$i]; 
@@ -56,34 +55,43 @@ class Listing extends My_Controller
             $this->load->library('upload', $config); 
             $this->upload->initialize($config); 
             if($this->upload->do_upload('file')){
-                 $images .= $config['file_name'].',';
+                 $images[$i] = $config['file_name'];
             }else{
-                $array = array(
-                    'form'   => true,
-                     'error' => $this->upload->display_errors(),
-                   );
+                   $this->session->set_flashdata('response', '<p class="text-center text-danger">'.display_errors().'</p>');
+                   redirect(base_url().'list_mod/listing');
+
                 break;
             }
-        $this->input->post('list_name');
-        $this->input->post('list_mobile');
-        $this->input->post('list_name');
-        $this->input->post('list_name');
-        $this->input->post('list_name');
-        $this->input->post('list_name');
-        $this->input->post('list_name');
-        $this->input->post('list_name');
-        $this->input->post('list_name');
         }
-            
-            
-        } else {
-            $array = array(
-                'form'   => true,
-                 'error' => validation_errors(),
-               );
-               
+        $data['list_name'] = $this->input->post('list_name');
+        $data['list_mobile'] = $this->input->post('list_mobile');
+        $data['list_email'] = $this->input->post('list_email');
+        $data['list_city'] = $this->input->post('list_city');
+        $data['list_locality'] = $this->input->post('list_locality');
+        $data['list_property_type'] = $this->input->post('list_type');
+        if($this->input->post('list_type')=="commercial")
+            {
+                $data['list_unit'] = $this->input->post('list_area');
             }
-            echo json_encode($array);
+        else{
+            $data['list_bhk'] = $this->input->post('list_bhk');
+        }
+        $data['list_furnished_type'] = $this->input->post('list_furnished');
+        $data['list_rent_out'] = $this->input->post('list_willing');
+        $data['list_images'] =  implode(",",$images);
+        $data['list_description'] = $this->input->post('list_messages');
+            if($this->db_property->list_property($data)){
+                $this->session->set_flashdata('response', '<p class="text-center text-danger">Successfully Listed Your Property</p>');
+                redirect(base_url().'list_mod/listing');
+            }else{
+                $this->session->set_flashdata('response', '<p class="text-center text-danger">Error In Listing Your Property</p>');
+                redirect(base_url().'list_mod/listing');
+
+            }
+        }else { 
+                $this->index();
+            }
+            
        
     }
     public function update($id)
