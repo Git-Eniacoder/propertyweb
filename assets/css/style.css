@@ -1533,6 +1533,14 @@ body{
   padding-bottom: .5rem;
   border-color: rgba(184, 182, 182, 0.692);
 }
+.recha .card .tt input[type=text]{
+  width: 100%;
+  height: auto;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-color: rgba(184, 182, 182, 0.692);
+  margin-top: 1.5rem;
+}
 
 
 .recha .card .re-bu{
@@ -1749,6 +1757,10 @@ display: none;
 .lo-mm  img{
   width: 80px;
   margin-left: 25px;
+}
+.recha .card .tt input[type=text]{
+ 
+  margin-top:0px;
 }
 } 
 

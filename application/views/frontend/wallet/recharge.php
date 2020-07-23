@@ -34,6 +34,9 @@
     vertical-align: middle;
     border: none;
    }
+   .nav-pills .nav-link:active{
+      background-color: transparent;
+   }
    </style>
    <body>
       <header class="header-area bg-white meu ">
@@ -126,15 +129,15 @@
             <div class="row">
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
-                  <button class="active"><img src="../assets/img/Recharge Wallet.png" width="25px">Recharge wallet</button>
+                  <button class="active"><img src="../assets/img/Recharge-Wallet.svg" width="25px" style="margin-top: -10px; margin-right:5px;">Recharge wallet</button>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
-                  <button><img src="../assets/img/refer.png" width="25px">Refer & Earn wallet</button>
+                  <button><img src="../assets/img/refer.svg" width="25px" style="margin-top: -10px; margin-right:5px;">Refer & Earn wallet</button>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
-                  <button><img src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
+                  <button><img src="../assets/img/Field Expense.png" width="25px" style="margin-top: -10px; margin-right:5px;">Field Expenses</button>
                </div>
                <div class="col-md-3">
                    <center><img src="../assets/img/Add-Money.svg" width="25px"></center>
@@ -153,25 +156,34 @@
                      <div class="dex">
                         <div class="row">
                            <div class="col-md-6">
-                              <div class="tab row">
-                                 <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'London')"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
-                                       Mobile  </a>  
-                                    </center>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
-                                       DTH</a>
-                                    </center>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'datacard')"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
-                                       Datacard  </a>
-                                    </center>
-                                 </div>
+                              <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
+                                 <li class="col-md-4 nav-item">
                                  
-                                 <!-- Tab content -->
-                              </div>
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
+                                       Mobile  </a>  
+                                    
+                                 
+                                    
+                                 </li>
+                                 <li class="col-md-4 nav-item">
+                                 
+                                    <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
+                                    DTH  </a>  
+                                  
+                                    
+                                 </li>
+                                 <li class="col-md-4 nav-item">
+                                 
+                                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
+                                    DataCard</a> 
+                                     
+                                    
+                                    
+                                 </li>
+                              </ul>
+                              
+                              
+                                
                            </div>
                            <div class="col-md-6">
                               <div class="row tab">
@@ -187,34 +199,39 @@
                         </div>
                      </div>
                      <div class="scrolling-wrapper">
-                        <div class="card">
-                           <center>
-                              <a href="#" class="tablinks"  onclick="openCity(event, 'London')">
-                                 <img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
-                                 <p>Mobile</p>
-                              </a>
-                           </center>
-                        </div>
-                        <div class="card">
-                        <center>
-                              <a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')">
-                                 <img class="ima" src="../assets/img/dth.png" alt="Dth" >
-                                 <p>DTH</p>
-                              </a>
-                           </center>
-                        </div>
-                        <div class="card">
-                        <center>
-                              <a href="#" class="tablinks"  onclick="openCity(event, 'datacard')">
-                                 <img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
-                                 <p>Datacard</p>
-                              </a>
-                           </center>
-                        </div>
+                              <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
+                                 <li class="card nav-item">
+                                 
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
+                                       <p>Mobile</p>  </a>  
+                                    
+                                 
+                                    
+                                 </li>
+                                 <li class="card nav-item">
+                                 
+                                    <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
+                                    <p>DTH</p>  </a>  
+                                  
+                                    
+                                 </li>
+                                 <li class="card nav-item">
+                                 
+                                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
+                                    <p>DataCard</p></a> 
+                                     
+                                    
+                                    
+                                 </li>
+                              </ul>
+                       
+                        
+                        
                         
                      </div>
-                     <div id="London" class="tabcontent">
-                        <div class="radi">
+                     <div class="tab-content" id="pills-tabContent">
+                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                 <div class="radi">
                            <label style="margin-right:1rem;"><input type="radio" name="optradio" checked> Prepaid</label>
                            <label><input type="radio" name="optradio" > Postpaid</label>
                         </div>
@@ -266,10 +283,9 @@
                               </div>
                            </div>
                         </div>
-                     </div>
-                     
-                     <div id="tokyo" class="tabcontent">
-                        <div class="row">
+                                 </div>
+                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                 <div class="row">
                            <div class="col-md-6">
                               
                               
@@ -284,9 +300,9 @@
                                 </div>
                            </div>
                            <div class="col-md-6"  >
-                               <div class="inp" >
-                                <input type="text" style=" border-color:grey;" placeholder="Subscriber id">
-                               </div>
+                              <div class="tt">
+                                <input type="text"  placeholder="Subscriber id">
+                              </div>
                            </div>
                         </div>
                         <div class="row">
@@ -318,9 +334,9 @@
                               </div>
                            </div>
                         </div>
-                     </div>
-                     <div id="datacard" class="tabcontent">
-                        <div class="radi">
+                                 </div>
+                                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                 <div class="radi">
                            <label><input type="radio" name="optradio" checked>Prepaid</label>
                            <label><input type="radio" name="optradio" >Postpaid</label>
                         </div>
@@ -372,7 +388,11 @@
                               </div>
                            </div>
                         </div>
-                     </div>
+                                 </div>
+                              </div>
+                     
+                    
+                     
                   </div>
                </div>
                <div class="col-md-6">
