@@ -34,6 +34,10 @@
     vertical-align: middle;
     border: none;
    }
+   .nav-pills .nav-link.active{
+      background-color: transparent !important;
+      color : #3D3D3D !important;
+   }
    </style>
    <body>
       <header class="header-area bg-white meu ">
@@ -46,17 +50,14 @@
             <div id="box">
                <div id="items">
                   <div class="item">Recharge & PayBills</div>
-                  <div class="item">Send Money</div>
-                  <div class="item">Prepaid Crads</div>
-                  <div class="item">Shopping</div>
+                  <div class="item">Buy Plan</div>
+                  <div class="item">Refer And Earn</div>
+                  <div class="item">Field Expeses</div>
                   <div class="item">Add Money</div>
                   <hr class="style1">
-                  <div class="item">Store Near You</div>
-                  <hr class="style1">
-                  <div class="item">Suppoprt</div>
+                  <a href="<?php echo $url['support']; ?>" class="item">Suppoprt</a>
                   <div class="item">About us</div>
-                  <hr class="style1">
-                  <div class="item">connect & share on</div>
+                  
                </div>
             </div>
             <div class="container">
@@ -64,14 +65,14 @@
                   <div class="col-lg-12">
                      <nav class="navbar navbar-expand-lg">
                         <div class="logo lo-mm">
-                           <a class="custom-logo-link " rel="<?php echo $url['home']; ?>" href="home">
+                           <a class="custom-logo-link "  href="<?php echo base_url(); ?>">
                            <img width="133" height=30 src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="Logo" class="custom-logo">
                            </a>
                         </div>
                         <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
                            <ul id="nav" class="navbar-nav ml-auto ">
                               <li class=" nav-item">
-                                 <a style="color: rgb( 245, 57, 61 );" title="Refer and Earn" href="#" class="nav-link">
+                                 <a style="color: rgb( 245, 57, 61 );" title="Refer and Earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
                                  Refer and Earn
                                  </a>
                               </li>
@@ -80,7 +81,7 @@
                               </li>
                               <li class=" nav-item">
                                  <a title="Balance" href="#" class="nav-link">
-                                <img src="../assets/img/Balance.png" width="25px">  Balance &#x20B9; 0.00
+                                <img src="../assets/img/Balance.png" width="25px">  Balance &#x20B9; <?php echo $post["all_data"][0]->recharge_wallet;?>.00
                                  </a>
                               </li>
                               <li   class="  nav-item m-1 brk ">
@@ -91,8 +92,8 @@
                                     <img style=" margin-top: .3rem;" src="../assets/img/flag.png" width="30px" class=" dropbtn" >
                                     <span class="caret"></span>
                                     <div class="dropdown-content">
-                                       <a class="dropdown-item" href="#">usa</a>
-                                       <a class="dropdown-item" href="#">nepal</a>
+                                       <a class="dropdown-item" href="#">India</a>
+                                       <a class="dropdown-item" href="#">Nepal</a>
                                     </div>
                                  </div>
                               </li>
@@ -104,8 +105,9 @@
                                  <i class="fa fa-user" aria-hidden="true"></i>
                                  <span class="caret"></span>
                                     <div class="dropdown-content">
-                                       <a class="dropdown-item" href="#">login</a>
-                                       <a class="dropdown-item" href="#">Register</a>
+                                    <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
+                                     <a class="dropdown-item" href="<?php echo $url['support']; ?>">Raise Ticket</a>
+                                     <a class="dropdown-item" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
                                     </div>
                                  </div>
                               </li>
@@ -126,18 +128,18 @@
             <div class="row">
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
-                  <button class="active"><img src="../assets/img/Recharge Wallet.png" width="25px">Recharge wallet</button>
+                  <button class="active"><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
-                  <button><img src="../assets/img/refer.png" width="25px">Refer & Earn wallet</button>
+                  <button><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
-                  <button><img src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
+                  <button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
                <div class="col-md-3">
-                   <center><img src="../assets/img/Add-Money.svg" width="25px"></center>
+                   <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
                   <button>Add Money</button>
                </div>
             </div>
@@ -152,26 +154,35 @@
                      <hr class="style1">
                      <div class="dex">
                         <div class="row">
-                           <div class="col-md-6">
-                              <div class="tab row">
-                                 <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'London')"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
-                                       Mobile  </a>  
-                                    </center>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
-                                       DTH</a>
-                                    </center>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <center><a href="#" class="tablinks"  onclick="openCity(event, 'datacard')"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
-                                       Datacard  </a>
-                                    </center>
-                                 </div>
+                           <div class="col-md-8">
+                              <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
+                                 <li class="col-md-4 nav-item">
                                  
-                                 <!-- Tab content -->
-                              </div>
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
+                                       Mobile  </a>  
+                                    
+                                 
+                                    
+                                 </li>
+                                 <li class="col-md-4 nav-item">
+                                 
+                                    <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
+                                    DTH  </a>  
+                                  
+                                    
+                                 </li>
+                                 <li class="col-md-4 nav-item">
+                                 
+                                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
+                                    DataCard</a> 
+                                     
+                                    
+                                    
+                                 </li>
+                              </ul>
+                              
+                              
+                                
                            </div>
                            <div class="col-md-6">
                               <div class="row tab">
@@ -187,34 +198,39 @@
                         </div>
                      </div>
                      <div class="scrolling-wrapper">
-                        <div class="card">
-                           <center>
-                              <a href="#" class="tablinks"  onclick="openCity(event, 'London')">
-                                 <img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
-                                 <p>Mobile</p>
-                              </a>
-                           </center>
-                        </div>
-                        <div class="card">
-                        <center>
-                              <a href="#" class="tablinks"  onclick="openCity(event, 'tokyo')">
-                                 <img class="ima" src="../assets/img/dth.png" alt="Dth" >
-                                 <p>DTH</p>
-                              </a>
-                           </center>
-                        </div>
-                        <div class="card">
-                        <center>
-                              <a href="#" class="tablinks"  onclick="openCity(event, 'datacard')">
-                                 <img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
-                                 <p>Datacard</p>
-                              </a>
-                           </center>
-                        </div>
+                              <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
+                                 <li class="card nav-item">
+                                 
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
+                                       <p>Mobile</p>  </a>  
+                                    
+                                 
+                                    
+                                 </li>
+                                 <li class="card nav-item">
+                                 
+                                    <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
+                                    <p>DTH</p>  </a>  
+                                  
+                                    
+                                 </li>
+                                 <li class="card nav-item">
+                                 
+                                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
+                                    <p>DataCard</p></a> 
+                                     
+                                    
+                                    
+                                 </li>
+                              </ul>
+                       
+                        
+                        
                         
                      </div>
-                     <div id="London" class="tabcontent">
-                        <div class="radi">
+                     <div class="tab-content" id="pills-tabContent">
+                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                 <div class="radi">
                            <label style="margin-right:1rem;"><input type="radio" name="optradio" checked> Prepaid</label>
                            <label><input type="radio" name="optradio" > Postpaid</label>
                         </div>
@@ -230,20 +246,20 @@
                               </div>
                               <div class="col-md-6">
                                  <select class="sel">
-                                    <option value="volvo">select operator</option>
-                                    <option value="saab">idea</option>
-                                    <option value="opel">jio</option>
-                                    <option value="audi">vodafone</option>
+                                    <option value="volvo">Select operator</option>
+                                    <option value="saab">Idea</option>
+                                    <option value="opel">Jio</option>
+                                    <option value="audi">Vodafone</option>
                                  </select>
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-md-6">
                                  <select class="sel" style="margin-bottom: 1rem;">
-                                    <option value="volvo">select circle</option>
-                                    <option value="saab">rajasthan </option>
-                                    <option value="opel">hariyana</option>
-                                    <option value="audi">delhi</option>
+                                    <option value="volvo">Select circle</option>
+                                    <option value="saab">Rajasthan </option>
+                                    <option value="opel">Hariyana</option>
+                                    <option value="audi">Delhi</option>
                                  </select>
                               </div>
                               <div class="col-md-6">
@@ -251,8 +267,8 @@
                                     <div class="input-group-prepend">
                                        <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                     </div>
-                                    <input type="number" class="form-control" placeholder="Ammount">
-                                    <input type="button" value="brwoser plan">
+                                    <input type="number" class="form-control" placeholder="Amount">
+                                    <input type="button" value="Browse plan">
                                  </div>
                               </div>
                            </div>
@@ -266,10 +282,9 @@
                               </div>
                            </div>
                         </div>
-                     </div>
-                     
-                     <div id="tokyo" class="tabcontent">
-                        <div class="row">
+                                 </div>
+                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                 <div class="row">
                            <div class="col-md-6">
                               
                               
@@ -284,9 +299,9 @@
                                 </div>
                            </div>
                            <div class="col-md-6"  >
-                               <div class="inp" >
-                                <input type="text" style=" border-color:grey;" placeholder="Subscriber id">
-                               </div>
+                              <div class="tt">
+                                <input type="text"  placeholder="Subscriber id">
+                              </div>
                            </div>
                         </div>
                         <div class="row">
@@ -297,7 +312,7 @@
                                     <div class="input-group-prepend">
                                        <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                     </div>
-                                    <input type="number" class="form-control" placeholder="Ammount">
+                                    <input type="number" class="form-control" placeholder="Amount">
                                     
                                  </div>
                                </div>
@@ -318,11 +333,11 @@
                               </div>
                            </div>
                         </div>
-                     </div>
-                     <div id="datacard" class="tabcontent">
-                        <div class="radi">
-                           <label><input type="radio" name="optradio" checked>Prepaid</label>
-                           <label><input type="radio" name="optradio" >Postpaid</label>
+                                 </div>
+                                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                 <div class="radi">
+                           <label style="margin-right:1rem;"><input type="radio" name="optradio1" checked> Prepaid</label>
+                           <label style="margin-right:1rem;"><input type="radio" name="optradio1" > Postpaid</label>
                         </div>
                         <div class="inp">
                            <div class="row top">
@@ -336,7 +351,7 @@
                               </div>
                               <div class="col-md-6">
                                  <select class="sel">
-                                    <option value="volvo">select operator</option>
+                                    <option value="volvo">Select operator</option>
                                     <option value="saab">idea</option>
                                     <option value="opel">jio</option>
                                     <option value="audi">vodafone</option>
@@ -346,7 +361,7 @@
                            <div class="row">
                               <div class="col-md-6">
                                  <select class="sel" style="margin-bottom: 1rem;">
-                                    <option value="volvo">select circle</option>
+                                    <option value="volvo">Select circle</option>
                                     <option value="saab">rajasthan </option>
                                     <option value="opel">hariyana</option>
                                     <option value="audi">delhi</option>
@@ -357,8 +372,8 @@
                                     <div class="input-group-prepend">
                                        <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                     </div>
-                                    <input type="number" class="form-control" placeholder="Ammount">
-                                    <input type="button" value="brwoser plan">
+                                    <input type="number" class="form-control" placeholder="Amount">
+                                    <input type="button" value="Browse plan">
                                  </div>
                               </div>
                            </div>
@@ -372,7 +387,11 @@
                               </div>
                            </div>
                         </div>
-                     </div>
+                                 </div>
+                              </div>
+                     
+                    
+                     
                   </div>
                </div>
                <div class="col-md-6">
@@ -414,17 +433,6 @@
       });
    </script>
    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-46156385-1', 'cssscript.com');
-      ga('send', 'pageview');
-      
-      
-      
-      
       
       function openCity(evt, cityName) {
       // Declare all variables

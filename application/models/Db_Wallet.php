@@ -15,7 +15,7 @@ class Db_Wallet extends CI_Model
 
 
     public function update_wallet($wallet,$balance,$referid,$update_data_refer){
-        $mobile=$this->session->userdata("id");
+        $mobile=$this->session->userdata("user_id");
         $this->db->where('mobileno', $mobile);
         $update_data=array($wallet=>$balance);
         if($this->db->update('user_wallet', $update_data)){

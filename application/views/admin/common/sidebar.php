@@ -18,7 +18,7 @@
                            
                             
 
-                            <div class="sb-sidenav-menu-heading">View request</div>
+                            <!-- <div class="sb-sidenav-menu-heading">View request</div> -->
                             
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseblog" aria-expanded="false" aria-controls="collapseblog"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -31,9 +31,24 @@
                                 <a class="nav-link" href="<?php echo base_url();?>admin/post/list_req">Listed Property</a>
                             
                             </nav>
+                            
                     
                             </div>
-
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#support" aria-expanded="false" aria-controls="collapseblog"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-question-circle"></i></div>
+                                Support Ticket
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <div class="collapse" id="support" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="<?php echo base_url();?>admin/support/payment">Payment Support</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/support/technical">Technical Support</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/support/billing">Billing</a>
+                            
+                            </nav>
+                            
+                    
+                            </div>
 
 
 
@@ -63,7 +78,7 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url();?>admin/Management/admin_management">Admin</a>
                                 <a class="nav-link" href="<?php echo base_url();?>admin/Management/user_management">User</a>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers" aria-expanded="false" aria-controls="collapseUsers"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Users
