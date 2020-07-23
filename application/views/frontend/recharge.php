@@ -33,9 +33,11 @@ a.active{
         <h3 class="pt-5">Bigger Saving Assured only on <span class="text-danger">Hello Rent India</span></h3>
         <h6>Now you can get Recharge of 1200 just paying 960 Rupees</h6>
     </div>
+    <?php if ($status == false) { ?>
     <div class="container bg-white p-4 text-center">
-        <h5>Already Paid ? <a class="text-danger" href="">Click Here</a> to Login in to wallet</h5>
+        <h5>Already Paid ? <a class="text-danger" href="" data-toggle="modal" data-target="#login">Click Here</a> to Login in to wallet</h5>
     </div>
+    <?php } ?>
     <div class="container py-3">
         <div class="row">
             <div class="col-md-4 text-center">

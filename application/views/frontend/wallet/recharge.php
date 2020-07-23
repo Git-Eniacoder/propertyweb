@@ -215,8 +215,8 @@
                      </div>
                      <div id="London" class="tabcontent">
                         <div class="radi">
-                           <label style="margin-right:1rem;"><input type="radio" name="optradio" checked>Prepaid</label>
-                           <label><input type="radio" name="optradio" >Postpaid</label>
+                           <label style="margin-right:1rem;"><input type="radio" name="optradio" checked> Prepaid</label>
+                           <label><input type="radio" name="optradio" > Postpaid</label>
                         </div>
                         <div class="inp">
                            <div class="row top">
