@@ -1,5 +1,5 @@
 <!-- Home  -->
-<main class="main sub-main">
+<main class="sub-main">
   <div class="">
     <div class="hero_section">
       <div class="top-text">

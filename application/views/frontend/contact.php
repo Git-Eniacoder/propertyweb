@@ -144,7 +144,7 @@
 
 <!-- New Code -->
 
-<main class="sub-main">
+<main class="sub-main contact_main">
         <div class="contact_us">
             <div class="container">
                 <div class="row justify-content-center">
@@ -192,11 +192,16 @@
                         </div>
                         <div class="col-md-6">
                             <div class="">
-                                <div class="refer-head">
-                                    <!-- <h2 class="ticket_h2">If you prefer a more tangible form of communication we're here:</h2> -->
+                                <div class="refer-hea">
+                                    <h2 class="ticket_h2">We are here to listen you</h2>
                                 </div>
                                 <div class="form-group">
- 
+                                    <div class="row">
+                                        <div class="col"></div>
+                                        <div class="col">
+                                            
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
