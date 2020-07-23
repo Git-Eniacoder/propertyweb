@@ -1,6 +1,11 @@
-
+<style>
+    .refer_overlay{
+        background-color: rgba(0, 0, 0, 0.349);
+    }
+</style>
     <main class="sub-main">
         <div class="referandearn">
+            <div class="refer_overlay">
             <div class="container">
                 <div class="row justify-content-center">
 
@@ -77,6 +82,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
 

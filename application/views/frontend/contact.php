@@ -144,69 +144,104 @@
 
 <!-- New Code -->
 
-<main class="sub-main">
-        <div class="contact_us">
-            <div class="container">
-                <div class="row justify-content-center">
+<main class="sub-main contact_main">
+    <div class="contact_us">
+        <div class="container">
+            <div class="row justify-content-center">
 
-                    <div class="col-sm-8 text-center contact-top-head">
-                        <h2 class="refer-text"><span class="contact-top-head-h2">Free to ask form Us :</span> Let we Know</h2>
-                        <p class="refer-text">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here.</p>
-                    </div>
-
+                <div class="col-sm-8 text-center contact-top-head">
+                    <h2 class="refer-text"><span class="contact-top-head-h2">Free to ask form Us :</span> Let we Know</h2>
+                    <p class="refer-text">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here.</p>
                 </div>
-                <div class="refer-bx">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <div class="">
-                                <div class="refer-head">
-                                    <h2 class="ticket_h2">Lets Say</h2>
+
+            </div>
+            <div class="refer-bx">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="">
+                            <div class="refer-head">
+                                <h2 class="ticket_h2">Lets Say</h2>
+                            </div>
+                            <div class="form-group">
+                                <form action="">
+                                    <div class="">
+
+                                        <input type="text" name="" id="" class=" contact_inp" placeholder="Your Friends Name" aria-describedby="helpId">
+                                    </div>
+                                    <div class="">
+                                        <input type="text" name="" id="" class="contact_inp" placeholder="Your Friends Email" aria-describedby="helpId">
+                                    </div>
+                                    <div class="">
+                                        <input type="text" name="" id="" class="contact_inp" placeholder="Your Friends Mobile" aria-describedby="helpId">
+                                    </div>
+                                    <div class="">
+                                        <textarea name="" id="" cols="30" rows="10" class="contact_inp" placeholder="Your Message"></textarea>
+                                    </div>
+
+
+                                    <div class="contact_btn_bx">
+                                        <button type="submit" class="btn btn-primary send_invite">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="">
+                            <div class="refer-hea">
+                                <h2 class="ticket_h2">We are here to listen you</h2>
+                            </div>
+                            <div class="form-group">
+                                <div class="row justify-content-center">
+                                    <div class="col-1 justify-content-center">
+                                        <div>
+                                            <i class="fa fa-map-marker contact-icon" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <p class="form_right-p">Reach us on our</p>
+                                        <h3 class="form_right-h3">Office</h3>
+                                        pGround Floor, Rajmahal Complex, Opp. PLA Petrol Pump, Delhi Road, Hisar Haryana 125001
+                                        <p></p>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <form action="">
-                                        <div class="">
-
-                                            <input type="text" name="" id="" class=" contact_inp"
-                                                placeholder="Your Friends Name" aria-describedby="helpId">
+                                <div class="row justify-content-center">
+                                    <div class="col-1 justify-content-center">
+                                        <div>
+                                        <i class="fa fa-phone contact-icon" aria-hidden="true"></i>
                                         </div>
-                                        <div class="">
-                                            <input type="text" name="" id="" class="contact_inp"
-                                                placeholder="Your Friends Email" aria-describedby="helpId">
+                                    </div>
+                                    <div class="col-8">
+                                        <p class="form_right-p">Give us a</p>
+                                        <h3 class="form_right-h3">Call</h3>
+                                        +7392900007
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-1 justify-content-center">
+                                        <div>
+                                        <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
                                         </div>
-                                        <div class="">
-                                            <input type="text" name="" id="" class="contact_inp"
-                                                placeholder="Your Friends Mobile" aria-describedby="helpId">
-                                        </div>
-                                        <div class="">
-                                            <textarea name="" id="" cols="30" rows="10" class="contact_inp" placeholder="Your Message"></textarea>
-                                        </div>
-
-
-                                        <div class="contact_btn_bx">
-                                            <button type="submit" class="btn btn-primary send_invite">Submit</button>
-                                        </div>
-                                    </form>
+                                    </div>
+                                    <div class="col-8">
+                                        <p class="form_right-p">Drop an</p>
+                                        <h3 class="form_right-h3">Email</h3>
+                                        info@walletapp.com
+                                        <p></p>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="col-md-6">
-                            <div class="">
-                                <div class="refer-head">
-                                    <!-- <h2 class="ticket_h2">If you prefer a more tangible form of communication we're here:</h2> -->
-                                </div>
-                                <div class="form-group">
- 
-                                </div>
-                            </div>
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-    </main>
+</main>
 
 
 
