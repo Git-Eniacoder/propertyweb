@@ -95,7 +95,8 @@ $route['test'] = 'admin/postreq_mod/Post_req/demo';
 //Recharge module 
 $route['wallet'] = 'admin/wallet/Recharge';
 // $route['wallet/view'] = 'admin/wallet/Recharge/callview';
-
+$route['refer-wallet'] = 'admin/wallet/Refer';
+$route['field-wallet'] = 'admin/wallet/Field';
 
 
 //Recharge module 

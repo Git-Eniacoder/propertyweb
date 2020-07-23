@@ -37,6 +37,53 @@
    .nav-pills .nav-link:active{
       background-color: transparent;
    }
+  .ic {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.ic:hover {
+    opacity: 0.7;
+}
+
+ .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-facebook:hover{
+  background: #3B5998;
+  color: white;
+}
+
+ .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-twitter:hover {
+  background: #55ACEE;
+  color: white;
+}
+ .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-youtube:hover {
+  background: #bb0000;
+  color: white;
+}
+ .fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-instagram:hover {
+  background: #125688;
+  color: white;
+}
    </style>
    <body>
       <header class="header-area bg-white meu ">
@@ -48,18 +95,24 @@
             </div>
             <div id="box">
                <div id="items">
-                  <div class="item">Recharge & PayBills</div>
+                  <div class="item"><i class="fa fa-mobile" aria-hidden="true"></i> Recharge & PayBills</div>
                   <div class="item">Send Money</div>
                   <div class="item">Prepaid Crads</div>
-                  <div class="item">Shopping</div>
+                  <div class="item"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping</div>
                   <div class="item">Add Money</div>
                   <hr class="style1">
-                  <div class="item">Store Near You</div>
+                  <div class="item"><i class="fa fa-map-marker"  aria-hidden="true"></i> Store Near You</div>
                   <hr class="style1">
-                  <div class="item">Suppoprt</div>
+                  <div class="item"><i class="fa fa-envelope" aria-hidden="true"></i> Suppoprt</div>
                   <div class="item">About us</div>
                   <hr class="style1">
-                  <div class="item">connect & share on</div>
+                  <div style="padding-left: 1rem; color:grey; font-size:1.3rem;" >connect & share on</div>
+                  <div style="padding-left: 1rem;">
+                  <a href="#" class="ic fa fa-facebook"></a>
+                  <a href="#" class="ic fa fa-instagram"></a>
+                  <a href="#" class="ic fa fa-youtube"></a>
+                  <a href="#" class="ic fa fa-twitter"></a>
+                  </div>
                </div>
             </div>
             <div class="container">
