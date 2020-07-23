@@ -64,6 +64,7 @@ class Login extends CI_Controller {
             {
                 $this->session->set_userdata("user_id",$check['mobile_no']);
                 $this->session->set_userdata("user_name",$check['user_name']);
+                $this->session->set_userdata("referid",$check['referid']);
                 $array = array(
                     'error'   => false,
                     'msg'     => $check,
