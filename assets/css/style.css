@@ -1081,6 +1081,12 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   text-align: center;
 }
 
+.home_head-sub{
+  /* Padding: top left bottom right */
+  padding: 2rem 0rem 0rem 0rem;
+  text-align: center;
+}
+
 .home_head p{
   font-size: 1.4rem;
   color: rgb(80, 79, 79);
@@ -1116,7 +1122,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 
 .call_box{
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   padding-bottom: 0.3rem;
 }
 
@@ -1320,8 +1326,13 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 .referandearn{
+<<<<<<< HEAD
   /* padding: 1rem; */
   background-image:url(https://tirupatiinsurance.com/assest/img/refer.jpg);
+=======
+  padding: 1rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../img/youtube.jpg);
+>>>>>>> f880e90159c4bc47a8040e98ccc2b2b744f959cd
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1341,9 +1352,54 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 
+.callback-btn{
+  background-color: #dc3545 !important;
+  color: #fff;
+}
+
+.base-input{
+  border: 1px solid #eee !important;
+  border-radius: 2px !important;
+}
+
+.contact-top-head{
+  margin-top: 2.5rem;
+}
+
+.contact-top-head h2{
+  color: #212529;
+  
+}
+.contact-top-head p{
+  color: #1e2229;
+
+}
+
+.contact-top-head-h2{
+  color: #dc3545;
+}
+
+
 /* // end of show property CSS */
 
 @media screen and (max-width: 600px){
+
+.home_contain{
+
+  width: 93%;
+
+}
+
+  .home_head{
+
+    padding: 4rem 0rem 0rem 0rem;
+
+  }
+
+  .top-main{
+
+    padding-bottom: 3rem;
+  }
 
 
   .call_btn {
@@ -1361,6 +1417,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
   .sub-main{
     padding-top: 4rem;
+    /* padding-left: 1rem; */
   }
 
   .pro-card .card{
@@ -1533,6 +1590,14 @@ body{
   padding-bottom: .5rem;
   border-color: rgba(184, 182, 182, 0.692);
 }
+.recha .card .tt input[type=text]{
+  width: 100%;
+  height: auto;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-color: rgba(184, 182, 182, 0.692);
+  margin-top: 1.5rem;
+}
 
 
 .recha .card .re-bu{
@@ -1613,9 +1678,7 @@ transition: .5s;
 border: 2px solid rgb( 245, 57, 61 );
 
 }
-.rea{
-border: 2px solid rgb( 245, 57, 61 );
-}
+
 .recha .card a{
   text-align: center;
   color: #3D3D3D;
@@ -1749,6 +1812,10 @@ display: none;
 .lo-mm  img{
   width: 80px;
   margin-left: 25px;
+}
+.recha .card .tt input[type=text]{
+ 
+  margin-top:0px;
 }
 } 
 

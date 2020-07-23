@@ -67,7 +67,7 @@
 
                                             <input type="text" name="" id="" class=" contact_inp"
                                                 placeholder="Your Friends Name" aria-describedby="helpId"
-                                                value="https://tirupatiinsurance.com/?id=5f17c3adcc404">
+                                                value="https://hellorentindia.com/?id=5f17c3adcc404">
 
 
                                             <div class="contact_btn_bx">

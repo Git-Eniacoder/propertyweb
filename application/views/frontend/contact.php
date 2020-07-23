@@ -1,3 +1,4 @@
+<!-- Old Code -->
 <!-- <style>
     .post-requirment input {
         padding: 0;
@@ -29,7 +30,6 @@
         width: 3rem;
     }
 </style> -->
-
 
 <!-- 
 <section class="py-5 px-3" style="background-color: #fafafa;">
@@ -91,7 +91,9 @@
     </div>
 </section> -->
 
-<main class="sub-main">
+
+<!-- Old Code -->
+<!-- <main class="sub-main">
     <section class="getintouch">
         <div class="container">
             <div class="getintouch_head text-center">
@@ -99,48 +101,154 @@
             </div>
         </div>
     </section>
-<section class="contact">
-    <div class="container">
-        <div class="contact_bx">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="contact_head">
-                        <h2>Contact Us</h2>
-                        <p>Get In touch with us and Thank you for reaching out and wanting to know us!</p>
-                    </div>
-                    <div class="form-group">
-                        <form action="">
-                            <label for=""></label>
-                            <input type="text" name="" id="" class=" contact_inp" placeholder="Your Name" aria-describedby="helpId">
-                            <input type="email" name="" id="" class=" contact_inp" placeholder="Your Email" aria-describedby="helpId">
-                            <input type="number" name="" id="" class=" contact_inp" placeholder="Your Mobile" aria-describedby="helpId">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" class=" contact_inp"></textarea>
-                            <div class="contact_btn_bx">
-                                <button type="submit" class="btn btn-primary contact_btn">Send</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="contact_side">
-                        <div class="contact_side_top">
-                            <h2 class="contact_side_top_h1">We are here to Help you out</h2>
-                            <p>The Contact Us page is one of the most important pages on your website. Get inspired by these 25 amazing examples,</p>
+    <section class="contact">
+        <div class="container">
+            <div class="contact_bx">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="contact_head">
+                            <h2>Contact Us</h2>
+                            <p>Get In touch with us and Thank you for reaching out and wanting to know us!</p>
                         </div>
-                        <div class="contact_side_top">
-                            <h2 class="contact_side_top_h1">We are here to Help you out</h2>
-                            <p>The Contact Us page is one of the most important pages on your website. Get inspired by these 25 amazing examples,</p>
+                        <div class="form-group">
+                            <form action="">
+                                <label for=""></label>
+                                <input type="text" name="" id="" class=" contact_inp" placeholder="Your Name" aria-describedby="helpId">
+                                <input type="email" name="" id="" class=" contact_inp" placeholder="Your Email" aria-describedby="helpId">
+                                <input type="number" name="" id="" class=" contact_inp" placeholder="Your Mobile" aria-describedby="helpId">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" class=" contact_inp"></textarea>
+                                <div class="contact_btn_bx">
+                                    <button type="submit" class="btn btn-primary contact_btn">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact_side">
+                            <div class="contact_side_top">
+                                <h2 class="contact_side_top_h1">We are here to Help you out</h2>
+                                <p>The Contact Us page is one of the most important pages on your website. Get inspired by these 25 amazing examples,</p>
+                            </div>
+                            <div class="contact_side_top">
+                                <h2 class="contact_side_top_h1">We are here to Help you out</h2>
+                                <p>The Contact Us page is one of the most important pages on your website. Get inspired by these 25 amazing examples,</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+</main> -->
+
+
+<!-- New Code -->
+
+<main class="sub-main">
+        <div class="contact_us">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-8 text-center contact-top-head">
+                        <h2 class="refer-text"><span class="contact-top-head-h2">Free to ask form Us :</span> Let we Know</h2>
+                        <p class="refer-text">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here.</p>
+                    </div>
+
+                </div>
+                <div class="refer-bx">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="">
+                                <div class="refer-head">
+                                    <h2 class="ticket_h2">Lets Say</h2>
+                                </div>
+                                <div class="form-group">
+                                    <form action="">
+                                        <div class="">
+
+                                            <input type="text" name="" id="" class=" contact_inp"
+                                                placeholder="Your Friends Name" aria-describedby="helpId">
+                                        </div>
+                                        <div class="">
+                                            <input type="text" name="" id="" class="contact_inp"
+                                                placeholder="Your Friends Email" aria-describedby="helpId">
+                                        </div>
+                                        <div class="">
+                                            <input type="text" name="" id="" class="contact_inp"
+                                                placeholder="Your Friends Mobile" aria-describedby="helpId">
+                                        </div>
+                                        <div class="">
+                                            <textarea name="" id="" cols="30" rows="10" class="contact_inp" placeholder="Your Message"></textarea>
+                                        </div>
+
+
+                                        <div class="contact_btn_bx">
+                                            <button type="submit" class="btn btn-primary send_invite">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="">
+                                <div class="refer-head">
+                                    <!-- <h2 class="ticket_h2">If you prefer a more tangible form of communication we're here:</h2> -->
+                                </div>
+                                <div class="form-group">
+ 
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+<!-- Refer and earn -->
+<!-- Recharge Section -->
+
+<!-- <div class="recharge-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ">
+                <div class="form-head">
+                    <h3>Refer And Earn</h3>
+                    <hr class="style1">
+                </div>
+                <div class="plans">
+                   
+
+                    <div>
+                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-4 rgt">
+                <div class="card">
+                    <h6>How we solve your problem</h6>
+                    <p>Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="card">
+                    <h6>How we solve your problem</h6>
+                    <p>Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
-</main>
+</div> -->
 
 
 
+<!-- end Of recharge -->
 
 <script>
     function myFunction() {

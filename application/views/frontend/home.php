@@ -1,144 +1,174 @@
 <!-- Home  -->
 <main class="main sub-main">
-  <div class="hero_section">
-    <div class="top-text">
+  <div class="">
+    <div class="hero_section">
+      <div class="top-text">
+        <div class="container home_contain">
+
+          <div class="row justify-content-center">
+            <div class="col-md-10 home_head">
+              <h1 class="home_head_h1">Now Search <span class="home_head-span">Your Rental Property</span> With Helo Rent India </h1>
+              <p>India’s Most Trusted Rental Website</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="top-main">
+        <div class="container">
+          <div class="flex justify-content-center ">
+            <div class="col-md-3 hero_cards">
+
+              <a href="<?php echo $url['recharge']; ?>" class="">
+                <div class="card">
+                  <div class="card-img">
+                    <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
+                  </div>
+                  <div class="card-body">
+
+                    <!-- <p>Home seekers get a virtual tour of your property.</p> -->
+                    <div class="text-center">
+                      <a href="<?php echo $url['list']; ?>" class="hero_card-text">Recharge</a>
+                    </div>
+                  </div>
+
+                </div>
+              </a>
+
+            </div>
+
+
+            <div class="col-md-3 hero_cards">
+
+              <a href="<?php echo $url['list']; ?>">
+                <div class="card">
+                  <div class="card-img">
+                    <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
+                  </div>
+                  <div class="card-body">
+
+                    <!-- <p>Fast & Easy Recharge for Prepaid Mobile</p> -->
+                    <div class="text-center">
+                      <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">List Property</a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+
+            <div class="col-md-3 hero_cards">
+
+              <a href="<?php echo $url['post_property']; ?>">
+                <div class="card">
+                  <div class="card-img">
+                    <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
+                  </div>
+                  <div class="card-body">
+
+                    <!-- <p>Selling property online was never so easy</p> -->
+                    <div class="text-center">
+                      <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Post Requirement</a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+
+            <div class="col-md-3 hero_cards">
+
+
+              <a href="">
+                <div class="card">
+                  <div class="card-img">
+                    <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
+                  </div>
+                  <div class="card-body">
+
+                    <!-- <p>Shop Online for men, women and kids fashion</p> -->
+                    <div class="text-center">
+                      <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Shopping</a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Get A Call Back Pop Up -->
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header callback-btn">
+            <h5 class="modal-title" id="exampleModalLongTitle">Get a callback</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="text" placeholder="Enter Your name" class="base-input">
+            <input type="text" placeholder="Enter Mobile Number" class="base-input">
+          </div>
+          <div class="modal-footer justify-content-center">
+            <a href="" class="btn btn-danger ">Submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call Action Box -->
+    <div class="call_box">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-10 home_head">
-            <h1 class="home_head_h1">Now Search <span class="home_head-span">Your Rental Property</span> With Helo Rent India </h1>
-            <p>India’s Most Trusted Rental Website</p>
+          <div class="col-md-10 home_head-sub">
+            <h1 class="home_head_h1">Still in Doubt? Why Don't We Chat?</h1>
           </div>
         </div>
-
-      </div>
-    </div>
-
-    <div class="top-main">
-      <div class="container">
-        <div class="flex justify-content-center ">
-          <div class="col-md-3 hero_cards">
-
-            <a href="<?php echo $url['recharge']; ?>" class="">
-              <div class="card">
-                <div class="card-img">
-                  <img class="hero_icons" src="assets/img/listproperty.png" alt="Card image">
-                </div>
-                <div class="card-body">
-
-                  <!-- <p>Home seekers get a virtual tour of your property.</p> -->
-                  <div class="text-center">
-                    <a href="<?php echo $url['list']; ?>" class="hero_card-text">Recharge</a>
-                  </div>
-                </div>
-
-              </div>
-            </a>
-
+        <div class="row justify-content-center call_actions">
+          <div class="col-md-2 call_bx">
+            <a name="" id="" href="javascript:void(Tawk_API.toggle())" class="btn btn-danger call_btn">Let's Chat</a>
           </div>
-
-
-          <div class="col-md-3 hero_cards">
-
-            <a href="<?php echo $url['list']; ?>">
-              <div class="card">
-                <div class="card-img">
-                  <img class="hero_icons" src="assets/img/walletrecharge.png" alt="Card image">
-                </div>
-                <div class="card-body">
-
-                  <!-- <p>Fast & Easy Recharge for Prepaid Mobile</p> -->
-                  <div class="text-center">
-                    <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">List Property</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
+          <div class="col-md-1 call_bx">
+            <p class="call_bx_or">OR</p>
           </div>
-
-          <div class="col-md-3 hero_cards">
-
-            <a href="<?php echo $url['post_property']; ?>">
-              <div class="card">
-                <div class="card-img">
-                  <img class="hero_icons" src="assets/img/002-discount.svg" alt="Card image">
-                </div>
-                <div class="card-body">
-
-                  <!-- <p>Selling property online was never so easy</p> -->
-                  <div class="text-center">
-                    <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Post Requirement</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-          </div>
-
-          <div class="col-md-3 hero_cards">
-
-
-            <a href="">
-              <div class="card">
-                <div class="card-img">
-                  <img class="hero_icons" src="assets/img/shopping.png" alt="Card image">
-                </div>
-                <div class="card-body">
-
-                  <!-- <p>Shop Online for men, women and kids fashion</p> -->
-                  <div class="text-center">
-                    <a href="<?php echo $url['recharge']; ?>" class="hero_card-text">Shopping</a>
-                  </div>
-                </div>
-              </div>
-            </a>
-
+          <div class="col-md-2 call_bx">
+            <a name="" id="" class="btn btn-danger call_btn" href="#" role="button" data-toggle="modal" data-target="#exampleModalCenter">Get a Call Back</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-
-  <!-- Call Action Box -->
-  <div class="call_box">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-10 home_head">
-          <h1 class="home_head_h1">Still in Doubt? Why Don't We Chat?</h1>
-        </div>
-      </div>
-      <div class="row justify-content-center call_actions">
-        <div class="col-md-2 call_bx">
-          <a name="" id="" href="javascript:void(Tawk_API.toggle())" class="btn btn-primary call_btn">Let's Chat</a>
-        </div>
-        <div class="col-md-1 call_bx">
-          <p class="call_bx_or">OR</p>
-        </div>
-        <div class="col-md-2 call_bx">
-          <a name="" id="" class="btn btn-primary call_btn" href="#" role="button">Get A Call Back</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="main-refer">
-    <div class="container fe">
-      <div class="row justify-content-center">
-        <div class="col-md-5">
-          <div class="card">
-            <h5>Refer your friend and earn upto &#8377; 50,000 per month</h5>
+    <div class="main-refer">
+      <div class="container fe">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="card">
+              <h5>Refer your friend and earn upto &#8377; 50,000 per month</h5>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <a name="" id="" class="btn btn-danger call_btn" href="<?php echo $url['referandearn']; ?>" role="button">Lets Go</a>
           </div>
         </div>
-        <div class="col-md-2 text-center">
-          <a name="" id="" class="btn btn-primary call_btn" href="<?php echo $url['referandearn']; ?>" role="button">Lets Go</a>
-        </div>
       </div>
     </div>
-  </div>
 
 
-  <!-- <div class="main-search-text">
+    <!-- <div class="main-search-text">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-7">
@@ -153,48 +183,49 @@
   </div> -->
 
 
-  <div class="pro-card blog_section">
-    <div class="container">
-      <div class="blog-head">
-        <h2>Let Explore our Blogs</h2>
-        <p>Looking for some of our best blogs</p>
+    <div class="pro-card blog_section">
+      <div class="container">
+        <div class="blog-head">
+          <h2>Let Explore our Blogs</h2>
+          <p>Looking for some of our best blogs</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img class="card-img-top" src="assets/img/youtube.jpg" alt="">
+              <div class="card-body">
+                <h4 class="card-title">How to use google keep</h4>
+                <p class="card-text">Google Keep makes organizing information a cinch You can easily jot down ideas</p>
+                <a href="#" class="btn btn-primary blog-btn">Read More...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img class="card-img-top" src="assets/img/property.jpg" alt="">
+              <div class="card-body">
+                <h4 class="card-title">How to find property</h4>
+                <p class="card-text">It is important to check the land record before purchasing the property because real estate is a non-transparent</p>
+                <a href="#" class="btn btn-primary blog-btn">Read More...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img class="card-img-top" src="assets/img/money4.jpg" alt="">
+              <div class="card-body">
+                <h4 class="card-title">Best ways to earn money</h4>
+                <p class="card-text">The crazy thing is, earning money online isn't a pipe dream. I have been doing real estate</p>
+                <a href="#" class="btn btn-primary blog-btn">Read More...</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-4">
-          <div class="card text-center">
-            <img class="card-img-top" src="assets/img/youtube.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">How to use google keep</h4>
-              <p class="card-text">Google Keep makes organizing information a cinch You can easily jot down ideas</p>
-              <a href="#" class="btn btn-primary blog-btn">Read More...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card text-center">
-            <img class="card-img-top" src="assets/img/property.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">How to find property</h4>
-              <p class="card-text">It is important to check the land record before purchasing the property because real estate is a non-transparent</p>
-              <a href="#" class="btn btn-primary blog-btn">Read More...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card text-center">
-            <img class="card-img-top" src="assets/img/money4.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Best ways to earn money</h4>
-              <p class="card-text">The crazy thing is, earning money online isn't a pipe dream. I have been doing real estate</p>
-              <a href="#" class="btn btn-primary blog-btn">Read More...</a>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
 
   </div>
-
 
 </main>
 

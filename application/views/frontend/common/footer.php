@@ -150,7 +150,7 @@ $.ajax({
           <h5>get in touch</h5>
           <hr class="style1">
           <input type="email" name="email" placeholder="Email here...">
-          <span class="arrow"><img src="assest/img/arrow.svg" width="100%"></span>
+          <span class="arrow"><img src="https://tirupatiinsurance.com/assest/img/arrow.svg" width="100%"></span>
           <!-- <p>Rajmahal Complex,Opp-PLA Petrol Pump,Delhi Road, Hisar-125001</p> -->
           <p><i class="fa fa-phone" style="margin-right: 7px; font-size: 20px;"></i>7392900007</p>
           <p><i class="fa fa-envelope" style="margin-right: 7px; font-size: 20px;"></i> info@walletapp.com</p>
