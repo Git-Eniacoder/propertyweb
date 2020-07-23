@@ -62,8 +62,8 @@ class Login extends CI_Controller {
         $check =  $this->db_login->user_check($data);
             if(!is_null($check))
             {
-                $this->session->set_userdata("id",$check['mobile_no']);
-                $this->session->set_userdata("name",$check['user_name']);
+                $this->session->set_userdata("user_id",$check['mobile_no']);
+                $this->session->set_userdata("user_name",$check['user_name']);
                 $array = array(
                     'error'   => false,
                     'msg'     => $check,

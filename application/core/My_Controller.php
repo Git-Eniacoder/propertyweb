@@ -16,13 +16,13 @@ class My_Controller extends CI_Controller {
         $this->data['social'] = $this->db_login->fetch_links();
         $this->config->load("urls", true);
         $this->data['url'] = $this->config->item("urls");
-        if($this->session->userdata("id")){
+        if($this->session->userdata("user_id")){
             $this->data['status'] = true;
-            $name = strpos($this->session->userdata("name"),' ');
+            $name = strpos($this->session->userdata("user_name"),' ');
                 if($name){
-                $name = substr($this->session->userdata("name"),0,$name);
+                $name = substr($this->session->userdata("user_name"),0,$name);
                 }else{
-                $name =$this->session->userdata("name");
+                $name =$this->session->userdata("user_name");
                 }
             
             $this->data['uname'] = $name;

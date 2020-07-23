@@ -126,18 +126,18 @@
             <div class="row">
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
-                  <button class="active"><img src="../assets/img/Recharge Wallet.png" width="25px">Recharge wallet</button>
+                  <button class="active"><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
-                  <button><img src="../assets/img/refer.png" width="25px">Refer & Earn wallet</button>
+                  <button><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
-                  <button><img src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
+                  <button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
                <div class="col-md-3">
-                   <center><img src="../assets/img/Add-Money.svg" width="25px"></center>
+                   <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
                   <button>Add Money</button>
                </div>
             </div>
@@ -230,7 +230,7 @@
                               </div>
                               <div class="col-md-6">
                                  <select class="sel">
-                                    <option value="volvo">select operator</option>
+                                    <option value="volvo">Select operator</option>
                                     <option value="saab">idea</option>
                                     <option value="opel">jio</option>
                                     <option value="audi">vodafone</option>
@@ -240,7 +240,7 @@
                            <div class="row">
                               <div class="col-md-6">
                                  <select class="sel" style="margin-bottom: 1rem;">
-                                    <option value="volvo">select circle</option>
+                                    <option value="volvo">Select circle</option>
                                     <option value="saab">rajasthan </option>
                                     <option value="opel">hariyana</option>
                                     <option value="audi">delhi</option>

@@ -28,8 +28,8 @@ class Support extends My_Controller {
             $config['file_name']            = 'support_image'.rand().'.png';
             $config['allowed_types']        = 'jpg|png';
 
-            $data['user_id'] = $this->session->userdata("id");
-            $data['user_name'] = $this->session->userdata("name");
+            $data['user_id'] = $this->session->userdata("user_id");
+            $data['user_name'] = $this->session->userdata("user_name");
             $data['support_department'] = $this->input->post('department');
             $data['support_subject'] = $this->input->post('subject');
             $data['support_message'] = $this->input->post('message');
