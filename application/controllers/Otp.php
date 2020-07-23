@@ -17,11 +17,10 @@ class Otp extends My_Controller {
         if ($this->form_validation->run()) {
             $data = $this->input->post('otp');
             if($_SESSION['user_otp']==$data){
-                $newstring = substr(strval($_SESSION['number']), -4);
                 $send['user_name'] =$_SESSION['name'];
                 $send['mobile_no'] =$_SESSION['number'];
                 $send['password'] =md5($_SESSION['pass']);
-                $send['referid'] =strval(rand()).$newstring;
+                
                 if($this->db_register->register($send)){
                     $array = array(
                         'otp'   => true,
