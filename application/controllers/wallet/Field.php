@@ -1,10 +1,5 @@
 <?php
-
-
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-
-// Handler Anshul
 
 class Field extends My_Controller {
 

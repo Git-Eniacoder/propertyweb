@@ -67,39 +67,7 @@
                             </nav>
                     
                             </div>
-                            <div class="sb-sidenav-menu-heading">Management</div>
+                    
                             
-                            <a class="nav-link collapsed" href="charts.html" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="false" aria-controls="collapsePages"
-                                ><div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-                                Management
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
-                            <div class="collapse" id="collapsePages2" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?php echo base_url();?>admin/Management/admin_management">Admin</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/Management/user_management">User</a>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers" aria-expanded="false" aria-controls="collapseUsers"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Users
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
-                            <div class="collapse" id="collapseUsers" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?php echo base_url();?>admin/users/all_user">All Users</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/users/add_new">Add New</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/users/your_profile">Your Profile</a>
-                            </nav>
-                            </div>
-                            <!-- <a class="nav-link" href="tables.html"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables</a
-                            > -->
-                        </div>
-                    </div>
-                    <!-- <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Admin
-                    </div> -->
                 </nav>
             </div>

@@ -7,6 +7,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
       <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
       <style>
@@ -142,7 +143,7 @@
                               </li>
                               <li class=" nav-item">
                                  <a title="Balance" href="#" class="nav-link">
-                                <img src="../assets/img/Balance.png" width="25px">  Balance &#x20B9; <?php echo $post["all_data"][0]->recharge_wallet;?>.00
+                                <img src="../assets/img/Balance.png" width="25px">  Balance <i class='fas fa-coins'></i> <?php echo $post["all_data"][0]->recharge_wallet;?>.00
                                  </a>
                               </li>
                               <li   class="  nav-item m-1 brk ">
@@ -188,15 +189,15 @@
          <div class="container">
             <div class="row">
                <div class="col-md-3">
-                  <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
+                  <center><span style="color: white;"><?php echo $post["all_data"][0]->recharge_wallet;?> <i class='fas fa-coins'></i></span></center>
                   <button class="active"><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button>
                </div>
                <div class="col-md-3">
-                  <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
+                  <center><span style="color: white;"><?php echo $post["all_data"][0]->refferal_wallet;?> <i class='fas fa-coins'></i></span></center>
                   <button><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button>
                </div>
                <div class="col-md-3">
-                  <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
+                  <center><span style="color: white;"><?php echo $post["all_data"][0]->filed_wallet;?> <i class='fas fa-coins'></i></span></center>
                   <button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
                <div class="col-md-3">

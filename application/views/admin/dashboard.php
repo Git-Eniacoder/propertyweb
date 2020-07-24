@@ -7,7 +7,7 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
-                        <div class="text-danger text-center">
+                        <!-- <div class="text-danger text-center">
                             <h1>Credentials of this admin panel</h1>
                             <h3 class="text-success">Username : adminpanel</h3>
                             <h3 class="text-success">Password : @Eniacoder1</h3>
@@ -50,7 +50,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
