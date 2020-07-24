@@ -1402,6 +1402,34 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 
+.about-head{
+  padding: 3rem 0;
+}
+
+.about-head-h2{
+  color: #DC3545;
+}
+
+.about_subhead{
+  margin-bottom: 1.7rem;
+}
+
+.about_text p{
+  font-size: 1.1rem;
+}
+
+.about_contain{
+  padding: 2rem 0;
+}
+
+.about_img_bx{
+  width: 22rem;
+  height: 22rem;
+  padding: 1rem;
+  background-color: #eee;
+}
+
+
 /* // end of show property CSS */
 
 @media screen and (max-width: 600px){
