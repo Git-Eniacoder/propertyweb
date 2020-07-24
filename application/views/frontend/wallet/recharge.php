@@ -1,4 +1,3 @@
-<?php print_r("LEVEL: ".$level[0]);?>
 <html>
    <head>
       <title>Wallet Recharge</title>
@@ -146,6 +145,11 @@
                                 <img src="../assets/img/Balance.png" width="25px">  Balance &#x20B9; <?php echo $post["all_data"][0]->recharge_wallet;?>.00
                                  </a>
                               </li>
+                              <li class=" nav-item">
+                                 <a title="Balance" href="#" class="nav-link">
+                                <img src="../assets/img/Balance.png" width="25px">  Level : <?php echo $level[0];?>
+                                 </a>
+                              </li>
                               <li   class="  nav-item m-1 brk ">
                                  |
                               </li>
@@ -200,6 +204,7 @@
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
                   <button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
+
                <div class="col-md-3">
                    <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
                   <button>Add Money</button>
