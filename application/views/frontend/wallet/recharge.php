@@ -1,3 +1,4 @@
+<?php print_r("LEVEL: ".$level[0]);?>
 <html>
    <head>
       <title>Wallet Recharge</title>

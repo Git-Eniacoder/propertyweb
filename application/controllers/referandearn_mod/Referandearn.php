@@ -16,5 +16,7 @@ class Referandearn extends My_Controller
         $this->load->view('frontend/referandearn', $this->data);
         $this->load->view('frontend/common/footer', $this->data);
     }
+
+    
 }
 ?>
