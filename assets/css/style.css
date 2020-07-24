@@ -1429,6 +1429,32 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   background-color: #eee;
 }
 
+.about_mentor{
+  font-size: 1.3rem;
+}
+
+.policy{
+  background-color: rgb(238, 238, 238);
+  min-height: 50rem;
+  /* padding: 2rem 0; */
+}
+.policy_page{
+  background-color: #fff;
+  padding: 2.8rem;
+  margin: 1rem .5rem;
+}
+
+.policy_page_head{
+  /* margin: 1rem 0 0 0; */
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(167, 165, 165);
+  width: 55%;
+}
+
+.policy_page_content{
+  padding: 1rem 0;
+}
+
 
 /* // end of show property CSS */
 
@@ -1520,6 +1546,15 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
     width: 70%;
 
+   }
+
+   .getintouch_h1 {
+
+    padding-top: 4.5rem;
+   } 
+
+   .policy_page_head{
+     width: 100%;
    }
 
 }
