@@ -146,6 +146,11 @@
                                 <img src="../assets/img/Balance.png" width="25px">  Balance <i class='fas fa-coins'></i> <?php echo $post["all_data"][0]->recharge_wallet;?>.00
                                  </a>
                               </li>
+                              <li class=" nav-item">
+                                 <a title="Balance" href="#" class="nav-link">
+                                <img src="../assets/img/Balance.png" width="25px">  Level : <?php echo $level[0];?>
+                                 </a>
+                              </li>
                               <li   class="  nav-item m-1 brk ">
                                  |
                               </li>
@@ -200,6 +205,7 @@
                   <center><span style="color: white;"><?php echo $post["all_data"][0]->filed_wallet;?> <i class='fas fa-coins'></i></span></center>
                   <button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
+
                <div class="col-md-3">
                    <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
                   <button>Add Money</button>

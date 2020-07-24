@@ -209,7 +209,7 @@
                                 <div class="row justify-content-center">
                                     <div class="col-1 justify-content-center">
                                         <div>
-                                        <i class="fa fa-phone contact-icon" aria-hidden="true"></i>
+                                            <i class="fa fa-phone contact-icon" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div class="col-8">
@@ -222,14 +222,16 @@
                                 <div class="row justify-content-center">
                                     <div class="col-1 justify-content-center">
                                         <div>
-                                        <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
+                                            <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div class="col-8">
-                                        <p class="form_right-p">Drop an</p>
-                                        <h3 class="form_right-h3">Email</h3>
-                                        info@walletapp.com
-                                        <p></p>
+                                        <div>
+                                            <p class="form_right-p">Drop an</p>
+                                            <h3 class="form_right-h3">Email</h3>
+                                            info@walletapp.com
+                                            <p></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
