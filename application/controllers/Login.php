@@ -88,7 +88,7 @@ class Login extends CI_Controller {
          echo json_encode($array);
     }
     public function logout(){
-        $this->session->unset_userdata('id');
+        $this->session->unset_userdata('user_id');
         redirect('#', 'refresh'); 
     }
 

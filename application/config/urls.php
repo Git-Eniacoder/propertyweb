@@ -22,6 +22,8 @@ $config['inreq'] = base_url().'list_mod/listing/insert';
 
 // wallet Controller
 $config['wallet'] = base_url().'wallet/recharge';  
+$config['refer-wallet'] = base_url().'wallet/refer';  
+$config['field-wallet'] = base_url().'wallet/field';  
 
 // recharge Controller
 $config['recharge'] = base_url().'recharge_mod/recharge';  // Done

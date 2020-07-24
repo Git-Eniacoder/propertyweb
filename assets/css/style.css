@@ -984,6 +984,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .sub-main{
   padding-top: 6rem;
+  background-color: #fff;
+  min-height: 45rem;
 }
 
 .wal-main-icon{
@@ -1165,7 +1167,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 .blog_section{
-  margin: 4rem 0rem;
+    padding: 2rem 0 3rem 0;
 }
 
 
@@ -1374,10 +1376,51 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   color: #dc3545;
 }
 
+.contact_main{
+  background-color: #F0F0F0;
+}
+
+.form_right-p{
+  color: rgb(136, 136, 136);
+  margin: .2rem 0 !important;
+}
+
+.form_right-h3{
+  font-size: 1.6rem;
+  color: #1e2229;
+}
+
+.contact-icon{
+  padding-top: 2rem;
+  font-size: 2rem !important;
+  color: #dc3545;
+}
+
 
 /* // end of show property CSS */
 
 @media screen and (max-width: 600px){
+
+
+  .modal .modal-content{
+    width: 95%;
+  }
+
+  .main-refer .fe{
+    padding: .9rem 0;
+  }
+
+  .home_head_h1{
+   padding:  0 .4rem;
+  }
+
+  .main-refer .fe .card h5{
+    padding: .7rem ;
+  }
+
+  .referandearn, .contact_us{
+    padding: 3.7rem 0rem;
+  }
 
 .home_contain{
 
@@ -1465,6 +1508,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 body{
   background-color: rgba(233, 227, 227, 0.555);
 }
+
 .wallet-op{
   width: 100%;
   height: auto;
