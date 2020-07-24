@@ -1326,13 +1326,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 
 .referandearn{
-<<<<<<< HEAD
-  /* padding: 1rem; */
-  background-image:url(https://tirupatiinsurance.com/assest/img/refer.jpg);
-=======
   padding: 1rem;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../img/youtube.jpg);
->>>>>>> f880e90159c4bc47a8040e98ccc2b2b744f959cd
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
