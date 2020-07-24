@@ -161,20 +161,20 @@
             <div class="row">
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
-                  <button ><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button>
+                  <a href="recharge"><button ><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
-                  <button ><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button>
+                  <a href="refer"><button ><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
-                  <button class="active"><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
+                  <a href="field"><button class="active"><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
                </div>
 
                <div class="col-md-3">
                    <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
-                  <button>Add Money</button>
+                  <a href="addmoney"><button>Add Money</button></a>
                </div>
             </div>
          </div>
@@ -184,7 +184,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <h4>Refer & Earn Wallet</h4>
+                        <h4>Field Wallet</h4>
                         
                         <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);">Recharge & PayBills</button>
                         <button>Total Ammount</button>
@@ -233,5 +233,36 @@
         </div> 
         </div>
    </body>  
-            
+   <script>
+      var sidebarBox = document.querySelector('#box');
+      var sidebarBtn = document.querySelector('#btn');
+      var pageWrapper = document.querySelector('#main-content');
+      
+      sidebarBtn.addEventListener('click', function(event) {
+      
+              if (this.classList.contains('active')) {
+                      this.classList.remove('active');
+                      sidebarBox.classList.remove('active');
+              } else {
+                      this.classList.add('active');
+                      sidebarBox.classList.add('active');
+              }
+      });
+      
+      pageWrapper.addEventListener('click', function(event) {
+      
+              if (sidebarBox.classList.contains('active')) {
+                      sidebarBtn.classList.remove('active');
+                      sidebarBox.classList.remove('active');
+              }
+      });
+      
+      window.addEventListener('keydown', function(event) {
+      
+              if (sidebarBox.classList.contains('active') && event.keyCode === 27) {
+                      sidebarBtn.classList.remove('active');
+                      sidebarBox.classList.remove('active');
+              }
+      });
+   </script>      
 </html>
