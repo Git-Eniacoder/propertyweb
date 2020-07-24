@@ -33,6 +33,7 @@ class Support extends My_Controller {
             $data['support_department'] = $this->input->post('department');
             $data['support_subject'] = $this->input->post('subject');
             $data['support_message'] = $this->input->post('message');
+            $data['referid'] = $this->input->post('referid');
             if($this->input->post('teansaction'))
                     {
                         $data['support_txn'] = $this->input->post('teansaction');
