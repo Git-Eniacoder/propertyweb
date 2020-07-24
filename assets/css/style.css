@@ -1356,7 +1356,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .base-input{
   border: 1px solid #eee !important;
-  border-radius: 2px !important;
+  border-radius: 4px !important;
 }
 
 .contact-top-head{
@@ -1394,6 +1394,11 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-top: 2rem;
   font-size: 2rem !important;
   color: #dc3545;
+}
+
+.get_call-btn{
+  font-size: 1rem;
+  padding: .5rem 1.2rem;
 }
 
 
