@@ -31,12 +31,18 @@ class Payment extends CI_Controller {
         $data['support_status'] = $this->input->post('status');
         $data['support_department'] = $this->input->post('department');
         $data['support_admin_msg'] = $this->input->post('message');
+        
+        //updating support ticket
         if($this->db_support->payment_update($data,$id)){
             $this->index();
         }else{
             $this->index();
         }
     }
+
+    
+
 }
+
 
 /* End of file Payment.php */

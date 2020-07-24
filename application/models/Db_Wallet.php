@@ -13,14 +13,23 @@ class Db_Wallet extends CI_Model
     }
 
 
+    public function get_balance_referid($referid)
+    {
+        $this->db->where('referid',$referid);
+        $query=$this->db->get('user_wallet');
+        $result=$query->result();
+        $num_rows=$query->num_rows();
+        return array("all_data"=>$result,"num_rows"=>$num_rows);
+    }
 
-    public function update_wallet($wallet,$balance,$referid,$update_data_refer){
-        $mobile=$this->session->userdata("user_id");
+
+
+    public function update_wallet($mobile,$balance,$referid,$update_data_refer){
         $this->db->where('mobileno', $mobile);
-        $update_data=array($wallet=>$balance);
+        $update_data=array("recharge_wallet"=>$balance);
         if($this->db->update('user_wallet', $update_data)){
             if($referid!=NULL){
-                $this->db->where('mobileno', $referid);
+                $this->db->where('referid', $referid);
                 $this->db->update('user_wallet', $update_data_refer);
             }
             return 1;

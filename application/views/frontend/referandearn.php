@@ -2,10 +2,11 @@
     .refer_overlay{
         background-color: rgba(0, 0, 0, 0.349);
     }
+  
 </style>
     <main class="sub-main">
         <div class="referandearn">
-            <div class="refer_overlay">
+          
             <div class="container">
                 <div class="row justify-content-center">
 
@@ -64,16 +65,12 @@
                                 <div class="form-group">
                                     <form action="">
                                         <div class="">
-
-                                            <input type="text" name="" id="" class=" contact_inp"
-                                                placeholder="Your Friends Name" aria-describedby="helpId"
-                                                value="https://hellorentindia.com/?id=5f17c3adcc404">
-
-
+                                                <input type="text" name="" id="myInput" class=" contact_inp"
+                                                    placeholder="Your Friends Name" aria-describedby="helpId"
+                                                    value="https://hellorentindia.com/?id=<?php echo $post["all_data"][0]->referid;?>" disabled>
                                             <div class="contact_btn_bx">
-                                                <button type="submit" class="btn btn-primary send_invite">Copy
-                                                    Link</button>
-                                            </div>
+                                                <input type="button" value="Copy Link" onclick="copy()" class="btn btn-primary send_invite">
+                                             </div>
                                         </div>
                                     </form>
                                 </div>
@@ -82,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+           
             </div>
         </div>
 

@@ -1,3 +1,19 @@
+<?php
+  if(isset($_GET["id"]))
+  {
+    $refer_id=$_GET["id"];
+    setcookie('referid',$_GET["id"],time() + (86400 * 30), "/");
+  }
+  else if(isset($_COOKIE['referid'])){
+    $refer_id=$_COOKIE['referid'];
+  }
+  else
+  {
+    $refer_id=NULL;
+    echo $refer_id;
+  }
+?>
+
 <style>
     .response{
         text-align : center;
@@ -74,7 +90,7 @@
                                                 <?php echo form_error('message')? '<span class=" text-danger">'.form_error('message').'</span>' : '' ;?>
 
                                         </div>
-
+                                        <input type="hidden" value=<?php echo $refer_id; ?> name="referid">
                                         <div class="contact_btn_bx">
                                             <button type="submit" class="btn btn-primary contact_btn">Send</button>
                                         </div>

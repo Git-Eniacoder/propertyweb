@@ -83,6 +83,8 @@
                 <option <?php echo ($update['support_department']==1)? 'selected' : ''?> value="1">Billing</option>
               </select>
             </div>
+            <input type="hidden" value="<?php echo $update['referid'] ?>" name="refer_id">
+            <input type="hidden" value="<?php echo $update['user_id'] ?>" name="user_no">
             <div class="form-group">
               <label for="">Resolved Message</label>
               <textarea class="form-control" name="message"  rows="3"><?php echo $update['support_admin_msg'] ;?></textarea>

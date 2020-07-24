@@ -18,7 +18,11 @@
     border-radius: 50%;
     padding: 4px 6px;
    }
-
+   .plans {
+    max-height: 380px;
+    overflow: hidden;
+    overflow-y: auto;
+}
    .user-fa{
        padding : 3px 0;
    }
@@ -38,6 +42,53 @@
       background-color: transparent !important;
       color : #3D3D3D !important;
    }
+  .ic {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.ic:hover {
+    opacity: 0.7;
+}
+
+ .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-facebook:hover{
+  background: #3B5998;
+  color: white;
+}
+
+ .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-twitter:hover {
+  background: #55ACEE;
+  color: white;
+}
+ .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-youtube:hover {
+  background: #bb0000;
+  color: white;
+}
+ .fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-instagram:hover {
+  background: #125688;
+  color: white;
+}
    </style>
    <body>
       <header class="header-area bg-white meu ">
@@ -49,14 +100,24 @@
             </div>
             <div id="box">
                <div id="items">
-                  <div class="item">Recharge & PayBills</div>
+                  <div class="item"><i class="fa fa-mobile" aria-hidden="true"></i> Recharge & PayBills</div>
                   <div class="item">Buy Plan</div>
-                  <div class="item">Refer And Earn</div>
-                  <div class="item">Field Expeses</div>
-                  <div class="item">Add Money</div>
+                  <div class="item"><img src="../assets/img/refer.svg" width="20px">Refer And Earn</div>
+                  <div class="item"><img src="../assets/img/Field Expense.png" width="20px"> Field Expeses</div>
+                  <div class="item"><img src="../assets/img/Add-Money.svg" width="20px">Add Money</div>
                   <hr class="style1">
-                  <a href="<?php echo $url['support']; ?>" class="item">Suppoprt</a>
+                  
+                  <a href="<?php echo $url['support']; ?>" class="item"><i class="fa fa-envelope" aria-hidden="true"></i> Suppoprt</a>
                   <div class="item">About us</div>
+                  <hr class="style1">
+                  <div style="padding-left: 1rem; color:grey; font-size:1.3rem;" >connect & share on</div>
+                  <div style="padding-left: 1rem;">
+                  <a href="#" class="ic fa fa-facebook"></a>
+                  <a href="#" class="ic fa fa-instagram"></a>
+                  <a href="#" class="ic fa fa-youtube"></a>
+                  <a href="#" class="ic fa fa-twitter"></a>
+                  </div>
+                  
                   
                </div>
             </div>
@@ -82,6 +143,11 @@
                               <li class=" nav-item">
                                  <a title="Balance" href="#" class="nav-link">
                                 <img src="../assets/img/Balance.png" width="25px">  Balance &#x20B9; <?php echo $post["all_data"][0]->recharge_wallet;?>.00
+                                 </a>
+                              </li>
+                              <li class=" nav-item">
+                                 <a title="Balance" href="#" class="nav-link">
+                                <img src="../assets/img/Balance.png" width="25px">  Level : <?php echo $level[0];?>
                                  </a>
                               </li>
                               <li   class="  nav-item m-1 brk ">
@@ -138,6 +204,7 @@
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
                   <button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
                </div>
+
                <div class="col-md-3">
                    <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
                   <button>Add Money</button>
@@ -268,7 +335,7 @@
                                        <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                     </div>
                                     <input type="number" class="form-control" placeholder="Amount">
-                                    <input type="button" value="Browse plan">
+                                    <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
                                  </div>
                               </div>
                            </div>
@@ -373,7 +440,7 @@
                                        <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                     </div>
                                     <input type="number" class="form-control" placeholder="Amount">
-                                    <input type="button" value="Browse plan">
+                                    <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
                                  </div>
                               </div>
                            </div>
@@ -462,3 +529,110 @@
 
    </script>
 </html>
+<div id="view-plans" class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Browse Plans</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+      </div>
+      <div class="modal-body">
+      
+        <div class="plans">
+          <div class="table-responsive-md">
+            <table class="table table-lg table-hover border">
+              <tbody>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$10 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">8 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">7 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Talktime $8 & 2 Local & National SMS & Free SMS valid for 2 day(s)</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$15 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">13 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">15 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Regular Talktime</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$50 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">47 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">47 Local Vodafone min free </td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$100 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">92 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Local min 92 & 10 Local & National SMS & Free SMS valid for 
+                    7 day(s).</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$150 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">143 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">60 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Talktime $143 & 50 Local & National SMS & Free SMS valid for 
+                    15 day(s).</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$220 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">220 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Full Talktime</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$250 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">250 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Full Talktime + 50 SMS per day for 7 days.</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$300 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">301 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">64 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Full Talktime</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$410 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">0 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Unlimited Local,STD & Roaming calls</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$501 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">510 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">180 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Full Talktime + 100 SMS per day for 28 days.</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$799 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">820 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">250 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Full Talktime + 100 SMS per day for 84 days.</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+                <tr>
+                  <td class="text-5 text-primary text-center align-middle">$999 <span class="text-1 text-muted d-block">Amount</span></td>
+                  <td class="text-3 text-center align-middle">1099 <span class="text-1 text-muted d-block">Talktime</span></td>
+                  <td class="text-3 text-center align-middle">356 Days <span class="text-1 text-muted d-block">Validity</span></td>
+                  <td class="text-1 text-muted align-middle">Full Talktime + 100 SMS per day for 90 days.</td>
+                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
