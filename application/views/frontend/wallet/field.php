@@ -120,8 +120,8 @@
                         <h4>Field Wallet</h4>
                         
                         <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);">Recharge & PayBills</button>
-                        <button>Total Ammount</button>
-                        <button>Transfered</button>
+                        <button>Total Amount</button>
+                        <!-- <button>Transfered</button> -->
                         <button>Transfer to Bank</button>
                     </div>    
                 </div>

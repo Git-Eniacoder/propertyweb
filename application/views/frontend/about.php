@@ -12,8 +12,8 @@
         <div class="container">
             <div class="about-box">
                 <div class="row justify-content-center">
-                    <div class="col about-head">
-                        <img src="" alt="">
+                    <div class="col about-head text-center">
+                        <img src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="">
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                 <div class="row justify-content-center about_contain">
                     <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="about_mentor">Sh. Radha Kishan Kaushik</h3>
                                 <p><span> <em>Founder</em> </span></p>
@@ -98,7 +98,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="about_mentor">Anoopnandan Kaushik</h3>
                                 <p><span> <em>CEO</em> </span></p>
@@ -109,7 +109,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="about_mentor">Sh. Radha Kishan Kaushik</h3>
                                 <p><span> <em>CEO</em> </span></p>
