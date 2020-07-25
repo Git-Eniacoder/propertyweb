@@ -1,31 +1,23 @@
 <style>
-.refer-wallet{
+.add-money{
   width: 100%;
   height: auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.refer-wallet .card{
+.add-money .card{
   width: 100%;
   height: auto;
   padding-top: 1rem;
-  margin-bottom: 1rem;
   border: 1px solid rgba(233, 227, 227, 0.836);
 }
-.refer-wallet .right .card{
-  width: 100%;
-  height: auto;
-  padding: 1rem;
-  
-  border: 1px solid rgba(233, 227, 227, 0.836);
-}
-.refer-wallet .card h4{
+.add-money .card h4{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   text-align: center;
   color: rgb( 245, 57, 61 );
 }
-.refer-wallet .card button{
+.add-money .card button{
   width: 100%;
   height: auto;
   padding-top: .5rem;
@@ -39,19 +31,11 @@
   color: grey;
   margin-top: 0px;
   transition: .5s;
-  text-align: left;
-  padding-left: 1rem;
 }
-.refer-wallet .card button:hover{
+.add-money .card button:hover{
   border-bottom: 1px solid rgb( 245, 57, 61 );
   
 }
-.refer-wallet .card .his-table{
-  width: 100%;
-  height: auto;
-  margin-top: 2rem;
-}
-
 .ic {
   padding: 10px;
   font-size: 20px;
@@ -99,8 +83,7 @@
   background: #125688;
   color: white;
 }
-
-</style>
+</style>   
       <div class="wallet-op">
          <div class="container">
             <div class="row">
@@ -110,7 +93,7 @@
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
-                  <a href="refer"><button class="active"><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
+                  <a href="refer"><button ><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
@@ -119,26 +102,37 @@
 
                <div class="col-md-3">
                    <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
-                  <a href="addmoney"><button>Add Money</button></a>
+                  <a href="addmoney"><button class="active">Add Money</button></a>
                </div>
             </div>
          </div>
       </div>
-        <div class="refer-wallet">
+      <div class="add-money">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="card">
-                        <h4>Refer & Earn Wallet</h4>
                         
-                        <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button>
-                        <button><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Ammount</button>
-                        <button><img src="../assets/img/trans.png" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfered</button>
                         
-                    </div> 
                        
+                        <button>Buy plan 960</button>
+                        
+                    </div>    
                 </div>
-                <div class="col-md-9 right">
+                <div class="col-md-8">
+                    <div class="card">
+                    <h4 >Scan Qr code</h4>
+                    <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
+                    <div class="card-body py-0">
+                        <h6 style="text-align: center;" class="text-primary">Or</h6>
+                        <p style="text-align: center;" class="card-text">Pay Through UPI</p>
+                        <h4 style="text-align: center;" class="card-title">7014162976@ybl</h4>
+                    </div>
+                        
+                </div>
+                </div>
+                <div class="col-md-6">
+
                     <div class="card">
                     <h4 style="text-align: left; margin-left: 1rem;">History</h4>
                     <div class="his-table table-responsive">
@@ -152,23 +146,23 @@
                               </tr>
                             </thead>
                             <tbody>
-                            <?php foreach($history as $value) {?>
+                            <?php foreach($history as $value) { ?>
                               <tr>
                                 <td><?php echo $value['user_id'] ;?></td>
-                                <td>+<?php echo $value['referal_refer'] ;?></td>
+                                <td>+<?php echo $value['payment_amount'] ;?></td>
                                 <td class="text-success">success</td>
                                 <td><?php echo $value['payment_date'] ;?></td>
                               </tr>
                             <?php } ?>
                             </tbody>
                           </table>
-                    </div>    
+                      
                 </div>
-                </div>
+               </div>
            </div> 
         </div> 
-        </div>
-   
+        </div>  
+  
    <script>
       var sidebarBox = document.querySelector('#box');
       var sidebarBtn = document.querySelector('#btn');
@@ -200,4 +194,5 @@
                       sidebarBox.classList.remove('active');
               }
       });
-   </script>     
+   </script>    
+

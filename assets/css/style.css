@@ -1356,7 +1356,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .base-input{
   border: 1px solid #eee !important;
-  border-radius: 2px !important;
+  border-radius: 4px !important;
 }
 
 .contact-top-head{
@@ -1394,6 +1394,65 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-top: 2rem;
   font-size: 2rem !important;
   color: #dc3545;
+}
+
+.get_call-btn{
+  font-size: 1rem;
+  padding: .5rem 1.2rem;
+}
+
+
+.about-head{
+  padding: 3rem 0;
+}
+
+.about-head-h2{
+  color: #DC3545;
+}
+
+.about_subhead{
+  margin-bottom: 1.7rem;
+}
+
+.about_text p{
+  font-size: 1.1rem;
+}
+
+.about_contain{
+  padding: 2rem 0;
+}
+
+.about_img_bx{
+  width: 22rem;
+  height: 22rem;
+  padding: 1rem;
+  background-color: #eee;
+}
+
+.about_mentor{
+  font-size: 1.3rem;
+}
+
+.policy{
+  background-color: rgb(238, 238, 238);
+  min-height: 50rem;
+  /* padding: 2rem 0; */
+}
+.policy_page{
+  background-color: #fff;
+  padding: 2.8rem;
+  margin: 1rem .5rem;
+}
+
+.policy_page_head{
+  /* margin: 1rem 0 0 0; */
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(167, 165, 165);
+  width: 55%;
+}
+
+.policy_page_content{
+  padding: 1rem 0;
 }
 
 
@@ -1487,6 +1546,15 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
     width: 70%;
 
+   }
+
+   .getintouch_h1 {
+
+    padding-top: 4.5rem;
+   } 
+
+   .policy_page_head{
+     width: 100%;
    }
 
 }
@@ -1760,9 +1828,9 @@ transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, 
 }
 
 
-#btn.active { left: 250px; }
+/* #btn.active { left: 250px; } */
 
-#btn.active div { background-color: #1e3044; }
+#btn.active div { background-color: #fff; }
 
 
 
@@ -1795,7 +1863,7 @@ width: 275px;
 opacity: 0;
 padding: 20px 0px;
 height: 100%;
-background-color: #1e3044;
+background-color: #313061;
 
 -webkit-transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
 transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
@@ -1808,7 +1876,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 50%;
+top: 40%;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -1818,8 +1886,8 @@ transform: translateY(-50%);
 position: relative;
 cursor: pointer;
 font-size: 1.1rem;
-margin-top: .5rem;
-margin-bottom: .5rem;
+margin-top: 1.5rem;
+margin-bottom: 1.5rem;
 padding-left: 2rem;
 color: grey;
 -webkit-transition: all 250ms;
@@ -1831,6 +1899,17 @@ transition: .5s;
 transform: scale(1.1);
 color: white;
 }   
+#items .item a{
+  
+  color: grey;
+  text-decoration: none;
+  }
+  #items .item a:hover {
+
+    transform: scale(1.1);
+    color: white;
+    } 
+
 .meu .style1 {
 
 border-top: 1px solid grey;
@@ -1838,6 +1917,11 @@ margin-top: 2rem;
 
 } 
 @media screen and (max-width: 520px) {
+  #items {
+    
+    top: 50%;
+    
+    }
 .wallet-op{
 display: none;
 }
@@ -1914,3 +1998,10 @@ display: none;
   border-top: none;
 }
 /* wallet new end */
+
+
+
+
+
+
+

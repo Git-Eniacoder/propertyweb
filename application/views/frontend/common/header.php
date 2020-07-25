@@ -11,13 +11,14 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
 </head>
 
 <body>
   <!-- Header Start -->
-  
+
   <header class="head">
     <div class="container">
       <div class="row">
@@ -69,8 +70,13 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a title="Recharge" href="<?php echo base_url().'contact' ?>" class="nav-link">
+                  <a title="Recharge" href="<?php echo base_url() . 'contact' ?>" class="nav-link">
                     Contact Us
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a title="Recharge" href="<?php echo base_url() . 'about' ?>" class="nav-link">
+                    About Us
                   </a>
                 </li>
 
@@ -190,7 +196,7 @@
               </div>
 
 
-              <div >
+              <div>
                 <h5>Forget Password ? Don't Worry</h5>
                 <p>Enter Your Registered Number</p>
                 <div id="resetid" class="text-center"></div>

@@ -37,8 +37,7 @@
                                                 ?></td>
                                                 <td class="d-flex">
                                                     <a class="btn btn-info mx-1" href="<?php echo base_url().'assets/img/support/'.$value['support_image'] ?>"><i class="fa fa-image" aria-hidden="true"></i></a>
-                                                    <a class="btn btn-success mx-1" href="<?php echo base_url().'admin/support/payment/update_fetch/'.$value['support_id'] ; ?>"><i class="fa fa-edit" aria-hidden="true"></i></a>
-                                                    <!-- <a class="btn btn-danger mx-1 text-white del" href="<?php echo base_url().'admin/support/payment/delete/'.$value['support_id'] ; ?>" data-value=""><i class="fa fa-trash" aria-hidden="true"></i></a> -->
+                                              <?php if(!$value['support_status'] == 1) { ?><a class="btn btn-success mx-1" href="<?php echo base_url().'admin/support/payment/update_fetch/'.$value['support_id'] ; ?>"><i class="fa fa-edit" aria-hidden="true"></i></a><?php } ?>
                                                 </td>
                                             </tr>
                                           
@@ -66,7 +65,7 @@
         <div class="modal-body">
         <p><span class="h5">Subject : </span><?php echo $update['support_subject'] ;?></p>
         <p><span class="h5">Message : </span><?php echo $update['support_message'] ;?></p>
-        <form action="<?php echo base_url().'admin/support/billing/update/'.$update['support_id'] ?>" method="post">
+        <form action="<?php echo base_url().'admin/support/payment/update/'.$update['support_id'] ?>" method="post">
             <div class="form-group">
               <label for="">Changes Status</label>
               <select class="form-control" name="status" >

@@ -26,6 +26,7 @@ class Db_register extends CI_Model {
         }
         
     }
+    
 }
 
 /* End of file Db_register.php */

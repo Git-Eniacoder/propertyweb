@@ -109,12 +109,38 @@
     Launch demo modal
   </button> -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- Modal old -->
+    <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
+
           <div class="modal-header callback-btn">
             <h5 class="modal-title" id="exampleModalLongTitle">Get a callback</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <input type="text" placeholder="Enter Your name" class="base-input">
+            <input type="text" placeholder="Enter Mobile Number" class="base-input">
+          </div>
+
+          <div class="modal-footer justify-content-center">
+            <a href="" class="btn btn-danger ">Submit</a>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- Modal New -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header callback-btn">
+            <h5 class="modal-title" id="exampleModalLongTitle">Get a Call Back</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -124,11 +150,22 @@
             <input type="text" placeholder="Enter Mobile Number" class="base-input">
           </div>
           <div class="modal-footer justify-content-center">
-            <a href="" class="btn btn-danger ">Submit</a>
+            <a href="" class="btn btn-danger get_call-btn">Submit</a>
           </div>
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Call Action Box -->
     <div class="call_box">
@@ -146,7 +183,7 @@
             <p class="call_bx_or">OR</p>
           </div>
           <div class="col-md-2 call_bx">
-            <a name="" id="" class="btn btn-danger call_btn" href="#" role="button" data-toggle="modal" data-target="#exampleModalCenter">Get a Call Back</a>
+            <a name="" id="" class="btn btn-danger call_btn" href="#" role="button" data-toggle="modal" data-target="#exampleModal">Get a Call Back</a>
           </div>
         </div>
       </div>

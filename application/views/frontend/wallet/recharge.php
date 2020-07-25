@@ -1,17 +1,4 @@
-<html>
-   <head>
-      <title>Wallet Recharge</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-      <style>
-      </style>
-   </head>
+
    <style>
    .fa-user{
     border: 2px solid gray;
@@ -90,130 +77,32 @@
   color: white;
 }
    </style>
-   <body>
-      <header class="header-area bg-white meu ">
-         <div class="navbar-area ">
-            <div id="btn">
-               <div id='top'></div>
-               <div id='middle'></div>
-               <div id='bottom'></div>
-            </div>
-            <div id="box">
-               <div id="items">
-                  <div class="item"><i class="fa fa-mobile" aria-hidden="true"></i> Recharge & PayBills</div>
-                  <div class="item">Buy Plan</div>
-                  <div class="item"><img src="../assets/img/refer.svg" width="20px">Refer And Earn</div>
-                  <div class="item"><img src="../assets/img/Field Expense.png" width="20px"> Field Expeses</div>
-                  <div class="item"><img src="../assets/img/Add-Money.svg" width="20px">Add Money</div>
-                  <hr class="style1">
-                  
-                  <a href="<?php echo $url['support']; ?>" class="item"><i class="fa fa-envelope" aria-hidden="true"></i> Suppoprt</a>
-                  <div class="item">About us</div>
-                  <hr class="style1">
-                  <div style="padding-left: 1rem; color:grey; font-size:1.3rem;" >connect & share on</div>
-                  <div style="padding-left: 1rem;">
-                  <a href="#" class="ic fa fa-facebook"></a>
-                  <a href="#" class="ic fa fa-instagram"></a>
-                  <a href="#" class="ic fa fa-youtube"></a>
-                  <a href="#" class="ic fa fa-twitter"></a>
-                  </div>
-                  
-                  
-               </div>
-            </div>
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-12">
-                     <nav class="navbar navbar-expand-lg">
-                        <div class="logo lo-mm">
-                           <a class="custom-logo-link "  href="<?php echo base_url(); ?>">
-                           <img width="133" height=30 src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="Logo" class="custom-logo">
-                           </a>
-                        </div>
-                        <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
-                           <ul id="nav" class="navbar-nav ml-auto ">
-                              <li class=" nav-item">
-                                 <a style="color: rgb( 245, 57, 61 );" title="Refer and Earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
-                                 Refer and Earn
-                                 </a>
-                              </li>
-                              <li   class="nav-item m-1 brk ">
-                                 |
-                              </li>
-                              <li class=" nav-item">
-                                 <a title="Balance" href="#" class="nav-link">
-                                <img src="../assets/img/Balance.png" width="25px">  Balance &#x20B9; <?php echo $post["all_data"][0]->recharge_wallet;?>.00
-                                 </a>
-                              </li>
-                              <li class=" nav-item">
-                                 <a title="Balance" href="#" class="nav-link">
-                                <img src="../assets/img/Balance.png" width="25px">  Level : <?php echo $level[0];?>
-                                 </a>
-                              </li>
-                              <li   class="  nav-item m-1 brk ">
-                                 |
-                              </li>
-                              <li class="mx-2 nav-item">
-                                 <div class="dropdown user-flag">
-                                    <img style=" margin-top: .3rem;" src="../assets/img/flag.png" width="30px" class=" dropbtn" >
-                                    <span class="caret"></span>
-                                    <div class="dropdown-content">
-                                       <a class="dropdown-item" href="#">India</a>
-                                       <a class="dropdown-item" href="#">Nepal</a>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li   class="  nav-item m-1 brk ">
-                                 |
-                              </li>
-                              <li class="nav-item">
-                                 <div class="dropdown user-fa">
-                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                 <span class="caret"></span>
-                                    <div class="dropdown-content">
-                                    <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
-                                     <a class="dropdown-item" href="<?php echo $url['support']; ?>">Raise Ticket</a>
-                                     <a class="dropdown-item" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
-                                    </div>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                     </nav>
-                     <!-- navbar -->
-                  </div>
-               </div>
-               <!-- row -->
-            </div>
-            <!-- container -->
-         </div>
-         <!-- navbar area -->
-      </header>
+   
       <div class="wallet-op">
          <div class="container">
             <div class="row">
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
-                  <button class="active"><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button>
+                  <a href="recharge"><button class="active"><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
-                  <button><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button>
+                  <a href="refer"><button><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
                </div>
                <div class="col-md-3">
                   <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
-                  <button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button>
+                  <a href="field"><button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
                </div>
 
                <div class="col-md-3">
                    <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
-                  <button>Add Money</button>
+                  <a href="addmoney"><button>Add Money</button></a>
                </div>
             </div>
          </div>
       </div>
       <div class="recha">
-         <div class="container">
+         <div class="container p-3">
             <div class="row">
                <div class="col-md-6">
                   <div class="card">
@@ -462,11 +351,37 @@
                   </div>
                </div>
                <div class="col-md-6">
+
+                    <div class="card">
+                    <h4 style="text-align: left; margin-left: 1rem;">History</h4>
+                    <div class="his-table table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>Refered Person</th>
+                                <th>Ammount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach($history as $value) { ?>
+                              <tr>
+                                <td><?php echo $value['user_id'] ;?></td>
+                                <td>+<?php echo $value['payment_amount'] ;?></td>
+                                <td class="text-success">success</td>
+                                <td><?php echo $value['payment_date'] ;?></td>
+                              </tr>
+                            <?php } ?>
+                            </tbody>
+                          </table>
+                      
+                </div>
                </div>
             </div>
          </div>
       </div>
-   </body>
+  
    <script>
       var sidebarBox = document.querySelector('#box');
       var sidebarBtn = document.querySelector('#btn');
@@ -499,36 +414,9 @@
               }
       });
    </script>
-   <script>
-      
-      function openCity(evt, cityName) {
-      // Declare all variables
-      var i, tabcontent, tablinks;
-      
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-      }
-      
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-      }
-      
-     
+ 
 
-
-
-
-   </script>
-</html>
+ 
 <div id="view-plans" class="modal fade" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
