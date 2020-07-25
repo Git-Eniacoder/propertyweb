@@ -27,39 +27,13 @@ class Billing extends CI_Controller {
         }
     }
     public function update($id=null){
-        $this->load->model('db_wallet');
         $data['support_status'] = $this->input->post('status');
         $data['support_department'] = $this->input->post('department');
         $data['support_admin_msg'] = $this->input->post('message');
-        if($data['support_status']==1){//do only when admin approves
-            $user_id=$this->input->post('user_no');
-            $refer_id=$this->input->post('refer_id');
-            //getting user wallet data
-            $this->load->model('Db_Wallet');
-            $this->userwallet_data = $this->db_wallet->get_balance($user_id);
-            //updating user waller and referal wallet
-            $update_bal=$this->userwallet_data["all_data"][0]->recharge_wallet+1200;
-            //getting refer data
-            $refer_data=$this->Db_Wallet->get_balance_referid($refer_id);
-            $next_level_points=$this->find_level_and_points($refer_data["all_data"][0]->total_referal);
-            $update_data_refer=array('refferal_wallet'=> $refer_data["all_data"][0]->refferal_wallet+$next_level_points[1],
-                                    "filed_wallet"=>$refer_data["all_data"][0]->filed_wallet+$next_level_points[2],
-                                    "total_referal"=>$refer_data["all_data"][0]->total_referal+1);
-            if($this->Db_Wallet->update_wallet($user_id,$update_bal,$refer_id,$update_data_refer)){
-            //update support ticket
-                if($this->db_support->payment_update($data,$id)){
-                    $this->index();
-                }else{
-                    $this->index();
-                }
-            }
-        }
-        else{//just update status in support table
-            if($this->db_support->payment_update($data,$id)){
-                $this->index();
-            }else{
-                $this->index();
-            }
+        if($this->db_support->payment_update($data,$id)){
+            $this->index();
+        }else{
+            $this->index();
         }
     }
 
@@ -111,9 +85,7 @@ class Billing extends CI_Controller {
             return array(6,233280,0);
         }
      }
-
-
-
+     
 }
 
 /* End of file Billing.php */
