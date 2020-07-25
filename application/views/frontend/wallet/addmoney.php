@@ -119,7 +119,7 @@
                         
                     </div>    
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-8">
                     <div class="card">
                     <h4 >Scan Qr code</h4>
                     <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
@@ -128,19 +128,17 @@
                         <p style="text-align: center;" class="card-text">Pay Through UPI</p>
                         <h4 style="text-align: center;" class="card-title">7014162976@ybl</h4>
                     </div>
-                        
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="card m-3 p-3 text-secondary bg-white border-0">
+                    <div class="card m-3 p-3 text-secondary bg-white border-0">
                     <h4 class="" >Earn Big</h4> 
                   <center><div class="card-body py-0">
                     <h6 class="text-dark">Upto 1,00,000/month</h6>
                     <p class="card-text">Wondering How ?</p>
                     <h6 class="card-title"><a class="text-danger" href="">Click Here</a> for Details</h6>
                   </div></center>
+                </div>    
                 </div>
                 </div>
+                
            </div> 
         </div> 
         </div>  

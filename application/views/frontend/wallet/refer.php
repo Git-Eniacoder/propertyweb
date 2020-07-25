@@ -9,6 +9,14 @@
   width: 100%;
   height: auto;
   padding-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(233, 227, 227, 0.836);
+}
+.refer-wallet .right .card{
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  
   border: 1px solid rgba(233, 227, 227, 0.836);
 }
 .refer-wallet .card h4{
@@ -31,6 +39,8 @@
   color: grey;
   margin-top: 0px;
   transition: .5s;
+  text-align: left;
+  padding-left: 1rem;
 }
 .refer-wallet .card button:hover{
   border-bottom: 1px solid rgb( 245, 57, 61 );
@@ -41,6 +51,7 @@
   height: auto;
   margin-top: 2rem;
 }
+
 .ic {
   padding: 10px;
   font-size: 20px;
@@ -116,17 +127,18 @@
         <div class="refer-wallet">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="card">
                         <h4>Refer & Earn Wallet</h4>
                         
-                        <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);">Recharge & PayBills</button>
-                        <button>Total Ammount</button>
-                        <button>Transfered</button>
+                        <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button>
+                        <button><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Ammount</button>
+                        <button><img src="../assets/img/trans.png" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfered</button>
                         
-                    </div>    
+                    </div> 
+                       
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-9 right">
                     <div class="card">
                     <h4 style="text-align: left; margin-left: 1rem;">History</h4>
                     <div class="his-table table-responsive">
