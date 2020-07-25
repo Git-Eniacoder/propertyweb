@@ -19,8 +19,9 @@ class Recharge extends My_Controller {
 
     public function index()
     {
-        $this->load->model('Db_wallet');
-        $this->data['post'] = $this->Db_wallet->get_balance($this->session->userdata("user_id"));
+        $this->load->model('db_wallet');
+        $this->data['post'] = $this->db_wallet->get_balance($this->session->userdata("user_id"));
+        $this->data['history'] = $this->db_wallet->recharge_history($this->data['post']['all_data'][0]->mobileno);
         $this->data['level']=$this->find_level_and_points($this->data['post']["all_data"][0]->total_referal);
         $this->load->view('frontend/common/wallet-header',$this->data);
         $this->load->view('frontend/wallet/recharge',$this->data);

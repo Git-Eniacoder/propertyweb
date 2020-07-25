@@ -133,31 +133,21 @@
                         <table class="table table-hover">
                             <thead>
                               <tr>
-                                <th>Transaction</th>
+                                <th>Refered Person</th>
                                 <th>Ammount</th>
                                 <th>Status</th>
-                                <th>Comment</th>
+                                <th>Date</th>
                               </tr>
                             </thead>
                             <tbody>
+                            <?php foreach($history as $value) {?>
                               <tr>
-                                <td>ID Refferal</td>
-                                <td>+300</td>
-                                <td>success</td>
-                                <td>-</td>
+                                <td><?php echo $value['user_id'] ;?></td>
+                                <td>+<?php echo $value['referal_refer'] ;?></td>
+                                <td class="text-success">success</td>
+                                <td><?php echo $value['payment_date'] ;?></td>
                               </tr>
-                              <tr>
-                                <td>ID Refferal</td>
-                                <td>+300</td>
-                                <td>success</td>
-                                <td>-</td>
-                              </tr>
-                              <tr>
-                                <td>ID Refferal</td>
-                                <td>+300</td>
-                                <td>success</td>
-                                <td>-</td>
-                              </tr>
+                            <?php } ?>
                             </tbody>
                           </table>
                     </div>    

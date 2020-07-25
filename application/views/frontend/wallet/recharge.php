@@ -102,7 +102,7 @@
          </div>
       </div>
       <div class="recha">
-         <div class="container">
+         <div class="container p-3">
             <div class="row">
                <div class="col-md-6">
                   <div class="card">
@@ -351,6 +351,32 @@
                   </div>
                </div>
                <div class="col-md-6">
+
+                    <div class="card">
+                    <h4 style="text-align: left; margin-left: 1rem;">History</h4>
+                    <div class="his-table table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>Refered Person</th>
+                                <th>Ammount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach($history as $value) { ?>
+                              <tr>
+                                <td><?php echo $value['user_id'] ;?></td>
+                                <td>+<?php echo $value['payment_amount'] ;?></td>
+                                <td class="text-success">success</td>
+                                <td><?php echo $value['payment_date'] ;?></td>
+                              </tr>
+                            <?php } ?>
+                            </tbody>
+                          </table>
+                      
+                </div>
                </div>
             </div>
          </div>
