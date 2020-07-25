@@ -28,7 +28,7 @@ class Db_Wallet extends CI_Model
         $this->db->where('mobileno', $mobile);
         $update_data=array("recharge_wallet"=>$balance);
         if($this->db->update('user_wallet', $update_data)){
-            if($referid!=NULL){
+            if($referid!=NULL&& $update_data_refer!=0){
                 $this->db->where('referid', $referid);
                 $this->db->update('user_wallet', $update_data_refer);
             }

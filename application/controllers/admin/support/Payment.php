@@ -32,21 +32,27 @@ class Payment extends CI_Controller {
         $data['support_status'] = $this->input->post('status');
         $data['support_department'] = $this->input->post('department');
         $data['support_admin_msg'] = $this->input->post('message');
-        if($data['support_status']==1){//do only when admin approves
+        if($data['support_status']==1 && $data['support_department']==2){//do only when admin approves and is in payment department
             $user_id=$this->input->post('user_no');
             $refer_id=$this->input->post('refer_id');
             //getting user wallet data
             $this->userwallet_data = $this->db_wallet->get_balance($user_id);
             //updating user waller and referal wallet
             $update_bal=$this->userwallet_data["all_data"][0]->recharge_wallet+1200;
-            //getting refer data
-            
-            $refer_data=$this->db_wallet->get_balance_referid($refer_id);
-            $next_level_points=$this->find_level_and_points($refer_data["all_data"][0]->total_referal);
-            $update_data_refer=array('refferal_wallet'=> $refer_data["all_data"][0]->refferal_wallet+$next_level_points[1],
-                                    "filed_wallet"=>$refer_data["all_data"][0]->filed_wallet+$next_level_points[2],
-                                    "total_referal"=>$refer_data["all_data"][0]->total_referal+1);
-            
+            if($this->userwallet_data["all_data"][0]->recharge_wallet==0)
+            {//logic for if user is doing first time payment then only refer will be appiled
+                //getting refer data
+                $refer_data=$this->db_wallet->get_balance_referid($refer_id);
+                $next_level_points=$this->find_level_and_points($refer_data["all_data"][0]->total_referal);
+                $update_data_refer=array('refferal_wallet'=> $refer_data["all_data"][0]->refferal_wallet+$next_level_points[1],
+                                        "filed_wallet"=>$refer_data["all_data"][0]->filed_wallet+$next_level_points[2],
+                                        "total_referal"=>$refer_data["all_data"][0]->total_referal+1);
+            }
+            else{
+                $update_data_refer=0;
+                $next_level_points=array('NA','NA','NA');
+                $refer_id='NA';
+            }
             if($this->db_wallet->update_wallet($user_id,$update_bal,$refer_id,$update_data_refer)){
             //update support ticket
                 if($this->db_support->payment_update($data,$id)){
@@ -55,6 +61,8 @@ class Payment extends CI_Controller {
                     $this->index();
                 }
             }
+            //updating history
+            $this->payment_history(array($user_id,$refer_id,$data['support_status'],1200,$next_level_points[1],$next_level_points[2]));
         }
         else{//just update status in support table
             if($this->db_support->payment_update($data,$id)){
@@ -63,9 +71,9 @@ class Payment extends CI_Controller {
                 $this->index();
             }
 
-            //updating history
+            
         }
-        $this->payment_history(array($user_id,$refer_id,$data['support_status'],1200,$next_level_points[1],$next_level_points[2]));
+        
     }
 
     public function find_level_and_points($total_count){
