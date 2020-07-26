@@ -38,6 +38,13 @@ class Db_Wallet extends CI_Model
             return 0;
         }
     }
+
+    public function payment_history($payment){
+        $data = array('user_id'=>$payment[0],'payment_amount'=>$payment[3],
+        'payment_status'=>$payment[2],'referal_id'=>$payment[1],'referal_refer'=>$payment[4],'referal_field'=>$payment[5]);
+        $this->db->insert('payment_history',$data);
+        
+    }
 }
 
 
