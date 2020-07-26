@@ -8,39 +8,25 @@
                                     <table class="table " id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>User No</th>
-                                                <th>User name</th>
-                                                <th>Subject</th>
-                                                <th>Date</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
+                                                <th>User Name</th>
+                                                <th>Mobile</th>
+                                                <th>Recharge Wallet</th>
+                                                <th>Referal Wallet</th>
+                                                <th>Field Wallet</th>
+                                                <th>Total Refers</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                      <?php foreach($payment as $value) {?>
+                                      <?php foreach($all_data as $value) {?>
                                             <tr>
                                               
-                                                <td><?php echo $value['user_id'] ; ?></td>
                                                 <td><?php echo $value['user_name'] ; ?></td>
-                                                <td><?php echo $value['support_subject'] ; ?></td>
-                                                <td><?php echo $value['support_date'] ; ?></td>
-                                                <td><?php 
-                                                if($value['support_status'] == 0){
-                                                       echo "<span class='text-white badge badge-warning'>In progress</span>"; 
-                                                }
-                                                if($value['support_status'] == 1){
-                                                    echo "<span class='text-white badge badge-success'>Approved</span>";
-                                                }
-                                                if($value['support_status'] == 2){
-                                                    echo "<span class='text-white badge badge-danger'>Declined</span>";
-                                                }
-                                                ?></td>
-                                                <td class="d-flex">
-                                                    <a class="btn btn-info mx-1" href="<?php echo base_url().'assets/img/support/'.$value['support_image'] ?>"><i class="fa fa-image" aria-hidden="true"></i></a>
-                                              <?php if(!$value['support_status'] == 1) { ?><a class="btn btn-success mx-1" href="<?php echo base_url().'admin/support/payment/update_fetch/'.$value['support_id'] ; ?>"><i class="fa fa-edit" aria-hidden="true"></i></a><?php } ?>
-                                                </td>
+                                                <td><?php echo $value['mobile_no'] ; ?></td>
+                                                <td><?php echo $value['recharge_wallet'] ; ?></td>
+                                                <td><?php echo $value['refferal_wallet'] ; ?></td>
+                                                <td><?php echo $value['filed_wallet'] ; ?></td>
+                                                <td><?php echo $value['total_referal'] ; ?></td>
                                             </tr>
-                                          
                                       <?php } ?>
                                         </tbody>
                                     </table>
@@ -65,7 +51,7 @@
         <div class="modal-body">
         <p><span class="h5">Subject : </span><?php echo $update['support_subject'] ;?></p>
         <p><span class="h5">Message : </span><?php echo $update['support_message'] ;?></p>
-        <form action="<?php echo base_url().'admin/support/payment/update/'.$update['support_id'] ?>" method="post">
+          <form action="<?php echo base_url().'admin/support/billing/update/'.$update['support_id'] ?>" method="post">
             <div class="form-group">
               <label for="">Changes Status</label>
               <select class="form-control" name="status" >
@@ -82,8 +68,6 @@
                 <option <?php echo ($update['support_department']==1)? 'selected' : ''?> value="1">Billing</option>
               </select>
             </div>
-            <input type="hidden" value="<?php echo $update['referid'] ?>" name="refer_id">
-            <input type="hidden" value="<?php echo $update['user_id'] ?>" name="user_no">
             <div class="form-group">
               <label for="">Resolved Message</label>
               <textarea class="form-control" name="message"  rows="3"><?php echo $update['support_admin_msg'] ;?></textarea>

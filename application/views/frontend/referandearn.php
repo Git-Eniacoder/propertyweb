@@ -58,24 +58,30 @@
 
                         </div>
                         <div class="col-md-6">
+                        <?php if($status) { ?>
                             <div class="">
                                 <div class="refer-head">
                                     <h2 class="ticket_h2">Generate Your Referal Link</h2>
                                 </div>
                                 <div class="form-group">
-                                    <form action="">
                                         <div class="">
                                                 <input type="text" name="" id="myInput" class=" contact_inp"
                                                     placeholder="Your Friends Name" aria-describedby="helpId"
                                                     value="https://hellorentindia.com/?id=<?php echo $post["all_data"][0]->referid;?>" disabled>
                                             <div class="contact_btn_bx">
-                                                <input type="button" value="Copy Link" onclick="copy()" class="btn btn-primary send_invite">
+                                            <!-- <p id="">Text</p> -->
+                                            <button class="btn btn-primary send_invite" onclick="copyToClipboard('#myInput')">Copy Link</button>
                                              </div>
                                         </div>
-                                    </form>
                                 </div>
                             </div>
-
+                        <?php } else{?>
+                            <div class="contact_btn_bx">
+                                            <h5>Generate your referral link:</h5>
+                                            <button class="btn btn-primary send_invite" data-toggle="modal" data-target="#login">Generate Link</button>
+                                   
+                                          </div>
+                        <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -86,7 +92,16 @@
     </main>
 
 
-
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).val()).select();
+  document.execCommand("copy");
+  $temp.remove();
+  alert("Link Copied To Clipboard")
+}
+</script>
 
 <!-- Refer and earn -->
 <!-- Recharge Section -->

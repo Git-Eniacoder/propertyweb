@@ -110,7 +110,7 @@
       <div class="add-money">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <div class="card">
                         
                         
@@ -128,17 +128,37 @@
                         <p style="text-align: center;" class="card-text">Pay Through UPI</p>
                         <h4 style="text-align: center;" class="card-title">7014162976@ybl</h4>
                     </div>
-                    <div class="card m-3 p-3 text-secondary bg-white border-0">
-                    <h4 class="" >Earn Big</h4> 
-                  <center><div class="card-body py-0">
-                    <h6 class="text-dark">Upto 1,00,000/month</h6>
-                    <p class="card-text">Wondering How ?</p>
-                    <h6 class="card-title"><a class="text-danger" href="">Click Here</a> for Details</h6>
-                  </div></center>
-                </div>    
+                        
                 </div>
                 </div>
-                
+                <div class="col-md-6">
+
+                    <div class="card">
+                    <h4 style="text-align: left; margin-left: 1rem;">History</h4>
+                    <div class="his-table table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>Refered Person</th>
+                                <th>Ammount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach($history as $value) { ?>
+                              <tr>
+                                <td><?php echo $value['user_id'] ;?></td>
+                                <td>+<?php echo $value['payment_amount'] ;?></td>
+                                <td class="text-success">success</td>
+                                <td><?php echo $value['payment_date'] ;?></td>
+                              </tr>
+                            <?php } ?>
+                            </tbody>
+                          </table>
+                      
+                </div>
+               </div>
            </div> 
         </div> 
         </div>  
