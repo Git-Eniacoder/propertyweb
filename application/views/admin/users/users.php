@@ -89,6 +89,7 @@ $(".del").click(function(){
         $("#userstatus"+i).data("value","DEACTIVE");
         $("#userstatus"+i).removeClass("badge-success");
         $("#userstatus"+i).addClass("badge-danger");
+        k="DEACTIVE";
     }
     else{
         $("#userstatus"+i).html(" Active ");
@@ -97,12 +98,11 @@ $(".del").click(function(){
         $("#userstatus"+i).data("value","ACTIVE");
         $("#userstatus"+i).removeClass("badge-danger");
         $("#userstatus"+i).addClass("badge-success");
-        
-
+        k="ACTIVE";
     }
     
   $.ajax({
-    url: "<?php echo base_url() ;?>admin/users/users/change_user_status?var1="+i+"&var2="+j, 
+    url: "<?php echo base_url() ;?>admin/users/users/change_user_status?var1="+i+"&var2="+k, 
     success: function(result){
         if(result == true){
         $('#response').html('<p class="text-success">Record Deleted</p>');
