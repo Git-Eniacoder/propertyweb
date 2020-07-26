@@ -16,9 +16,11 @@ class Dashboard extends CI_Controller {
 
     public function index()
     {
+        $this->load->model('db_siteuser');
+        $data['all_data']=$this->db_siteuser->fetch_user();
         $this->load->view('admin/common/header');
         $this->load->view('admin/common/sidebar');
-        $this->load->view('admin/dashboard');
+        $this->load->view('admin/dashboard',$data);
         $this->load->view('admin/common/footer');
         
     }
