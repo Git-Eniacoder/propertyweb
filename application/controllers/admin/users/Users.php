@@ -20,6 +20,12 @@ class users extends CI_Controller {
         $this->load->view('admin/common/footer');
     }
     
+    public function change_user_status(){
+        $mobile=$this->input->get('var1');;
+        $status=$this->input->get('var2');;
+        $this->load->model('db_siteuser');
+        return $this->db_siteuser->change_status($mobile,$status);
+    }
 }
 
 
