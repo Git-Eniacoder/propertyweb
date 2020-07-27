@@ -265,7 +265,7 @@
                                     <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                  </div>
                                  <input type="number" name="amt" class="form-control" placeholder="Amount">
-                                 <!-- <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan"> -->
+                                 <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
                               </div>
                            </div>
                         </div>
