@@ -359,7 +359,7 @@
                             <thead>
                               <tr>
                                 <th>Refered Person</th>
-                                <th>Ammount</th>
+                                <th>Amount</th>
                                 <th>Status</th>
                                 <th>Date</th>
                               </tr>

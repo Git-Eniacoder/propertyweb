@@ -101,8 +101,8 @@
                         </div>
                         
                         <div class="form-group col-md-4">
-                            <input type="text" name="build_area" class="form-control" placeholder="Build Up Area (sq.ft) *">
-                            <?php echo form_error('build_area') ? '<span class=" text-danger">' . form_error('build_area') . '</span>' : ''; ?>
+                            <input type="text" name="expected_rent" class="form-control" placeholder="Expected Rent *">
+                            <?php echo form_error('expected_rent') ? '<span class=" text-danger">' . form_error('expected_rent') . '</span>' : ''; ?>
                         </div>
 
                     </div>

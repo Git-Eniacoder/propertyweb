@@ -79,22 +79,32 @@
 
           </div>
 
-          <!-- Form-row 2 -->
-          <div class="form-row">
-            <!-- Min Budget -->
-            <div class="form-group col-md-6">
+
+
+
+          <!-- <div class="form-row"> -->
+          <!-- Min Budget -->
+          <!-- <div class="form-group col-md-6">
               <input type="text" name="post_min" placeholder="Min Budget*" class="form-control">
-              <?php echo form_error('post_min') ? '<span class=" text-danger">' . form_error('post_min') . '</span>' : ''; ?>
-            </div>
-            <!-- Max Budget -->
-            <div class="form-group col-md-6">
+              <?php // echo form_error('post_min') ? '<span class=" text-danger">' . form_error('post_min') . '</span>' : ''; 
+              ?>
+            </div> -->
+          <!-- Max Budget -->
+          <!-- <div class="form-group col-md-6">
               <input type="text" name="post_max" placeholder="Max Budget*" class="form-control">
-              <?php echo form_error('post_max') ? '<span class=" text-danger">' . form_error('post_max') . '</span>' : ''; ?>
+              <?php // echo form_error('post_max') ? '<span class=" text-danger">' . form_error('post_max') . '</span>' : ''; 
+              ?>
 
-            </div>
-          </div>
+            </div> -->
 
-          <!-- Form-row 3 -->
+
+          <!-- </div> -->
+
+
+
+
+
+          <!-- Form-row 2 -->
           <div class="form-row">
             <!-- City -->
             <div class="form-group col-md-6">
@@ -110,7 +120,7 @@
 
           </div>
 
-          <!-- Form-row 4 -->
+          <!-- Form-row 3 -->
           <div class="form-row">
             <!-- Build Up Area  New-->
             <div class="form-group col-md-6">
@@ -127,6 +137,14 @@
               <?php echo form_error('need_for') ? '<span class=" text-danger">' . form_error('need_for') . '</span>' : ''; ?>
 
             </div>
+
+          </div>
+
+          <!-- Form-row 4 -->
+          <div class="form-group">
+
+            <input type="text" class="form-control" name="budget" placeholder="Budget *">
+            <?php echo form_error('budget') ? '<span class=" text-danger">' . form_error('budget') . '</span>' : ''; ?>
 
           </div>
 
