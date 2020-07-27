@@ -15,6 +15,10 @@
                                 ><div class="sb-nav-link-icon"><i class="fa fa-link" aria-hidden="true"></i></div>
                                 Social Links
                             </a>
+                            <a class="nav-link" href="<?php echo base_url();?>admin/site_user"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+                                Site Users
+                            </a>
                            
                             
 

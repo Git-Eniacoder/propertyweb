@@ -24,21 +24,16 @@
 
 
 
-        public function update_wallet($mobile,$balance,$referid,$update_data_refer){
-            $this->db->where('mobileno', $mobile);
-            $update_data=array("recharge_wallet"=>$balance);
-            if($this->db->update('user_wallet', $update_data)){
-                if($referid!=NULL){
-                    $this->db->where('referid', $referid);
-                    $this->db->update('user_wallet', $update_data_refer);
-                }
-                return 1;
-            }
-            else{
-                return 0;
+    public function update_wallet($mobile,$balance,$referid,$update_data_refer){
+        $this->db->where('mobileno', $mobile);
+        $update_data=array("recharge_wallet"=>$balance);
+        if($this->db->update('user_wallet', $update_data)){
+            if($referid!=NULL&& $update_data_refer!=0){
+                $this->db->where('referid', $referid);
+                $this->db->update('user_wallet', $update_data_refer);
             }
         }
-
+    }
         public function payment_history($payment){
             $data = array('user_id'=>$payment[0],'payment_amount'=>$payment[3],
             'payment_status'=>$payment[2],'referal_id'=>$payment[1],'referal_refer'=>$payment[4],'referal_field'=>$payment[5]);
@@ -50,6 +45,22 @@
         }
         public function recharge_history($id){
             return $this->db->where('user_id',$id)->get('payment_history')->result_array();
+        }
+        public function update_balance($id,$amt){
+            $this->db->trans_start();
+            $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
+            $total = intval($balance['recharge_wallet']) - intval($amt);
+            $this->db->where('mobileno',$id)->update('user_wallet',array('recharge_wallet' => $total));
+            $this->db->trans_complete();
+            if($this->db->trans_status()){
+                return true;
+            }else{
+                return false;
+            }
+            
+        }
+        public function history_rec($data){
+           return $this->db->insert('recharge_history',$data);
         }
     }
 

@@ -65,7 +65,7 @@
         <div class="modal-body">
         <p><span class="h5">Subject : </span><?php echo $update['support_subject'] ;?></p>
         <p><span class="h5">Message : </span><?php echo $update['support_message'] ;?></p>
-        <form action="<?php echo base_url().'admin/support/technical/update/'.$update['support_id'] ?>" method="post">
+        <form action="<?php echo base_url().'admin/support/payment/update/'.$update['support_id'] ?>" method="post">
             <div class="form-group">
               <label for="">Changes Status</label>
               <select class="form-control" name="status" >
@@ -86,6 +86,8 @@
               <label for="">Resolved Message</label>
               <textarea class="form-control" name="message"  rows="3"><?php echo $update['support_admin_msg'] ;?></textarea>
             </div>
+            <input type="hidden" value="<?php echo $update['referid'] ?>" name="refer_id">
+            <input type="hidden" value="<?php echo $update['user_id'] ?>" name="user_no">
          
         </div>
         

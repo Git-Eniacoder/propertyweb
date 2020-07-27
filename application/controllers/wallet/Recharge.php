@@ -12,6 +12,7 @@ class Recharge extends My_Controller {
     public function __construct() {
 
         parent::__construct();
+        $this->load->model('db_wallet');
 
        // $this->load->model('pages/Db_postreq');
         
@@ -26,6 +27,67 @@ class Recharge extends My_Controller {
         $this->load->view('frontend/common/wallet-header',$this->data);
         $this->load->view('frontend/wallet/recharge',$this->data);
         $this->load->view('frontend/common/footer',$this->data);
+    }
+    public function mobile(){
+        $this->form_validation->set_rules('amt', 'Amount', 'required');
+        $this->form_validation->set_rules('circle', 'Circle', 'required');
+        $this->form_validation->set_rules('number', 'Number', 'required');
+        $this->form_validation->set_rules('company', 'Operator', 'required');
+        
+        if ($this->form_validation->run()) {
+            $data['recharge_amount'] = $this->input->post('amt');
+            $data['trans_id'] = date("dmYis").rand(1,9);
+            $data['recharge_circle'] = $this->input->post('circle');
+            $data['recharge_no'] = $this->input->post('number');
+            $data['recharge_opt'] = $this->input->post('company');
+            $data['user_id']  = $this->session->userdata("user_id");
+            $data['user_name']  = $this->session->userdata("user_name");
+
+            $userid = urlencode('7392900007');
+            $pass = urlencode('693655');
+            $numbers = urlencode($data['recharge_amount']);
+            $opt = urlencode('wkdjkdw');
+            $amt =  urlencode($data['recharge_amount']); 
+
+            $data = 'userid=' . $userid . '&pass=' . $pass . "&mob=" . $numbers . "&opt=" . $opt.'&amt='.$amt.'&agentid='.$data['trans_id'].'&fmt=json';
+
+            $ch = curl_init('http://www.login.imwallet.in/API/APIService.aspx?' . $data);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $response = curl_exec($ch);
+            curl_close($ch);
+            print_r($response);
+            $feed = json_decode($response);
+            if($feed->STATUS == 'Success'){
+                if($this->db_wallet->update_balance(7737328864,$data['recharge_amount'])){
+                    $data['recharge_status'] = $feed->STATUS;
+                    $data['recharge_msg'] = $feed->MSG;
+                    $data['imWallet_id'] = $feetd->OPID;
+                $this->db_wallet->recharge_history($data);
+                $array = array(
+                    'error'   => false,
+                    'msg'   => $feed->MSG,
+                );
+                }
+            }else{
+                $data['recharge_status'] = $feed->STATUS;
+                $data['recharge_msg'] = $feed->MSG;
+                $data['imWallet_id'] = $feed->OPID;
+                $array = array(
+                    'error'   => true,
+                    'msg'   => $feed->MSG,
+                );
+            }
+        }
+            else {
+            $array = array(
+                'form'   => true,
+                'msg'   => validation_errors(),
+            );
+        }
+        
+           echo json_encode($array);
+           
+        
     }
 
     public function find_level_and_points($total_count){
