@@ -28,7 +28,7 @@
                   <div class="item"><a href="field"><img src="../assets/img/Field Expense.png" width="20px"style="margin-right: 5px;" > Field Expeses</a></div>
                   <div class="item"><a href="addmoney"><img src="../assets/img/Add-Money.svg" width="20px"style="margin-right: 5px;" >Add Money</a></div>
                   <hr class="style1">
-                  
+                  <div class="item"><a href="ticket"><img src="../assets/img/ticket.svg" width="25px" style="margin-top:-5px; margin-right: 5px;">Raise Ticket</a></div>
                   <div class="item"><a href="<?php echo $url['support']; ?>"  ><i class="fa fa-envelope" style="color: white;" aria-hidden="true" width="20px"style="margin-right: 5px;"></i> Suppoprt</a></div>
                   <div class="item"><a ><img src="../assets/img/about.svg" width="20px" style="margin-top:-5px; margin-right: 5px;">  About us</a></div>
                   <hr class="style1">

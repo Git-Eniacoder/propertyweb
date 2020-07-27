@@ -119,8 +119,8 @@
                         
                     </div>    
                 </div>
-                <div class="col-md-8">
-                    <div class="card">
+                <div class="col-md-4">
+                    <div class="card" style="margin-bottom: 2rem;">
                     <h4 >Scan Qr code</h4>
                     <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
                     <div class="card-body py-0">
