@@ -49,39 +49,45 @@ class Recharge extends My_Controller {
             $opt = urlencode('wkdjkdw');
             $amt =  urlencode($data['recharge_amount']); 
 
-            $data = 'userid=' . $userid . '&pass=' . $pass . "&mob=" . $numbers . "&opt=" . $opt.'&amt='.$amt.'&agentid='.$data['trans_id'].'&fmt=json';
+            $api = 'userid=' . $userid . '&pass=' . $pass . "&mob=" . $numbers . "&opt=" . $opt.'&amt='.$amt.'&agentid='.$data['trans_id'].'&fmt=json';
 
-            $ch = curl_init('http://www.login.imwallet.in/API/APIService.aspx?' . $data);
+            $ch = curl_init('http://www.login.imwallet.in/API/APIService.aspx?' . $api);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             $response = curl_exec($ch);
             curl_close($ch);
-            print_r($response);
+            
             $feed = json_decode($response);
+            
             if($feed->STATUS == 'Success'){
                 if($this->db_wallet->update_balance(7737328864,$data['recharge_amount'])){
                     $data['recharge_status'] = $feed->STATUS;
                     $data['recharge_msg'] = $feed->MSG;
                     $data['imWallet_id'] = $feetd->OPID;
-                $this->db_wallet->recharge_history($data);
+                $this->db_wallet->history_rec($data);
                 $array = array(
                     'error'   => false,
                     'msg'   => $feed->MSG,
+                    'he'    => 'Success!',
+                    'ico'   => ' <i class="fa fa-check"></i>',
                 );
                 }
             }else{
                 $data['recharge_status'] = $feed->STATUS;
                 $data['recharge_msg'] = $feed->MSG;
                 $data['imWallet_id'] = $feed->OPID;
+               $this->db_wallet->history_rec($data);
                 $array = array(
                     'error'   => true,
                     'msg'   => $feed->MSG,
+                    'he'    => 'Failed!',
+                    'ico'   => '<i class="fa fa-times"></i>',
                 );
             }
         }
             else {
             $array = array(
                 'form'   => true,
-                'msg'   => validation_errors(),
+                'msg'   =>  '<span class="text-danger">Please fill all fields</span>',
             );
         }
         

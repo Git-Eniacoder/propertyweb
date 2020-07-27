@@ -1,4 +1,83 @@
 <style>
+/* modal  */
+
+.modal-confirm {		
+	color: #636363;
+	width: 325px;
+	font-size: 14px;
+}
+.modal-confirm .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-confirm .modal-header {
+	border-bottom: none;   
+	position: relative;
+}
+.modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -15px;
+}
+.modal-confirm .form-control, .modal-confirm .btn {
+	min-height: 40px;
+	border-radius: 3px; 
+}
+.modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}	
+.modal-confirm .modal-footer {
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 13px;
+}	
+.modal-confirm .icon-box {
+	color: #fff;		
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -70px;
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	z-index: 9;
+	background: #82ce34;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-confirm .icon-box i {
+	font-size: 58px;
+	position: relative;
+	top: 3px;
+}
+.modal-confirm.modal-dialog {
+	margin-top: 80px;
+}
+.modal-confirm .btn {
+	color: #fff;
+	border-radius: 4px;
+	background: #82ce34;
+	text-decoration: none;
+	transition: all 0.4s;
+	line-height: normal;
+	border: none;
+}
+.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+	background: #6fb32b;
+	outline: none;
+}
+.trigger-btn {
+	display: inline-block;
+	margin: 100px auto;
+}
+
+/* end modal  */
    .fa-user{
    border: 2px solid gray;
    border-radius: 50%;
@@ -167,6 +246,7 @@
                </ul>
             </div>
             <div class="tab-content" id="pills-tabContent">
+            <div id="response" class="text-center"></div>
                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                   <div class="radi">
                      <form id="recharge" action="<?php echo $url['wallet'] ;?>/mobile" method="post">
@@ -181,6 +261,7 @@
                   <span class="input-group-text">+91</span>
                   </div>
                   <input type="number" name="number" class="form-control" placeholder="Mobile Number">
+                  
                   </div>
                   </div>
                   <div class="col-md-6">
@@ -428,6 +509,25 @@
       </div>
    </div>
 </div>
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div id="ico" class="icon-box jq">
+            
+				</div>				
+				<h4 id="he" class="modal-title w-100"></h4>	
+			</div>
+			<div class="modal-body">
+				<p id="rec" class="text-center"></p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block jq" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div> 
+
 <script>
    var sidebarBox = document.querySelector('#box');
    var sidebarBtn = document.querySelector('#btn');
@@ -463,8 +563,9 @@
 
 
 <script>
-$("#recharge33").submit(function(event){
-// event.preventDefault();
+// $('#myModal').modal('show');
+$("#recharge").submit(function(event){
+event.preventDefault();
 var post_url = $(this).attr("action"); 
 var request_method = $(this).attr("method"); 
 var form_data = $(this).serialize(); 
@@ -478,15 +579,24 @@ $.ajax({
     data : form_data, 
 }).done(function(response){ 
     console.log(response);
+    if(response.form){
+      $('#response').html(response.msg);
+    }if(response.error == true){
+       $('.jq').css("background-color", "red");
+      $('#myModal').modal('show');
+      $('#rec').html(response.msg);
+      $('#ico').html(response.ico);
+      $('#he').html(response.he);
+    }
     if(response.error == false){
-        $('#response').html(response.msg);
+       $('.jq').css("background-color", "#82ce34");
+      $('#myModal').modal('show');
+      $('#rec').html(response.msg);
+      $('#ico').html(response.ico);
+      $('#he').html(response.he);
     }
-    if(response.error == true){
-        $('#response').html(response.msg);
-    }
-    if(response.form== true){
-        $('#response').html(response.msg);
-    }
+   
+    
 });
 });
 </script>
