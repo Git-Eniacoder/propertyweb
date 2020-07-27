@@ -20,6 +20,7 @@ class Otp extends My_Controller {
                 $send['user_name'] =$_SESSION['name'];
                 $send['mobile_no'] =$_SESSION['number'];
                 $send['password'] =md5($_SESSION['pass']);
+                $send['user_status']="ACTIVE";
                 
                 if($this->db_register->register($send)){
                     $array = array(

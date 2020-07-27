@@ -166,14 +166,21 @@
                                 <form action="">
                                     <div class="">
 
-                                        <input type="text" name="" id="" class=" contact_inp" placeholder="Your Friends Name" aria-describedby="helpId">
+                                        <input type="text" name="" id="" class=" contact_inp" placeholder="Your Name" aria-describedby="helpId">
                                     </div>
                                     <div class="">
-                                        <input type="text" name="" id="" class="contact_inp" placeholder="Your Friends Email" aria-describedby="helpId">
+                                        <input type="text" name="" id="" class="contact_inp" placeholder="Your Email" aria-describedby="helpId">
                                     </div>
                                     <div class="">
-                                        <input type="text" name="" id="" class="contact_inp" placeholder="Your Friends Mobile" aria-describedby="helpId">
+                                        <input type="text" name="" id="" class="contact_inp" placeholder="Your Mobile" aria-describedby="helpId">
                                     </div>
+                                    <!-- <div class="">
+                                        <select name="" id="" class="" aria-placeholder="Issue Related">
+                                            <option value="">Property Listing</option>
+                                            <option value="">Recharge</option>
+                                            <option value="">Refer and Earn</option>
+                                        </select>
+                                    </div> -->
                                     <div class="">
                                         <textarea name="" id="" cols="30" rows="10" class="contact_inp" placeholder="Your Message"></textarea>
                                     </div>

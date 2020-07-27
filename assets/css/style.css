@@ -1861,7 +1861,7 @@ top: 0px;
 left: -275px;
 width: 275px;
 opacity: 0;
-padding: 20px 0px;
+padding: 57px 6px 14px 19px;
 height: 100%;
 background-color: #313061;
 
@@ -1916,6 +1916,11 @@ border-top: 1px solid grey;
 margin-top: 2rem;
 
 } 
+
+
+
+
+
 @media screen and (max-width: 520px) {
   #items {
     

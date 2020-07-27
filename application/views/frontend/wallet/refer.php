@@ -128,7 +128,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="card">
+                    <div class="card ">
                         <h4>Refer & Earn Wallet</h4>
                         
                         <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button>
