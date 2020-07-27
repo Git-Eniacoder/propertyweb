@@ -1,526 +1,515 @@
-
-   <style>
-   .fa-user{
-    border: 2px solid gray;
-    border-radius: 50%;
-    padding: 4px 6px;
+<style>
+   .fa-user {
+      border: 2px solid gray;
+      border-radius: 50%;
+      padding: 4px 6px;
    }
+
    .plans {
-    max-height: 380px;
-    overflow: hidden;
-    overflow-y: auto;
-}
-   .user-fa{
-       padding : 3px 0;
+      max-height: 380px;
+      overflow: hidden;
+      overflow-y: auto;
    }
-   .user-flag{
-       padding : 2px 0;
+
+   .user-fa {
+      padding: 3px 0;
    }
-   .caret{
-    display: inline-block;
-    width: 6px;
-    height: 5px;
-    background: url(https://www.oxigenwallet.com/public/images/tilt.png) no-repeat 0 0;
-    margin-left: 0;
-    vertical-align: middle;
-    border: none;
+
+   .user-flag {
+      padding: 2px 0;
    }
-   .nav-pills .nav-link.active{
+
+   .caret {
+      display: inline-block;
+      width: 6px;
+      height: 5px;
+      background: url(https://www.oxigenwallet.com/public/images/tilt.png) no-repeat 0 0;
+      margin-left: 0;
+      vertical-align: middle;
+      border: none;
+   }
+
+   .nav-pills .nav-link.active {
       background-color: transparent !important;
-      color : #3D3D3D !important;
+      color: #3D3D3D !important;
    }
-  .ic {
-  padding: 10px;
-  font-size: 20px;
-  width: 40px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
 
-.ic:hover {
-    opacity: 0.7;
-}
+   .ic {
+      padding: 10px;
+      font-size: 20px;
+      width: 40px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+   }
 
- .fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-.fa-facebook:hover{
-  background: #3B5998;
-  color: white;
-}
+   .ic:hover {
+      opacity: 0.7;
+   }
 
- .fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-.fa-twitter:hover {
-  background: #55ACEE;
-  color: white;
-}
- .fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-.fa-youtube:hover {
-  background: #bb0000;
-  color: white;
-}
- .fa-instagram {
-  background: #125688;
-  color: white;
-}
-.fa-instagram:hover {
-  background: #125688;
-  color: white;
-}
-   </style>
-   
-      <div class="wallet-op">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-3">
-                  <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet;?></span></center>
-                  <a href="recharge"><button class="active"><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
-               </div>
-               <div class="col-md-3">
-                  <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet;?></span></center>
-                  <a href="refer"><button><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
-               </div>
-               <div class="col-md-3">
-                  <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet;?></span></center>
-                  <a href="field"><button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
-               </div>
+   .fa-facebook {
+      background: #3B5998;
+      color: white;
+   }
 
-               <div class="col-md-3">
-                   <center><img  src="../assets/img/Add-Money.svg" width="25px"></center>
-                  <a href="addmoney"><button>Add Money</button></a>
-               </div>
-            </div>
+   .fa-facebook:hover {
+      background: #3B5998;
+      color: white;
+   }
+
+   .fa-twitter {
+      background: #55ACEE;
+      color: white;
+   }
+
+   .fa-twitter:hover {
+      background: #55ACEE;
+      color: white;
+   }
+
+   .fa-youtube {
+      background: #bb0000;
+      color: white;
+   }
+
+   .fa-youtube:hover {
+      background: #bb0000;
+      color: white;
+   }
+
+   .fa-instagram {
+      background: #125688;
+      color: white;
+   }
+
+   .fa-instagram:hover {
+      background: #125688;
+      color: white;
+   }
+</style>
+
+<!-- <div id="rechargeModal" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+      
+      <div class="modal-content">
+         <div class="modal-body text-center">
+            <img width="80" src="<?php echo base_url() . 'assets/img/loading.gif' ?>" alt="" srcset="">
          </div>
       </div>
-      <div class="recha">
-         <div class="container p-3">
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="card">
-                     <h4>Recharge & PayBills</h4>
-                     <hr class="style1">
-                     <div class="dex">
-                        <div class="row">
-                           <div class="col-md-8">
-                              <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
-                                 <li class="col-md-4 nav-item">
-                                 
-                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
-                                       Mobile  </a>  
-                                    
-                                 
-                                    
-                                 </li>
-                                 <li class="col-md-4 nav-item">
-                                 
-                                    <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
-                                    DTH  </a>  
-                                  
-                                    
-                                 </li>
-                                 <li class="col-md-4 nav-item">
-                                 
-                                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
-                                    DataCard</a> 
-                                     
-                                    
-                                    
-                                 </li>
-                              </ul>
-                              
-                              
-                                
+
+   </div>
+</div> -->
+
+
+<!-- <div class="wallet-op">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-3">
+            <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
+            <a href="<?php echo $url['wallet']; ?>"><button class="active"><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
+         </div>
+         <div class="col-md-3">
+            <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
+            <a href="<?php echo $url['refer-wallet']; ?>"><button><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
+         </div>
+         <div class="col-md-3">
+            <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
+            <a href="<?php echo $url['field-wallet']; ?>"><button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
+         </div>
+         <div class="col-md-3">
+            <center><img src="../assets/img/Add-Money.svg" width="25px"></center>
+            <a href="addmoney"><button>Add Money</button></a>
+         </div>
+      </div>
+   </div>
+</div> -->
+
+
+
+
+
+
+<div class="recha">
+   <div class="container p-3">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="card">
+               <h4>Recharge & PayBills</h4>
+               <hr class="style1">
+               <div class="dex">
+                  <div class="row">
+                     <div class="col-md-8">
+                        <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
+                           <li class="col-md-4 nav-item">
+                              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img class="ima rea" src="../assets/img/smartphoneicon.svg" alt="Mobile" style="width: 3rem; height: 3rem;">
+                                 Mobile </a>
+                           </li>
+                           <li class="col-md-4 nav-item">
+                              <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img class="ima" src="../assets/img/DTHicon_1.svg" alt="Dth" style="width: 3rem; height: 3rem;">
+                                 DTH </a>
+                           </li>
+                           <li class="col-md-4 nav-item">
+                              <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><img class="ima " src="../assets/img/datacardicon.svg" alt="Datacard" style="width: 3rem; height: 3rem;">
+                                 DataCard</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="row tab">
+                           <div class="col-md-4">
                            </div>
-                           <div class="col-md-6">
-                              <div class="row tab">
-                                 <div class="col-md-4">
-                                    
-                                 </div>
-                                 <div class="col-md-4">
-                                 </div>
-                                 <div class="col-md-4">
-                                 </div>
-                              </div>
+                           <div class="col-md-4">
+                           </div>
+                           <div class="col-md-4">
                            </div>
                         </div>
                      </div>
-                     <div class="scrolling-wrapper">
-                              <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
-                                 <li class="card nav-item">
-                                 
-                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img class="ima rea" src="../assets/img/phone.png" alt="Mobile" >
-                                       <p>Mobile</p>  </a>  
-                                    
-                                 
-                                    
-                                 </li>
-                                 <li class="card nav-item">
-                                 
-                                    <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img class="ima" src="../assets/img/dth.png" alt="Dth" >
-                                    <p>DTH</p>  </a>  
-                                  
-                                    
-                                 </li>
-                                 <li class="card nav-item">
-                                 
-                                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><img class="ima " src="../assets/img/datacard.png" alt="Datacard" >
-                                    <p>DataCard</p></a> 
-                                     
-                                    
-                                    
-                                 </li>
-                              </ul>
-                       
-                        
-                        
-                        
-                     </div>
-                     <div class="tab-content" id="pills-tabContent">
-                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <div class="radi">
-                           <label style="margin-right:1rem;"><input type="radio" name="optradio" checked> Prepaid</label>
-                           <label><input type="radio" name="optradio" > Postpaid</label>
-                        </div>
-                        <div class="inp">
-                           <div class="row top">
-                              <div class="col-md-6">
-                                 <div class="input-group" style="margin-bottom: 1rem;">
-                                    <div class="input-group-prepend">
-                                       <span class="input-group-text">+91</span>
-                                    </div>
-                                    <input type="number" class="form-control" placeholder="Mobile Number">
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <select class="sel">
-                                    <option value="volvo">Select operator</option>
-                                    <option value="saab">Idea</option>
-                                    <option value="opel">Jio</option>
-                                    <option value="audi">Vodafone</option>
-                                 </select>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <select class="sel" style="margin-bottom: 1rem;">
-                                    <option value="volvo">Select circle</option>
-                                    <option value="saab">Rajasthan </option>
-                                    <option value="opel">Hariyana</option>
-                                    <option value="audi">Delhi</option>
-                                 </select>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="input-group"  style=" border-color:grey;">
-                                    <div class="input-group-prepend">
-                                       <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
-                                    </div>
-                                    <input type="number" class="form-control" placeholder="Amount">
-                                    <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="re-bu">
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <button>Recharge Now</button>
-                              </div>
-                              <div class="col-md-6">
-                              </div>
-                           </div>
-                        </div>
-                                 </div>
-                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                 <div class="row">
-                           <div class="col-md-6">
-                              
-                              
-
-                                <div class="inp">
-                                 <select class="sel" >
-                                    <option value="volvo">select operator</option>
-                                    <option value="aa-dd">Airtel DTH</option>
-                                    <option value="s-dd">Sun dth</option>
-                                    <option value="v-dd">Videocon D2H</option>
-                                 </select>
-                                </div>
-                           </div>
-                           <div class="col-md-6"  >
-                              <div class="tt">
-                                <input type="text"  placeholder="Subscriber id">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-md-6">
-                              
-                              <div class="inp" >
-                                <div class="input-group"   style=" margin-top:-1rem; border-color:grey;">
-                                    <div class="input-group-prepend">
-                                       <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
-                                    </div>
-                                    <input type="number" class="form-control" placeholder="Amount">
-                                    
-                                 </div>
-                               </div>
-
-
-                               
-                           </div>
-                           <div class="col-md-6"  >
-                               
-                           </div>
-                        </div>
-                        <div class="re-bu">
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <button>Pay Now</button>
-                              </div>
-                              <div class="col-md-6">
-                              </div>
-                           </div>
-                        </div>
-                                 </div>
-                                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                 <div class="radi">
-                           <label style="margin-right:1rem;"><input type="radio" name="optradio1" checked> Prepaid</label>
-                           <label style="margin-right:1rem;"><input type="radio" name="optradio1" > Postpaid</label>
-                        </div>
-                        <div class="inp">
-                           <div class="row top">
-                              <div class="col-md-6">
-                                 <div class="input-group" style="margin-bottom: 1rem;">
-                                    <div class="input-group-prepend">
-                                       <span class="input-group-text">+91</span>
-                                    </div>
-                                    <input type="number" class="form-control" placeholder="Mobile Number">
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <select class="sel">
-                                    <option value="volvo">Select operator</option>
-                                    <option value="saab">idea</option>
-                                    <option value="opel">jio</option>
-                                    <option value="audi">vodafone</option>
-                                 </select>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <select class="sel" style="margin-bottom: 1rem;">
-                                    <option value="volvo">Select circle</option>
-                                    <option value="saab">rajasthan </option>
-                                    <option value="opel">hariyana</option>
-                                    <option value="audi">delhi</option>
-                                 </select>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="input-group"  style=" border-color:grey;">
-                                    <div class="input-group-prepend">
-                                       <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
-                                    </div>
-                                    <input type="number" class="form-control" placeholder="Amount">
-                                    <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="re-bu">
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <button>Recharge Now</button>
-                              </div>
-                              <div class="col-md-6">
-                              </div>
-                           </div>
-                        </div>
-                                 </div>
-                              </div>
-                     
-                    
-                     
                   </div>
                </div>
-               <div class="col-md-6">
-
-                    <div class="card">
-                    <h4 style="text-align: left; margin-left: 1rem;">History</h4>
-                    <div class="his-table table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                              <tr>
-                                <th>Refered Person</th>
-                                <th>Amount</th>
-                                <th>Status</th>
-                                <th>Date</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                            <?php foreach($history as $value) { ?>
-                              <tr>
-                                <td><?php echo $value['user_id'] ;?></td>
-                                <td>+<?php echo $value['payment_amount'] ;?></td>
-                                <td class="text-success">success</td>
-                                <td><?php echo $value['payment_date'] ;?></td>
-                              </tr>
-                            <?php } ?>
-                            </tbody>
-                          </table>
-                      
-                </div>
+               <div class="scrolling-wrapper">
+                  <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
+                     <li class="card nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                           <img class="ima rea" src="../assets/img/phone.png" alt="Mobile">
+                           <p>Mobile</p>
+                        </a>
+                     </li>
+                     <li class="card nav-item">
+                        <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                           <img class="ima" src="../assets/img/dth.png" alt="Dth">
+                           <p>DTH</p>
+                        </a>
+                     </li>
+                     <li class="card nav-item">
+                        <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+                           <img class="ima " src="../assets/img/datacard.png" alt="Datacard">
+                           <p>DataCard</p>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                     <div class="radi">
+                        <form id="recharge" action="<?php echo $url['wallet']; ?>/mobile" method="post">
+                           <label style="margin-right:1rem;"><input type="radio" value="prepaid" name="optradio" checked> Prepaid</label>
+                           <label><input type="radio" name="optradio" value="postpaid"> Postpaid</label>
+                     </div>
+                     <div class="inp">
+                        <div class="row top">
+                           <div class="col-md-6">
+                              <div class="input-group" style="margin-bottom: 1rem;">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text">+91</span>
+                                 </div>
+                                 <input type="number" name="number" class="form-control" placeholder="Mobile Number">
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <select name="company" class="sel">
+                                 <option selected disabled value="">Select Company</option>
+                                 <option value="AO">Airtel</option>
+                                 <option value="B">BSNL</option>
+                                 <option value="ID">Idea</option>
+                                 <option value="JO">Jio</option>
+                                 <option value="VF">Vodafone</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-6">
+                              <select name="circle" class="sel" style="margin-bottom: 1rem;">
+                                 <option selected disabled value="">Select circle</option>
+                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                 <option value="Assam">Assam</option>
+                                 <option value="Bihar">Bihar</option>
+                                 <option value="Chandigarh">Chandigarh</option>
+                                 <option value="Chhattisgarh">Chhattisgarh</option>
+                                 <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                 <option value="Daman and Diu">Daman and Diu</option>
+                                 <option value="Delhi">Delhi</option>
+                                 <option value="Lakshadweep">Lakshadweep</option>
+                                 <option value="Puducherry">Puducherry</option>
+                                 <option value="Goa">Goa</option>
+                                 <option value="Gujarat">Gujarat</option>
+                                 <option value="Haryana">Haryana</option>
+                                 <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                 <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                 <option value="Jharkhand">Jharkhand</option>
+                                 <option value="Karnataka">Karnataka</option>
+                                 <option value="Kerala">Kerala</option>
+                                 <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                 <option value="Maharashtra">Maharashtra</option>
+                                 <option value="Manipur">Manipur</option>
+                                 <option value="Meghalaya">Meghalaya</option>
+                                 <option value="Mizoram">Mizoram</option>
+                                 <option value="Nagaland">Nagaland</option>
+                                 <option value="Odisha">Odisha</option>
+                                 <option value="Punjab">Punjab</option>
+                                 <option value="Rajasthan">Rajasthan</option>
+                                 <option value="Sikkim">Sikkim</option>
+                                 <option value="Tamil Nadu">Tamil Nadu</option>
+                                 <option value="Telangana">Telangana</option>
+                                 <option value="Tripura">Tripura</option>
+                                 <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                 <option value="Uttarakhand">Uttarakhand</option>
+                                 <option value="West Bengal">West Bengal</option>
+                              </select>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="input-group" style=" border-color:grey;">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
+                                 </div>
+                                 <input type="number" name="amt" class="form-control" placeholder="Amount">
+                                 <!-- <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan"> -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="re-bu">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <button>Recharge Now</button>
+                           </div>
+                           </form>
+                           <div class="col-md-6">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <form action="">
+                              <div class="inp">
+                                 <select class="sel" required>
+                                    <option selected disabled value="">Select operator</option>
+                                    <option value="AT">AIRTEL DIGITAL TV</option>
+                                    <option value="DT">DISH TV</option>
+                                    <option value="RT">RELIANCE DIGITAL TV</option>
+                                    <option value="ST">SUN DIRECT</option>
+                                    <option value="TT">TATA SKY B 2 B</option>
+                                    <option value="VT">VIDEOCON D2H</option>
+                                 </select>
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="tt">
+                              <input type="text" placeholder="Subscriber id">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="inp">
+                              <div class="input-group" style=" margin-top:-1rem; border-color:grey;">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
+                                 </div>
+                                 <input type="number" class="form-control" placeholder="Amount">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                     </div>
+                     <div class="re-bu">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <button>Pay Now</button>
+                           </div>
+                           </form>
+                           <div class="col-md-6">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                     <div class="radi">
+                        <form action="">
+                           <label style="margin-right:1rem;"><input type="radio" name="optradio1" checked> Prepaid</label>
+                           <label style="margin-right:1rem;"><input type="radio" name="optradio1"> Postpaid</label>
+                     </div>
+                     <div class="inp">
+                        <div class="row top">
+                           <div class="col-md-6">
+                              <div class="input-group" style="margin-bottom: 1rem;">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text">+91</span>
+                                 </div>
+                                 <input type="number" class="form-control" placeholder="Mobile Number">
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <select class="sel">
+                                 <option selected disabled value="">Select circle</option>
+                                 <option value="AO">Airtel</option>
+                                 <option value="B">BSNL</option>
+                                 <option value="ID">Idea</option>
+                                 <option value="JO">Jio</option>
+                                 <option value="VF">Vodafone</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-6">
+                              <select class="sel" style="margin-bottom: 1rem;">
+                                 <option selected disabled value="">Select circle</option>
+                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                 <option value="Assam">Assam</option>
+                                 <option value="Bihar">Bihar</option>
+                                 <option value="Chandigarh">Chandigarh</option>
+                                 <option value="Chhattisgarh">Chhattisgarh</option>
+                                 <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                 <option value="Daman and Diu">Daman and Diu</option>
+                                 <option value="Delhi">Delhi</option>
+                                 <option value="Lakshadweep">Lakshadweep</option>
+                                 <option value="Puducherry">Puducherry</option>
+                                 <option value="Goa">Goa</option>
+                                 <option value="Gujarat">Gujarat</option>
+                                 <option value="Haryana">Haryana</option>
+                                 <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                 <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                 <option value="Jharkhand">Jharkhand</option>
+                                 <option value="Karnataka">Karnataka</option>
+                                 <option value="Kerala">Kerala</option>
+                                 <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                 <option value="Maharashtra">Maharashtra</option>
+                                 <option value="Manipur">Manipur</option>
+                                 <option value="Meghalaya">Meghalaya</option>
+                                 <option value="Mizoram">Mizoram</option>
+                                 <option value="Nagaland">Nagaland</option>
+                                 <option value="Odisha">Odisha</option>
+                                 <option value="Punjab">Punjab</option>
+                                 <option value="Rajasthan">Rajasthan</option>
+                                 <option value="Sikkim">Sikkim</option>
+                                 <option value="Tamil Nadu">Tamil Nadu</option>
+                                 <option value="Telangana">Telangana</option>
+                                 <option value="Tripura">Tripura</option>
+                                 <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                 <option value="Uttarakhand">Uttarakhand</option>
+                                 <option value="West Bengal">West Bengal</option>
+                              </select>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="input-group" style=" border-color:grey;">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
+                                 </div>
+                                 <input type="number" class="form-control" placeholder="Amount">
+                                 <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="re-bu">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <button>Recharge Now</button>
+                           </div>
+                           </form>
+                           <div class="col-md-6">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="card">
+               <h4 style="text-align: left; margin-left: 1rem;">History</h4>
+               <div class="his-table table-responsive">
+                  <table class="table table-hover">
+                     <thead>
+                        <tr>
+                           <th class="history-text">Refered Person</th>
+                           <th class="history-text">Amount</th>
+                           <th class="history-text">Status</th>
+                           <th class="history-text">Date</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <?php foreach ($history as $value) { ?>
+                           <tr>
+                              <td><?php echo $value['user_id']; ?></td>
+                              <td>+<?php echo $value['payment_amount']; ?></td>
+                              <td class="text-success">success</td>
+                              <td><?php echo $value['payment_date']; ?></td>
+                           </tr>
+                        <?php } ?>
+                     </tbody>
+                  </table>
                </div>
             </div>
          </div>
       </div>
-  
+   </div>
    <script>
       var sidebarBox = document.querySelector('#box');
       var sidebarBtn = document.querySelector('#btn');
       var pageWrapper = document.querySelector('#main-content');
-      
+
       sidebarBtn.addEventListener('click', function(event) {
-      
-              if (this.classList.contains('active')) {
-                      this.classList.remove('active');
-                      sidebarBox.classList.remove('active');
-              } else {
-                      this.classList.add('active');
-                      sidebarBox.classList.add('active');
-              }
+
+         if (this.classList.contains('active')) {
+            this.classList.remove('active');
+            sidebarBox.classList.remove('active');
+         } else {
+            this.classList.add('active');
+            sidebarBox.classList.add('active');
+         }
       });
-      
+
       pageWrapper.addEventListener('click', function(event) {
-      
-              if (sidebarBox.classList.contains('active')) {
-                      sidebarBtn.classList.remove('active');
-                      sidebarBox.classList.remove('active');
-              }
+
+         if (sidebarBox.classList.contains('active')) {
+            sidebarBtn.classList.remove('active');
+            sidebarBox.classList.remove('active');
+         }
       });
-      
+
       window.addEventListener('keydown', function(event) {
-      
-              if (sidebarBox.classList.contains('active') && event.keyCode === 27) {
-                      sidebarBtn.classList.remove('active');
-                      sidebarBox.classList.remove('active');
-              }
+
+         if (sidebarBox.classList.contains('active') && event.keyCode === 27) {
+            sidebarBtn.classList.remove('active');
+            sidebarBox.classList.remove('active');
+         }
       });
    </script>
- 
 
- 
-<div id="view-plans" class="modal fade" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Browse Plans</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
-      </div>
-      <div class="modal-body">
-      
-        <div class="plans">
-          <div class="table-responsive-md">
-            <table class="table table-lg table-hover border">
-              <tbody>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$10 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">8 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">7 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Talktime $8 & 2 Local & National SMS & Free SMS valid for 2 day(s)</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$15 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">13 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">15 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Regular Talktime</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$50 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">47 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">47 Local Vodafone min free </td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$100 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">92 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Local min 92 & 10 Local & National SMS & Free SMS valid for 
-                    7 day(s).</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$150 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">143 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">60 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Talktime $143 & 50 Local & National SMS & Free SMS valid for 
-                    15 day(s).</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$220 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">220 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Full Talktime</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$250 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">250 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Full Talktime + 50 SMS per day for 7 days.</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$300 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">301 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">64 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Full Talktime</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$410 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">0 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">28 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Unlimited Local,STD & Roaming calls</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$501 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">510 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">180 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Full Talktime + 100 SMS per day for 28 days.</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$799 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">820 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">250 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Full Talktime + 100 SMS per day for 84 days.</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-                <tr>
-                  <td class="text-5 text-primary text-center align-middle">$999 <span class="text-1 text-muted d-block">Amount</span></td>
-                  <td class="text-3 text-center align-middle">1099 <span class="text-1 text-muted d-block">Talktime</span></td>
-                  <td class="text-3 text-center align-middle">356 Days <span class="text-1 text-muted d-block">Validity</span></td>
-                  <td class="text-1 text-muted align-middle">Full Talktime + 100 SMS per day for 90 days.</td>
-                  <td class="align-middle"><button class="btn btn-sm btn-outline-primary shadow-none text-nowrap" type="submit">Recharge Now</button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+   <script>
+      $("#recharge33").submit(function(event) {
+         // event.preventDefault();
+         var post_url = $(this).attr("action");
+         var request_method = $(this).attr("method");
+         var form_data = $(this).serialize();
+         console.log(form_data)
+         // $('#rechargeModal').modal({backdrop: 'static', keyboard: false ,show: true })  
+
+         $.ajax({
+            url: post_url,
+            type: request_method,
+            dataType: "json",
+            data: form_data,
+         }).done(function(response) {
+            console.log(response);
+            if (response.error == false) {
+               $('#response').html(response.msg);
+            }
+            if (response.error == true) {
+               $('#response').html(response.msg);
+            }
+            if (response.form == true) {
+               $('#response').html(response.msg);
+            }
+         });
+      });
+   </script>

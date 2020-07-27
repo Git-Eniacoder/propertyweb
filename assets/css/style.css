@@ -1876,7 +1876,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 40%;
+top: 58%;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -1917,16 +1917,53 @@ margin-top: 2rem;
 
 } 
 
+.history-text{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.his-table{
+  margin-top: .2rem !important;
+}
+
+.wal_left_btn{
+  margin-right: .3rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.wal_side_links{
+  border: 1px solid red;
+  padding: 1rem 0;
+}
+
+.refer_wallet-btn{
+  padding: .8rem 0 .8rem 1.8rem !important;
+  
+}
+
+.wal_side_head{
+  font-size: 1.3rem;
+  padding-bottom: .5rem;
+}
 
 
+.wal_level{
+  background-color: rgb( 245, 57, 61 );
+  margin-right: .5rem;
+  border-radius: 2px;
+  color: #fff !important;
+}
 
 
 @media screen and (max-width: 520px) {
+
   #items {
     
-    top: 50%;
+    top: 37%;
     
     }
+
 .wallet-op{
 display: none;
 }

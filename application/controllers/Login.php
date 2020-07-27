@@ -60,7 +60,14 @@ class Login extends CI_Controller {
         $data['mobile_no'] = $this->input->post('pno');
         $data['password'] = $this->input->post('password');
         $check =  $this->db_login->user_check($data);
-            if(!is_null($check))
+            if($check["user_status"]!="ACTIVE")
+            {
+                $array = array(
+                    'error'   => true,
+                    'msg'     => '<p class="text-center text-danger">User is not active</p>'
+                );
+            }
+            else if(!is_null($check))
             {
                 $this->session->set_userdata("user_id",$check['mobile_no']);
                 $this->session->set_userdata("user_name",$check['user_name']);
