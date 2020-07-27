@@ -128,9 +128,8 @@
                 <div class="col-md-3">
                     <div class="card">
                         <h4>Field Wallet</h4>
-                        
-                        <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button>
-                        <button><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Ammount</button>
+                        <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button>     
+                        <button class="refer_wallet-btn"><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Ammount</button>     
                         <button><img src="../assets/img/trans.png" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfered</button>
                         <button><img src="../assets/img/tobank.webp" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfer to Bank</button>
                     </div>    
