@@ -344,7 +344,7 @@
                                     <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                  </div>
                                  <input type="number" name="amt" class="form-control" placeholder="Amount">
-                                 <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
+                                 <!-- <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan"> -->
                               </div>
                            </div>
                         </div>
@@ -408,10 +408,10 @@
                      </div>
                   </div>
                   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                     <div class="radi">
-                        <form action="">
-                           <label style="margin-right:1rem;"><input type="radio" name="optradio1" checked> Prepaid</label>
-                           <label style="margin-right:1rem;"><input type="radio" name="optradio1"> Postpaid</label>
+                  <div class="radi">
+                        <form id="recharge" action="<?php echo $url['wallet']; ?>/mobile" method="post">
+                           <label style="margin-right:1rem;"><input type="radio" value="prepaid" name="optradio" checked> Prepaid</label>
+                           <label><input type="radio" name="optradio" value="postpaid"> Postpaid</label>
                      </div>
                      <div class="inp">
                         <div class="row top">
@@ -420,12 +420,12 @@
                                  <div class="input-group-prepend">
                                     <span class="input-group-text">+91</span>
                                  </div>
-                                 <input type="number" class="form-control" placeholder="Mobile Number">
+                                 <input type="number" name="number" class="form-control" placeholder="Mobile Number">
                               </div>
                            </div>
                            <div class="col-md-6">
-                              <select class="sel">
-                                 <option selected disabled value="">Select circle</option>
+                              <select name="company" class="sel">
+                                 <option selected disabled value="">Select Company</option>
                                  <option value="AO">Airtel</option>
                                  <option value="B">BSNL</option>
                                  <option value="ID">Idea</option>
@@ -436,7 +436,7 @@
                         </div>
                         <div class="row">
                            <div class="col-md-6">
-                              <select class="sel" style="margin-bottom: 1rem;">
+                              <select name="circle" class="sel" style="margin-bottom: 1rem;">
                                  <option selected disabled value="">Select circle</option>
                                  <option value="Andhra Pradesh">Andhra Pradesh</option>
                                  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -481,8 +481,8 @@
                                  <div class="input-group-prepend">
                                     <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                  </div>
-                                 <input type="number" class="form-control" placeholder="Amount">
-                                 <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
+                                 <input type="number" name="amt" class="form-control" placeholder="Amount">
+                                 <!-- <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan"> -->
                               </div>
                            </div>
                         </div>
@@ -501,31 +501,31 @@
                </div>
             </div>
          </div>
-         <div class="col-md-6">
-            <div class="card">
-               <h4 style="text-align: left; margin-left: 1rem;">History</h4>
-               <div class="his-table table-responsive">
-                  <table class="table table-hover">
-                     <thead>
-                        <tr>
-                           <th class="history-text">Refered Person</th>
-                           <th class="history-text">Amount</th>
-                           <th class="history-text">Status</th>
-                           <th class="history-text">Date</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <?php foreach ($history as $value) { ?>
-                              <td><?php echo $value['user_id']; ?></td>
-                              <td>+<?php echo $value['payment_amount']; ?></td>
-                              <td class="text-success">success</td>
-                              <td><?php echo $value['payment_date']; ?></td>
-                           </tr>
-                        <?php } ?>
-                     </tbody>
-                  </table>
-               </div>
-            </div>
+         <div class="col-md-6 bg-white">
+      <div class="container">
+     <table class="table table-fluid" id="myTable">
+     <thead>
+     <tr class="bg-white"><th>Name</th><th>Email</th><th>Password</th></tr>
+     </thead>
+     <tbody>
+     <tr><td>Daniel Danny</td><td>danny.daniel@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Samuel</td><td>samuel@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Jack</td><td>jack@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Eureka</td><td>eureka@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Pinky</td><td>pinky@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Mishti</td><td>mishti@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Puneet</td><td>puneet@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Nick</td><td>nick@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Danika</td><td>danika@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Vishakha</td><td>vishakha@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Nitin</td><td>ni3@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Latika</td><td>latika@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Kaavya</td><td>kaavya@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Ishika</td><td>ishika@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Veronika</td><td>veronika@gmail.com</td><td>Pass1234</td></tr>
+     </tbody>
+     </table>
+     </div>
          </div>
       </div>
    </div>
@@ -583,6 +583,7 @@
 </script>
 
 
+
 <script>
 // $('#myModal').modal('show');
 $("#recharge").submit(function(event){
@@ -602,15 +603,22 @@ $.ajax({
     console.log(response);
     if(response.form){
       $('#response').html(response.msg);
-    }if(response.error == true){
+    }if(response.failed){
        $('.jq').css("background-color", "red");
       $('#myModal').modal('show');
       $('#rec').html(response.msg);
       $('#ico').html(response.ico);
       $('#he').html(response.he);
     }
-    if(response.error == false){
+    if(response.success){
        $('.jq').css("background-color", "#82ce34");
+      $('#myModal').modal('show');
+      $('#rec').html(response.msg);
+      $('#ico').html(response.ico);
+      $('#he').html(response.he);
+    }
+    if(response.pending){
+       $('.jq').css("background-color", "##ffc107");
       $('#myModal').modal('show');
       $('#rec').html(response.msg);
       $('#ico').html(response.ico);
@@ -622,4 +630,12 @@ $.ajax({
 });
 </script>
 
-        
+<script>
+     $(document).ready( function () {
+     $('#myTable').DataTable({
+      "bLengthChange": false,
+    "bFilter": false,
+    "bInfo": false,
+     });
+ } );
+     </script>
