@@ -101,7 +101,7 @@
             <div class="container">
                 <div class="contact_bx">
                     <div class="row justify-content-start">
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             <div class="tickect-bx">
                                 <div class="ticket_head">
                                     <h2 class="ticket_h2">Raise a Ticket</h2>
@@ -165,12 +165,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-6">
                             <div class="card" style="padding: 1rem;">
                                 <h4 style=" font-weight: 500;  margin-bottom:1rem; color: rgb( 245, 57, 61 ); ">Ticket History</h4>
                                 <hr>
                                 <div class="his-table table-responsive">
-                                <table id="example" class="table table-striped table-borderless" style="width:100%">
+                                <table id="example" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>ID</th>

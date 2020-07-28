@@ -250,19 +250,19 @@
                   <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
                      <li class="card nav-item">
                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                           <img class="ima rea" src="../assets/img/phone.png" alt="Mobile">
+                           <img class="ima rea" src="../assets/img/smartphoneicon.svg" alt="Mobile">
                            <p>Mobile</p>
                         </a>
                      </li>
                      <li class="card nav-item">
                         <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                           <img class="ima" src="../assets/img/dth.png" alt="Dth">
+                           <img class="ima" src="../assets/img/DTHicon_1.svg" alt="Dth">
                            <p>DTH</p>
                         </a>
                      </li>
                      <li class="card nav-item">
                         <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
-                           <img class="ima " src="../assets/img/datacard.png" alt="Datacard">
+                           <img class="ima " src="../assets/img/datacardicon.svg" alt="Datacard">
                            <p>DataCard</p>
                         </a>
                      </li>

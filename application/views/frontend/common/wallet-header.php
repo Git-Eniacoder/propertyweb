@@ -14,6 +14,9 @@
 
 
    <style>
+      .meu .mmvv{
+         display: none;
+      }
       .fa-user {
          border: 2px solid gray;
          border-radius: 50%;
@@ -171,7 +174,7 @@
                            <li class="  nav-item m-1 brk ">
                               |
                            </li>
-                           <li class="mx-2 nav-item">
+                           <!--li class="mx-2 nav-item">
                               <div class="dropdown user-flag">
                                  <img style=" margin-top: .3rem;" src="../assets/img/flag.png" width="30px" class=" dropbtn">
                                  <span class="caret"></span>
@@ -183,7 +186,7 @@
                            </li>
                            <li class="  nav-item m-1 brk ">
                               |
-                           </li>
+                           </li-->
                            <li class="nav-item">
                               <div class="dropdown user-fa">
                                  <i class="fa fa-user" aria-hidden="true"></i>
@@ -197,8 +200,15 @@
                            </li>
                         </ul>
                      </div>
+                     <div class="mmvv">
+                     <a title="Balance" href="#" class="nav-link">
+                                 <img src="../assets/img/Balance.png" width="25px" style="margin-right: 10px;"><?php echo $post["all_data"][0]->recharge_wallet; ?>.00
+                              </a>
+                     </div>
                   </nav>
                   <!-- navbar -->
+                  
+
                </div>
             </div>
             <!-- row -->
@@ -207,7 +217,7 @@
       </div>
       <!-- navbar area -->
    </header>
-
+   
 
 
 
@@ -229,9 +239,9 @@
 
    <div class="wallet-op">
       <div class="container">
-         <div class="row wallet_options">
+         <div class="row wallet_options justify-content-center">
             <div class="col-md-3 wallet_op_bx">
-               <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
+               <center><span class="wallet_amt" style="color: white; margin-top:5px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
                <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn active"><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
             </div>
             <div class="col-md-3 wallet_op_bx">
