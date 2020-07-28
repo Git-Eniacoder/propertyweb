@@ -121,8 +121,8 @@
                <div class="item"><a href="refer"><img src="../assets/img/refer.svg" width="19px" style="margin-right: 5px;" >Refer And Earn</a></div>
                <div class="item"><a href="field"><img src="../assets/img/Field Expense.png" width="19px" style="margin-right: 5px;" > Field Expenses</a></div>
                <div class="item"><a href="addmoney"><img src="../assets/img/Add-Money.svg" width="19px" style="margin-right: 5px;" >Add Money</a></div>
-               <div class="item"><a href="addmoney"><img src="../assets/img/Add-Money.svg" width="19px" style="margin-right: 5px;" >Raise a Ticket</a></div>
-               <div class="item"><a href="addmoney"><img src="../assets/img/Add-Money.svg" width="19px" style="margin-right: 5px;" >Ticket Status</a></div>
+               <div class="item"><a href="ticket"><img src="../assets/img/ticket .svg" width="19px" style="margin-right: 5px;" >Raise a Ticket</a></div>
+              
                <hr class="style1">
 
                <div class="item"><a href="<?php echo $url['support']; ?>"><i class="fa fa-envelope" style="color: white;" aria-hidden="true" width="20px" style="margin-right: 5px;"></i> Support</a></div>
@@ -229,22 +229,23 @@
 
    <div class="wallet-op">
       <div class="container">
-         <div class="row">
-            <div class="col-md-3">
-               <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
-               <a href="<?php echo $url['wallet']; ?>"><button class="active"><img class="mx-2" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
+         <div class="row wallet_options">
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
+               <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn active"><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
             </div>
-            <div class="col-md-3">
-               <center><span style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
-               <a href="<?php echo $url['refer-wallet']; ?>"><button><img class="mx-2" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
+               <a href="<?php echo $url['refer-wallet']; ?>"><button  class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
             </div>
-            <div class="col-md-3">
-               <center><span style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
-               <a href="<?php echo $url['field-wallet']; ?>"><button><img class="mx-2" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
+               <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
             </div>
-            <div class="col-md-3">
-               <center><img src="../assets/img/Add-Money.svg" width="25px"></center>
-               <a href="addmoney"><button>Add Money</button></a>
+
+            <div class="col-md-3 wallet_op_bx wallet_op_bx-money">
+               <center><img src="../assets/img/Add-Money.svg" width="25px" class=" wallet_mob_img"></center>
+               <a href="addmoney"><button class="wallet_op_btn">Add Money</button ></a>
             </div>
          </div>
       </div>
