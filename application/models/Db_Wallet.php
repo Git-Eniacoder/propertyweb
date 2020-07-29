@@ -62,6 +62,14 @@
         public function history_rec($data){
            return $this->db->insert('recharge_history',$data);
         }
+        public function check_balance($id,$amount){
+            $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
+            if(intval($balance['recharge_wallet']) >= intval($amount)){
+                return true;
+            }else{
+                return false;
+            }
+        }
     }
 
 

@@ -28,21 +28,25 @@ class Recharge extends My_Controller {
         $this->load->view('frontend/wallet/recharge',$this->data);
         $this->load->view('frontend/common/footer',$this->data);
     }
-    public function mobile(){
+    public function mobile($id=null){
+        if(!$id){
+            $this->form_validation->set_rules('circle', 'Circle', 'required');
+        }
         $this->form_validation->set_rules('amt', 'Amount', 'required');
-        $this->form_validation->set_rules('circle', 'Circle', 'required');
         $this->form_validation->set_rules('number', 'Number', 'required');
         $this->form_validation->set_rules('company', 'Operator', 'required');
         
         if ($this->form_validation->run()) {
             $data['recharge_amount'] = $this->input->post('amt');
             $data['trans_id'] = 'HRI'.date("dmYis").rand(1,9);
+            if($this->input->post('circle')){
             $data['recharge_circle'] = $this->input->post('circle');
+            }
             $data['recharge_no'] = $this->input->post('number');
             $data['recharge_opt'] = $this->input->post('company');
             $data['user_id']  = $this->session->userdata("user_id");
             $data['user_name']  = $this->session->userdata("user_name");
-
+        if($this->db_wallet->check_balance($this->session->userdata("user_id"),$data['recharge_amount'])){
             // $userid = urlencode('7392900007');
             // $pass = urlencode('693655');
             // $numbers = urlencode($data['recharge_no']);
@@ -94,7 +98,15 @@ class Recharge extends My_Controller {
                     'ico'   => '<i class="fa fa-times"></i>',
                 );
             }
+        }else{
+            $array = array(
+                'failed'   => true,
+                'msg'   => 'Balance is Shorter',
+                'he'    => 'Balance',
+                'ico'   => '<i class="fa fa-times"></i>',
+            );
         }
+         }
             else {
             $array = array(
                'failed'   => true,
@@ -108,7 +120,13 @@ class Recharge extends My_Controller {
            
         
     }
-
+    public function check_balance($id){
+        if($this->db_wallet->check_balance($this->session->userdata("user_id"),$id)){
+            echo "yes";
+        }else{
+            echo "no";
+        }
+    }
     public function find_level_and_points($total_count){
         if($total_count<pow(6,1)){
             if($total_count==0)

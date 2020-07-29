@@ -271,7 +271,7 @@
                <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                      <div class="radi">
-                        <form id="recharge" action="<?php echo $url['wallet']; ?>/mobile" method="post">
+                        <form id="dth" action="<?php echo $url['wallet']; ?>/mobile" method="post">
                            <label style="margin-right:1rem;"><input type="radio" value="prepaid" name="optradio" checked> Prepaid</label>
                            <label><input type="radio" name="optradio" value="postpaid"> Postpaid</label>
                      </div>
@@ -363,9 +363,9 @@
                   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                      <div class="row">
                         <div class="col-md-6">
-                           <form action="">
+                           <form id="dth" action="<?php echo $url['wallet']; ?>/mobile/1" method="post">
                               <div class="inp">
-                                 <select class="sel" required>
+                                 <select name="company" class="sel">
                                     <option selected disabled value="">Select operator</option>
                                     <option value="AT">AIRTEL DIGITAL TV</option>
                                     <option value="DT">DISH TV</option>
@@ -378,7 +378,7 @@
                         </div>
                         <div class="col-md-6">
                            <div class="tt">
-                              <input type="text" placeholder="Subscriber id">
+                              <input name="number" type="text" placeholder="Subscriber id">
                            </div>
                         </div>
                      </div>
@@ -389,7 +389,7 @@
                                  <div class="input-group-prepend">
                                     <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                  </div>
-                                 <input type="number" class="form-control" placeholder="Amount">
+                                 <input type="number" name="amt" class="form-control" placeholder="Amount">
                               </div>
                            </div>
                         </div>
@@ -409,7 +409,7 @@
                   </div>
                   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                   <div class="radi">
-                        <form id="recharge" action="<?php echo $url['wallet']; ?>/mobile" method="post">
+                        <form id="datacard" action="<?php echo $url['wallet']; ?>/mobile" method="post">
                            <label style="margin-right:1rem;"><input type="radio" value="prepaid" name="optradio" checked> Prepaid</label>
                            <label><input type="radio" name="optradio" value="postpaid"> Postpaid</label>
                      </div>
@@ -586,22 +586,22 @@
 
 <script>
 // $('#myModal').modal('show');
-$("#recharge").submit(function(event){
+$("#recharge,#datacard,#dth").submit(function(event){
 event.preventDefault();
 var post_url = $(this).attr("action"); 
 var request_method = $(this).attr("method"); 
 var form_data = $(this).serialize(); 
-console.log(form_data)
+console.log(form_data)  
 $('#rechargeModal').modal('show')  
-
+$('.modal-backdrop').show();
 $.ajax({
     url : post_url,
     type: request_method,
     dataType:"json",
     data : form_data, 
 }).done(function(response){ 
-      $('.modal').hide();
-      $('.modal-backdrop').remove();
+   $('.modal').modal('hide');
+      $('.modal-backdrop').hide();
     if(response.failed){
        $('.jq').css("background-color", "red");
       $('#myModal').modal('show');
