@@ -156,34 +156,32 @@
         </div>
       </div>
       <div class="col-md-9 right">
-        <div class="card">
-          <h4 class="wal_side_head" style="text-align: left; margin-left: 1rem;">History</h4>
-          <div class="his-table table-responsive">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th class="history-text">Transaction</th>
-                  <th class="history-text">Ammount</th>
-                  <th class="history-text">Status</th>
-                  <th class="history-text">Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach ($history as $value) {
+      <div class="container bg-white">
+            <table class="table table-fluid" id="myTable">
+         <thead>
+               <tr class="bg-white">
+                  <th>Refered Person</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+               </tr>
+         </thead>
+     <tbody>
+     <?php foreach ($history as $value) {
                   if ($value['referal_field'] <= 0) {
                     break;
                   } ?>
-                  <tr>
-                    <td><?php echo $value['user_id']; ?></td>
+               <tr>
+               <td><?php echo $value['user_id']; ?></td>
                     <td>+<?php echo $value['referal_field']; ?></td>
                     <td class="text-success">success</td>
                     <td><?php echo $value['payment_date']; ?></td>
-                  </tr>
-                <?php } ?>
-              </tbody>
-            </table>
-          </div>
-        </div>
+               </tr>
+               <?php } ?>
+     </tbody>
+     </table>
+     </div>
+    
       </div>
     </div>
   </div>
@@ -221,3 +219,14 @@
     }
   });
 </script>
+<script>
+     $(document).ready( function () {
+     $('#myTable').DataTable({
+      "bLengthChange": false,
+    "bFilter": false,
+    "bInfo": false,
+    "pagingType": "simple",
+    "pageLength": 5,
+     });
+ } );
+     </script>

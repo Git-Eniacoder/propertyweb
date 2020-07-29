@@ -94,7 +94,7 @@
    .user-fa {
       padding: 3px 0;
    }
-
+  
    .user-flag {
       padding: 2px 0;
    }
@@ -502,9 +502,9 @@
                </div>
             </div>
          </div>
-         <div class="col-md-6 bg-white">
-      <div class="container">
-     <table class="table table-fluid" id="myTable">
+         <div class="col-md-6">
+               <div class="container bg-white">
+            <table class="table table-fluid" id="myTable">
          <thead>
                <tr class="bg-white">
                   <th>Transaction Id</th>
