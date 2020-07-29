@@ -129,13 +129,13 @@
    <div class="container">
       <div class="row">
          <div class="col-md-2">
-            <div class="card">
+            <div class="card" style="margin-bottom: 2rem;">
                <h4 style="text-align: left; margin-left: 1rem;">Add Money</h4>
                <button>Buy plan 960</button>
             </div>
          </div>
          <div class="col-md-4">
-            <div class="card">
+            <div class="card" style="margin-bottom: 2rem;">
                <h4>Scan Qr code</h4>
                <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
                <div class="card-body py-0">
@@ -146,7 +146,7 @@
             </div>
          </div>
          <div class="col-md-6">
-            <div class="card">
+            <div class="card" style="margin-bottom: 2rem;">
                <h4 style="text-align: left; margin-left: 1rem;">History</h4>
                <div class="his-table table-responsive">
                   <table class="table table-hover">

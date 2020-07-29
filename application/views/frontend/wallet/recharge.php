@@ -1,8 +1,87 @@
 <style>
-   .fa-user {
-      border: 2px solid gray;
-      border-radius: 50%;
-      padding: 4px 6px;
+/* modal  */
+
+.modal-confirm {		
+	color: #636363;
+	width: 325px;
+	font-size: 14px;
+}
+.modal-confirm .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-confirm .modal-header {
+	border-bottom: none;   
+	position: relative;
+}
+.modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -15px;
+}
+.modal-confirm .form-control, .modal-confirm .btn {
+	min-height: 40px;
+	border-radius: 3px; 
+}
+.modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}	
+.modal-confirm .modal-footer {
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 13px;
+}	
+.modal-confirm .icon-box {
+	color: #fff;		
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -70px;
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	z-index: 9;
+	background: #82ce34;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-confirm .icon-box i {
+	font-size: 58px;
+	position: relative;
+	top: 3px;
+}
+.modal-confirm.modal-dialog {
+	margin-top: 80px;
+}
+.modal-confirm .btn {
+	color: #fff;
+	border-radius: 4px;
+	background: #82ce34;
+	text-decoration: none;
+	transition: all 0.4s;
+	line-height: normal;
+	border: none;
+}
+.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+	background: #6fb32b;
+	outline: none;
+}
+.trigger-btn {
+	display: inline-block;
+	margin: 100px auto;
+}
+
+/* end modal  */
+   .fa-user{
+   border: 2px solid gray;
+   border-radius: 50%;
+   padding: 4px 6px;
    }
 
    .plans {
@@ -171,19 +250,19 @@
                   <ul class=" row nav nav-pills " id="pills-tab" role="tablist">
                      <li class="card nav-item">
                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                           <img class="ima rea" src="../assets/img/phone.png" alt="Mobile">
+                           <img class="ima rea" src="../assets/img/smartphoneicon.svg" alt="Mobile">
                            <p>Mobile</p>
                         </a>
                      </li>
                      <li class="card nav-item">
                         <a class="nav-link " id="pills-home-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                           <img class="ima" src="../assets/img/dth.png" alt="Dth">
+                           <img class="ima" src="../assets/img/DTHicon_1.svg" alt="Dth">
                            <p>DTH</p>
                         </a>
                      </li>
                      <li class="card nav-item">
                         <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
-                           <img class="ima " src="../assets/img/datacard.png" alt="Datacard">
+                           <img class="ima " src="../assets/img/datacardicon.svg" alt="Datacard">
                            <p>DataCard</p>
                         </a>
                      </li>
@@ -265,7 +344,7 @@
                                     <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                  </div>
                                  <input type="number" name="amt" class="form-control" placeholder="Amount">
-                                 <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
+                                 <!-- <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan"> -->
                               </div>
                            </div>
                         </div>
@@ -329,10 +408,10 @@
                      </div>
                   </div>
                   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                     <div class="radi">
-                        <form action="">
-                           <label style="margin-right:1rem;"><input type="radio" name="optradio1" checked> Prepaid</label>
-                           <label style="margin-right:1rem;"><input type="radio" name="optradio1"> Postpaid</label>
+                  <div class="radi">
+                        <form id="recharge" action="<?php echo $url['wallet']; ?>/mobile" method="post">
+                           <label style="margin-right:1rem;"><input type="radio" value="prepaid" name="optradio" checked> Prepaid</label>
+                           <label><input type="radio" name="optradio" value="postpaid"> Postpaid</label>
                      </div>
                      <div class="inp">
                         <div class="row top">
@@ -341,12 +420,12 @@
                                  <div class="input-group-prepend">
                                     <span class="input-group-text">+91</span>
                                  </div>
-                                 <input type="number" class="form-control" placeholder="Mobile Number">
+                                 <input type="number" name="number" class="form-control" placeholder="Mobile Number">
                               </div>
                            </div>
                            <div class="col-md-6">
-                              <select class="sel">
-                                 <option selected disabled value="">Select circle</option>
+                              <select name="company" class="sel">
+                                 <option selected disabled value="">Select Company</option>
                                  <option value="AO">Airtel</option>
                                  <option value="B">BSNL</option>
                                  <option value="ID">Idea</option>
@@ -357,7 +436,7 @@
                         </div>
                         <div class="row">
                            <div class="col-md-6">
-                              <select class="sel" style="margin-bottom: 1rem;">
+                              <select name="circle" class="sel" style="margin-bottom: 1rem;">
                                  <option selected disabled value="">Select circle</option>
                                  <option value="Andhra Pradesh">Andhra Pradesh</option>
                                  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -402,8 +481,8 @@
                                  <div class="input-group-prepend">
                                     <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                  </div>
-                                 <input type="number" class="form-control" placeholder="Amount">
-                                 <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan">
+                                 <input type="number" name="amt" class="form-control" placeholder="Amount">
+                                 <!-- <input type="button" data-target="#view-plans" data-toggle="modal" value="Browse plan"> -->
                               </div>
                            </div>
                         </div>
@@ -422,94 +501,141 @@
                </div>
             </div>
          </div>
-         <div class="col-md-6">
-            <div class="card">
-               <h4 style="text-align: left; margin-left: 1rem;">History</h4>
-               <div class="his-table table-responsive">
-                  <table class="table table-hover">
-                     <thead>
-                        <tr>
-                           <th class="history-text">Refered Person</th>
-                           <th class="history-text">Amount</th>
-                           <th class="history-text">Status</th>
-                           <th class="history-text">Date</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <?php foreach ($history as $value) { ?>
-                           <tr>
-                              <td><?php echo $value['user_id']; ?></td>
-                              <td>+<?php echo $value['payment_amount']; ?></td>
-                              <td class="text-success">success</td>
-                              <td><?php echo $value['payment_date']; ?></td>
-                           </tr>
-                        <?php } ?>
-                     </tbody>
-                  </table>
-               </div>
-            </div>
+         <div class="col-md-6 bg-white">
+      <div class="container">
+     <table class="table table-fluid" id="myTable">
+     <thead>
+     <tr class="bg-white"><th>Name</th><th>Email</th><th>Password</th></tr>
+     </thead>
+     <tbody>
+     <tr><td>Daniel Danny</td><td>danny.daniel@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Samuel</td><td>samuel@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Jack</td><td>jack@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Eureka</td><td>eureka@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Pinky</td><td>pinky@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Mishti</td><td>mishti@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Puneet</td><td>puneet@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Nick</td><td>nick@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Danika</td><td>danika@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Vishakha</td><td>vishakha@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Nitin</td><td>ni3@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Latika</td><td>latika@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Kaavya</td><td>kaavya@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Ishika</td><td>ishika@gmail.com</td><td>Pass1234</td></tr>
+     <tr><td>Veronika</td><td>veronika@gmail.com</td><td>Pass1234</td></tr>
+     </tbody>
+     </table>
+     </div>
          </div>
       </div>
    </div>
-   <script>
-      var sidebarBox = document.querySelector('#box');
-      var sidebarBtn = document.querySelector('#btn');
-      var pageWrapper = document.querySelector('#main-content');
+</div>
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div id="ico" class="icon-box jq">
+            
+				</div>				
+				<h4 id="he" class="modal-title w-100"></h4>	
+			</div>
+			<div class="modal-body">
+				<p id="rec" class="text-center"></p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block jq" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div> 
 
-      sidebarBtn.addEventListener('click', function(event) {
+<script>
+   var sidebarBox = document.querySelector('#box');
+   var sidebarBtn = document.querySelector('#btn');
+   var pageWrapper = document.querySelector('#main-content');
+   
+   sidebarBtn.addEventListener('click', function(event) {
+   
+           if (this.classList.contains('active')) {
+                   this.classList.remove('active');
+                   sidebarBox.classList.remove('active');
+           } else {
+                   this.classList.add('active');
+                   sidebarBox.classList.add('active');
+           }
+   });
+   
+   pageWrapper.addEventListener('click', function(event) {
+   
+           if (sidebarBox.classList.contains('active')) {
+                   sidebarBtn.classList.remove('active');
+                   sidebarBox.classList.remove('active');
+           }
+   });
+   
+   window.addEventListener('keydown', function(event) {
+   
+           if (sidebarBox.classList.contains('active') && event.keyCode === 27) {
+                   sidebarBtn.classList.remove('active');
+                   sidebarBox.classList.remove('active');
+           }
+   });
+</script>
 
-         if (this.classList.contains('active')) {
-            this.classList.remove('active');
-            sidebarBox.classList.remove('active');
-         } else {
-            this.classList.add('active');
-            sidebarBox.classList.add('active');
-         }
-      });
-
-      pageWrapper.addEventListener('click', function(event) {
-
-         if (sidebarBox.classList.contains('active')) {
-            sidebarBtn.classList.remove('active');
-            sidebarBox.classList.remove('active');
-         }
-      });
-
-      window.addEventListener('keydown', function(event) {
-
-         if (sidebarBox.classList.contains('active') && event.keyCode === 27) {
-            sidebarBtn.classList.remove('active');
-            sidebarBox.classList.remove('active');
-         }
-      });
-   </script>
 
 
-   <script>
-      $("#recharge33").submit(function(event) {
-         // event.preventDefault();
-         var post_url = $(this).attr("action");
-         var request_method = $(this).attr("method");
-         var form_data = $(this).serialize();
-         console.log(form_data)
-         // $('#rechargeModal').modal({backdrop: 'static', keyboard: false ,show: true })  
+<script>
+// $('#myModal').modal('show');
+$("#recharge").submit(function(event){
+event.preventDefault();
+var post_url = $(this).attr("action"); 
+var request_method = $(this).attr("method"); 
+var form_data = $(this).serialize(); 
+console.log(form_data)
+// $('#rechargeModal').modal({backdrop: 'static', keyboard: false ,show: true })  
 
-         $.ajax({
-            url: post_url,
-            type: request_method,
-            dataType: "json",
-            data: form_data,
-         }).done(function(response) {
-            console.log(response);
-            if (response.error == false) {
-               $('#response').html(response.msg);
-            }
-            if (response.error == true) {
-               $('#response').html(response.msg);
-            }
-            if (response.form == true) {
-               $('#response').html(response.msg);
-            }
-         });
-      });
-   </script>
+$.ajax({
+    url : post_url,
+    type: request_method,
+    dataType:"json",
+    data : form_data, 
+}).done(function(response){ 
+    console.log(response);
+    if(response.form){
+      $('#response').html(response.msg);
+    }if(response.failed){
+       $('.jq').css("background-color", "red");
+      $('#myModal').modal('show');
+      $('#rec').html(response.msg);
+      $('#ico').html(response.ico);
+      $('#he').html(response.he);
+    }
+    if(response.success){
+       $('.jq').css("background-color", "#82ce34");
+      $('#myModal').modal('show');
+      $('#rec').html(response.msg);
+      $('#ico').html(response.ico);
+      $('#he').html(response.he);
+    }
+    if(response.pending){
+       $('.jq').css("background-color", "##ffc107");
+      $('#myModal').modal('show');
+      $('#rec').html(response.msg);
+      $('#ico').html(response.ico);
+      $('#he').html(response.he);
+    }
+   
+    
+});
+});
+</script>
+
+<script>
+     $(document).ready( function () {
+     $('#myTable').DataTable({
+      "bLengthChange": false,
+    "bFilter": false,
+    "bInfo": false,
+     });
+ } );
+     </script>

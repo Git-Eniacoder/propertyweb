@@ -46,42 +46,57 @@ class Recharge extends My_Controller {
             $userid = urlencode('7392900007');
             $pass = urlencode('693655');
             $numbers = urlencode($data['recharge_amount']);
-            $opt = urlencode('wkdjkdw');
+            $opt = urlencode($data['recharge_opt']);
             $amt =  urlencode($data['recharge_amount']); 
 
-            $data = 'userid=' . $userid . '&pass=' . $pass . "&mob=" . $numbers . "&opt=" . $opt.'&amt='.$amt.'&agentid='.$data['trans_id'].'&fmt=json';
+            $api = 'userid=' . $userid . '&pass=' . $pass . "&mob=" . $numbers . "&opt=" . $opt.'&amt='.$amt.'&agentid='.$data['trans_id'].'&fmt=json';
 
-            $ch = curl_init('http://www.login.imwallet.in/API/APIService.aspx?' . $data);
+            $ch = curl_init('http://www.login.imwallet.in/API/APIService.aspx?' . $api);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             $response = curl_exec($ch);
             curl_close($ch);
-            print_r($response);
+            
             $feed = json_decode($response);
+            
             if($feed->STATUS == 'Success'){
-                if($this->db_wallet->update_balance(7737328864,$data['recharge_amount'])){
+                if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['recharge_amount'])){
                     $data['recharge_status'] = $feed->STATUS;
                     $data['recharge_msg'] = $feed->MSG;
                     $data['imWallet_id'] = $feetd->OPID;
-                $this->db_wallet->recharge_history($data);
+                $this->db_wallet->history_rec($data);
                 $array = array(
-                    'error'   => false,
+                    'success'   => true,
                     'msg'   => $feed->MSG,
+                    'he'    => 'Success!',
+                    'ico'   => ' <i class="fa fa-check"></i>',
                 );
                 }
-            }else{
+            }if($feed->STATUS == 'Request Accepted'){
                 $data['recharge_status'] = $feed->STATUS;
                 $data['recharge_msg'] = $feed->MSG;
                 $data['imWallet_id'] = $feed->OPID;
+                $this->db_wallet->history_rec($data);
                 $array = array(
-                    'error'   => true,
+                    'pending'   => true,
                     'msg'   => $feed->MSG,
+                    'he'    => 'Pending!',
+                    'ico'   => '<i class="fa-clock-o"></i>',
+                );
+            }
+            else{
+
+                $array = array(
+                    'failed'   => true,
+                    'msg'   => $feed->MSG,
+                    'he'    => 'Failed!',
+                    'ico'   => '<i class="fa fa-times"></i>',
                 );
             }
         }
             else {
             $array = array(
                 'form'   => true,
-                'msg'   => validation_errors(),
+                'msg'   =>  '<span class="text-danger">Please fill all fields</span>',
             );
         }
         
