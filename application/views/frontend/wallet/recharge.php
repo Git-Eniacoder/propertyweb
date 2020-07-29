@@ -592,7 +592,7 @@ var post_url = $(this).attr("action");
 var request_method = $(this).attr("method"); 
 var form_data = $(this).serialize(); 
 console.log(form_data)
-// $('#rechargeModal').modal({backdrop: 'static', keyboard: false ,show: true })  
+$('#rechargeModal').modal('show')  
 
 $.ajax({
     url : post_url,
@@ -600,25 +600,25 @@ $.ajax({
     dataType:"json",
     data : form_data, 
 }).done(function(response){ 
-    console.log(response);
-    if(response.form){
-      $('#response').html(response.msg);
-    }if(response.failed){
+      $('.modal').hide();
+      $('.modal-backdrop').remove();
+    if(response.failed){
        $('.jq').css("background-color", "red");
       $('#myModal').modal('show');
       $('#rec').html(response.msg);
       $('#ico').html(response.ico);
       $('#he').html(response.he);
     }
-    if(response.success){
+    
+    else if(response.success){
        $('.jq').css("background-color", "#82ce34");
       $('#myModal').modal('show');
       $('#rec').html(response.msg);
       $('#ico').html(response.ico);
       $('#he').html(response.he);
     }
-    if(response.pending){
-       $('.jq').css("background-color", "##ffc107");
+    else if(response.pending){
+       $('.jq').css("background-color", "#ffc107");
       $('#myModal').modal('show');
       $('#rec').html(response.msg);
       $('#ico').html(response.ico);

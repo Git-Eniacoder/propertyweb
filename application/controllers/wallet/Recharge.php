@@ -36,42 +36,44 @@ class Recharge extends My_Controller {
         
         if ($this->form_validation->run()) {
             $data['recharge_amount'] = $this->input->post('amt');
-            $data['trans_id'] = date("dmYis").rand(1,9);
+            $data['trans_id'] = 'HRI'.date("dmYis").rand(1,9);
             $data['recharge_circle'] = $this->input->post('circle');
             $data['recharge_no'] = $this->input->post('number');
             $data['recharge_opt'] = $this->input->post('company');
             $data['user_id']  = $this->session->userdata("user_id");
             $data['user_name']  = $this->session->userdata("user_name");
 
-            $userid = urlencode('7392900007');
-            $pass = urlencode('693655');
-            $numbers = urlencode($data['recharge_amount']);
-            $opt = urlencode($data['recharge_opt']);
-            $amt =  urlencode($data['recharge_amount']); 
+            // $userid = urlencode('7392900007');
+            // $pass = urlencode('693655');
+            // $numbers = urlencode($data['recharge_no']);
+            // $opt = urlencode($data['recharge_opt']);
+            // $amt =  urlencode($data['recharge_amount']); 
 
-            $api = 'userid=' . $userid . '&pass=' . $pass . "&mob=" . $numbers . "&opt=" . $opt.'&amt='.$amt.'&agentid='.$data['trans_id'].'&fmt=json';
+            // $api = 'userid=' . $userid . '&pass=' . $pass . "&mob=" . $numbers . "&opt=" . $opt.'&amt='.$amt.'&agentid='.$data['trans_id'].'&fmt=json';
 
-            $ch = curl_init('http://www.login.imwallet.in/API/APIService.aspx?' . $api);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            $response = curl_exec($ch);
-            curl_close($ch);
+            // $ch = curl_init('http://www.login.imwallet.in/API/APIService.aspx?' . $api);
+            // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            // $response = curl_exec($ch);
+            // curl_close($ch);
             
-            $feed = json_decode($response);
+            $feed = json_decode('{"STATUS":"Success","MOBILE":"8949715939","AMOUNT":"50","RPID":"2072822391582368C4","AGENTID":"HRI49036","OPID":"BR0004ZHL2X6","BAL":494834.19,"MSG":"Success"}');
             
             if($feed->STATUS == 'Success'){
                 if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['recharge_amount'])){
                     $data['recharge_status'] = $feed->STATUS;
                     $data['recharge_msg'] = $feed->MSG;
-                    $data['imWallet_id'] = $feetd->OPID;
+                    $data['imWallet_id'] = $feed->OPID;
                 $this->db_wallet->history_rec($data);
                 $array = array(
                     'success'   => true,
                     'msg'   => $feed->MSG,
                     'he'    => 'Success!',
-                    'ico'   => ' <i class="fa fa-check"></i>',
+                    'ico'   => '<i class="fa fa-check"></i>',
                 );
                 }
-            }if($feed->STATUS == 'Request Accepted'){
+                
+            }
+            else if($feed->STATUS == 'Request Accepted'){
                 $data['recharge_status'] = $feed->STATUS;
                 $data['recharge_msg'] = $feed->MSG;
                 $data['imWallet_id'] = $feed->OPID;
@@ -80,7 +82,7 @@ class Recharge extends My_Controller {
                     'pending'   => true,
                     'msg'   => $feed->MSG,
                     'he'    => 'Pending!',
-                    'ico'   => '<i class="fa-clock-o"></i>',
+                    'ico'   => '<i class="fa fa-spinner"></i>',
                 );
             }
             else{
@@ -88,15 +90,17 @@ class Recharge extends My_Controller {
                 $array = array(
                     'failed'   => true,
                     'msg'   => $feed->MSG,
-                    'he'    => 'Failed!',
+                    'he'    => $data['recharge_no'],
                     'ico'   => '<i class="fa fa-times"></i>',
                 );
             }
         }
             else {
             $array = array(
-                'form'   => true,
-                'msg'   =>  '<span class="text-danger">Please fill all fields</span>',
+               'failed'   => true,
+                    'msg'   => validation_errors(),
+                    'he'    => 'Fields Error',
+                    'ico'   => '<i class="fa fa-times"></i>',
             );
         }
         
