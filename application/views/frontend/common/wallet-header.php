@@ -244,7 +244,7 @@
             </div>
 
             <div class="col-md-3 wallet_op_bx wallet_op_bx-money">
-               <center><img src="../assets/img/Add-Money.svg" width="25px" class=" wallet_mob_img"></center>
+               <center><img src="../assets/img/Add-Money.svg" width="25px" class="wallet_mob_img"></center>
                <a href="addmoney"><button class="wallet_op_btn">Add Money</button ></a>
             </div>
          </div>

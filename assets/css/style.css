@@ -985,7 +985,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 .sub-main{
   padding-top: 6rem;
   background-color: #fff;
-  min-height: 45rem;
+  /* min-height: 114rem; */
 }
 
 .wal-main-icon{
@@ -2085,6 +2085,227 @@ background-color: #fff;
   border-top: none;
 }
 /* wallet new end */
+
+
+
+
+
+
+/* New Home CSS */
+
+.nav {
+  height: 3rem;
+}
+
+.hero {
+  height: 35rem;
+  background-color: #eee;
+}
+
+.hero_head {
+  padding: 3rem 0 1rem 0;
+}
+
+.hero_head_p {
+  font-size: 1.2rem;
+  word-spacing: .1rem;
+}
+
+.hero_search {
+  padding: 1.2rem 0;
+}
+
+.hero_inputs {
+  padding: 1rem !important;
+  border: none !important;
+  border: 1px solid #eee !important;
+  width: 12rem !important;
+  margin: 0rem !important;
+  font-size: 1.1rem !important;
+  color: #797979 !important;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hero_search_bx {
+  width: 73%;
+  margin: 0 auto;
+}
+
+.hero_post_bx {
+  width: 35%;
+  margin: 2.7rem auto;
+  font-size: 1.1rem;
+}
+
+.hero_inputs_btn {
+  border: none;
+  background-color: crimson;
+  color: #fff;
+  padding: .9rem;
+  width: 8rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.hero_post_bx_btn {
+  background-color: crimson;
+  color: #fff;
+  font-size: 1.3rem !important;
+  margin: 2.5rem 0;
+  width: 20rem;
+}
+
+.post_line {
+  width: 20%;
+  height: 1px;
+  background-color: #868585;
+}
+
+.fg {
+  padding: 0 !important;
+}
+
+.hero_input {
+  padding: .8rem;
+  border: none;
+  border: 1px solid #dfdddd;
+}
+
+.hero_btn {
+  padding: .7rem;
+  width: 70%;
+  border: none;
+  margin-left: .5rem;
+  background-color: crimson;
+  color: #fff;
+}
+
+.hero_service {
+  padding: 1rem 0;
+}
+
+.hero_service_bx {
+  background-color: #fff;
+  border: 1px solid #c9c7c7;
+  position: relative;
+}
+
+.ser {
+  padding: .5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_ser_img {
+  width: 3.3rem;
+}
+
+.hero_ser_text {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.hero_ser_link {
+  text-decoration: none;
+  color: #5e5e5e;
+}
+
+.home_subhead {
+  width: 100%;
+  margin: 4rem auto;
+}
+
+.home_subhead_text {
+  font-size: 1.7rem;
+  color: crimson;
+}
+
+.home_subhead_line {
+  border: 1px solid #a0a0a0;
+}
+
+.home_row_col {
+  position: relative;
+}
+
+.property_price {
+  position: absolute;
+  top: 9rem;
+  left: 1rem;
+  padding-left: .3rem;
+  padding-right: .3rem;
+  height: 1.5rem;
+  background-color: crimson;
+  color: #fff;
+}
+
+.property_text {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.property_text_person {
+  font-size: .9rem;
+  color: #747272;
+  margin: 0;
+}
+
+.property_text_city {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.trending {
+  margin: 7rem 0 6rem 0;
+}
+
+.prop_loc {
+  padding-right: .1rem;
+}
+
+.call_prop {
+  width: 1.8rem;
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    min-height: 68rem;
+  }
+  .hero_inputs {
+    width: 90% !important;
+  }
+  .hero_post_bx {
+    width: 98%;
+    margin: 0 .2rem;
+  }
+  .hero_inputs_btn {
+    width: 89%;
+  }
+  .hero_head_h1 {
+    font-size: 1.8rem;
+  }
+  .hero_head_p {
+    font-size: 1.5rem;
+  }
+  .hero_service {
+    padding: 2rem 0;
+    margin: 0 1.3rem;
+  }
+  .property_card {
+    margin: 1.2rem 0;
+  }
+  .trending {
+    margin: 1rem;
+  }
+  .home_subhead {
+    margin: 3rem 0;
+  }
+}
+/*# sourceMappingURL=wallet.css.map */
+
 
 
 
