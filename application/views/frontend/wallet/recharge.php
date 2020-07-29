@@ -641,6 +641,8 @@ $.ajax({
       "bLengthChange": false,
     "bFilter": false,
     "bInfo": false,
+    "pagingType": "simple",
+    "pageLength": 5,
      });
  } );
      </script>
