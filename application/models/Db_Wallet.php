@@ -44,7 +44,7 @@
         return $this->db->where('referal_id',$id)->get('payment_history')->result_array();
         }
         public function recharge_history($id){
-            return $this->db->where('user_id',$id)->get('payment_history')->result_array();
+            return $this->db->where('user_id',$id)->get('recharge_history')->result_array();
         }
         public function update_balance($id,$amt){
             $this->db->trans_start();
