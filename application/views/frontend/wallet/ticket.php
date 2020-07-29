@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 
+
 <?php
   if(isset($_GET["id"]))
   {
@@ -24,7 +25,9 @@
     }
 </style>
 <style>
-
+ .contact{
+    background-color:rgba(233, 230, 230, 0.7);
+ }
 .vie{
     width: 100%;
     height: auto;
@@ -85,9 +88,31 @@
   background: #125688;
   color: white;
 }
-
+table{
+    width: 100%;
+    height: auto;
+    
+}
+.page-item.active .page-link{
+    background-color: red;
+    border: 2px solid red;
+    width: 100%;
+    outline: none;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    background: none;
+    border: none;
+    outline: none;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-radius: 0px;
+    outline: none;
+}
 </style>
-<main class="sub-main">
+<main class="sub-main" >
         <section class="getintouch">
             <div class="container">
                 <div class="getintouch_head text-center">
@@ -97,12 +122,12 @@
         </section>
 
 
-        <section class="contact">
+        <section class="contact " >
             <div class="container">
                 <div class="contact_bx">
                     <div class="row justify-content-start">
                         <div class="col-md-6">
-                            <div class="tickect-bx">
+                            <div class="tickect-bx bg-white" style="margin-bottom: 2rem;">
                                 <div class="ticket_head">
                                     <h2 class="ticket_h2">Raise a Ticket</h2>
                                     <p>To get your deal done just raise your ticket</p>
@@ -166,13 +191,11 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card" style="padding: 1rem;">
-                                <h4 style=" font-weight: 500;  margin-bottom:1rem; color: rgb( 245, 57, 61 ); ">Ticket History</h4>
-                                <hr>
-                                <div class="his-table table-responsive">
-                                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                            
+                                <div class=" container bg-white  table-responsive" style="padding-top: 1rem;  padding-bottom:1rem; margin-bottom:2rem;">
+                                <table id="example" class="table table-fluid" >
                                     <thead>
-                                        <tr>
+                                        <tr class="bg-white">
                                             <th>ID</th>
                                             <th>Subject</th>
                                             <th>Status</th>
@@ -200,7 +223,7 @@
                                     </tbody>    
                                 </table>
                                 </div>    
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
