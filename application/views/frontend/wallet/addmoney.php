@@ -118,7 +118,29 @@
       </div>
    </div>
 </div> -->
+<div class="wallet-op">
+      <div class="container">
+         <div class="row wallet_options justify-content-center">
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white; margin-top:5px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
+               <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn "><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
+            </div>
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
+               <a href="<?php echo $url['refer-wallet']; ?>"><button  class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
+            </div>
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
+               <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
+            </div>
 
+            <div class="col-md-3 wallet_op_bx wallet_op_bx-money">
+               <center><img src="../assets/img/Add-Money.svg" width="25px" class="wallet_mob_img"></center>
+               <a href="addmoney"><button class="wallet_op_btn active">Add Money</button ></a>
+            </div>
+         </div>
+      </div>
+   </div>
 
 
 
@@ -146,7 +168,7 @@
             </div>
          </div>
          <div class="col-md-6">
-         <div class="container bg-white">
+         <div class="container bg-white table-responsive"  style=" margin-bottom:2rem;">
             <table class="table table-fluid" id="myTable">
          <thead>
                <tr class="bg-white">

@@ -982,11 +982,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-top: 3rem;
 }
 
-.sub-main{
-  padding-top: 6rem;
-  background-color: #fff;
-  /* min-height: 114rem; */
-}
+
 
 .wal-main-icon{
   display: flex;
@@ -1469,7 +1465,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
   #items {
     
-    top: 80%;
+    top: 55%;
     
     }
 
@@ -1523,10 +1519,12 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   }
 
   .sub-main{
-    padding-top: 4rem;
+    padding-top: 0rem;
     /* padding-left: 1rem; */
   }
-
+.getintouch{
+  padding-top: -1rem;
+}
   .pro-card .card{
 
     margin-left: 1.2rem;
@@ -1630,7 +1628,8 @@ body{
       width: 33%;
       height: auto;
       border: none;
-      
+      padding-top: 1rem;
+      padding-bottom: 1rem;
 
   }
   
@@ -1886,7 +1885,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 58%;
+top: 45%;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -1974,7 +1973,7 @@ margin-top: 2rem;
 
   #items {
     
-    top: 80%;
+    top: 55%;
     
     }
 
@@ -2276,6 +2275,7 @@ background-color: #fff;
 }
 
 @media screen and (max-width: 600px) {
+  
   .hero {
     min-height: 68rem;
   }
@@ -2317,4 +2317,12 @@ background-color: #fff;
 
 
 
-
+@media screen and (max-width: 950px) and (min-width: 600px) {
+  .recha .dex{
+    display: none;
+  
+  }
+  .recha .scrolling-wrapper{
+    display: block;
+  }
+}  
