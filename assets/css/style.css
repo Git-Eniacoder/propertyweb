@@ -982,7 +982,12 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding-top: 3rem;
 }
 
-
+.sub-main{
+  /* padding-top: 6rem; */
+  background-color: #fff;
+  padding-bottom: 4rem;
+  /* min-height: 114rem; */
+}
 
 .wal-main-icon{
   display: flex;
@@ -2095,14 +2100,24 @@ background-color: #fff;
 
 
 
-/* New Home CSS */
 
+
+
+
+
+
+
+
+
+
+
+/* New Home CSS */
 .nav {
   height: 5rem;
 }
 
 .hero {
-  height: 35rem;
+  height: 34.2rem;
   background-color: #eee;
 }
 
@@ -2120,13 +2135,13 @@ background-color: #fff;
 }
 
 .hero_inputs {
-  padding: 1rem !important;
-  border: none !important;
-  border: 1px solid #eee !important;
-  width: 12rem !important;
-  margin: 0rem !important;
-  font-size: 1.1rem !important;
-  color: #797979 !important;
+  padding: 1rem;
+  border: none;
+  border: 1px solid #eee;
+  width: 12rem;
+  margin: 0rem;
+  font-size: 1.1rem;
+  color: #797979;
   cursor: pointer;
   overflow: hidden;
 }
@@ -2274,13 +2289,155 @@ background-color: #fff;
   width: 1.8rem;
 }
 
+.searchbar {
+  border: none !important;
+  padding: .8rem !important;
+  color: #727272 !important;
+  margin: 0 !important;
+}
+
+.sb_1 {
+  width: 19%;
+  border-right: 1px solid #cfcfcf;
+  overflow: hidden;
+  border-top-left-radius: 8px !important;
+}
+
+.sb_2 {
+  width: 35% !important;
+  border-right: 1px solid #cfcfcf !important;
+}
+
+.sb_2::placeholder {
+  padding-left: 1rem;
+}
+
+.sb_3 {
+  width: 24.3%;
+}
+
+.sb_4 {
+  width: 20%;
+  background-color: crimson;
+  color: #fff;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.choosecity {
+  margin-left: .5rem;
+}
+
+.searchbar_bx {
+  background-color: #fff;
+  width: 70%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin: 0 auto;
+}
+
+.hero_ser_shadow {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav_btn {
+  display: block !important;
+}
+
+.nav_header {
+  padding: 1rem 0 !important;
+  background-color: #fff;
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, .2) !important;
+  z-index: 4;
+}
+
+.wal_logo {
+  width: 7rem;
+}
+
+.wal_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.wal_nav_dropdown {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  padding: 2rem 3rem;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 110%;
+  left: 82%;
+  z-index: 4;
+  display: none;
+}
+
+.wal_nav_dropdown_links {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 0;
+  text-decoration: none;
+  color: #525151;
+}
+
+.wal_nav_dropdown_links:hover {
+  text-decoration: none;
+  color: crimson;
+  transition: all .2s ease;
+}
+
+.wal_nav_list {
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wal_nav_list_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_list_icons {
+  padding: 0 1rem;
+  border-right: 1px solid #eee;
+}
+
+.fa-user {
+  padding-right: .2rem;
+}
+
+.fa-bars {
+  font-size: 1.4rem !important;
+  padding-top: .5rem;
+  cursor: pointer;
+}
+
+.wal_nav_links {
+  text-decoration: none;
+  color: #7e7b7b;
+}
+
+.wal_nav_links:hover {
+  text-decoration: none;
+  color: crimson;
+}
+
 @media screen and (max-width: 600px) {
   
   .hero {
     min-height: 68rem;
   }
   .hero_inputs {
-    width: 90% !important;
+    width: 90%;
   }
   .hero_post_bx {
     width: 98%;
@@ -2308,7 +2465,20 @@ background-color: #fff;
   .home_subhead {
     margin: 3rem 0;
   }
+  .wal_nav_list {
+    width: 4rem;
+  }
+  .wal_nav_list_left {
+    display: none;
+  }
+  .wal_nav_dropdown {
+    padding: 2rem 3rem;
+    overflow: hidden;
+    top: 110%;
+    left: 52%;
+  }
 }
+
 /*# sourceMappingURL=wallet.css.map */
 
 
