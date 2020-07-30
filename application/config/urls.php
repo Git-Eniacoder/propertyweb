@@ -4,6 +4,7 @@
 
 //  Site Settings 
 $config['css'] = base_url().'assets/css/styles.css';
+$config['newhomecss'] = base_url().'assets/css/newhome.css';
 $config['stylecss'] = base_url().'assets/css/style.css';
 $config['js'] = base_url().'assets/js/';
 $config['image'] = base_url().'assets/img/';

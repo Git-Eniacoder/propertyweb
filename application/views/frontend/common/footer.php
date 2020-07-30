@@ -1,4 +1,23 @@
+<script>
+
+var dropdown = $('.wal_nav_dropdown');
+
+$(".nav_bar_click").click(function(){
+
+
+        dropdown.toggle('show');
+ 
+
+  });
+
+
+</script>
+  
+  
+  
   <!--Start of Tawk.to Script-->
+  
+  
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {},
       Tawk_LoadStart = new Date();

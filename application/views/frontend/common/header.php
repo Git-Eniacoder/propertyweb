@@ -14,12 +14,13 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
+  <link rel="stylesheet" href="<?php echo $url['newhomecss']; ?>">
 </head>
 
 <body>
   <!-- Header Start -->
 
-  <header class="head">
+  <!-- <header class="head">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -50,14 +51,7 @@
                     Post Property
                   </a>
                 </li>
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Properties
-                  </a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="<?php echo $url['posttable']; ?>">Posted Property</a>
-                  </div>
-                </li> -->
+
 
                 <li class="nav-item">
                   <a title="Recharge" href="<?php echo $url['recharge']; ?>" class="nav-link">
@@ -98,12 +92,87 @@
                 </li>
               </ul>
             </div>
-          </nav> <!-- navbar -->
+          </nav> 
         </div>
-      </div> <!-- row -->
-    </div> <!-- container -->
-  </header>
+      </div> 
+    </div> 
+  </header> -->
+
+
+  <div class="nav_header">
+    <div class="container">
+      <nav class="wal_nav">
+        <div class="nav_left">
+          <div class="logo">
+            <a href=""><img src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="" class="wal_logo_n"></a>
+          </div>
+        </div>
+        <div class="nav_right">
+          <div class="wal_nav_list">
+            <div class="wal_nav_list_left">
+              <div class="nav_list_icons">
+                <a href="" class="wal_nav_links">Refer and Earn</a>
+              </div>
+              <div class="nav_list_icons">
+                <a href="" class="wal_nav_links">List Property</a>
+              </div>
+
+              <div class="nav_list_icons">
+                <span><i class="fa fa-user wal_nav_links" aria-hidden="true"></i></span>
+                <span><a href="" class="wal_nav_links">Login /</a></span>
+                <span><a href="" class="wal_nav_links">Sign up</a></span>
+              </div>
+            </div>
+
+            <div class="wal_nav_list_right">
+              <div class="nav_list_icons nav_bar_click">
+                <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="wal_nav_dropdown">
+          <a href="" class="wal_nav_dropdown_links">Profile</a>
+          <a href="" class="wal_nav_dropdown_links">Wallet</a>
+          <a href="" class="wal_nav_dropdown_links">List Property</a>
+          <a href="" class="wal_nav_dropdown_links">Refer and Earn</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
   <!-- Header end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="modal fade" id="register">
     <div class="modal-dialog">
