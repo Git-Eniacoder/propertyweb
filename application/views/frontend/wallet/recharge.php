@@ -1,6 +1,9 @@
+
 <style>
 /* modal  */
-
+.nav{
+   height: 6rem;
+}
 .modal-confirm {		
 	color: #636363;
 	width: 325px;
@@ -93,7 +96,7 @@
    .user-fa {
       padding: 3px 0;
    }
-
+  
    .user-flag {
       padding: 2px 0;
    }
@@ -204,7 +207,29 @@
    </div>
 </div> -->
 
+<div class="wallet-op">
+      <div class="container">
+         <div class="row wallet_options justify-content-center">
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white; margin-top:5px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
+               <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn active"><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
+            </div>
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
+               <a href="<?php echo $url['refer-wallet']; ?>"><button  class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
+            </div>
+            <div class="col-md-3 wallet_op_bx">
+               <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
+               <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
+            </div>
 
+            <div class="col-md-3 wallet_op_bx wallet_op_bx-money">
+               <center><img src="../assets/img/Add-Money.svg" width="25px" class="wallet_mob_img"></center>
+               <a href="addmoney"><button class="wallet_op_btn">Add Money</button ></a>
+            </div>
+         </div>
+      </div>
+   </div>
 
 
 
@@ -271,7 +296,7 @@
                <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                      <div class="radi">
-                        <form id="recharge" action="<?php echo $url['wallet']; ?>/mobile" method="post">
+                        <form id="dth" action="<?php echo $url['wallet']; ?>/mobile" method="post">
                            <label style="margin-right:1rem;"><input type="radio" value="prepaid" name="optradio" checked> Prepaid</label>
                            <label><input type="radio" name="optradio" value="postpaid"> Postpaid</label>
                      </div>
@@ -363,9 +388,9 @@
                   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                      <div class="row">
                         <div class="col-md-6">
-                           <form action="">
+                           <form id="dth" action="<?php echo $url['wallet']; ?>/mobile/1" method="post">
                               <div class="inp">
-                                 <select class="sel" required>
+                                 <select name="company" class="sel">
                                     <option selected disabled value="">Select operator</option>
                                     <option value="AT">AIRTEL DIGITAL TV</option>
                                     <option value="DT">DISH TV</option>
@@ -378,7 +403,7 @@
                         </div>
                         <div class="col-md-6">
                            <div class="tt">
-                              <input type="text" placeholder="Subscriber id">
+                              <input name="number" type="text" placeholder="Subscriber id">
                            </div>
                         </div>
                      </div>
@@ -389,7 +414,7 @@
                                  <div class="input-group-prepend">
                                     <span class="input-group-text"><img src="../assets/img/rupee.svg" width="10px"></span>
                                  </div>
-                                 <input type="number" class="form-control" placeholder="Amount">
+                                 <input type="number" name="amt" class="form-control" placeholder="Amount">
                               </div>
                            </div>
                         </div>
@@ -409,7 +434,7 @@
                   </div>
                   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                   <div class="radi">
-                        <form id="recharge" action="<?php echo $url['wallet']; ?>/mobile" method="post">
+                        <form id="datacard" action="<?php echo $url['wallet']; ?>/mobile" method="post">
                            <label style="margin-right:1rem;"><input type="radio" value="prepaid" name="optradio" checked> Prepaid</label>
                            <label><input type="radio" name="optradio" value="postpaid"> Postpaid</label>
                      </div>
@@ -501,28 +526,32 @@
                </div>
             </div>
          </div>
-         <div class="col-md-6 bg-white">
-      <div class="container">
-     <table class="table table-fluid" id="myTable">
-     <thead>
-     <tr class="bg-white"><th>Name</th><th>Email</th><th>Password</th></tr>
-     </thead>
+         <div class="col-md-6">
+               <div class="container bg-white table-responsive" style="margin-top: 2rem; ">
+            <table class="table table-fluid" id="myTable">
+         <thead>
+               <tr class="bg-white">
+                  <th>Transaction Id</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+               </tr>
+         </thead>
      <tbody>
-     <tr><td>Daniel Danny</td><td>danny.daniel@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Samuel</td><td>samuel@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Jack</td><td>jack@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Eureka</td><td>eureka@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Pinky</td><td>pinky@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Mishti</td><td>mishti@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Puneet</td><td>puneet@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Nick</td><td>nick@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Danika</td><td>danika@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Vishakha</td><td>vishakha@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Nitin</td><td>ni3@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Latika</td><td>latika@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Kaavya</td><td>kaavya@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Ishika</td><td>ishika@gmail.com</td><td>Pass1234</td></tr>
-     <tr><td>Veronika</td><td>veronika@gmail.com</td><td>Pass1234</td></tr>
+               <?php foreach($history as $value) { ?>
+               <tr>
+                  <td><?php echo $value['trans_id'] ?></td>
+                  <td>-<?php echo $value['recharge_amount'] ?></td>
+                  <?php if($value['recharge_status'] == 'Failed'){ ?>
+                  <td class="text-danger"><?php echo $value['recharge_status'] ?></td>
+                  <?php }else if($value['recharge_status'] == 'Request Accepted'){ ?>
+                     <td class="text-warning"><?php echo $value['recharge_status'] ?></td>
+                  <?php }else if($value['recharge_status'] == 'Success'){ ?>
+                     <td class="text-success"><?php echo $value['recharge_status'] ?></td>
+                  <?php } ?>
+                  <td><?php echo $value['recharge_date'] ?></td>
+               </tr>
+               <?php } ?>
      </tbody>
      </table>
      </div>
@@ -586,39 +615,39 @@
 
 <script>
 // $('#myModal').modal('show');
-$("#recharge").submit(function(event){
+$("#recharge,#datacard,#dth").submit(function(event){
 event.preventDefault();
 var post_url = $(this).attr("action"); 
 var request_method = $(this).attr("method"); 
 var form_data = $(this).serialize(); 
-console.log(form_data)
-// $('#rechargeModal').modal({backdrop: 'static', keyboard: false ,show: true })  
-
+console.log(form_data)  
+$('#rechargeModal').modal('show')  
+$('.modal-backdrop').show();
 $.ajax({
     url : post_url,
     type: request_method,
     dataType:"json",
     data : form_data, 
 }).done(function(response){ 
-    console.log(response);
-    if(response.form){
-      $('#response').html(response.msg);
-    }if(response.failed){
+   $('.modal').modal('hide');
+      $('.modal-backdrop').hide();
+    if(response.failed){
        $('.jq').css("background-color", "red");
       $('#myModal').modal('show');
       $('#rec').html(response.msg);
       $('#ico').html(response.ico);
       $('#he').html(response.he);
     }
-    if(response.success){
+    
+    else if(response.success){
        $('.jq').css("background-color", "#82ce34");
       $('#myModal').modal('show');
       $('#rec').html(response.msg);
       $('#ico').html(response.ico);
       $('#he').html(response.he);
     }
-    if(response.pending){
-       $('.jq').css("background-color", "##ffc107");
+    else if(response.pending){
+       $('.jq').css("background-color", "#ffc107");
       $('#myModal').modal('show');
       $('#rec').html(response.msg);
       $('#ico').html(response.ico);
@@ -636,6 +665,8 @@ $.ajax({
       "bLengthChange": false,
     "bFilter": false,
     "bInfo": false,
+    "pagingType": "simple",
+    "pageLength": 5,
      });
  } );
      </script>

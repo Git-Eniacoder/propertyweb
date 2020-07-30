@@ -46,6 +46,9 @@
         public function recharge_history($id){
             return $this->db->where('user_id',$id)->get('payment_history')->result_array();
         }
+        public function rech_his($id){
+            return $this->db->where('user_id',$id)->get('recharge_history')->result_array();
+        }
         public function update_balance($id,$amt){
             $this->db->trans_start();
             $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
@@ -61,6 +64,14 @@
         }
         public function history_rec($data){
            return $this->db->insert('recharge_history',$data);
+        }
+        public function check_balance($id,$amount){
+            $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
+            if(intval($balance['recharge_wallet']) >= intval($amount)){
+                return true;
+            }else{
+                return false;
+            }
         }
     }
 
