@@ -1,4 +1,5 @@
 <style>
+  
   .refer-wallet {
     width: 100%;
     height: auto;
@@ -174,7 +175,7 @@
           <button class="refer_wallet-btn" style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button>
           <button class="refer_wallet-btn"><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Amount</button>
           <button class="refer_wallet-btn"><img src="../assets/img/trans.png" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfered</button>
-          <button class="refer_wallet-btn"><img src="../assets/img/tobank.webp" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfer to Bank</button>
+          <button class="refer_wallet-btn" data-toggle="modal" data-target="#myModal"><img src="../assets/img/tobank.webp" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfer to Bank</button>
         </div>
       </div>
       <div class="col-md-9 right">
@@ -208,7 +209,41 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class=" container-fluid modal-body">
+          <!-- <div class="left">
+            <h5>Login</h5>
+          </div> -->
 
+
+          <div class="row">
+            <div class="col login_bx">
+              <div class="login_head">
+                <h5>Transfer to Bank</h5>
+              </div>
+              <!-- <p>Login with mobile</p> -->
+              
+              <form >
+                <input type="password"  placeholder="Account Number" class="login_inp">
+                <input type="number"  placeholder="Re-enter Account Number" class="login_inp">
+                <input type="text"  placeholder="IFSC code" class="login_inp">
+                <input type="text"  placeholder="Holder Name" class="login_inp">
+                <div>
+                  <button class="login_btn">Submit</button>
+                </div>
+              </form>
+              
+          </div>
+        </div>
+
+      <!-- Modal footer -->
+      
+
+    </div>
+  </div>
+</div>
 <script>
   var sidebarBox = document.querySelector('#box');
   var sidebarBtn = document.querySelector('#btn');
