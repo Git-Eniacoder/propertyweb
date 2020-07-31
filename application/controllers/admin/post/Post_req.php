@@ -45,5 +45,9 @@ class Post_req extends My_Controller
         }
     }
    
+    public function delete_row($id=null){
+        $this->Db_postreq->delete_row("post_id",$id,"post_property");
+        $this->index();
+    }
 
 }

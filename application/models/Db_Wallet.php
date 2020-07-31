@@ -73,6 +73,13 @@
                 return false;
             }
         }
+        public function fetch_payment_history($check){
+            if($check == 1){
+            return $this->db->get('recharge_history')->result_array();
+            }else if($check == 2){
+            return $this->db->get('payment_history')->result_array();
+            }
+        }
     }
 
 
