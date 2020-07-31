@@ -19,13 +19,14 @@ class Post_req extends My_Controller
         // print_r($data['value']);die;
     }
     
-    public function index()
+    public function index($data=null)
     {
+        
         $this->data['values']= $this->Db_postreq->fetch_req();
 
         $this->load->view('admin/common/header', $this->data);
         $this->load->view('admin/common/sidebar',$this->data);
-        $this->load->view('admin/post/post_req', $this->data);
+        $this->load->view('admin/post/post_req', $data);
         $this->load->view('admin/common/footer', $this->data);
     }
 
@@ -33,6 +34,15 @@ class Post_req extends My_Controller
     {
         $this->Db_postreq->del_post($id);
         $this->index();
+    }
+
+    public function update_fetch($id=null){
+        $data['update'] = $this->Db_postreq->update_fetch($id);
+        if($data['update']){
+            $this->index($data);
+        }else{
+            $this->index();
+        }
     }
    
 
