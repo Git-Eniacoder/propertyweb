@@ -10,6 +10,7 @@
                                             <tr>
                                                 <th>User Name</th>
                                                 <th>Mobile</th>
+                                                <th>Referal Id</th>
                                                 <th>Recharge Wallet</th>
                                                 <th>Referal Wallet</th>
                                                 <th>Field Wallet</th>
@@ -22,6 +23,7 @@
                                               
                                                 <td><?php echo $value['user_name'] ; ?></td>
                                                 <td><?php echo $value['mobile_no'] ; ?></td>
+                                                <td><?php echo $value['referid'] ; ?></td>
                                                 <td><?php echo $value['recharge_wallet'] ; ?></td>
                                                 <td><?php echo $value['refferal_wallet'] ; ?></td>
                                                 <td><?php echo $value['filed_wallet'] ; ?></td>

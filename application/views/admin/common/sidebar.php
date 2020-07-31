@@ -15,17 +15,30 @@
                                 ><div class="sb-nav-link-icon"><i class="fa fa-link" aria-hidden="true"></i></div>
                                 Social Links
                             </a>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#support" aria-expanded="false" aria-controls="collapseblog"
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#user" aria-expanded="false" aria-controls="collapseblog"
                                 ><div class="sb-nav-link-icon"><i class="fa fa-users"></i></div>
                                 User Section
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                             ></a>
-                            <div class="collapse" id="support" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <div class="collapse" id="user" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="<?php echo base_url();?>admin/users/users">All Users</a>
                                     <a class="nav-link" href="<?php echo base_url();?>admin/users/site_user">User Details</a>
                                 </nav>
                             </div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#payment" aria-expanded="false" aria-controls="collapseblog"
+                                ><div class="sb-nav-link-icon"><i class="fa fa-users"></i></div>
+                                Payment Section
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <div class="collapse" id="payment" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="<?php echo base_url();?>admin/payment/recharge_history">Recharge History</a>
+                                    <a class="nav-link" href="<?php echo base_url();?>admin/payment/referal">Referal History</a>
+                                    <a class="nav-link" href="<?php echo base_url();?>admin/payment/field">Field Expenses</a>
+                                </nav>
+                            </div>
+                            
 
                             <!-- <div class="sb-sidenav-menu-heading">View request</div> -->
                             
