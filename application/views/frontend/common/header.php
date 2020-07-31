@@ -119,8 +119,8 @@
 
               <div class="nav_list_icons">
                 <span><i class="fa fa-user wal_nav_links" aria-hidden="true"></i></span>
-                <span><a href="" class="wal_nav_links">Login /</a></span>
-                <span><a href="" class="wal_nav_links">Sign up</a></span>
+                <span><a href="#" data-toggle="modal" data-target="#login"  class="wal_nav_links">Login /</a></span>
+                <span><a href="#" data-toggle="modal" data-target="#register" class="wal_nav_links">Sign up</a></span>
               </div>
             </div>
 
@@ -145,33 +145,6 @@
 
 
   <!-- Header end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <div class="modal fade" id="register">

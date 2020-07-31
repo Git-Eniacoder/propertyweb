@@ -1970,7 +1970,7 @@ margin-top: 2rem;
 }
 
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 600px) {
 
   .meu .mmvv{
     display: block;
@@ -1995,21 +1995,27 @@ background-color: #fff;
 }
 
 .wallet_op_bx{
-  width: 8rem !important;
-  height: 7rem;
-  margin: .5rem;
-  border-radius: 4px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+  width: 50%;
+  height: 8rem;
+  margin: 0;
+  padding: 44px 0;
+  border-radius : unset;
+  border: 1px solid white;
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6); */
   background-color: rgb( 245, 57, 61 );
  
 }
 .wallet-op button{
   font-size: 10px;
- 
+ border-bottom: transparent !important;
 }
 .wallet_mob_img{
-  margin: .7rem 1.2rem .2rem 1.2rem !important;
+  /* margin: .7rem 1.2rem .2rem 1.2rem !important; */
   width: 1.4rem;
+}
+.recha{
+  background-color: #fff;
+  margin: 0 !important;
 }
 
 .wallet_op_btn{

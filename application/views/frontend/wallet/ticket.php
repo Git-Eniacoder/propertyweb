@@ -112,21 +112,27 @@ table{
     outline: none;
 }
 </style>
-<main class="sub-main" >
-        <section class="getintouch">
+<!-- <main class="sub-main" > -->
+        <!-- <section class="getintouch">
             <div class="container">
                 <div class="getintouch_head text-center">
                     <h1 class="getintouch_h1">Raise a Ticket</h1>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
-        <section class="contact " >
+        
+        <section class="contact p-0" >
+        <div class="container-fluid bg-danger p-3">
+                <div class="section">
+                <h3 class="text-center text-white">Raise a Ticket</h3>
+                </div>
+            </div>
             <div class="container">
                 <div class="contact_bx">
-                    <div class="row justify-content-start">
-                        <div class="col-md-6">
+                    <!-- <div class="row justify-content-start">
+                        <div class="col-md-8"> -->
                             <div class="tickect-bx bg-white" style="margin-bottom: 2rem;">
                                 <div class="ticket_head">
                                     <h2 class="ticket_h2">Raise a Ticket</h2>
@@ -190,9 +196,14 @@ table{
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-4">
                             
-                                <div class=" container bg-white  table-responsive" style="padding-top: 1rem;  padding-bottom:1rem; margin-bottom:2rem;">
+                                
+                            
+                        </div> -->
+                    <!-- </div> -->
+                    <div class="container py-3">
+                    <div class=" container bg-white  table-responsive" style="padding-top: 1rem;  padding-bottom:1rem; margin-bottom:2rem;">
                                 <table id="example" class="table table-fluid" >
                                     <thead>
                                         <tr class="bg-white">
@@ -222,9 +233,7 @@ table{
                                         </tr>
                                     </tbody>    
                                 </table>
-                                </div>    
-                            
-                        </div>
+                                </div>   
                     </div>
                 </div>
             </div>
