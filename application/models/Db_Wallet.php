@@ -29,10 +29,15 @@
         $update_data=array("recharge_wallet"=>$balance);
         if($this->db->update('user_wallet', $update_data)){
             if($referid!=NULL&& $update_data_refer!=0){
+                echo "omom";
                 $this->db->where('referid', $referid);
-                $this->db->update('user_wallet', $update_data_refer);
+                return $this->db->update('user_wallet', $update_data_refer);
+            }
+            else{
+                return 1;
             }
         }
+        return 0;
     }
         public function payment_history($payment){
             $data = array('user_id'=>$payment[0],'payment_amount'=>$payment[3],
@@ -79,6 +84,13 @@
             }else if($check == 2){
             return $this->db->get('payment_history')->result_array();
             }
+        }
+        
+        public function unset_notification($data){
+                $toggle=array("level_up"=>0);
+                $this->db->where("id",$data);
+                $this->db->update('user_wallet', $toggle);
+                $this->index();
         }
     }
 

@@ -1,4 +1,3 @@
-
 <style>
 /* modal  */
 .nav{
@@ -661,3 +660,37 @@ $.ajax({
      });
  } );
      </script>
+
+
+
+
+
+
+<?php if($post["all_data"][0]->level_up==1){ ?>
+   <div class="modal" id="update">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <!-- Modal Header -->
+        <div class="modal-header text-center">
+          <h2 class="modal-title text-green">Notification</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <p>Level Up to <?php echo $level[0]; ?></p>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="<?php echo base_url() ;?>/wallet/recharge/unset_notification?var1=<?php echo $post["all_data"][0]->id; ?>"><button type="button" class="btn btn-danger" >Close</button></a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+        $('#update').modal('show');
+</script>
+  
+<?php } ?>

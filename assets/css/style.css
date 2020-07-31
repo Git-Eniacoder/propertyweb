@@ -1461,7 +1461,11 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 /* // end of show property CSS */
 
 @media screen and (max-width: 600px){
-
+  .meu .mmvv{
+    display: block;
+    position: relative;
+ }
+ 
   .lo-mm img{
     width: 100px;
     margin-left: 48px;

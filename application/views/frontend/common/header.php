@@ -21,49 +21,49 @@
  
 
 
-    .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0px;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    }
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0px;
+  background-color: crimson;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
 
-    .sidenav a:hover {
-      color: rgb( 245, 57, 61 );
-    }
+.sidenav a:hover {
+  color: rgb( 245, 57, 61 );
+}
 
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      left:0px;
-      font-size: 36px;
-      
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left:0px;
+  font-size: 36px;
+  
 
-    }
+}
 
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
 
 
-</style>  
+  </style>  
 </head>
 
 <body>

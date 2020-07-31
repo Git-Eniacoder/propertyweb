@@ -354,15 +354,15 @@
   }
 
   .prop_lists_btn{
-    background-color: rgb(207, 6, 6);
+    background-color: crimson;
     color:rgb(255, 255, 255) ;
     font-size: 1.1rem;
   }
 
   .prop_lists_btn:hover{
-    color: rgb(207, 6, 6);
+    color: crimson;
     background-color: #fff;
-    border: 1px solid rgb(207, 6, 6);
+    border: 1px solid crimson;
     transition: all .3s ease;
   }
 
