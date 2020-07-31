@@ -1,310 +1,184 @@
-<!-- Old Code -->
-<!-- <style>
-    .post-requirment input {
-        padding: 0;
-        margin: 0;
-        outline-color: none;
-        border: 1px solid #ced4da;
-        outline-color: red;
-        padding: .375rem .75rem;
+<style>
+.contect-form{
+  background-color: white;
+  position: relative;
+  
+
+  width:92%;
+  padding-top: 30px;
+
+}
+.contect-form .lis{
+  width: 100%;
+border: 1px solid rgb( 190, 190, 190 );
+  padding-left: 15px;
+  margin-bottom: 20px;
+  background-color: rgb( 255, 255, 255 );
+  border-radius: 6px;
+  color: rgb(165, 154, 154);
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  padding:10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .contect-form .lis::placeholder{
+    color: rgb(165, 154, 154);
+  }
+
+  .contect-form .bu {
+    padding: 5px;
+    
+  
+    border-radius: 6px;
+    background-color: rgb( 227, 31, 36 );
+    text-align: center;
+    width: 100%;
+    height: auto;
+    outline: none;
+    border: none;
+    color: rgb( 255, 255, 255 );
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
+ .contect-form .bu:hover{
+  background-color: rgb( 95, 96, 96 );
+ }
+ .contect-form .contact-info{
+  background-color: white;
+  position: relative;
+  
+  
 
-    #bhk {
-        display: none;
-    }
-
-    #unit {
-        display: none;
-    }
-
-    .post-card {
-        border: none;
-        background: none;
-    }
-
-    .post-card .card-body {
-        color: #6c757d !important;
-    }
-
-    .post-card img {
-        width: 3rem;
-    }
-</style> -->
-
-<!-- 
-<section class="py-5 px-3" style="background-color: #fafafa;">
-
-    <div class="py-5 container text-center">
-        <h3 class="pt-5"><span class="text-danger">Get In Touch with Us</span> - Free to ask any question from us</h3>
-        <h6>We are here to help you there</h6>
-    </div>
-
-    <div style="border: 1px solid #ccc;" class="container form-padding">
-        <div class="row">
-            <div style="background-color: #fff;" class="p-4 col-md-9">
-                <h5 class="text-black">Contact Us <span class="text-danger">*</span> </h5>
-                <form class="post-requirment my-3">
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="inputAddress" placeholder="Your name *">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="inputAddress2" placeholder="Your Email *">
-                    </div>
-                    <div class="form-group">
-                        <input type="Number" class="form-control" id="inputAddress2" placeholder="Your Mobile *">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Your Text"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-danger w-100 my-4">Submit</button>
-                </form>
-
-            </div>
-            <div style="border-left: 1px solid #ccc; background-color: #fafafa;" class="col-md-3 py-4 text-center">
-                <h4 class="text-secondary py-3">Why Post through us?</h4>
-                <div class="card post-card">
-                    <div class="card-image">
-                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_01.jpg">
-                    </div>
-                    <div class="card-body">
-                        <p class="card-title">Searching of your dream property ends here</p>
-                    </div>
-                </div>
-                <div class="card post-card">
-                    <div class="card-image">
-                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_04.jpg">
-                    </div>
-                    <div class="card-body">
-                        <p class="card-title">Get Properties in your Inbox</p>
-                    </div>
-                </div>
-                <div class="card post-card">
-                    <div class="card-image">
-                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_03.jpg">
-                    </div>
-                    <div class="card-body">
-                        <p class="card-title">Get Properties in your Inbox</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-<!-- Old Code -->
-<!-- <main class="sub-main">
-    <section class="getintouch">
-        <div class="container">
-            <div class="getintouch_head text-center">
-                <h1 class="getintouch_h1">Get In Touch</h1>
-            </div>
-        </div>
-    </section>
-    <section class="contact">
-        <div class="container">
-            <div class="contact_bx">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="contact_head">
-                            <h2>Contact Us</h2>
-                            <p>Get In touch with us and Thank you for reaching out and wanting to know us!</p>
+  
+ }
+ .contect-form .contact-info .uper-info p{
+   color: black;
+   font-size: 24px;
+   line-height: 1.2;
+ }
+ 
+ .contect-form .contact-info .conn{
+   margin-bottom: 20px;
+ }
+</style>    
+        <div class="contact-us">
+            <div class="hdr">
+                <div class="container">
+                     <div class="banner-text text-center size-banner">
+  
+                        <div class="contect fliter-heading">
+                            <h3 style="margin-top:40px;"><span style="color:rgb( 239, 69, 84 ); margin-top:40px;">Enough about us,</span> <b>lets talk about you now !</b></h3>
+                            <p style="font-size:15px; color:rgb( 95, 96, 96 );">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here. We’ll be sure to get back to you as soon as we can.</p>
                         </div>
-                        <div class="form-group">
-                            <form action="">
-                                <label for=""></label>
-                                <input type="text" name="" id="" class=" contact_inp" placeholder="Your Name" aria-describedby="helpId">
-                                <input type="email" name="" id="" class=" contact_inp" placeholder="Your Email" aria-describedby="helpId">
-                                <input type="number" name="" id="" class=" contact_inp" placeholder="Your Mobile" aria-describedby="helpId">
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" class=" contact_inp"></textarea>
-                                <div class="contact_btn_bx">
-                                    <button type="submit" class="btn btn-primary contact_btn">Send</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact_side">
-                            <div class="contact_side_top">
-                                <h2 class="contact_side_top_h1">We are here to Help you out</h2>
-                                <p>The Contact Us page is one of the most important pages on your website. Get inspired by these 25 amazing examples,</p>
-                            </div>
-                            <div class="contact_side_top">
-                                <h2 class="contact_side_top_h1">We are here to Help you out</h2>
-                                <p>The Contact Us page is one of the most important pages on your website. Get inspired by these 25 amazing examples,</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main> -->
+                      </div>
+                 </div>
+            </div> 
+            
+        </div> 
+        <div class="">
+            <div class="container contect-form" style="margin-top:50px; margin-bottom:50px;">
+                <div class="row">
+                    <div class="col-lg-7 col-xs-12">
+                        <div class="group-form">
+                            <div class="screen-reader-response" aria-live="polite"></div>
+  
+                            <span id="success_m" class="text-success"></span>
+                                <input class="lis" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name Here">
+                                <span id="name_error" class="text-danger m-0 p-0"></span></br>
+                                <input class="lis" type="email" name="mail" value="" size="40"  placeholder="Enter Your Mail">
+                                <span id="email_error" class="text-danger m-0 p-0"></span></br>
+                                <input class="lis" type="tel" name="tel" value="" size="40" aria-invalid="false" placeholder="Enter Your Mobile Number">
+                                <span id="tel_error" class="text-danger m-0 p-0"></span></br>
+                                
+                                
+                                <textarea class="lis" name="text" cols="40" rows="10"  aria-invalid="false" placeholder="Brief Requirement"></textarea>
+                                <span id="text_error" class="text-danger m-0 p-0"></span></br>
+                                <input type="submit" name="formSubmit"  class="bu"  />
 
-
-<!-- New Code -->
-
-<main class="sub-main contact_main">
-    <div class="contact_us">
-        <div class="container">
-            <div class="row justify-content-center">
-
-                <div class="col-sm-8 text-center contact-top-head">
-                    <h2 class="refer-text"><span class="contact-top-head-h2">Free to ask form Us :</span> Let we Know</h2>
-                    <p class="refer-text">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here.</p>
-                </div>
-
-            </div>
-            <div class="refer-bx">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="">
-                            <div class="refer-head">
-                                <h2 class="ticket_h2">Lets Say</h2>
-                            </div>
-                            <div class="form-group">
-                                <form action="">
-                                    <div class="">
-
-                                        <input type="text" name="" id="" class=" contact_inp" placeholder="Your Name" aria-describedby="helpId">
-                                    </div>
-                                    <div class="">
-                                        <input type="text" name="" id="" class="contact_inp" placeholder="Your Email" aria-describedby="helpId">
-                                    </div>
-                                    <div class="">
-                                        <input type="text" name="" id="" class="contact_inp" placeholder="Your Mobile" aria-describedby="helpId">
-                                    </div>
-                                    <!-- <div class="">
-                                        <select name="" id="" class="" aria-placeholder="Issue Related">
-                                            <option value="">Property Listing</option>
-                                            <option value="">Recharge</option>
-                                            <option value="">Refer and Earn</option>
-                                        </select>
-                                    </div> -->
-                                    <div class="">
-                                        <textarea name="" id="" cols="30" rows="10" class="contact_inp" placeholder="Your Message"></textarea>
-                                    </div>
-
-
-                                    <div class="contact_btn_bx">
-                                        <button type="submit" class="btn btn-primary send_invite">Submit</button>
-                                    </div>
-                                </form>
-                            </div>
+                         
                         </div>
 
-                    </div>
-                    <div class="col-md-6">
-                        <div class="">
-                            <div class="refer-hea">
-                                <h2 class="ticket_h2">We are here to listen you</h2>
+                    </div>  
+                    <div class="col-lg-5 col-xs-12" style="padding: 0;">
+                        <div class="container contact-info">
+                            <div class="uper-info">
+                                <p>If you prefer a more tangible form of communication we're here:</p>
+                                <hr class="style1">
                             </div>
-                            <div class="form-group">
-                                <div class="row justify-content-center">
-                                    <div class="col-1 justify-content-center">
-                                        <div>
-                                            <i class="fa fa-map-marker contact-icon" aria-hidden="true"></i>
+                           
+                                <div class="container">
+                                  
+                                    <div class="row">
+                                      <div class="col-md-12 col-12">
+                                        
+                                        <div class="row conn">
+                                            <div class="col-md-2">
+                                            <i class="fa fa-map-marker" style="font-size: 35px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                
+                                            
+                                                   
+                                                        <p style="color: grey;">Reach us on our</p>
+                                                        <h4>Office</h4>
+                                                        <p style="color: grey;">Ground Floor,  Rajmahal Complex, Opp. PLA Petrol Pump, Delhi Road, Hisar Haryana 125001</p>
+                                                  
+                                                
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <p class="form_right-p">Reach us on our</p>
-                                        <h3 class="form_right-h3">Office</h3>
-                                        pGround Floor, Rajmahal Complex, Opp. PLA Petrol Pump, Delhi Road, Hisar Haryana 125001
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-1 justify-content-center">
-                                        <div>
-                                            <i class="fa fa-phone contact-icon" aria-hidden="true"></i>
+                                        <div class="row conn">
+                                            <div class="col-md-2">
+                                            <i class="fa fa-phone" style="font-size: 35px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="col-md-10">
+                                            
+                                            <p style="color: grey;">Give us a</p>
+                                            <h4>Call</h4>
+                                            <p style="color: grey;">+91 925 400 0000 </p>
+                                            <p style="color: grey;">+91 819 893 2943</p>
+                                            <p style="color: grey;">+91 920 624 4000</p>
+                                            </div>
+                                          
                                         </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <p class="form_right-p">Give us a</p>
-                                        <h3 class="form_right-h3">Call</h3>
-                                        +7392900007
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-1 justify-content-center">
-                                        <div>
-                                            <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
+                                        <div class="row conn">
+                                            <div class="col-md-2">
+                                            <i class="fa fa-envelope" style="font-size: 35px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="col-md-10">
+                                            
+                                            <p style="color: grey;">Drop an</p>
+                                            <h4>Email</h4>
+                                            <p style="color: grey;">hisarfever@gmail.com</p>
+                                            <p style="color: grey;">vikaspoonia17@gmail.com</p>
+                                            <p style="color: grey;">jagdish@tirupatiinsurance.com</p>
+                                            </div>
+                                          
                                         </div>
+
+
+                                          
+                          
+                                          
+                                       
+                                      
+                                        
+                                          
+                                          
+                                     
+                                      </div>
+                                      
                                     </div>
-                                    <div class="col-8">
-                                        <div>
-                                            <p class="form_right-p">Drop an</p>
-                                            <h3 class="form_right-h3">Email</h3>
-                                            info@walletapp.com
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                 
+                                </div>          
+                              
                         </div>
-
-                    </div>
-                </div>
+                    </div>  
+                </div>    
             </div>
         </div>
-    </div>
-
-</main>
-
-
-
-
-<!-- Refer and earn -->
-<!-- Recharge Section -->
-
-<!-- <div class="recharge-main">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 ">
-                <div class="form-head">
-                    <h3>Refer And Earn</h3>
-                    <hr class="style1">
-                </div>
-                <div class="plans">
-                   
-
-                    <div>
-                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="col-md-4 rgt">
-                <div class="card">
-                    <h6>How we solve your problem</h6>
-                    <p>Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                </div>
-                <div class="card">
-                    <h6>How we solve your problem</h6>
-                    <p>Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
-<!-- end Of recharge -->
-
-<script>
-    function myFunction() {
-        var v = $('#protype').val();
-        console.log(v)
-        if (v == 'commercial') {
-            $('#unit').show();
-            $('#bhk').hide();
-        }
-        if (v == 'residential') {
-            $('#bhk').show();
-            $('#unit').hide();
-        }
-    }
-</script>
+        
+       
