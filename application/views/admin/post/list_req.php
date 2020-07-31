@@ -27,7 +27,8 @@
                                                 <td><?php echo $value['list_date'] ; ?></td>
                                                 <td class="d-flex">
                                                     <!-- <a class="btn btn-success mx-1" href="<?php //echo base_url() ; ?>admin/pages/new_page/update/<?php //echo $value['page_id'] ; ?>"><i class="fa fa-edit" aria-hidden="true"></i></a> -->
-                                                    <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/list_req/update_fetch/'.$value['property_id'] ; ?>"><i  class="fa fa-trash" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/list_req/update_fetch/'.$value['property_id'] ; ?>"><i  class="fa fa-eye" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/list_req/delete_row/'.$value['property_id'] ; ?>"><i  class="fa fa-trash" aria-hidden="true"></i></a>
                                                 </td>
                                             </tr>
                                           
@@ -58,26 +59,24 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-            <p><span>Property id : </span><?php echo $update['property_id'] ;?></p>
-            <p><span>Property name : </span><?php echo $update['list_name'] ;?></p>
-            <p><span>Property mobile : </span><?php echo $update['list_mobile'] ;?></p>
-            <p><span>Property email : </span><?php echo $update['list_email'] ;?></p>
-            <p><span>Property city : </span><?php echo $update['list_city'] ;?></p>
-            <p><span>Property locality : </span><?php echo $update['list_locality'] ;?></p>
-            <p><span>Property Type : </span><?php echo $update['list_property_type'] ;?></p>
-            <p><span>Property BHK : </span><?php echo $update['list_bhk'] ;?></p>
-            <p><span>Property unit : </span><?php echo $update['list_unit'] ;?></p>
-            <p><span>Property Furnished : </span><?php echo $update['list_furnished_type'] ;?></p>
-            <p><span>Property rent out : </span><?php echo $update['list_rent_out'] ;?></p>
-            <p><span>Property description : </span><?php echo $update['list_description'] ;?></p>
-            <p><span>Property date : </span><?php echo $update['list_date'] ;?></p>
+            <p><span style="font-weight:bold;">Property id : </span><?php echo $update['property_id'] ;?></p>
+            <p><span style="font-weight:bold;">Property name : </span><?php echo $update['list_name'] ;?></p>
+            <p><span style="font-weight:bold;">Property mobile : </span><?php echo $update['list_mobile'] ;?></p>
+            <p><span style="font-weight:bold;">Property email : </span><?php echo $update['list_email'] ;?></p>
+            <p><span style="font-weight:bold;">Property city : </span><?php echo $update['list_city'] ;?></p>
+            <p><span style="font-weight:bold;">Property locality : </span><?php echo $update['list_locality'] ;?></p>
+            <p><span style="font-weight:bold;">Property Type : </span><?php echo $update['list_property_type'] ;?></p>
+            <p><span style="font-weight:bold;">Property BHK : </span><?php echo $update['list_bhk'] ;?></p>
+            <p><span style="font-weight:bold;">Property unit : </span><?php echo $update['list_unit'] ;?></p>
+            <p><span style="font-weight:bold;">Property Furnished : </span><?php echo $update['list_furnished_type'] ;?></p>
+            <p><span style="font-weight:bold;">Property rent out : </span><?php echo $update['list_rent_out'] ;?></p>
+            <p><span style="font-weight:bold;">Property description : </span><?php echo $update['list_description'] ;?></p>
+            <p><span style="font-weight:bold;">Property date : </span><?php echo $update['list_date'] ;?></p>
         </div>
         
         <!-- Modal footer -->
         
         <div class="modal-footer">
-          <button class="btn btn-success">Resolve</button>
-          </form>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
         

@@ -128,7 +128,11 @@ class Db_postreq extends CI_Model {
 
   public function update_fetch_list($id){
     return $this->db->where('property_id',$id)->get('list_property')->row_array();
-}
+  }
+
+  public function delete_row($where,$where_val,$table){
+    return $this->db->where($where,$where_val)->delete($table);
+  }
 
 }
 

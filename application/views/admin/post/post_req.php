@@ -27,7 +27,8 @@
                                                 <td><?php echo $value['post_date'] ; ?></td>
                                                 <td class="d-flex">
                                                     <!-- <a class="btn btn-success mx-1" href="<?php //echo base_url() ; ?>admin/pages/new_page/update/<?php //echo $value['page_id'] ; ?>"><i class="fa fa-edit" aria-hidden="true"></i></a> -->
-                                                    <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/post_req/update_fetch/'.$value['post_id'] ; ?>"><i  class="fa fa-trash" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/post_req/update_fetch/'.$value['post_id'] ; ?>"><i  class="fa fa-eye" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/post_req/delete_row/'.$value['post_id'] ; ?>"><i  class="fa fa-trash" aria-hidden="true"></i></a>
                                                 </td>
                                             </tr>
                                           
@@ -58,24 +59,23 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-            <p><span>post id : </span><?php echo $update['post_id'] ;?></p>
-            <p><span>post type : </span><?php echo $update['post_type'] ;?></p>
-            <p><span>post budget : </span><?php echo $update['post_budget'] ;?></p>
-            <p><span>post locality : </span><?php echo $update['post_locality'] ;?></p>
-            <p><span>post city : </span><?php echo $update['post_city'] ;?></p>
-            <p><span>post bhk : </span><?php echo $update['post_bhk'] ;?></p>
-            <p><span>post size : </span><?php echo $update['post_size'] ;?></p>
-            <p><span>post name : </span><?php echo $update['post_name'] ;?></p>
-            <p><span>post email : </span><?php echo $update['post_email'] ;?></p>
-            <p><span>post phone : </span><?php echo $update['post_phone'] ;?></p>
-            <p><span>post date : </span><?php echo $update['post_date'] ;?></p>
+            <p><span font-weight:bold;>post id : </span><?php echo $update['post_id'] ;?></p>
+            <p><span font-weight:bold;>post type : </span><?php echo $update['post_type'] ;?></p>
+            <p><span font-weight:bold;>post budget : </span><?php echo $update['post_budget'] ;?></p>
+            <p><span font-weight:bold;>post locality : </span><?php echo $update['post_locality'] ;?></p>
+            <p><span font-weight:bold;>post city : </span><?php echo $update['post_city'] ;?></p>
+            <p><span font-weight:bold;>post bhk : </span><?php echo $update['post_bhk'] ;?></p>
+            <p><span font-weight:bold;>post size : </span><?php echo $update['post_size'] ;?></p>
+            <p><span font-weight:bold;>post name : </span><?php echo $update['post_name'] ;?></p>
+            <p><span font-weight:bold;>post email : </span><?php echo $update['post_email'] ;?></p>
+            <p><span font-weight:bold;>post phone : </span><?php echo $update['post_phone'] ;?></p>
+            <p><span font-weight:bold;>post date : </span><?php echo $update['post_date'] ;?></p>
         </div>
         
         <!-- Modal footer -->
         
         <div class="modal-footer">
-          <button class="btn btn-success">Resolve</button>
-          </form>
+          
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
         
