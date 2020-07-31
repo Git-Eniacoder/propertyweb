@@ -100,14 +100,14 @@ class Db_postreq extends CI_Model {
 
     public function fetch_req()
     {
-        return  $this->db->get("post_req")->result_array();
+        return  $this->db->get("post_property")->result_array();
         // prnt($a);
         // print_r($a);die;
     }
 
     public function fetch_list()
     {
-        return  $this->db->get("post_request")->result_array();
+        return  $this->db->get("list_property")->result_array();
         // prnt($a);
         // print_r($a);die;
     }
@@ -121,6 +121,14 @@ class Db_postreq extends CI_Model {
       return $this->db->where("id",$id)->delete("post_req");
        
      }
+
+     public function update_fetch($id){
+      return $this->db->where('post_id',$id)->get('post_property')->row_array();
+  }
+
+  public function update_fetch_list($id){
+    return $this->db->where('property_id',$id)->get('list_property')->row_array();
+}
 
 }
 
