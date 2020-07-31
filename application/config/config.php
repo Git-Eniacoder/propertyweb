@@ -34,6 +34,7 @@ spl_autoload_register('my_load');
 | a PHP script and you can easily do that on your own.
 |
 */
+// $config['base_url'] = 'http://192.168.43.253/propertyweb/';
 $config['base_url'] = 'http://localhost/propertyweb/';
 // $config['base_url'] = 'http://testing.eniacoder.com/propertyweb/';
 
