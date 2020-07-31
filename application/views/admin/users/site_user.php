@@ -1,3 +1,54 @@
+<?php
+function find_level_and_points($total_count){
+  if($total_count<pow(6,1)){
+      if($total_count==0)
+          return array(1,50,0);
+      if($total_count==1)
+          return array(1,70,0);
+      if($total_count==2)
+          return array(1,90,0);
+      if($total_count==3)
+          return array(1,110,0);
+      if($total_count==4)
+          return array(1,130,0);
+      if($total_count==5)
+          return array(1,150,0);
+      
+  }
+  if($total_count<pow(6,2)){
+      return array(2,900,0);
+  }
+  if($total_count<pow(6,3)){
+      if($total_count==pow(6,2))
+      {
+          return array(3,4320,10000);
+      }
+      return array(3,4320,0);
+  }
+  if($total_count<pow(6,4)){
+      if($total_count==pow(6,3))
+      {
+          return array(4,12960,25000);
+      }
+      return array(4,12960,0);
+  }
+  if($total_count<pow(6,5)){
+      if($total_count==pow(6,4))
+      {
+          return array(5,38880,50000);
+      }
+      return array(5,38880,0);
+  }
+  if($total_count<pow(6,6)){
+      if($total_count==pow(6,5))
+      {
+          return array(6,233280,75000);
+      }
+      return array(6,233280,0);
+  }
+}
+?>
+
 <div id="layoutSidenav_content">
 <main>
    <div class="container-fluid">
@@ -10,10 +61,12 @@
                                             <tr>
                                                 <th>User Name</th>
                                                 <th>Mobile</th>
+                                                <th>Referal Id</th>
                                                 <th>Recharge Wallet</th>
                                                 <th>Referal Wallet</th>
                                                 <th>Field Wallet</th>
                                                 <th>Total Refers</th>
+                                                <th>User Level</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -22,10 +75,13 @@
                                               
                                                 <td><?php echo $value['user_name'] ; ?></td>
                                                 <td><?php echo $value['mobile_no'] ; ?></td>
+                                                <td><?php echo $value['referid'] ; ?></td>
                                                 <td><?php echo $value['recharge_wallet'] ; ?></td>
                                                 <td><?php echo $value['refferal_wallet'] ; ?></td>
                                                 <td><?php echo $value['filed_wallet'] ; ?></td>
                                                 <td><?php echo $value['total_referal'] ; ?></td>
+                                                <td><?php echo find_level_and_points($value['total_referal'])[0] ; ?></td>
+                                                
                                             </tr>
                                       <?php } ?>
                                         </tbody>

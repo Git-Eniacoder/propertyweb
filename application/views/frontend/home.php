@@ -167,7 +167,7 @@
             </div>
             <div class="home_row">
                 <div class="flex justify-content-center">
-                    <div class="col-md-3 ">
+                    
                         <div class="card ">
                             <div class="property_price">
                                 <p>&#8377; 60,000 (Negotiable)</p>
@@ -192,8 +192,8 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 ">
+                    
+                    
                         <div class="card ">
                             <div class="property_price">
                                 <p>&#8377; 60,000 (Negotiable)</p>
@@ -218,8 +218,8 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 ">
+                   
+                    
                         <div class="card ">
                             <div class="property_price">
                                 <p>&#8377; 60,000 (Negotiable)</p>
@@ -244,8 +244,8 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3  ">
+                    
+                    
                         <div class="card ">
                             <div class="property_price">
                                 <p>&#8377; 60,000 (Negotiable)</p>
@@ -270,7 +270,7 @@
 
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
 
             </div>

@@ -42,4 +42,11 @@ class List_req extends My_Controller
             $this->index();
         }
     }
+
+    
+    public function delete_row($id=null){
+        $this->Db_postreq->delete_row("property_id",$id,"list_property");
+        $this->index();
+    }
+
 }
