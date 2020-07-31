@@ -3,7 +3,7 @@
   }
   
   .hero {
-    height: 35rem;
+    height: 32.6rem;
     background-color: #eee;
   }
   
@@ -39,7 +39,7 @@
   
   .hero_post_bx {
     width: 35%;
-    margin: 2.7rem auto;
+    margin: 3rem auto .8rem auto;
     font-size: 1.1rem;
   }
   
@@ -60,6 +60,13 @@
     margin: 2.5rem 0;
     width: 20rem;
   }
+
+  .hero_post_bx_btn:hover{
+    color: #fff;
+    border: #fff;
+    transition: all .2s ease;
+  }
+
   
   .post_line {
     width: 20%;
@@ -111,6 +118,13 @@
     margin-top: 1rem;
     padding-left: 1.5rem;
     font-size: 1.2rem;
+    text-decoration: none;
+  
+  }
+
+  .hero_ser_text:hover{
+    color: rgb(207, 6, 6);
+    text-decoration: none;
   }
   
   .hero_ser_link {
@@ -162,9 +176,12 @@
     font-size: 1rem;
     margin-top: 2rem;
   }
+  .top_trend{
+    margin: 8rem 0 3rem 0 !important;
+  }
   
   .trending {
-    margin: 5rem 0 3rem 0;
+    margin: 2rem 0 3rem 0;
   }
   
   .prop_loc {
@@ -295,6 +312,62 @@
     display: none;
   }
 
+  .trending_card{
+    padding: 1rem;
+  }
+
+  .nav_list_links{
+    font-size: 1.2rem !important;
+  }
+
+
+  .prop_lists{
+    /* width: 20rem; */
+  }
+
+  .prop_lists_price{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(207, 6, 6);
+    padding: 0 !important;
+  }
+
+  .prop_lists_rent{
+    padding: 0 !important;
+    margin-bottom: .6rem !important;
+    color: rgb(133, 129, 129);
+    font-size: .9rem;
+  }
+
+  .prop_lists_text{
+    padding: 0 !important;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+
+  }
+
+  .prop_lists_add{
+    padding: 0 !important;
+    font-size: .8rem;
+    color: rgb(121, 120, 120);
+    margin-bottom: 0.2rem !important;
+  }
+
+  .prop_lists_btn{
+    background-color: rgb(207, 6, 6);
+    color:rgb(255, 255, 255) ;
+    font-size: 1.1rem;
+  }
+
+  .prop_lists_btn:hover{
+    color: rgb(207, 6, 6);
+    background-color: #fff;
+    border: 1px solid rgb(207, 6, 6);
+    transition: all .3s ease;
+  }
+
+
+
   @media screen and (max-width: 1200px) {
 
 
@@ -318,6 +391,8 @@
     .hero_ser_img{
       width: 3rem;
     }
+
+
   
   
   }
@@ -351,6 +426,10 @@
     .sb_4 {
       width: 100%;
       border-top-right-radius: 0;
+    }
+
+    .top_trend{
+      margin: 0 1rem !important;
     }
   }
   

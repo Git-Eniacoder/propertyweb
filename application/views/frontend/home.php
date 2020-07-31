@@ -102,7 +102,7 @@
             <div class="hero_service">
                 <div class="row justify-content-center align-items-center hero_ser_shadow">
 
-                    <div class="col-md-3 col-sm-3 hero_service_bx">
+                    <div class="col-md-3  hero_service_bx">
 
                         <a href="" class="hero_ser_link">
                             <div class="ser">
@@ -114,7 +114,7 @@
 
                     </div>
 
-                    <div class="col-md-3 col-sm-3 hero_service_bx">
+                    <div class="col-md-3  hero_service_bx">
                         <a href="" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rechargep.png" alt="" class="hero_ser_img">
@@ -124,7 +124,7 @@
 
 
                     </div>
-                    <div class="col-md-3 col-sm-3 hero_service_bx">
+                    <div class="col-md-3  hero_service_bx">
 
                         <a href="" class="hero_ser_link">
                             <div class="ser">
@@ -134,7 +134,7 @@
                         </a>
 
                     </div>
-                    <div class="col-md-3 col-sm-3 hero_service_bx">
+                    <div class="col-md-3  hero_service_bx">
                         <a href="" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
@@ -153,124 +153,119 @@
 
     <!-- Trending Properties -->
 
-    <section class="trending">
+    <section class="trending top_trend">
         <div class="container">
             <div class="home_subhead">
                 <div class="row justify-content-start align-items-center">
                     <div class="col-sm-3 ">
-                        <h2 class="home_subhead_text text-start">Trending Properties</h2>
+                        <h2 class="home_subhead_text text-center text-start">Trending Properties</h2>
                     </div>
                     <div class="col-sm-9">
                         <hr class="home_subhead_line">
                     </div>
                 </div>
             </div>
+
+            <!-- Trending Row -->
             <div class="home_row">
                 <div class="flex justify-content-center">
-                    
-                        <div class="card ">
-                            <div class="property_price">
-                                <p>&#8377; 60,000 (Negotiable)</p>
-                            </div>
-                            <img class="card-img-top" src="assets/img/homeimgs/youtube.jpg" alt="">
-                            <div class="card-body">
-                                <h4 class="property_text">3 BHK appartment 180 (sq-ft)</h4>
-                                <span class="property_text_person"> by Vikas</span>
 
-                                <div class="property_text_city">
-                                    <div class="row justify-content-between align-items-center">
-                                        <div class="col-9">
-                                            <span><i class="fa fa-map-marker prop_loc" aria-hidden="true"></i> Model
-                                                Town, Jaipur</span>
+                    <!-- <div class="card ">
+                        <div class="property_price">
+                            <p>&#8377; 60,000 (Negotiable)</p>
+                        </div>
+                        <img class="card-img-top" src="assets/img/homeimgs/youtube.jpg" alt="">
+                        <div class="card-body trending_card">
+                            <h4 class="property_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <span class="property_text_person"> by Vikas</span>
 
-                                        </div>
-                                        <div class="col ">
-                                            <a href=""><img src="assets/img/homeimgs/callprop.svg" alt="" class="call_prop"></a>
-                                        </div>
+                            <div class="property_text_city">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-9">
+                                        <span><i class="fa fa-map-marker prop_loc" aria-hidden="true"></i> Model
+                                            Town, Jaipur</span>
+
+                                    </div>
+                                    <div class="col ">
+                                        <a href=""><img src="assets/img/homeimgs/callprop.svg" alt="" class="call_prop"></a>
                                     </div>
                                 </div>
-
                             </div>
+
                         </div>
-                    
-                    
-                        <div class="card ">
-                            <div class="property_price">
-                                <p>&#8377; 60,000 (Negotiable)</p>
+                    </div> -->
+
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+                            <p class="prop_lists_rent"><span>Rent</span></p>
+                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
                             </div>
-                            <img class="card-img-top" src="assets/img/homeimgs/youtube.jpg" alt="">
-                            <div class="card-body">
-                                <h4 class="property_text">3 BHK appartment 180 (sq-ft)</h4>
-                                <span class="property_text_person"> by Vikas</span>
 
-                                <div class="property_text_city">
-                                    <div class="row justify-content-between align-items-center">
-                                        <div class="col-9">
-                                            <span><i class="fa fa-map-marker prop_loc" aria-hidden="true"></i> Model
-                                                Town, Jaipur</span>
-
-                                        </div>
-                                        <div class="col ">
-                                            <a href=""><img src="assets/img/homeimgs/callprop.svg" alt="" class="call_prop"></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
-                   
-                    
-                        <div class="card ">
-                            <div class="property_price">
-                                <p>&#8377; 60,000 (Negotiable)</p>
+                    </div>
+
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+                            <p class="prop_lists_rent"><span>Rent</span></p>
+                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
                             </div>
-                            <img class="card-img-top" src="assets/img/homeimgs/youtube.jpg" alt="">
-                            <div class="card-body">
-                                <h4 class="property_text">3 BHK appartment 180 (sq-ft)</h4>
-                                <span class="property_text_person"> by Vikas</span>
 
-                                <div class="property_text_city">
-                                    <div class="row justify-content-between align-items-center">
-                                        <div class="col-9">
-                                            <span><i class="fa fa-map-marker prop_loc" aria-hidden="true"></i> Model
-                                                Town, Jaipur</span>
-
-                                        </div>
-                                        <div class="col ">
-                                            <a href=""><img src="assets/img/homeimgs/callprop.svg" alt="" class="call_prop"></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
-                    
-                    
-                        <div class="card ">
-                            <div class="property_price">
-                                <p>&#8377; 60,000 (Negotiable)</p>
+                    </div>
+
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+                            <p class="prop_lists_rent"><span>Rent</span></p>
+                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
                             </div>
-                            <img class="card-img-top" src="assets/img/homeimgs/youtube.jpg" alt="">
-                            <div class="card-body">
-                                <h4 class="property_text">3 BHK appartment 180 (sq-ft)</h4>
-                                <span class="property_text_person"> by Vikas</span>
 
-                                <div class="property_text_city">
-                                    <div class="row justify-content-between align-items-center">
-                                        <div class="col-9">
-                                            <span><i class="fa fa-map-marker prop_loc" aria-hidden="true"></i> Model
-                                                Town, Jaipur</span>
-
-                                        </div>
-                                        <div class="col ">
-                                            <a href=""><img src="assets/img/homeimgs/callprop.svg" alt="" class="call_prop"></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
-                    
+                    </div>
+
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+                            <p class="prop_lists_rent"><span>Rent</span></p>
+                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
                 </div>
 
             </div>
@@ -286,14 +281,14 @@
             <div class="home_subhead">
                 <div class="row justify-content-start align-items-center">
                     <div class="col-md-4 ">
-                        <h2 class="home_subhead_text text-start">Recently Added Properties</h2>
+                        <h2 class="home_subhead_text text-center text-start">Recently Added Properties</h2>
                     </div>
                     <div class="col-md-8 text-start">
                         <hr class="home_subhead_line">
                     </div>
                 </div>
             </div>
-            <div class="home_row">
+            <!-- <div class="home_row">
                 <div class="row">
                     <div class="col-md-3 home_row_col">
                         <div class="card text-left property_card">
@@ -401,8 +396,134 @@
                     </div>
                 </div>
 
+            </div> -->
+
+            <!-- Trending Row -->
+            <div class="home_row">
+                <div class="flex justify-content-center">
+
+                    <!-- <div class="card ">
+                        <div class="property_price">
+                            <p>&#8377; 60,000 (Negotiable)</p>
+                        </div>
+                        <img class="card-img-top" src="assets/img/homeimgs/youtube.jpg" alt="">
+                        <div class="card-body trending_card">
+                            <h4 class="property_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <span class="property_text_person"> by Vikas</span>
+
+                            <div class="property_text_city">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-9">
+                                        <span><i class="fa fa-map-marker prop_loc" aria-hidden="true"></i> Model
+                                            Town, Jaipur</span>
+
+                                    </div>
+                                    <div class="col ">
+                                        <a href=""><img src="assets/img/homeimgs/callprop.svg" alt="" class="call_prop"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+                            <p class="prop_lists_rent"><span>Rent</span></p>
+                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+                            <p class="prop_lists_rent"><span>Rent</span></p>
+                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+                            <p class="prop_lists_rent"><span>Rent</span></p>
+                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+                            <p class="prop_lists_rent"><span>Rent</span></p>
+                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
             </div>
+
+
         </div>
     </section>
 
 </main>
+
+<!-- 
+<div class="container">
+
+    <div class="card text-left prop_lists">
+        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+        <div class="card-body">
+            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
+            <p class="prop_lists_rent"><span>Rent</span></p>
+            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+            <p class="prop_lists_add">in Alsanatham for Sale
+                Within 3-6 months</p>
+            <p><span class="prop_lists_rent">By Anshul</span></p>
+            <div class="text-center">
+                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+            </div>
+
+        </div>
+    </div>
+</div> -->

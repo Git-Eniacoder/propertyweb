@@ -21,49 +21,49 @@
  
 
 
-  .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0px;
-  background-color: white;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0px;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
 
-.sidenav a:hover {
-  color: rgb( 245, 57, 61 );
-}
+    .sidenav a:hover {
+      color: rgb( 245, 57, 61 );
+    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  left:0px;
-  font-size: 36px;
-  
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      left:0px;
+      font-size: 36px;
+      
 
-}
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
 
 
 
-  </style>  
+</style>  
 </head>
 
 <body>
@@ -153,17 +153,17 @@
       <nav class="wal_nav">
         <div class="nav_left">
           <div class="logo">
-            <a href=""><img src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="" class="wal_logo_n"></a>
+            <a href="<?php echo $url['home']; ?>"><img src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="" class="wal_logo_n"></a>
           </div>
         </div>
         <div class="nav_right">
           <div class="wal_nav_list">
             <div class="wal_nav_list_left">
               <div class="nav_list_icons">
-                <a href="" class="wal_nav_links">Refer and Earn</a>
+                <a href="<?= $url['referandearn']; ?>" class="wal_nav_links">Refer and Earn</a>
               </div>
               <div class="nav_list_icons">
-                <a href="" class="wal_nav_links">List Property</a>
+                <a href="<?= $url['list']; ?>" class="wal_nav_links">List Property</a>
               </div>
 
               <div class="nav_list_icons">
@@ -178,10 +178,11 @@
             </div>
             <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Clients</a>
-              <a href="#">Contact</a>
+              <a href="<?= $url['wallet']; ?>" class="nav_list_links">Wallet</a>
+              <a href="" class="nav_list_links">Recharge</a>
+              <a href="<?= $url['list']; ?>" class="nav_list_links"> List Property</a>
+              <a href="<?= $url['post_property']; ?>" class="nav_list_links">Post property </a>
+              <a href="#" class="nav_list_links">Refer And Earn </a>
             </div>
           </div>
         </div>
