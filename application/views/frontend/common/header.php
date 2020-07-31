@@ -134,11 +134,16 @@
         </div>
 
         <div class="wal_nav_dropdown">
+          <div class="searchbar_bx_close">
+            <i class="fa fa-times serch_close" aria-hidden="true"></i>
+          </div>
           <a href="" class="wal_nav_dropdown_links">Profile</a>
           <a href="" class="wal_nav_dropdown_links">Wallet</a>
           <a href="" class="wal_nav_dropdown_links">List Property</a>
           <a href="" class="wal_nav_dropdown_links">Refer and Earn</a>
         </div>
+
+        
       </nav>
     </div>
   </div>
