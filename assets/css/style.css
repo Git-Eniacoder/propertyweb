@@ -2255,7 +2255,20 @@ background-color: #fff;
 .home_row_col {
   position: relative;
 }
-
+.home_row{
+  width: 100%;
+  height: auto;
+}
+.home_row .flex {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.home_row .flex .card {
+  width: 100%;
+  height: auto;
+  
+}
 .property_price {
   position: absolute;
   top: 9rem;
