@@ -87,6 +87,6 @@
   
   <script>
         $('#update').modal('show');
-        </script>
+  </script>
         
 <?php } ?>

@@ -175,5 +175,11 @@ class Recharge extends My_Controller {
             return array(6,233280,0);
         }
     }
+
+    public function unset_notification(){
+        $this->db_wallet->unset_notification($_GET['var1']);
+    }
+
+
     
 }   
