@@ -1,4 +1,3 @@
-<?php  print_r($post[0]); ?>
 <main class="sub-main">
 
     <section class="hero">
