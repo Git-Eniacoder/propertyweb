@@ -34,6 +34,8 @@
     color: red;
   }
 </style>
+
+<div class="main_list">
 <section class="py-3 px-3" style="background-color: #fafafa;">
   <div class="pb-5 container text-center">
     <h3 class="pt-5"><span class="text-danger">Post Your Requirement</span> - Get Property Alert in your Inbox</h3>
@@ -245,6 +247,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <script>
   function myFunction() {

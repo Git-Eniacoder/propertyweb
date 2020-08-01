@@ -39,11 +39,13 @@
         color: red;
     }
 </style>
-<section class="px-3" style="background-color: #fafafa;">
+
+<div class="main_list">
+<section class="">
 
 
     <div class="pb-5 container text-center">
-        <h3 class="pt-5"><span class="text-danger">List Your Property</span> - Get Renters of your Choice</h3>
+        <h3 class="pt-5"><span class="text-danger crimson_text">List Your Property</span> - Get Renters of your Choice</h3>
         <h6 class="">Thousand of Renters Searching Daily</h6>
     </div>
 
@@ -95,7 +97,7 @@
                             </select>
                             <?php echo form_error('list_type') ? '<span class=" text-danger">' . form_error('list_type') . '</span>' : ''; ?>
                         </div>
-                        
+
                         <div class="form-group col-md-4">
                             <input type="text" name="expected_rent" class="form-control" placeholder="Expected Rent *">
                             <?php echo form_error('expected_rent') ? '<span class=" text-danger">' . form_error('expected_rent') . '</span>' : ''; ?>
@@ -149,7 +151,7 @@
                         <textarea class="form-control" name="list_messages" placeholder="Brief Description or Message" rows="3"></textarea>
                     </div>
                     <?php echo form_error('list_messages') ? '<span class=" text-danger">' . form_error('list_messages') . '</span>' : ''; ?>
-                    <button type="submit" class="btn btn-danger w-100 my-4">List my Property</button>
+                    <button type="submit" class="btn btn-danger w-100 my-4 crimson_background">List my Property</button>
                 </form>
 
             </div>
@@ -183,6 +185,8 @@
         </div>
     </div>
 </section>
+
+</div>
 
 <script>
     function myFunction() {

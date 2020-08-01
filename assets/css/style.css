@@ -33,6 +33,10 @@
 
 /* Spinner */
 /*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
+
+body{
+  /* font-family: 'Montserrat', sans-serif !important;  */
+}
 input{
   outline: none;
 }
@@ -1273,7 +1277,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 .getintouch{
   width: 100%;
   height: 9rem;
-  background-color: rgb( 245, 57, 61);
+  background-color: crimson;
 }
 
 .getintouch_h1{
@@ -1599,7 +1603,7 @@ body{
   height: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: rgb( 245, 57, 61 );
+  background-color: crimson;
 }
 .wallet-op button{
   width: 100%;
@@ -1612,7 +1616,7 @@ body{
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   transition: .5s;
-  border-bottom: 2px solid  rgb( 245, 57, 61);
+  border-bottom: 2px solid  crimson;
 }
 .wallet-op button:hover{
   border-bottom: 2px solid white;
@@ -1735,8 +1739,8 @@ body{
   padding-top: .5rem;
   padding-bottom: .5rem;
   color: white;
-  background-color: rgb( 245, 57, 61 );
-  border: 2px solid rgb( 245, 57, 61 );
+  background-color: crimson;
+  border: 2px solid crimson;
   outline: none;
   border-radius: 4px;
   transition: .5s;
@@ -1894,7 +1898,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 45%;
+top: 47%;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -1967,7 +1971,7 @@ margin-top: 2rem;
 
 
 .wal_level{
-  background-color: rgb( 245, 57, 61 );
+  background-color: crimson;
   margin-right: .5rem;
   border-radius: 2px;
   color: #fff !important;
@@ -2441,6 +2445,28 @@ background-color: #fff;
 .sidenav{
 
   box-shadow: 0px 1px 5px rgba(0, 0, 0, .2) !important;
+}
+
+.wal_sidebar_icons{
+  margin-right: .6rem !important;
+  /* padding-top: 2rem; */
+  font-size: 2rem !important;
+}
+
+.wal_sidebar_text-2{
+  font-size: rem !important;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.wal_sidebar_text{
+  color: rgb(219, 219, 219) !important;
+}
+
+.wal_sidebar_text:hover{
+  color: crimson !important;
+  transition: all .1s ease;
 }
 
 

@@ -9,15 +9,13 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
    <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 
    <style>
-     
- 
       .fa-user {
          border: 2px solid gray;
          border-radius: 50%;
@@ -120,17 +118,23 @@
          </div>
          <div id="box">
             <div id="items">
-               <div class="item"><a href="recharge"><img src="../assets/img/Mob.svg" width="12px" style="margin-top:-5px; margin-right: 5px;" > Recharge & PayBills</a></div>
-               <div class="item"><img src="../assets/img/buyplan.svg" width="19px" style="margin-top:-5px; margin-right: 5px;" >Buy Plan</div>
-               <div class="item"><a href="refer"><img src="../assets/img/refer.svg" width="19px" style="margin-right: 5px;" >Refer And Earn</a></div>
-               <div class="item"><a href="field"><img src="../assets/img/Field Expense.png" width="19px" style="margin-right: 5px;" > Field Expenses</a></div>
-               <div class="item"><a href="addmoney"><img src="../assets/img/Add-Money.svg" width="19px" style="margin-right: 5px;" >Add Money</a></div>
-               <div class="item"><a href="ticket"><img src="../assets/img/ticket .svg" width="19px" style="margin-right: 5px;" >Raise a Ticket</a></div>
-              
+               <div class="item"><a href="recharge" class="wal_sidebar_text"><img src="../assets/img/Mob.svg" width="12px"  class="wal_sidebar_icons"> Recharge & PayBills</a></div>
+               <!-- <div class="item">
+                  <a href="recharge" class="wal_sidebar_text-2">
+                     <p><span><i class="fa fa-mobile wal_sidebar_icons" aria-hidden="true"></i></span></p>
+                     <p>Recharge & PayBills</p>
+                  </a>
+               </div> -->
+               <div class="item"><a href="#" class="wal_sidebar_text"><img src="../assets/img/buyplan.svg" width="19px" class="wal_sidebar_icons">Buy Plan</a></div>
+               <div class="item"><a href="refer" class="wal_sidebar_text"><img src="../assets/img/refer.svg" width="19px" class="wal_sidebar_icons">Refer And Earn</a></div>
+               <div class="item"><a href="field" class="wal_sidebar_text"><img src="../assets/img/Field Expense.png" width="19px" class="wal_sidebar_icons"> Field Expenses</a></div>
+               <div class="item"><a href="addmoney" class="wal_sidebar_text"><img src="../assets/img/Add-Money.svg" width="19px" class="wal_sidebar_icons">Add Money</a></div>
+               <div class="item"><a href="ticket" class="wal_sidebar_text"><img src="../assets/img/ticket .svg" width="19px" class="wal_sidebar_icons">Raise a Ticket</a></div>
+
                <hr class="style1">
 
-               <div class="item"><a href="<?php echo $url['support']; ?>"><i class="fa fa-envelope" style="color: white;" aria-hidden="true" width="20px" style="margin-right: 5px;"></i> Support</a></div>
-               <div class="item"><a><img src="../assets/img/about.svg" width="20px" style="margin-top:-5px; margin-right: 5px;"> About Us</a></div>
+               <div class="item"><a class="wal_sidebar_text" href="<?php echo $url['support']; ?>"><i class="fa fa-envelope" style="color: white;" aria-hidden="true" width="20px" style="margin-right: 8px;"></i> Support</a></div>
+               <div class="item"><a class="wal_sidebar_text"><img src="../assets/img/about.svg" width="20px" style="margin-top:-5px; margin-right: 5px;"> About Us</a></div>
                <hr class="style1">
                <div style="padding-left: 1rem; color:grey; font-size:1.3rem;">connect & share on</div>
                <div style="padding-left: 1rem;">
@@ -155,7 +159,7 @@
                      <div id="navbarSupportedContent" class=" collapse navbar-collapse sub-menu-bar">
                         <ul id="nav" class="navbar-nav ml-auto ">
                            <li class=" nav-item">
-                              <a style="color: rgb( 245, 57, 61 );" title="Refer and Earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
+                              <a style="color: crimson" title="Refer and Earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
                                  Refer and Earn
                               </a>
                            </li>
@@ -169,7 +173,7 @@
                            </li>
                            <li class="mmvv nav-item">
                               <a title="Balance" href="#" class="nav-link wal_level">
-                                  Level : <?php echo $level[0]; ?>
+                                 Level : <?php echo $level[0]; ?>
                               </a>
                            </li>
                            <li class="  nav-item m-1 brk ">
@@ -201,10 +205,10 @@
                            </li>
                         </ul>
                      </div>
-                     
+
                   </nav>
                   <!-- navbar -->
-                  
+
 
                </div>
             </div>
@@ -214,7 +218,7 @@
       </div>
       <!-- navbar area -->
    </header>
-   
+
 
 
 
@@ -232,6 +236,3 @@
 
       </div>
    </div>
-
-
-   
