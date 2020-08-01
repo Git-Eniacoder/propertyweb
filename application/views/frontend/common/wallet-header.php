@@ -125,11 +125,10 @@
                      <p>Recharge & PayBills</p>
                   </a>
                </div> -->
-               <div class="item"><a href="#" class="wal_sidebar_text"><img src="../assets/img/buyplan.svg" width="19px" class="wal_sidebar_icons">Buy Plan</a></div>
+               <div class="item"><a href="<?php echo $url['recharge']; ?>" class="wal_sidebar_text"><img src="../assets/img/buyplan.svg" width="19px" class="wal_sidebar_icons">Buy Plan</a></div>
                <div class="item"><a href="refer" class="wal_sidebar_text"><img src="../assets/img/refer.svg" width="19px" class="wal_sidebar_icons">Refer And Earn</a></div>
                <div class="item"><a href="field" class="wal_sidebar_text"><img src="../assets/img/Field Expense.png" width="19px" class="wal_sidebar_icons"> Field Expenses</a></div>
                <div class="item"><a href="addmoney" class="wal_sidebar_text"><img src="../assets/img/Add-Money.svg" width="19px" class="wal_sidebar_icons">Add Money</a></div>
-               <div class="item"><a href="ticket" class="wal_sidebar_text"><img src="../assets/img/ticket.svg" width="19px" class="wal_sidebar_icons">Raise a Ticket</a></div>
 
                <hr class="style1">
 
@@ -168,7 +167,7 @@
                            </li>
                            <li class=" nav-item">
                               <a title="Balance" href="#" class="nav-link">
-                                 <img src="../assets/img/Balance.png" width="25px"> Balance <?php echo $post["all_data"][0]->recharge_wallet; ?>.00
+                                 <img src="<?php echo $url['image']; ?>/Balance.png" width="25px"> Balance <?php echo $post["all_data"][0]->recharge_wallet; ?>.00
                               </a>
                            </li>
                            <li class="mmvv nav-item">

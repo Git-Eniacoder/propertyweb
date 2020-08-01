@@ -207,30 +207,44 @@ table{
                                 <table id="example" class="table table-fluid" >
                                     <thead>
                                         <tr class="bg-white">
-                                            <th>ID</th>
                                             <th>Subject</th>
+                                            <th>Department</th>
                                             <th>Status</th>
-                                            <th>View more</th>
+                                            <th>Admin Msg</th>
+                                            <th>Date</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php foreach($support_list as $value){?>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Recharge</td>
-                                            <td>Open</td>
-                                            <td>
-                                                <div class="dropdown">
-                                                    <button type="button" class=" vie dropdown-toggle" data-toggle="dropdown">
-                                                        View more
-                                                    </button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Link 1</a>
-                                                        <a class="dropdown-item" href="#">Link 2</a>
-                                                        <a class="dropdown-item" href="#">Link 3</a>
-                                                    </div>
-                                                </div>
-                                            </td>
+                                           <td><?php echo $value['support_subject'] ;?></td>
+                                           <td>
+                                               <?php 
+                                                    if($value['support_department']==0){
+                                                        echo "Technical Dept.";
+                                                    }else if($value['support_department']==1){
+                                                        echo "Billing Dept.";
+                                                    }else if($value['support_department']==2){
+                                                        echo "Payment Dept.";
+                                                    }
+                                               ?>
+                                           </td>
+                                           <td><?php 
+                                                if($value['support_status'] == 0){
+                                                       echo "<span class='text-white badge badge-warning'>In progress</span>"; 
+                                                }
+                                                if($value['support_status'] == 1){
+                                                    echo "<span class='text-white badge badge-success'>Approved</span>";
+                                                }
+                                                if($value['support_status'] == 2){
+                                                    echo "<span class='text-white badge badge-danger'>Declined</span>";
+                                                }
+                                                ?></td>
+                                            <td><?php echo $value['support_admin_msg']; ?></td>
+                                            <td><?php echo $value['support_date']; ?></td>
                                         </tr>
+                                        <?php } ?>
                                     </tbody>    
                                 </table>
                                 </div>   

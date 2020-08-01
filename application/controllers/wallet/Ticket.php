@@ -13,6 +13,7 @@ class Ticket extends My_Controller {
 
         parent::__construct();
         $this->load->model('db_wallet');
+        $this->load->model('db_support');
 
        // $this->load->model('pages/Db_postreq');
         
@@ -21,6 +22,7 @@ class Ticket extends My_Controller {
     public function index()
     {
 
+        $this->data['support_list'] = $this->db_support->support_list();
        $this->data['post'] = $this->db_wallet->get_balance($this->session->userdata("user_id"));
        $this->data['history'] = $this->db_wallet->refer_history($this->data['post']['all_data'][0]->referid);
        $this->data['level']=$this->find_level_and_points($this->data['post']["all_data"][0]->total_referal);
@@ -75,6 +77,48 @@ class Ticket extends My_Controller {
             }
             return array(6,233280,0);
         }
+    }
+    public function submit_support(){
+        $this->form_validation->set_rules('department', 'Department', 'required');
+        $this->form_validation->set_rules('subject', 'Subject', 'required');
+        $this->form_validation->set_rules('message', 'Message', 'required');
+        if ($this->form_validation->run()) {
+            $config['upload_path']          = './assets/img/support/';
+            $config['file_name']            = 'support_image'.rand().'.png';
+            $config['allowed_types']        = 'jpg|png';
+
+            $data['user_id'] = $this->session->userdata("user_id");
+            $data['user_name'] = $this->session->userdata("user_name");
+            $data['support_department'] = $this->input->post('department');
+            $data['support_subject'] = $this->input->post('subject');
+            $data['support_message'] = $this->input->post('message');
+            $data['referid'] = $this->input->post('referid');
+            if($this->input->post('teansaction'))
+                    {
+                        $data['support_txn'] = $this->input->post('teansaction');
+                    }
+            $data['support_image'] = $config['file_name'] ;
+            
+            $this->load->library('upload', $config);
+
+            if($this->upload->do_upload('image')){
+                if($this->db_support->submit_support($data)){
+                    $this->session->set_flashdata('response', '<p class="text-center text-success">Ticket Generated Success</p>');
+                    redirect(base_url().'wallet/ticket');
+                }
+                else{
+                    $this->session->set_flashdata('response', '<p class="text-center text-danger">Error in Submition</p>');
+                    redirect(base_url().'wallet/ticket');
+                }
+            }else{
+                $this->session->set_flashdata('response', '<p class="text-center text-danger">'.$this->upload->display_errors().'</p>');
+                redirect(base_url().'wallet/ticket');
+                
+            }
+        } else {
+           $this->index();
+        }
+        
     }
    
 }   
