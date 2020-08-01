@@ -183,7 +183,7 @@
             </div>
 
             <div class="wal_nav_list_right">
-              <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+              <span style="font-size:30px;cursor:pointer;color:crimson;" onclick="openNav()">&#9776;</span>
             </div>
             <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

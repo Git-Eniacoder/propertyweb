@@ -125,7 +125,7 @@
                                                    
                                                         <p style="color: grey;">Reach us on our</p>
                                                         <h4>Office</h4>
-                                                        <p style="color: grey;">Ground Floor,  Rajmahal Complex, Opp. PLA Petrol Pump, Delhi Road, Hisar Haryana 125001</p>
+                                                        <p style="color: grey;"> Hisar Haryana 125001</p>
                                                   
                                                 
                                             </div>
@@ -138,9 +138,8 @@
                                             
                                             <p style="color: grey;">Give us a</p>
                                             <h4>Call</h4>
-                                            <p style="color: grey;">+91 925 400 0000 </p>
-                                            <p style="color: grey;">+91 819 893 2943</p>
-                                            <p style="color: grey;">+91 920 624 4000</p>
+                                            <p style="color: grey;">+91 7392900007</p>
+                                            
                                             </div>
                                           
                                         </div>
@@ -152,9 +151,8 @@
                                             
                                             <p style="color: grey;">Drop an</p>
                                             <h4>Email</h4>
-                                            <p style="color: grey;">hisarfever@gmail.com</p>
-                                            <p style="color: grey;">vikaspoonia17@gmail.com</p>
-                                            <p style="color: grey;">jagdish@tirupatiinsurance.com</p>
+                                            <p style="color: grey;"> info@walletapp.com</p>
+                                      
                                             </div>
                                           
                                         </div>
