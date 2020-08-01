@@ -119,28 +119,28 @@
    </div>
 </div> -->
 <div class="wallet-op">
-      <div class="container">
-         <div class="row wallet_options justify-content-center">
-            <div class="col-md-3 wallet_op_bx">
-               <center><span class="wallet_amt" style="color: white; margin-top:5px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
-               <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn "><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
-            </div>
-            <div class="col-md-3 wallet_op_bx">
-               <center><span class="wallet_amt" style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
-               <a href="<?php echo $url['refer-wallet']; ?>"><button  class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
-            </div>
-            <div class="col-md-3 wallet_op_bx">
-               <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
-               <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
-            </div>
+   <div class="container">
+      <div class="row wallet_options justify-content-center">
+         <div class="col-md-3 wallet_op_bx">
+            <center><span class="wallet_amt" style="color: white; margin-top:5px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
+            <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn "><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
+         </div>
+         <div class="col-md-3 wallet_op_bx">
+            <center><span class="wallet_amt" style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
+            <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
+         </div>
+         <div class="col-md-3 wallet_op_bx">
+            <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
+            <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
+         </div>
 
-            <div class="col-md-3 wallet_op_bx wallet_op_bx-money">
-               <center><img src="../assets/img/Add-Money.svg" width="25px" class="wallet_mob_img"></center>
-               <a href="addmoney"><button class="wallet_op_btn active">Add Money</button ></a>
-            </div>
+         <div class="col-md-3 wallet_op_bx wallet_op_bx-money">
+            <center><img src="../assets/img/Add-Money.svg" width="25px" class="wallet_mob_img"></center>
+            <a href="addmoney"><button class="wallet_op_btn active">Add Money</button></a>
          </div>
       </div>
    </div>
+</div>
 
 
 
@@ -152,35 +152,38 @@
       <div class="row">
          <div class="col-md-3">
             <div class="card" style="margin-bottom: 2rem;">
-               <h4 style="text-align: left; margin-left: 1rem;">Add Money</h4>
+               <h4 style="text-center: left; margin-left: 1rem;">Add Money</h4>
                <button>Buy plan 960</button>
             </div>
          </div>
-         
+
          <div class="col-md-9">
-         <div class="container bg-white table-responsive"  style=" margin-bottom:2rem;">
-            <table class="table table-fluid" id="myTable">
-         <thead>
-               <tr class="bg-white">
-                  <th>Refered Person</th>
-                  <th>Amount</th>
-                  <th>Status</th>
-                  <th>Date</th>
-               </tr>
-         </thead>
-     <tbody>
-     <?php foreach ($history as $value) {?>
-                <tr>
-                              <td><?php echo $value['user_id']; ?></td>
-                              <td>+<?php echo $value['payment_amount']; ?></td>
-                              <td class="text-success">success</td>
-                              <td><?php echo $value['payment_date']; ?></td>
-                           </tr>
-               <?php } ?>
-     </tbody>
-     </table>
-     </div>
-     <div class="card" style="margin-bottom: 2rem;">
+            <div class="container bg-white table-responsive" style=" margin-bottom:2rem;">
+               <div class="walhistory">
+                  <h4 class="walhistory_text">Transactions</h4>
+               </div>
+               <table class="table table-fluid" id="myTable">
+                  <thead>
+                     <tr class="bg-white">
+                        <th>Refered Person</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <?php foreach ($history as $value) { ?>
+                        <tr>
+                           <td><?php echo $value['user_id']; ?></td>
+                           <td>+<?php echo $value['payment_amount']; ?></td>
+                           <td class="text-success">success</td>
+                           <td><?php echo $value['payment_date']; ?></td>
+                        </tr>
+                     <?php } ?>
+                  </tbody>
+               </table>
+            </div>
+            <div class="card" style="margin-bottom: 2rem;">
                <h4>Scan Qr code</h4>
                <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
                <div class="card-body py-0">
@@ -225,13 +228,13 @@
       });
    </script>
    <script>
-     $(document).ready( function () {
-     $('#myTable').DataTable({
-      "bLengthChange": false,
-    "bFilter": false,
-    "bInfo": false,
-    "pagingType": "simple",
-    "pageLength": 5,
-     });
- } );
-     </script>
+      $(document).ready(function() {
+         $('#myTable').DataTable({
+            "bLengthChange": false,
+            "bFilter": false,
+            "bInfo": false,
+            "pagingType": "simple",
+            "pageLength": 5,
+         });
+      });
+   </script>
