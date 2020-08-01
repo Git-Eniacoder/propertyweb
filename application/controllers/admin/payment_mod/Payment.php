@@ -8,6 +8,9 @@ class Payment extends My_Controller {
     {
         
         $data['url'] = $this->config->item('urls');
+        if(is_null($this->session->userdata("id"))){
+            redirect(base_url().'admin','refresh');
+        }
         $this->load->view('admin/payment_mod/payment');
         
     }

@@ -14,6 +14,9 @@ class Post_req extends My_Controller
     {
 
         parent::__construct();
+        if(is_null($this->session->userdata("id"))){
+            redirect(base_url().'admin','refresh');
+        }
 
         $this->load->model('pages/Db_postreq');
         // print_r($data['value']);die;

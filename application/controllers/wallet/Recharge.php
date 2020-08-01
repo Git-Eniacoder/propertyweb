@@ -12,7 +12,11 @@ class Recharge extends My_Controller {
     public function __construct() {
 
         parent::__construct();
+        
         $this->load->model('db_wallet');
+        if(is_null($this->session->userdata("user_id"))){
+            redirect(base_url());
+        }
 
        // $this->load->model('pages/Db_postreq');
         

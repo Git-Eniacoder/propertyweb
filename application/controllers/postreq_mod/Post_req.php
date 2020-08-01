@@ -8,6 +8,7 @@ class Post_req extends My_Controller {
 public function __construct()
 {
     parent::__construct();
+    
     $this->load->model('db_property');
     
 }

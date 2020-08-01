@@ -18,6 +18,11 @@ class Home extends My_Controller {
 
     public function index()
     {
+        // echo "<pre>";
+        // print_r($this->data);
+        // die;
+        $this->load->model('db_property');
+        $this->data['post'] = $this->db_property->get_property($this->session->userdata("user_id"));
         $this->data['property'] = $this->db_postreq->fetch_list();
         $this->load->view('frontend/common/header',$this->data);
         $this->load->view('frontend/home',$this->data);
@@ -42,7 +47,18 @@ class Home extends My_Controller {
         }
         echo json_encode($array);
     }
-
+    public function search_single(){
+        $data['city'] = $this->input->post('city');
+        $data['loc'] = $this->input->post('loc');
+        $data['type'] = $this->input->post('type');
+        $info = $this->db_fillter->search($data);
+        if(!is_null($info)){
+            print_r($info);
+        }else{
+            print_r("hello");
+        }
+       
+    }
     public function add()
     {
         $pre = $this->input->post(null,true);
