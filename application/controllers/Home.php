@@ -12,20 +12,35 @@ class Home extends My_Controller {
     public function __construct() {
 
         parent::__construct();
-        
-        $this->load->model('pages/Db_postreq');
+        $this->load->model('pages/db_postreq');
+        $this->load->model('pages/db_fillter');
     }
 
     public function index()
     {
-        // echo "<pre>";
-        // print_r($this->data);
-        // die;
-
+        $this->data['property'] = $this->db_postreq->fetch_list();
         $this->load->view('frontend/common/header',$this->data);
         $this->load->view('frontend/home',$this->data);
         $this->load->view('frontend/common/footer',$this->data);
 
+    }
+    public function search(){
+        $data['city'] = $this->input->post('city');
+        $data['loc'] = $this->input->post('loc');
+        $data['type'] = $this->input->post('type');
+        $info = $this->db_fillter->search($data);
+        if(!is_null($info)){
+            $array = array(
+                'form'   => true,
+                'msg'   => $info,
+               );
+        }else{
+            $array = array(
+                'form'   => true,
+                'msg'   => 'No Result Found',
+               );
+        }
+        echo json_encode($array);
     }
 
     public function add()
@@ -43,11 +58,8 @@ class Home extends My_Controller {
                     "pcity" => $pre['pcity'],
                 
             ];
-            // print_r($field);
-            // die();
-         //  prnt($field);
-
-            $this->Db_postreq->add($field);
+          
+            $this->db_postreq->add($field);
            
         $this->index();
     

@@ -125,7 +125,6 @@
                <div class="item"><a href="refer"><img src="../assets/img/refer.svg" width="19px" style="margin-right: 5px;" >Refer And Earn</a></div>
                <div class="item"><a href="field"><img src="../assets/img/Field Expense.png" width="19px" style="margin-right: 5px;" > Field Expenses</a></div>
                <div class="item"><a href="addmoney"><img src="../assets/img/Add-Money.svg" width="19px" style="margin-right: 5px;" >Add Money</a></div>
-               <div class="item"><a href="ticket"><img src="../assets/img/ticket .svg" width="19px" style="margin-right: 5px;" >Raise a Ticket</a></div>
               
                <hr class="style1">
 
@@ -164,7 +163,7 @@
                            </li>
                            <li class=" nav-item">
                               <a title="Balance" href="#" class="nav-link">
-                                 <img src="../assets/img/Balance.png" width="25px"> Balance <?php echo $post["all_data"][0]->recharge_wallet; ?>.00
+                                 <img src="<?php echo $url['image']; ?>/Balance.png" width="25px"> Balance <?php echo $post["all_data"][0]->recharge_wallet; ?>.00
                               </a>
                            </li>
                            <li class="mmvv nav-item">

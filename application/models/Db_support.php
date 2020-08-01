@@ -39,6 +39,9 @@ class Db_support extends CI_Model {
             return false;
         }
     }
+    public function support_list(){
+        return $this->db->where('user_id',$this->session->userdata('user_id'))->get('support')->result_array();
+    }
 }
 
 /* End of file Db_support.php */
