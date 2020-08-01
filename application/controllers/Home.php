@@ -21,7 +21,8 @@ class Home extends My_Controller {
         // echo "<pre>";
         // print_r($this->data);
         // die;
-
+        $this->load->model('db_property');
+        $this->data['post'] = $this->db_property->get_property($this->session->userdata("user_id"));
         $this->load->view('frontend/common/header',$this->data);
         $this->load->view('frontend/home',$this->data);
         $this->load->view('frontend/common/footer',$this->data);

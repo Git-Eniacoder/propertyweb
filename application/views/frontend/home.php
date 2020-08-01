@@ -1,3 +1,4 @@
+<?php  print_r($post[0]); ?>
 <main class="sub-main">
 
     <section class="hero">
@@ -194,9 +195,26 @@
 
                         </div>
                     </div> -->
-
+                <?php foreach($post as $value){ ?>
                     <!-- new Card  -->
                     <div class="card text-left prop_lists">
+                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "Sell"?></span></p>
+                            <h4 class=" prop_lists_text"><?php echo $value["list_bhk"] ?> BHK appartment 180 (sq-ft)</h4>
+                            <p class="prop_lists_add">in Alsanatham for Sale
+                                Within 3-6 months</p>
+                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <div class="text-center">
+                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php } ?>
+                    <!-- new Card  -->
+                    <!-- <div class="card text-left prop_lists">
                         <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
                         <div class="card-body">
                             <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
@@ -210,10 +228,10 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- new Card  -->
-                    <div class="card text-left prop_lists">
+                    <!-- <div class="card text-left prop_lists">
                         <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
                         <div class="card-body">
                             <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
@@ -227,10 +245,10 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- new Card  -->
-                    <div class="card text-left prop_lists">
+                    <!-- <div class="card text-left prop_lists">
                         <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
                         <div class="card-body">
                             <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
@@ -244,24 +262,7 @@
                             </div>
 
                         </div>
-                    </div>
-
-                    <!-- new Card  -->
-                    <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                        <div class="card-body">
-                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-                            <p class="prop_lists_rent"><span>Rent</span></p>
-                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
-                            <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
-                            </div>
-
-                        </div>
-                    </div>
+                    </div> -->
 
 
 
@@ -428,29 +429,14 @@
                     </div> -->
 
                     <!-- new Card  -->
-                    <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                        <div class="card-body">
-                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-                            <p class="prop_lists_rent"><span>Rent</span></p>
-                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
-                            <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
-                            </div>
-
-                        </div>
-                    </div>
-
+                    <?php foreach($post as $value){ ?>
                     <!-- new Card  -->
                     <div class="card text-left prop_lists">
                         <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
                         <div class="card-body">
-                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-                            <p class="prop_lists_rent"><span>Rent</span></p>
-                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                            <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "Sell"?></span></p>
+                            <h4 class=" prop_lists_text"><?php echo $value["list_bhk"] ?> BHK appartment 180 (sq-ft)</h4>
                             <p class="prop_lists_add">in Alsanatham for Sale
                                 Within 3-6 months</p>
                             <p><span class="prop_lists_rent">By Anshul</span></p>
@@ -460,42 +446,7 @@
 
                         </div>
                     </div>
-
-                    <!-- new Card  -->
-                    <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                        <div class="card-body">
-                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-                            <p class="prop_lists_rent"><span>Rent</span></p>
-                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
-                            <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- new Card  -->
-                    <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                        <div class="card-body">
-                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-                            <p class="prop_lists_rent"><span>Rent</span></p>
-                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
-                            <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
-                            </div>
-
-                        </div>
-                    </div>
-
-
+                <?php } ?>
 
 
                 </div>

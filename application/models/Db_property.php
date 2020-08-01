@@ -24,6 +24,11 @@ class Db_property extends CI_Model {
         }
     }
 
+    public function get_property(){
+        return $this->db->query("SELECT * FROM `list_property` ")->result_array();
+    }
+
+
 }
 
 /* End of file Db_property.php */
