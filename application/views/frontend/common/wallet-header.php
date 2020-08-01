@@ -129,7 +129,7 @@
                <div class="item"><a href="refer" class="wal_sidebar_text"><img src="../assets/img/refer.svg" width="19px" class="wal_sidebar_icons">Refer And Earn</a></div>
                <div class="item"><a href="field" class="wal_sidebar_text"><img src="../assets/img/Field Expense.png" width="19px" class="wal_sidebar_icons"> Field Expenses</a></div>
                <div class="item"><a href="addmoney" class="wal_sidebar_text"><img src="../assets/img/Add-Money.svg" width="19px" class="wal_sidebar_icons">Add Money</a></div>
-               <div class="item"><a href="ticket" class="wal_sidebar_text"><img src="../assets/img/ticket .svg" width="19px" class="wal_sidebar_icons">Raise a Ticket</a></div>
+               <div class="item"><a href="ticket" class="wal_sidebar_text"><img src="../assets/img/ticket.svg" width="19px" class="wal_sidebar_icons">Raise a Ticket</a></div>
 
                <hr class="style1">
 

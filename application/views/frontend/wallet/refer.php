@@ -244,11 +244,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <div class="card ">
+        <div class="card " style="margin-bottom:2rem ;">
           <h4 class="wal_side_head">Refer & Earn Wallet</h4>
 
           <a href="recharge"><button class="refer_wallet-btn" style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button></a>
-          <button class="refer_wallet-btn"><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Amount</button>
+          <!--button class="refer_wallet-btn"><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Amount</button> -->
           <button class="refer_wallet-btn "  data-toggle="modal" data-target="#myModal"><img src="../assets/img/trans.png" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfer to wallet</button>
 
           <!-- <button><img src="../assets/img/Mob.png" class="wal_left_icons">Recharge & PayBills</button>
@@ -260,7 +260,7 @@
 
       </div>
       <div class="col-md-9 right">
-      <div class="container bg-white table-responsive" style="margin-top: 2rem; ">
+      <div class="container bg-white table-responsive" >
             <table class="table table-fluid" id="myTable">
          <thead>
                <tr class="bg-white">
