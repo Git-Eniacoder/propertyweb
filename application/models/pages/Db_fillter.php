@@ -54,7 +54,7 @@ class Db_fillter extends CI_Model
  }
  public function search($data){
 
-    return $this->db->select('list_locality')->from('list_property')->like('list_city', $data['city'], 'both')->like('list_property_type', $data['type'], 'both')->like('list_locality', $data['loc'], 'both')->get()->result_array();
+    return $this->db->from('list_property')->like('list_city', $data['city'], 'both')->like('list_property_type', $data['type'], 'both')->like('list_locality', $data['loc'], 'both')->get()->result_array();
      
  }
  function count_all($minimum_price, $maximum_price, $brand, $ram, $storage)

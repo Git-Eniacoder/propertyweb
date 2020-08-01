@@ -65,6 +65,7 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col text-center">
                         <div class="searchbar_bx">
+                            <form method="post" action="<?php echo base_url().'propertydetail/search_single'; ?>">
                             <select name="city" id="city" class="searchbar sb_1">
                                 <option selected disabled value="">CHOOSE CITY</option>
                                 <option value="jaipur">Jaipur</option>
@@ -82,6 +83,7 @@
                             <button class="searchbar sb_4"><i class="fa fa-search" aria-hidden="true"></i>
                                 SEARCH
                             </button>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,18 @@ class Home extends My_Controller {
         }
         echo json_encode($array);
     }
-
+    public function search_single(){
+        $data['city'] = $this->input->post('city');
+        $data['loc'] = $this->input->post('loc');
+        $data['type'] = $this->input->post('type');
+        $info = $this->db_fillter->search($data);
+        if(!is_null($info)){
+            print_r($info);
+        }else{
+            print_r("hello");
+        }
+       
+    }
     public function add()
     {
         $pre = $this->input->post(null,true);
