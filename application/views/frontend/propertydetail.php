@@ -1,3 +1,9 @@
+<?php 
+echo "<pre>";
+print_r($searched);
+die;
+
+?>
 <div class="main_list">
 
 <div class="container">
