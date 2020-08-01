@@ -36,7 +36,7 @@
 </style>
 
 <div class="main_list">
-<section class="py-3 px-3" style="background-color: #fafafa;">
+<section class="" style="background-color: #fafafa;">
   <div class="pb-5 container text-center">
     <h3 class="pt-5"><span class="text-danger">Post Your Requirement</span> - Get Property Alert in your Inbox</h3>
     <h6>More than 10,000 Properties added daily</h6>

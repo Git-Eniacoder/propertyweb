@@ -124,7 +124,7 @@ table{
 
         
         <section class="contact p-0" >
-        <div class="container-fluid bg-danger p-3">
+        <div class="container-fluid bg-danger p-4">
                 <div class="section">
                 <h3 class="text-center text-white">Raise a Ticket</h3>
                 </div>
