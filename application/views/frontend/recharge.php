@@ -28,8 +28,8 @@ a.active{
     text-decoration: none;
 }
 </style>
-<section class="py-5 px-2" style="background-color: #fafafa;">
-    <div class="py-5 container text-center">
+<section class="py-3 px-2" style="background-color: #fafafa;">
+    <div class="pb-5 container text-center">
         <h3 class="pt-5">Bigger Saving Assured only on <span class="text-danger">Hello Rent India</span></h3>
         <h6>Now you can get Recharge of 1200 just paying 960 Rupees</h6>
     </div>

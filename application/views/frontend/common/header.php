@@ -153,24 +153,34 @@
       <nav class="wal_nav">
         <div class="nav_left">
           <div class="logo">
-            <a href=""><img src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="" class="wal_logo_n"></a>
+            <a href="<?php echo base_url(); ?>"><img src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="" class="wal_logo_n"></a>
           </div>
         </div>
         <div class="nav_right">
           <div class="wal_nav_list">
             <div class="wal_nav_list_left">
               <div class="nav_list_icons">
-                <a href="" class="wal_nav_links">Refer and Earn</a>
+                <a href="<?php echo $url['referandearn']; ?>" class="wal_nav_links">Refer and Earn</a>
               </div>
               <div class="nav_list_icons">
-                <a href="" class="wal_nav_links">List Property</a>
+                <a href="<?php echo $url['list']; ?>" class="wal_nav_links">List Property</a>
               </div>
-
+              <?php if ($status == false) { ?>   
               <div class="nav_list_icons">
                 <span><i class="fa fa-user wal_nav_links" aria-hidden="true"></i></span>
                 <span><a href="#" data-toggle="modal" data-target="#login"  class="wal_nav_links">Login /</a></span>
                 <span><a href="#" data-toggle="modal" data-target="#register" class="wal_nav_links">Sign up</a></span>
               </div>
+              <?php }else{ ?>
+              <div class="nav_list_icons">
+                <a href="#" id="navbardrop" data-toggle="dropdown" class="wal_nav_links dropdown-toggle"><?php echo 'Hey, ' . $uname; ?></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
+                    <a class="dropdown-item" href="<?php echo $url['support']; ?>">Raise Ticket</a>
+                    <a class="dropdown-item" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
+                </div>
+              </div>
+              <?php } ?>
             </div>
 
             <div class="wal_nav_list_right">
@@ -178,15 +188,16 @@
             </div>
             <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Clients</a>
-              <a href="#">Contact</a>
+              <a href="<?php echo $url['list']; ?>">List Property</a>
+              <a href="<?php echo $url['post_property']; ?>">Post Property</a>
+              <a href="<?php echo base_url() . 'about' ?>">About Us</a>
+              <a href="<?php echo base_url() . 'policy' ?>">Privacy Policy</a>
+              <a href="<?php echo base_url() . 'contact' ?>">Contact</a>
             </div>
           </div>
         </div>
 
-        <div class="wal_nav_dropdown">
+        <!-- <div class="wal_nav_dropdown">
           <div class="searchbar_bx_close">
             <i class="fa fa-times serch_close" aria-hidden="true"></i>
           </div>
@@ -194,7 +205,7 @@
           <a href="" class="wal_nav_dropdown_links">Wallet</a>
           <a href="" class="wal_nav_dropdown_links">List Property</a>
           <a href="" class="wal_nav_dropdown_links">Refer and Earn</a>
-        </div>
+        </div> -->
 
         
       </nav>

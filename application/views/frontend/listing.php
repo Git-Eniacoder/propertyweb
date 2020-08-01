@@ -39,10 +39,10 @@
         color: red;
     }
 </style>
-<section class="py-5 px-3" style="background-color: #fafafa;">
+<section class="px-3" style="background-color: #fafafa;">
 
 
-    <div class="py-5 container text-center">
+    <div class="pb-5 container text-center">
         <h3 class="pt-5"><span class="text-danger">List Your Property</span> - Get Renters of your Choice</h3>
         <h6 class="">Thousand of Renters Searching Daily</h6>
     </div>
