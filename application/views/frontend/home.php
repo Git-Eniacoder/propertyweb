@@ -125,6 +125,7 @@
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rechargep.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Recharge Portal</p>
+                                <!-- <a href="" class="hero_ser_text">Recharge Portal</a> -->
                             </div>
                         </a>
 
@@ -136,6 +137,7 @@
                             <div class="ser">
                                 <img src="assets/img/homeimgs/postp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Post Requirement</p>
+                                <!-- <a href="" class="hero_ser_text">Post Requirement</a> -->
                             </div>
                         </a>
 
@@ -145,6 +147,7 @@
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">shopping Portal</p>
+                                <!-- <a href="" class="hero_ser_text">Post Requirement</a> -->
                             </div>
                         </a>
 
@@ -206,13 +209,13 @@
                         <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
                         <div class="card-body">
                             <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
-                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "Sell"?></span></p>
-                            <h4 class=" prop_lists_text"><?php echo $value["list_bhk"] ?> BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></span></p>
+                            <h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4>
+                            <p class="prop_lists_add">in <?php echo $value["list_city"]?> for <?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></p>
+                            <p class="prop_lists_add"><?php echo $value["list_date"]?> </p>
+                            <p><span class="prop_lists_rent"><?php echo $value["list_name"]?></span></p>
                             <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+                            <a href="tel:+91<?php echo $value["list_mobile"] ?>"> <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
                             </div>
 
                         </div>
@@ -437,16 +440,16 @@
                     <?php foreach($post as $value){ ?>
                     <!-- new Card  -->
                     <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                        <img class="card-img-top" height="188px" src="<?php $img = explode(",",$value["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt="">
                         <div class="card-body">
                             <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
-                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "Sell"?></span></p>
-                            <h4 class=" prop_lists_text"><?php echo $value["list_bhk"] ?> BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By </span></p>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></span></p>
+                            <h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4>
+                            <p class="prop_lists_add">in <?php echo $value["list_city"]?> for <?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></p>
+                            <p class="prop_lists_add"><?php echo $value["list_date"]?> </p>
+                            <p><span class="prop_lists_rent"><?php echo $value["list_name"]?></span></p>
                             <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
+                            <a href="tel:+91<?php echo $value["list_mobile"] ?>"> <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
                             </div>
 
                         </div>
