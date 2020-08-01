@@ -107,25 +107,25 @@ class Otp extends My_Controller {
                 $rand = mt_rand(10000,99999);
                 $_SESSION['ruser_otp'] = $rand;
                 $_SESSION['rnumber'] = $number;
-                // Account details
-                // $apiKey = urlencode('AatJnvXT+aY-938RJaCG444fzTalb9slE32x4suSln');
+    
+                $apiKey = urlencode('+tnkyt2mkYg-VZ4Pz5wm4deRjTTC2vxPgQLl3seD4y');
                 
-                // // Message details
-                // $numbers = urlencode($number);
-                // $sender = urlencode('TXTLCL');
-                // $message = rawurlencode('Dear customer, your OTP for registration is '.$rand);
+                // Message details
+                $numbers = urlencode($number);
+                $sender = urlencode('TXTLCL');
+                $message = rawurlencode('Dear customer, your OTP for registration is '.$rand);
         
-                // $data = 'apikey=' . $apiKey . '&numbers=' . $numbers . "&sender=" . $sender . "&message=" . $message;
+                $data = 'apikey=' . $apiKey . '&numbers=' . $numbers . "&sender=" . $sender . "&message=" . $message;
             
         
-                // $ch = curl_init('https://api.textlocal.in/send/?' . $data);
-                // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                // $response = curl_exec($ch);
-                // curl_close($ch);
+                $ch = curl_init('https://api.textlocal.in/send/?' . $data);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                $response = curl_exec($ch);
+                curl_close($ch);
 
                 $array = array(
                     'status'   => true,
-                    'msg'   => $rand,
+                    'msg'   => $response,
                 );
 
             } else {
