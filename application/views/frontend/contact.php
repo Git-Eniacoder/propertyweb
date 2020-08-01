@@ -1,69 +1,69 @@
 <style>
-.contect-form{
-  background-color: white;
-  position: relative;
-  
+    .contect-form{
+    background-color: white;
+    position: relative;
 
-  width:92%;
-  padding-top: 30px;
 
-}
-.contect-form .lis{
-  width: 100%;
-border: 1px solid rgb( 190, 190, 190 );
-  padding-left: 15px;
-  margin-bottom: 20px;
-  background-color: rgb( 255, 255, 255 );
-  border-radius: 6px;
-  color: rgb(165, 154, 154);
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  padding:10px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  .contect-form .lis::placeholder{
-    color: rgb(165, 154, 154);
-  }
+    width:92%;
+    padding-top: 30px;
 
-  .contect-form .bu {
-    padding: 5px;
-    
-  
-    border-radius: 6px;
-    background-color: rgb( 227, 31, 36 );
-    text-align: center;
+    }
+    .contect-form .lis{
     width: 100%;
-    height: auto;
+    border: 1px solid rgb( 190, 190, 190 );
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background-color: rgb( 255, 255, 255 );
+    border-radius: 6px;
+    color: rgb(165, 154, 154);
+    text-align: left;
     outline: none;
-    border: none;
-    color: rgb( 255, 255, 255 );
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 20px;
+    font-size: 15px;
+    padding:10px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
- .contect-form .bu:hover{
-  background-color: rgb( 95, 96, 96 );
- }
- .contect-form .contact-info{
-  background-color: white;
-  position: relative;
-  
-  
+    .contect-form .lis::placeholder{
+      color: rgb(165, 154, 154);
+    }
 
-  
- }
- .contect-form .contact-info .uper-info p{
-   color: black;
-   font-size: 24px;
-   line-height: 1.2;
- }
- 
- .contect-form .contact-info .conn{
-   margin-bottom: 20px;
- }
+    .contect-form .bu {
+      padding: 5px;
+      
+
+      border-radius: 6px;
+      background-color: rgb( 227, 31, 36 );
+      text-align: center;
+      width: 100%;
+      height: auto;
+      outline: none;
+      border: none;
+      color: rgb( 255, 255, 255 );
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+    .contect-form .bu:hover{
+    background-color: rgb( 95, 96, 96 );
+    }
+    .contect-form .contact-info{
+    background-color: white;
+    position: relative;
+
+
+
+
+    }
+    .contect-form .contact-info .uper-info p{
+      color: black;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .contect-form .contact-info .conn{
+      margin-bottom: 20px;
+    }
 </style>    
         <div class="contact-us">
             <div class="hdr">

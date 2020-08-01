@@ -1064,7 +1064,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 .login_btn{
   width: 100%;
-  background-color: #FF5757;
+  background-color: crimson;
   padding: .7rem 0rem;
   border: none;
   color: #fff;
@@ -1898,7 +1898,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 47%;
+top: 54% !important;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -2011,7 +2011,7 @@ margin-top: 2rem;
     border-radius : unset;
     border: 1px solid white;
     /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6); */
-    background-color: rgb( 245, 57, 61 );
+    background-color: crimson;
   
   }
   .wallet-op button{
@@ -2475,6 +2475,10 @@ margin-top: 2rem;
   transition: all .1s ease;
 }
 
+
+.prop_detail_img{
+  width: 50%;
+}
 
 
 @media screen and (max-width: 600px) {
