@@ -88,7 +88,7 @@
             <div class="hero_post_bx">
                 <div class="row justify-content-center align-items-center">
                     <div class="col post_line"></div>
-                    <div class="col-7">Are you a Property Owner?</div>
+                    <div class="col-7 post_mob">Are you a Property Owner?</div>
                     <div class="col post_line"></div>
                 </div>
                 <div class="row justify-content-center align-items-center">
@@ -107,7 +107,7 @@
                         <a href="" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
-                                <p class="hero_ser_text">Rental Portal</p>
+                                <p class="hero_ser_text">Rental Home Portal</p>
                             </div>
                         </a>
 
@@ -508,22 +508,26 @@
 
 </main>
 
-<!-- 
-<div class="container">
 
-    <div class="card text-left prop_lists">
+<!-- <div class="container">
+
+    <div class="card text-left prop_lists prop_lists2">
         <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
         <div class="card-body">
-            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-            <p class="prop_lists_rent"><span>Rent</span></p>
-            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
-            <p class="prop_lists_add">in Alsanatham for Sale
+        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+        <p class="prop_lists_add">in Alsanatham for Sale
                 Within 3-6 months</p>
-            <p><span class="prop_lists_rent">By Anshul</span></p>
-            <div class="text-center">
-                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
-            </div>
-
+        <p><span>Vaishali Nagar</span></p>
+     
+        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+    
+        
+        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+        <p><span class="prop_lists_rent">Rent</span></p>
+        <div class="text-center">
+            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+        </div>
+        
         </div>
     </div>
 </div> -->

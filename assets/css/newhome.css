@@ -366,6 +366,9 @@
     transition: all .3s ease;
   }
 
+  .prop_lists2{
+    width: 20rem;
+  }
 
 
   @media screen and (max-width: 1200px) {
@@ -390,6 +393,10 @@
 
     .hero_ser_img{
       width: 3rem;
+    }
+
+    .sb_2::placeholder {
+      padding-left: 0rem !important;
     }
 
 
@@ -430,6 +437,23 @@
 
     .top_trend{
       margin: 0 1rem !important;
+    }
+
+    .ser{
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero_service_bx {
+      width: 50%;
+    }
+
+    .post_mob{
+      text-align: center;
+    }
+
+    .prop_lists{
+      width: 17.5rem !important;
     }
   }
   
