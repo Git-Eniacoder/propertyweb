@@ -2477,7 +2477,7 @@ margin-top: 2rem;
 
 
 .prop_detail_img{
-  width: 50%;
+  width: 100%;
   border: 2px solid #eee;
   border-radius: 3px;
 }
@@ -2570,6 +2570,23 @@ margin-top: 2rem;
   }
   .wal_nav_list_left {
     display: none;
+  }
+
+  .prop_detail_text-h2{
+    font-size: 1.5rem;
+    
+  }
+  .prop_detail_text-span{
+    font-size: 1.2rem;
+  }
+
+  .prop_detail_text-detail{
+    font-size: 1.5rem;
+  }
+
+  .prop_detail_text{
+    padding-top: .8rem;
+    padding-bottom: 1rem;
   }
 }
 
