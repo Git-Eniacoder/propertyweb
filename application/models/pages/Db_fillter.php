@@ -57,6 +57,9 @@ class Db_fillter extends CI_Model
     return $this->db->from('list_property')->like('list_city', $data['city'], 'both')->like('list_property_type', $data['type'], 'both')->like('list_locality', $data['loc'], 'both')->get()->result_array();
      
  }
+ public function fetch_property($id){
+    return $this->db->where('property_id',$id)->get('list_property')->row_array();
+ }
  function count_all($minimum_price, $maximum_price, $brand, $ram, $storage)
  {
   $query = $this->make_query($minimum_price, $maximum_price, $brand, $ram, $storage);
