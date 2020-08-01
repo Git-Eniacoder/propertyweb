@@ -18,6 +18,11 @@ class Home extends My_Controller {
 
     public function index()
     {
+        // echo "<pre>";
+        // print_r($this->data);
+        // die;
+        $this->load->model('db_property');
+        $this->data['post'] = $this->db_property->get_property($this->session->userdata("user_id"));
         $this->data['property'] = $this->db_postreq->fetch_list();
         $this->load->view('frontend/common/header',$this->data);
         $this->load->view('frontend/home',$this->data);
