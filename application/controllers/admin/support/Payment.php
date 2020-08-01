@@ -28,7 +28,7 @@ class Payment extends CI_Controller {
         }
     }
     public function update($id=null){
-        // echo "hello";
+        $depart  =$this->input->post('department');  // depatment id
         $this->load->model('db_wallet');
         $data['support_status'] = $this->input->post('status');
         $data['support_department'] = $this->input->post('department');
@@ -54,7 +54,7 @@ class Payment extends CI_Controller {
                                         "filed_wallet"=>$refer_data["all_data"][0]->filed_wallet+$next_level_points[2],
                                         "total_referal"=>$refer_data["all_data"][0]->total_referal+1,
                                         "level_up"=>$next_level_points[3]);
-                print_r($update_data_refer);
+               
             }
             else{
                 // echo "hello3";
@@ -66,24 +66,60 @@ class Payment extends CI_Controller {
                 
             //update support ticket
                 if($this->db_support->payment_update($data,$id)){
-                    $this->index();
+                    if($depart==2){
+                        redirect(base_url().'/admin/support/payment');
+                    }else if($depart==0){
+                         redirect(base_url().'/admin/support/technical');
+                    }else if($depart==1){
+                         redirect(base_url().'/admin/support/billing');
+                    }
                 }else{
-                    $this->index();
+                    if($depart==2){
+                        redirect(base_url().'/admin/support/payment');
+                    }else if($depart==0){
+                         redirect(base_url().'/admin/support/technical');
+                    }else if($depart==1){
+                         redirect(base_url().'/admin/support/billing');
+                    }
                 }
             }
             else{
-                $this->index();
+                if($depart==2){
+                    redirect(base_url().'/admin/support/payment');
+                }else if($depart==0){
+                     redirect(base_url().'/admin/support/technical');
+                }else if($depart==1){
+                     redirect(base_url().'/admin/support/billing');
+                }
             }
             //updating history
             $this->payment_history(array($user_id,$refer_id,$data['support_status'],1200,$next_level_points[1],$next_level_points[2]));
-            $this->index();
+            if($depart==2){
+                redirect(base_url().'/admin/support/payment');
+            }else if($depart==0){
+                 redirect(base_url().'/admin/support/technical');
+            }else if($depart==1){
+                 redirect(base_url().'/admin/support/billing');
+            }
         }
         else{//just update status in support table
             // echo "hello5";
             if($this->db_support->payment_update($data,$id)){
-                $this->index();
+                if($depart==2){
+                    redirect(base_url().'/admin/support/payment');
+                }else if($depart==0){
+                     redirect(base_url().'/admin/support/technical');
+                }else if($depart==1){
+                     redirect(base_url().'/admin/support/billing');
+                }
             }else{
-                $this->index();
+                if($depart==2){
+                    redirect(base_url().'/admin/support/payment');
+                }else if($depart==0){
+                     redirect(base_url().'/admin/support/technical');
+                }else if($depart==1){
+                     redirect(base_url().'/admin/support/billing');
+                }
             }
 
             

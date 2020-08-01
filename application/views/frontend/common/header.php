@@ -20,7 +20,6 @@
   
  
 
-
   .sidenav {
   height: 100%;
   width: 0;
@@ -241,7 +240,7 @@
               </form>
 
               <div class="login_bot">
-                <p>If you have an account just <a id="mlog" class="btn text-primary"> Login here</a></p>
+                <p>If you have an account just <a id="mlog" class="btn text-danger"> Login here</a></p>
               </div>
 
 
@@ -279,9 +278,9 @@
                 </div>
               </form>
               <a class="p-1 btn login_forgot" id="para">
-                <p>Forgot Password ?</p>
+                <p style="color:red;">Forgot Password ?</p>
               </a>
-              <p>If you dont have an account just <a id="mreg" class="btn text-primary">Register here</a></p>
+              <p>If you dont have an account just <a id="mreg" class="btn text-danger">Register here</a></p>
               <!-- <center><a class="btn" id="mreg">Register</a></center> -->
             </div>
           </div>
@@ -302,9 +301,6 @@
 
           <div class="row">
             <div class="col login_bx">
-              <div class="login_head">
-                <h5>Login into your account</h5>
-              </div>
 
 
               <div>
@@ -315,7 +311,7 @@
                   <input type="number" name="mobile" placeholder="Mobile no" class="login_inp">
                   <button class="login_btn">Submit</button>
                 </form>
-                <p class="reg_line">If you dont have an account just <a href="#">Register here</a></p>
+                <p class="reg_line">If you dont have an account just <a href="#" class="text-danger">Register here</a></p>
               </div>
 
             </div>

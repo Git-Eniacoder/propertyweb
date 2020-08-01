@@ -42,7 +42,7 @@ $config['post_req'] = base_url().'postreq_mod/post_req/insert/';
 $config['wallet'] = base_url().'wallet/recharge';   // Done
 
 // support
-$config['support'] = base_url().'support/';
+$config['support'] = base_url().'wallet/ticket/';
 
 //image url
 $config['image'] = base_url().'assets/img/';

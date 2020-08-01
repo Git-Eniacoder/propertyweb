@@ -1,3 +1,4 @@
+
 <main class="sub-main">
 
     <section class="hero">
@@ -64,16 +65,19 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col text-center">
                         <div class="searchbar_bx">
-                            <select name="" id="" class="searchbar sb_1">
-                                <option value="">CHOOSE CITY</option>
-                                <option value="">Choose Type</option>
-                                <option value="">Choose Type</option>
+                            <select name="city" id="city" class="searchbar sb_1">
+                                <option selected disabled value="">CHOOSE CITY</option>
+                                <option value="jaipur">Jaipur</option>
+                                <option value="delhi">Delhi</option>
                             </select>
-                            <input type="text" class="searchbar sb_2" placeholder="SEARCH LOCALITY">
-                            <select name="" id="" class="searchbar sb_3">
-                                <option value="">PROPERTY TYPE</option>
-                                <option value="">Choose Type</option>
-                                <option value="">Choose Type</option>
+                            <input list="searches" type="text" id="click" class="searchbar sb_2" placeholder="SEARCH LOCALITY">
+                            <datalist id="searches">
+                                
+                            </datalist>
+                            <select name="type" id="type" class="searchbar sb_3">
+                                <option selected disabled value="">PROPERTY TYPE</option>
+                                <option value="residential">Residential Property</option>
+                                <option value="commercial">Commercial Property</option>
                             </select>
                             <button class="searchbar sb_4"><i class="fa fa-search" aria-hidden="true"></i>
                                 SEARCH
@@ -494,6 +498,7 @@
 
                         </div>
                     </div>
+                 
 
 
 
@@ -507,6 +512,28 @@
     </section>
 
 </main>
+<script type="text/javascript">
+
+$("#click").keypress(function(){
+    var city = $("#city").val();
+    var type = $("#type").val();
+    var loc = $("#click").val();
+    $.ajax({
+    url : "<?php echo base_url().'home/search' ; ?>",
+    type: "post",
+    dataType:"json",
+    data : { city: city, type: type, loc: loc },
+}).done(function(response){
+    console.log(response)
+    for(var key in response.msg){
+     $('#searches').html("<option value='" + response.msg[key].list_locality + "'>");
+    }
+
+});
+});
+</script>
+
+
 
 
 <!-- <div class="container">
