@@ -108,7 +108,7 @@ class Otp extends My_Controller {
                 $_SESSION['ruser_otp'] = $rand;
                 $_SESSION['rnumber'] = $number;
     
-                $apiKey = urlencode('+tnkyt2mkYg-VZ4Pz5wm4deRjTTC2vxPgQLl3seD4y');
+                $apiKey = urlencode('AatJnvXT+aY-938RJaCG444fzTalb9slE32x4suSln');
                 
                 // Message details
                 $numbers = urlencode($number);

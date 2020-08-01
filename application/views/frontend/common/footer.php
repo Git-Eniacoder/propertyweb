@@ -53,7 +53,7 @@ $(".nav_bar_click").click(function(){
           console.log(response);
           $('#status').html('');
           $('#reg').attr('action', '<?php echo base_url() . "otp/verify"; ?>');
-          $('#reg').html('<input type="text" name="otp" required><button>Verify Otp</button>');
+          $('#reg').html('<input type="text" class="login_inp" placholder="Enter Otp" name="otp" required><button class="login_btn">Verify Otp</button>');
         }
         if (response.otp) {
           $('#reg').html('');
@@ -112,7 +112,7 @@ $(".nav_bar_click").click(function(){
           console.log(response);
           $('#resetid').html('');
           $('#frest').attr('action', '<?php echo base_url() . "otp/verify_reset"; ?>');
-          $('#frest').html('<input type="text" name="rotp" required><button>Verify Otp</button>');
+          $('#frest').html('<input type="text" name="rotp" placeholder="Enter Otp" required><button class="login_btn">Verify Otp</button>');
         }
         if (response.otp) {
           console.log(response);
