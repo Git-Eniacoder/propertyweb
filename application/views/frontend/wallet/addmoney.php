@@ -150,24 +150,14 @@
 <div class="add-money">
    <div class="container">
       <div class="row">
-         <div class="col-md-2">
+         <div class="col-md-3">
             <div class="card" style="margin-bottom: 2rem;">
                <h4 style="text-align: left; margin-left: 1rem;">Add Money</h4>
                <button>Buy plan 960</button>
             </div>
          </div>
-         <div class="col-md-4">
-            <div class="card" style="margin-bottom: 2rem;">
-               <h4>Scan Qr code</h4>
-               <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
-               <div class="card-body py-0">
-                  <h6 style="text-align: center;" class="text-primary">Or</h6>
-                  <p style="text-align: center;" class="card-text">Pay Through UPI</p>
-                  <h4 style="text-align: center;" class="card-title">7014162976@ybl</h4>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6">
+         
+         <div class="col-md-9">
          <div class="container bg-white table-responsive"  style=" margin-bottom:2rem;">
             <table class="table table-fluid" id="myTable">
          <thead>
@@ -190,6 +180,15 @@
      </tbody>
      </table>
      </div>
+     <div class="card" style="margin-bottom: 2rem;">
+               <h4>Scan Qr code</h4>
+               <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
+               <div class="card-body py-0">
+                  <h6 style="text-align: center;" class="text-primary">Or</h6>
+                  <p style="text-align: center;" class="card-text">Pay Through UPI</p>
+                  <h4 style="text-align: center;" class="card-title">7014162976@ybl</h4>
+               </div>
+            </div>
          </div>
       </div>
    </div>

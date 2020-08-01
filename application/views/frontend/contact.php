@@ -71,7 +71,7 @@ border: 1px solid rgb( 190, 190, 190 );
                      <div class="banner-text text-center size-banner">
   
                         <div class="contect fliter-heading">
-                            <h3 style="margin-top:40px;"><span style="color:rgb( 239, 69, 84 ); margin-top:40px;">Enough about us,</span> <b>lets talk about you now !</b></h3>
+                            <h3 style="margin-top:40px;"><span style=" margin-top:40px;" class="crimson_text">Enough about us,</span> <b>lets talk about you now !</b></h3>
                             <p style="font-size:15px; color:rgb( 95, 96, 96 );">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here. We’ll be sure to get back to you as soon as we can.</p>
                         </div>
                       </div>
@@ -97,7 +97,7 @@ border: 1px solid rgb( 190, 190, 190 );
                                 
                                 <textarea class="lis" name="text" cols="40" rows="10"  aria-invalid="false" placeholder="Brief Requirement"></textarea>
                                 <span id="text_error" class="text-danger m-0 p-0"></span></br>
-                                <input type="submit" name="formSubmit"  class="bu"  />
+                                <input type="submit" name="formSubmit"  class="bu crimson_background"  />
 
                          
                         </div>
@@ -117,7 +117,7 @@ border: 1px solid rgb( 190, 190, 190 );
                                         
                                         <div class="row conn">
                                             <div class="col-md-2">
-                                            <i class="fa fa-map-marker" style="font-size: 35px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
+                                            <i class="fa fa-map-marker crimson_text" style="font-size: 35px;" aria-hidden="true"></i>
                                             </div>
                                             <div class="col-md-10">
                                                 
@@ -132,7 +132,7 @@ border: 1px solid rgb( 190, 190, 190 );
                                         </div>
                                         <div class="row conn">
                                             <div class="col-md-2">
-                                            <i class="fa fa-phone" style="font-size: 35px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
+                                            <i class="fa fa-phone crimson_text" style="font-size: 35px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
                                             </div>
                                             <div class="col-md-10">
                                             
@@ -146,7 +146,7 @@ border: 1px solid rgb( 190, 190, 190 );
                                         </div>
                                         <div class="row conn">
                                             <div class="col-md-2">
-                                            <i class="fa fa-envelope" style="font-size: 35px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
+                                            <i class="fa fa-envelope crimson_text" style="font-size: 35px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
                                             </div>
                                             <div class="col-md-10">
                                             
