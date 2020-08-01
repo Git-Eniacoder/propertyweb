@@ -1898,7 +1898,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 54% !important;
+top: 45% !important;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -2528,6 +2528,12 @@ margin-top: 2rem;
   background-color: #fff;
   padding: 1rem;
   /* margin-top: 1rem; */
+}
+
+.walhistory_text{
+  padding: 1rem 0 .8rem 0;
+  font-size: 1.2rem;
+  color: rgb( 65, 65, 65 );
 }
 
 
