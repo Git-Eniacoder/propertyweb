@@ -125,6 +125,7 @@
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rechargep.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Recharge Portal</p>
+                                <!-- <a href="" class="hero_ser_text">Recharge Portal</a> -->
                             </div>
                         </a>
 
@@ -136,6 +137,7 @@
                             <div class="ser">
                                 <img src="assets/img/homeimgs/postp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Post Requirement</p>
+                                <!-- <a href="" class="hero_ser_text">Post Requirement</a> -->
                             </div>
                         </a>
 
@@ -145,6 +147,7 @@
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">shopping Portal</p>
+                                <!-- <a href="" class="hero_ser_text">Post Requirement</a> -->
                             </div>
                         </a>
 

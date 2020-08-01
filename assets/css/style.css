@@ -2478,6 +2478,56 @@ margin-top: 2rem;
 
 .prop_detail_img{
   width: 50%;
+  border: 2px solid #eee;
+  border-radius: 3px;
+}
+
+.prop_detail_text{
+  padding-top: 2rem;
+}
+
+.prop_detail_text-span{
+  color: rgb(95, 95, 95);
+  font-size: 1.8rem;
+}
+
+.prop_detail_text-p{
+  color: rgb(95, 95, 95);
+  font-size: 1.1rem;
+}
+
+.prop_detail_text-detail{
+  font-size: 2rem;
+  font-weight: 400;
+  color: crimson;
+}
+
+.prop_detail_text-detail-rent{
+  color: rgb(136, 136, 136);
+}
+
+.prop_detail_text-price{
+  width: 70%;
+}
+
+.prop_detail_text-other{
+  font-size: 1.2rem;
+  color: #555454;
+  padding-top: 2rem;
+}
+
+.prop_detail_text-obx{
+ padding-top: 1rem !important;
+}
+
+.prop_detail_text-status{
+
+}
+
+.prop_detail_bottom{
+  background-color: #fff;
+  padding: 1rem;
+  /* margin-top: 1rem; */
 }
 
 
