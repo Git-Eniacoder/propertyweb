@@ -47,8 +47,6 @@
         <h6 class="">Thousand of Renters Searching Daily</h6>
     </div>
 
-
-
     <div style="border: 1px solid #ccc;" class="container form-padding">
         <div class="row">
             <div style="background-color: #fff;" class="p-4 col-md-9">
@@ -60,8 +58,6 @@
                     }
                     ?>
                 </div>
-
-
 
                 <form action="<?php echo $url['inreq']; ?>" method="post" class="post-requirment my-3" enctype="multipart/form-data">
                     <div class="form-row">

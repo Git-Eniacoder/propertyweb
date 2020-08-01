@@ -16,9 +16,8 @@
 
 
    <style>
-      .meu .mmvv{
-         display: none;
-      }
+     
+ 
       .fa-user {
          border: 2px solid gray;
          border-radius: 50%;
@@ -153,7 +152,7 @@
                            <img width="133" height=30 src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="Logo" class="custom-logo">
                         </a>
                      </div>
-                     <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
+                     <div id="navbarSupportedContent" class=" collapse navbar-collapse sub-menu-bar">
                         <ul id="nav" class="navbar-nav ml-auto ">
                            <li class=" nav-item">
                               <a style="color: rgb( 245, 57, 61 );" title="Refer and Earn" href="<?php echo $url['referandearn']; ?>" class="nav-link">
@@ -168,7 +167,7 @@
                                  <img src="../assets/img/Balance.png" width="25px"> Balance <?php echo $post["all_data"][0]->recharge_wallet; ?>.00
                               </a>
                            </li>
-                           <li class=" nav-item">
+                           <li class="mmvv nav-item">
                               <a title="Balance" href="#" class="nav-link wal_level">
                                   Level : <?php echo $level[0]; ?>
                               </a>
@@ -189,8 +188,8 @@
                            <li class="  nav-item m-1 brk ">
                               |
                            </li-->
-                           <li class="nav-item">
-                              <div class="dropdown user-fa">
+                           <li class=" nav-item">
+                              <div class="mmvv dropdown user-fa">
                                  <i class="fa fa-user" aria-hidden="true"></i>
                                  <span class="caret"></span>
                                  <div class="dropdown-content">
@@ -202,11 +201,7 @@
                            </li>
                         </ul>
                      </div>
-                     <div class="mmvv">
-                     <a title="Balance" href="#" class="nav-link">
-                                 <img src="../assets/img/Balance.png" width="25px" style="margin-right: 10px;"><?php echo $post["all_data"][0]->recharge_wallet; ?>.00
-                              </a>
-                     </div>
+                     
                   </nav>
                   <!-- navbar -->
                   

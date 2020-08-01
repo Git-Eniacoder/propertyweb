@@ -28,7 +28,7 @@
   z-index: 1;
   top: 0;
   right: 0px;
-  background-color: white;
+  background-color: crimson;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -38,7 +38,7 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: white;
   display: block;
   transition: 0.3s;
 }
