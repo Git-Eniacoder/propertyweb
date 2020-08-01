@@ -181,7 +181,8 @@
   }
   
   .trending {
-    margin: 2rem 0 3rem 0;
+    margin: 2rem 0 0 0;
+    padding-bottom: 2rem;
   }
   
   .prop_loc {
@@ -369,6 +370,30 @@
   .prop_lists2{
     width: 20rem;
   }
+
+  .side_link{
+    font-size: 1.1rem !important;
+  }
+
+  .closebtn{
+    font-size: 1.3rem;
+  }
+
+  .crimson_text{
+    color: crimson !important;
+  }
+
+  .crimson_background{
+    background-color: crimson !important;
+  }
+
+  .main_list{
+    /* margin-bottom: 3rem !important; */
+    padding-bottom: 3rem;
+    background-color: #fafafa;
+  }
+
+
 
 
   @media screen and (max-width: 1200px) {

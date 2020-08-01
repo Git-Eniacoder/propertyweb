@@ -10,7 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
@@ -188,11 +188,11 @@
             </div>
             <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="<?php echo $url['list']; ?>">List Property</a>
-              <a href="<?php echo $url['post_property']; ?>">Post Property</a>
-              <a href="<?php echo base_url() . 'about' ?>">About Us</a>
-              <a href="<?php echo base_url() . 'policy' ?>">Privacy Policy</a>
-              <a href="<?php echo base_url() . 'contact' ?>">Contact</a>
+              <a href="<?php echo $url['list']; ?>" class="side_link">List Property</a>
+              <a href="<?php echo $url['post_property']; ?>" class="side_link">Post Property</a>
+              <a href="<?php echo base_url() . 'about' ?>" class="side_link">About Us</a>
+              <a href="<?php echo base_url() . 'policy' ?>" class="side_link">Privacy Policy</a>
+              <a href="<?php echo base_url() . 'contact' ?>" class="side_link">Contact</a>
             </div>
           </div>
         </div>
