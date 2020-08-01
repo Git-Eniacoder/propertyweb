@@ -104,7 +104,7 @@
 
                     <div class="col-md-3  hero_service_bx">
 
-                        <a href="" class="hero_ser_link">
+                        <a href="<?php echo $url['list']; ?>" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Rental Home Portal</p>
@@ -115,7 +115,7 @@
                     </div>
 
                     <div class="col-md-3  hero_service_bx">
-                        <a href="" class="hero_ser_link">
+                        <a href="<?php echo $url['recharge']; ?>" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rechargep.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Recharge Portal</p>
@@ -126,7 +126,7 @@
                     </div>
                     <div class="col-md-3  hero_service_bx">
 
-                        <a href="" class="hero_ser_link">
+                        <a href="<?php echo $url['post_property']; ?>" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/postp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Post Requirement</p>

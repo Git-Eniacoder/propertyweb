@@ -1898,7 +1898,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 47%;
+top: 54% !important;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -2474,6 +2474,10 @@ margin-top: 2rem;
   transition: all .1s ease;
 }
 
+
+.prop_detail_img{
+  width: 50%;
+}
 
 
 @media screen and (max-width: 600px) {
