@@ -444,7 +444,7 @@
                             <h4 class=" prop_lists_text"><?php echo $value["list_bhk"] ?> BHK appartment 180 (sq-ft)</h4>
                             <p class="prop_lists_add">in Alsanatham for Sale
                                 Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
+                            <p><span class="prop_lists_rent">By </span></p>
                             <div class="text-center">
                                 <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
                             </div>
