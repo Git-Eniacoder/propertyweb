@@ -237,7 +237,7 @@
    <div class="container p-3">
       <div class="row">
          <div class="col-md-6">
-            <div class="card">
+            <div class="card" style="margin-bottom:4rem ;">
                <h4>Recharge & PayBills</h4>
                <hr class="style1">
                <div class="dex">
@@ -517,7 +517,7 @@
             </div>
          </div>
          <div class="col-md-6">
-               <div class="container bg-white table-responsive" style="margin-top: 2rem; ">
+               <div class="container bg-white table-responsive ">
             <table class="table table-fluid" id="myTable">
          <thead>
                <tr class="bg-white">
