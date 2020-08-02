@@ -98,7 +98,7 @@
                     <div class="col post_line"></div>
                 </div>
                 <div class="row justify-content-center align-items-center">
-                    <button class="btn hero_post_bx_btn">Post Your Free Ad</button>
+                   <a href="<?php echo $url['post_property']; ?>"> <button class="btn hero_post_bx_btn">Post Your Free Ad</button></a>
                 </div>
             </div>
 
@@ -143,7 +143,7 @@
 
                     </div>
                     <div class="col-md-3  hero_service_bx">
-                        <a href="" class="hero_ser_link">
+                        <a href="<?php echo base_url().'shopping' ?>" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">shopping Portal</p>
