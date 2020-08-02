@@ -113,7 +113,7 @@
                         <a href="<?php echo $url['list']; ?>" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
-                                <p class="hero_ser_text">Rental Home Portal</p>
+                                <p class="hero_ser_text">Rental Home</p>
                             </div>
                         </a>
 

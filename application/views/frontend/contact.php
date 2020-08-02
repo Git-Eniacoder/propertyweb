@@ -138,13 +138,8 @@
                                             
                                             <p style="color: grey;">Give us a</p>
                                             <h4>Call</h4>
-<<<<<<< HEAD
-                                            <p style="color: grey;">+91 7392900007</p>
-                                            
-=======
                                             <p style="color: grey;">+91 7392900007 </p>
                                            
->>>>>>> 795fb91beb963405b2c9fe6824452d208b1433d8
                                             </div>
                                           
                                         </div>
@@ -156,12 +151,7 @@
                                             
                                             <p style="color: grey;">Drop an</p>
                                             <h4>Email</h4>
-<<<<<<< HEAD
-                                            <p style="color: grey;"> info@walletapp.com</p>
-                                      
-=======
                                             <p style="color: grey;">info@walletapp.com</p>
->>>>>>> 795fb91beb963405b2c9fe6824452d208b1433d8
                                             </div>
                                           
                                         </div>
