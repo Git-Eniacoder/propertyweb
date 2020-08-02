@@ -118,13 +118,17 @@
          </div>
          <div id="box">
             <div id="items">
-               <div class="item"><a href="recharge" class="wal_sidebar_text"><img src="../assets/img/Mob.svg" width="12px"  class="wal_sidebar_icons"> Recharge & PayBills</a></div>
-               <!-- <div class="item">
-                  <a href="recharge" class="wal_sidebar_text-2">
-                     <p><span><i class="fa fa-mobile wal_sidebar_icons" aria-hidden="true"></i></span></p>
-                     <p>Recharge & PayBills</p>
-                  </a>
-               </div> -->
+               <div class="item wal_level_contain">
+                  <div class="wal_name">
+                     <span class="wal_sidebar_text">Hi! Navneet</span>
+                  </div>
+                  <div class="wal_level">
+                     <a title="Balance" href="#" class="nav-link wal_level">
+                        Level : <?php echo $level[0]; ?>
+                     </a>
+                  </div>
+               </div>
+               <div class="item"><a href="recharge" class="wal_sidebar_text"><img src="../assets/img/Mob.svg" width="12px" class="wal_sidebar_icons"> Recharge & PayBills</a></div>
                <div class="item"><a href="<?php echo $url['recharge']; ?>" class="wal_sidebar_text"><img src="../assets/img/buyplan.svg" width="19px" class="wal_sidebar_icons">Buy Plan</a></div>
                <div class="item"><a href="refer" class="wal_sidebar_text"><img src="../assets/img/refer.svg" width="19px" class="wal_sidebar_icons">Refer And Earn</a></div>
                <div class="item"><a href="field" class="wal_sidebar_text"><img src="../assets/img/Field Expense.png" width="19px" class="wal_sidebar_icons"> Field Expenses</a></div>
@@ -152,7 +156,7 @@
                   <nav class="navbar navbar-expand-lg">
                      <div class="logo lo-mm">
                         <a class="custom-logo-link " href="<?php echo base_url(); ?>">
-                           <img width="133" height=30 src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="Logo" class="custom-logo">
+                           <img width="133" height=30 src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="Logo" class="custom-logo wal_logo_main">
                         </a>
                      </div>
                      <div id="navbarSupportedContent" class=" collapse navbar-collapse sub-menu-bar">

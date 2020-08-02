@@ -1898,7 +1898,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 45% !important;
+top: 45%;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -1977,8 +1977,16 @@ margin-top: 2rem;
   color: #fff !important;
 }
 
+.wal_level_contain{
+  display: none;
+}
+
 
 @media screen and (max-width: 600px) {
+
+  .wal_level_contain{
+    display: block;
+  }
 
     .meu .mmvv{
       display: block;
@@ -1986,7 +1994,7 @@ margin-top: 2rem;
 
     #items {
       
-      top: 55%;
+      top: 55% !important;
       
       }
 
@@ -2054,6 +2062,10 @@ margin-top: 2rem;
 
   .main_list {
     padding: 0 1.5rem 2rem;
+  }
+
+  .wal_level_mob{
+    display: block;
   }
 
 } 
@@ -2536,8 +2548,26 @@ margin-top: 2rem;
   color: rgb( 65, 65, 65 );
 }
 
+.wal_level_mob{
+  display: none;
+}
+
+.wal_name{
+  padding-bottom: .7rem;
+}
+
+.wal_level_contain{
+  margin-top: 1rem !important;
+}
+
 
 @media screen and (max-width: 600px) {
+
+  .wal_logo_main{
+    width: 85px !important;
+    margin-left: 40px !important;
+    margin-top: 0.6rem !important;
+  }
   
   .hero {
     min-height: 68rem;
@@ -2609,6 +2639,10 @@ margin-top: 2rem;
 
 
 @media screen and (max-width: 950px) and (min-width: 600px) {
+
+  .wal_level_contain{
+    display: block;
+  }
   .recha .dex{
     display: none;
   
