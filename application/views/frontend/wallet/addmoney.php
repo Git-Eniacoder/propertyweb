@@ -1,4 +1,18 @@
 <style>
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+   background-color: crimson;
+    border: 2px solid crimson;
+    color: white !important;
+    outline: none;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+   border-bottom: none;
+   color: grey;
+}
    .add-money {
       width: 100%;
       height: auto;
@@ -34,6 +48,8 @@
       color: grey;
       margin-top: 0px;
       transition: .5s;
+      text-align: left;
+      padding-left: 1.5rem;
    }
 
    .add-money .card button:hover {
@@ -122,16 +138,16 @@
    <div class="container">
       <div class="row wallet_options justify-content-center">
          <div class="col-md-3 wallet_op_bx">
-            <center><span class="wallet_amt" style="color: white; margin-top:5px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
-            <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn "><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
+            <center><span class="wallet_amt" style="color: white; margin-top:5px; font-size:23px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
+            <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn "><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px" style="margin-top: -10px;">Recharge wallet</button></a>
          </div>
          <div class="col-md-3 wallet_op_bx">
-            <center><span class="wallet_amt" style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
-            <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
+            <center><span class="wallet_amt" style="color: white; font-size:23px;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
+            <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer & Earn wallet</button></a>
          </div>
          <div class="col-md-3 wallet_op_bx">
-            <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
-            <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
+            <center><span class="wallet_amt" style="color: white; font-size:23px;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
+            <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px" style="margin-top: -10px;">Field Expenses</button></a>
          </div>
 
          <div class="col-md-3 wallet_op_bx wallet_op_bx-money">
@@ -152,12 +168,22 @@
       <div class="row">
          <div class="col-md-3">
             <div class="card" style="margin-bottom: 2rem;">
-               <h4 style="text-center: left; margin-left: 1rem;">Add Money</h4>
-               <button>Buy plan 960</button>
+               <h4 style="text-align:left; margin-left: 1rem;">Add Money</h4>
+               <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);"> <img src="../assets/img/buy.png" width="20px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Buy plan 960</button>
             </div>
          </div>
 
          <div class="col-md-9">
+         <div class="card" style="margin-bottom: 2rem; padding-top:2rem; padding-bottom:2rem;">
+         <p style="text-align: center;" class="card-text">Scan Qr code for buy plan</p>
+               <h4>Scan Qr code</h4>
+               <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
+               <div class="card-body py-0">
+                  <h6 style="text-align: center;" class="text-primary">Or</h6>
+                  <p style="text-align: center;" class="card-text">Pay Through UPI</p>
+                  <h4 style="text-align: center;" class="card-title">7014162976@ybl</h4>
+               </div>
+            </div>
             <div class="container bg-white table-responsive" style=" margin-bottom:2rem;">
                <div class="walhistory">
                   <h4 class="walhistory_text">Transactions</h4>
@@ -183,15 +209,7 @@
                   </tbody>
                </table>
             </div>
-            <div class="card" style="margin-bottom: 2rem;">
-               <h4>Scan Qr code</h4>
-               <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
-               <div class="card-body py-0">
-                  <h6 style="text-align: center;" class="text-primary">Or</h6>
-                  <p style="text-align: center;" class="card-text">Pay Through UPI</p>
-                  <h4 style="text-align: center;" class="card-title">7014162976@ybl</h4>
-               </div>
-            </div>
+            
          </div>
       </div>
    </div>
