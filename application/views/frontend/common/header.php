@@ -176,6 +176,7 @@
               <div class="nav_list_icons">
                 <a href="#" id="navbardrop" data-toggle="dropdown" class="wal_nav_links dropdown-toggle"><?php echo 'Hey, ' . $uname; ?></a>
                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="userprofile">My Profile</a>
                     <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
                     <a class="dropdown-item" href="<?php echo $url['support']; ?>">Raise Ticket</a>
                     <a class="dropdown-item" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
