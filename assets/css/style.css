@@ -2584,6 +2584,15 @@ margin-top: 2rem;
   color: #1e2229;
 }
 
+.wal_mob_dd:active{
+  background-color: #fff !important;
+}
+
+.wal_mob_dd:link{
+  background-color: #fff !important;
+  color: #212529;
+}
+
 
 @media screen and (max-width: 600px) {
 
