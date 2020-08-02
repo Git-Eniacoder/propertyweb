@@ -2594,6 +2594,10 @@ margin-top: 2rem;
     padding-top: .8rem;
     padding-bottom: 1rem;
   }
+
+  .hero_post_bx_btn{
+    width: 18rem !important;
+  }
 }
 
 /*# sourceMappingURL=wallet.css.map */

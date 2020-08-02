@@ -393,11 +393,24 @@
     background-color: #fafafa;
   }
 
+  .wal_mob_log{
+    display: none;
+  }
+
+.mob_on{
+    display: none;
+  }
+
+
+
 
 
 
   @media screen and (max-width: 1200px) {
 
+    .wal_mob_view{
+      display: block;
+    }
 
     .sb_2{
       width: 34.3% !important;
@@ -519,8 +532,22 @@
     .wal_nav_list {
       width: 4rem;
     }
+
     .wal_nav_list_left {
       display: none;
+    }
+
+    .wal_mob_log{
+      display: block;
+    }
+
+    .wal_mob_dd{
+      color: rgb(107, 106, 106) !important;
+      font-size: 1.2rem !important;
+    }
+
+    .mob_on{
+      display: block;
     }
 
   }

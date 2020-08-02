@@ -159,11 +159,12 @@
           <div class="wal_nav_list">
             <div class="wal_nav_list_left">
               <div class="nav_list_icons">
-                <a href="<?php echo $url['referandearn']; ?>" class="wal_nav_links">Refer and Earn</a>
+                <a href="<?php echo $url['referandearn']; ?>" class="wal_nav_links wal_mob_off">Refer and Earn</a>
               </div>
               <div class="nav_list_icons">
-                <a href="<?php echo $url['list']; ?>" class="wal_nav_links">List Property</a>
+                <a href="<?php echo $url['list']; ?>" class="wal_nav_links wal_mob_off">List Property</a>
               </div>
+
               <?php if ($status == false) { ?>   
               <div class="nav_list_icons">
                 <span><i class="fa fa-user wal_nav_links" aria-hidden="true"></i></span>
@@ -186,9 +187,34 @@
               <span style="font-size:30px;cursor:pointer;color:crimson;" onclick="openNav()">&#9776;</span>
             </div>
             <div id="mySidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+              <div class="wal_mob_log">
+              <?php if ($status == false) { ?>  
+
+              <div class="">
+                <!-- <span></span> -->
+                <!-- <span><a href="#" data-toggle="modal" data-target="#login"  class="side_link">Login /</a><a href="#" data-toggle="modal" data-target="#register" class="side_link">Sign up</a></span> -->
+                <span><a href="#" data-toggle="modal" data-target="#login"  class="side_link">Login /</a></span><span><a href="#" data-toggle="modal" data-target="#register" class="side_link">Sign up</a></span>
+               
+              </div>
+
+
+              <?php }else{ ?>
+              <div class="">
+                <a href="#" id="navbardrop" data-toggle="dropdown" class="side_link dropdown-toggle"><?php echo 'Hey, ' . $uname; ?></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item wal_mob_dd" href="<?php echo $url['wallet']; ?>">Wallet</a>
+                    <a class="dropdown-item wal_mob_dd" href="<?php echo $url['support']; ?>">Raise Ticket</a>
+                    <a class="dropdown-item wal_mob_dd" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
+                </div>
+              </div>
+              <?php } ?>
+              </div>
+              
               <a href="<?php echo $url['list']; ?>" class="side_link">List Property</a>
               <a href="<?php echo $url['post_property']; ?>" class="side_link">Post Property</a>
+              <a href="<?php echo $url['referandearn']; ?>" class="side_link mob_on">Refer and Earn</a>
               <a href="<?php echo base_url() . 'about' ?>" class="side_link">About Us</a>
               <a href="<?php echo base_url() . 'policy' ?>" class="side_link">Privacy Policy</a>
               <a href="<?php echo base_url() . 'contact' ?>" class="side_link">Contact</a>
