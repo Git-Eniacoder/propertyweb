@@ -86,7 +86,7 @@
                 </div>
                 <div class="row justify-content-center about_contain">
                     <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem; margin-bottom:1rem;">
                             <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="about_mentor">Sh. Radha Kishan Kaushik</h3>
@@ -97,7 +97,7 @@
 
                     </div>
                     <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem; margin-bottom:1rem;">
                             <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="about_mentor">Anoopnandan Kaushik</h3>
@@ -108,7 +108,7 @@
 
                     </div>
                     <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem; margin-bottom:1rem;">
                             <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="about_mentor">Sh. Radha Kishan Kaushik</h3>

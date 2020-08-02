@@ -118,29 +118,29 @@
          </div>
          <div id="box">
             <div id="items">
-               <div class="item"><a href="recharge" class="wal_sidebar_text"><img src="../assets/img/Mob.svg" width="12px"  class="wal_sidebar_icons"> Recharge & PayBills</a></div>
+               <div class="item"><a href=" <?php echo $url['wallet']; ?>" class="wal_sidebar_text"><img src="<?php echo $url['image']; ?>/Mob.svg" width="12px"  class="wal_sidebar_icons"> Recharge & PayBills</a></div>
                <!-- <div class="item">
                   <a href="recharge" class="wal_sidebar_text-2">
                      <p><span><i class="fa fa-mobile wal_sidebar_icons" aria-hidden="true"></i></span></p>
                      <p>Recharge & PayBills</p>
                   </a>
                </div> -->
-               <div class="item"><a href="<?php echo $url['recharge']; ?>" class="wal_sidebar_text"><img src="../assets/img/buyplan.svg" width="19px" class="wal_sidebar_icons">Buy Plan</a></div>
-               <div class="item"><a href="refer" class="wal_sidebar_text"><img src="../assets/img/refer.svg" width="19px" class="wal_sidebar_icons">Refer And Earn</a></div>
-               <div class="item"><a href="field" class="wal_sidebar_text"><img src="../assets/img/Field Expense.png" width="19px" class="wal_sidebar_icons"> Field Expenses</a></div>
-               <div class="item"><a href="addmoney" class="wal_sidebar_text"><img src="../assets/img/Add-Money.svg" width="19px" class="wal_sidebar_icons">Add Money</a></div>
+               <div class="item"><a href="<?php echo $url['recharge']; ?>" class="wal_sidebar_text"><img src="<?php echo $url['image']; ?>/buyplan.svg" width="19px" class="wal_sidebar_icons">Buy Plan</a></div>
+               <div class="item"><a href=" <?php echo $url['refer']; ?>" class="wal_sidebar_text"><img src="<?php echo $url['image']; ?>/refer.svg" width="19px" class="wal_sidebar_icons">Refer And Earn</a></div>
+               <div class="item"><a href="<?php echo $url['field']; ?>" class="wal_sidebar_text"><img src="<?php echo $url['image']; ?>/Field Expense.png" width="19px" class="wal_sidebar_icons"> Field Expenses</a></div>
+               <div class="item"><a href=" <?php echo $url['addmoney']; ?>" class="wal_sidebar_text"><img src="<?php echo $url['image']; ?>/Add-Money.svg" width="19px" class="wal_sidebar_icons">Add Money</a></div>
 
                <hr class="style1">
 
                <div class="item"><a class="wal_sidebar_text" href="<?php echo $url['support']; ?>"><i class="fa fa-envelope" style="color: white;" aria-hidden="true" width="20px" style="margin-right: 8px;"></i> Support</a></div>
-               <div class="item"><a class="wal_sidebar_text"><img src="../assets/img/about.svg" width="20px" style="margin-top:-5px; margin-right: 5px;"> About Us</a></div>
+               <div class="item"><a class="wal_sidebar_text" href="<?php echo base_url() . 'about' ?>"><img src="<?php echo $url['image']; ?>/about.svg" width="20px" style="margin-top:-5px; margin-right: 5px;"> About Us</a></div>
                <hr class="style1">
                <div style="padding-left: 1rem; color:grey; font-size:1.3rem;">connect & share on</div>
                <div style="padding-left: 1rem;">
-                  <a href="#" class="ic fa fa-facebook"></a>
-                  <a href="#" class="ic fa fa-instagram"></a>
-                  <a href="#" class="ic fa fa-youtube"></a>
-                  <a href="#" class="ic fa fa-twitter"></a>
+                  <a href="<?php echo $social['facebook_url']; ?>" target="_blank" class="ic fa fa-facebook"></a>
+                  <a href="<?php echo $social['instagram_url']; ?>" target="_blank" class="ic fa fa-instagram"></a>
+                  <a href="<?php echo $social['youtube_url']; ?>" target="_blank" class="ic fa fa-youtube"></a>
+                  <a href="<?php echo $social['twitter_url']; ?>" target="_blank" class="ic fa fa-twitter"></a>
                </div>
 
 

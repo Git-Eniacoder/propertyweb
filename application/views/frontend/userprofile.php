@@ -21,12 +21,13 @@
     border-right: none;
     border-bottom: 1px solid rgba(233, 227, 227, 0.836);
     outline: none;
-    background-color: white;
-    color: grey;
+    background-color: #DC3545;
+    color: white;
     margin-top: 0px;
     transition: .5s;
     text-align: center;
     padding-left: 1rem;
+    margin-bottom: 1rem;
   }
 
   .profile .left  button:hover {
