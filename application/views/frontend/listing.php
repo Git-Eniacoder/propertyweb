@@ -156,10 +156,10 @@
 
             </div>
             <div style="border-left: 1px solid #ccc; background-color: #fafafa;" class="col-md-3 py-4 text-center">
-                <h4 class="text-secondary py-3">Why Post through us?</h4>
+                <h4 class="text-secondary py-3">List your property here</h4>
                 <div class="card post-card">
                     <div class="card-image">
-                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_01.jpg">
+                        <img class="img-responsive" alt="Video Marketing" src="<?php echo base_url() . 'assets/img/homeimgs/licon.svg' ?>">
                     </div>
                     <div class="card-body">
                         <p class="card-title">Searching of your dream property ends here</p>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="card post-card">
                     <div class="card-image">
-                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_04.jpg">
+                        <img class="img-responsive" alt="Video Marketing" src="<?php echo base_url() . 'assets/img/homeimgs/lsearch.svg' ?>">
                     </div>
                     <div class="card-body">
                         <p class="card-title">Get Properties in your Inbox</p>
@@ -175,7 +175,7 @@
                 </div>
                 <div class="card post-card">
                     <div class="card-image">
-                        <img class="img-responsive" alt="Video Marketing" src="https://static.realestateindia.com/rei/images/icon_03.jpg">
+                        <img class="img-responsive" alt="Video Marketing" src="<?php echo base_url() . 'assets/img/homeimgs/lsearch.svg' ?>">
                     </div>
                     <div class="card-body">
                         <p class="card-title">Get Properties in your Inbox</p>

@@ -220,6 +220,12 @@
                         </ul>
                      </div>
 
+                     <div class="wal_bal">
+                     <a title="Balance" href="#" class="nav-link">
+                                 <img src="<?php echo $url['image']; ?>/Balance.png" width="25px" style="margin-top: -10px;"> Balance <?php echo $post["all_data"][0]->recharge_wallet; ?>.00
+                     </a>
+                     </div>
+
                   </nav>
                   <!-- navbar -->
 

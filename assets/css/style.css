@@ -2593,6 +2593,18 @@ margin-top: 2rem;
   color: #212529;
 }
 
+.wal_bal{
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+  .wal_bal{
+    padding-top: .4rem;
+    display: block;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
 
@@ -2683,4 +2695,9 @@ margin-top: 2rem;
   .recha .scrolling-wrapper{
     display: block;
   }
+
+  .wal_bal{
+    display: block;
+  }
+  
 }  
