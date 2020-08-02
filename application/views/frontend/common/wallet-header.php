@@ -128,11 +128,11 @@
                      </a>
                   </div>
                </div>
-               <div class="item"><a href="recharge" class="wal_sidebar_text"><img src="../assets/img/Mob.svg" width="12px" class="wal_sidebar_icons"> Recharge & PayBills</a></div>
-               <div class="item"><a href="<?php echo $url['recharge']; ?>" class="wal_sidebar_text"><img src="../assets/img/buyplan.svg" width="19px" class="wal_sidebar_icons">Buy Plan</a></div>
-               <div class="item"><a href="refer" class="wal_sidebar_text"><img src="../assets/img/refer.svg" width="19px" class="wal_sidebar_icons">Refer And Earn</a></div>
-               <div class="item"><a href="field" class="wal_sidebar_text"><img src="../assets/img/Field Expense.png" width="19px" class="wal_sidebar_icons"> Field Expenses</a></div>
-               <div class="item"><a href="addmoney" class="wal_sidebar_text"><img src="../assets/img/Add-Money.svg" width="19px" class="wal_sidebar_icons">Add Money</a></div>
+               <div class="item"><a href="<?php echo $url['wallet']; ?>" class="wal_sidebar_text"><img src=" <?php echo $url['image']; ?>/Mob.svg" width="12px" class="wal_sidebar_icons"> Recharge & PayBills</a></div>
+               <div class="item"><a href="<?php echo $url['recharge']; ?>" class="wal_sidebar_text"><img src=" <?php echo $url['image']; ?>/buyplan.svg" width="19px" class="wal_sidebar_icons">Buy Plan</a></div>
+               <div class="item"><a href="<?php echo $url['refer']; ?>" class="wal_sidebar_text"><img src=" <?php echo $url['image']; ?>/refer.svg" width="19px" class="wal_sidebar_icons">Refer And Earn</a></div>
+               <div class="item"><a href=" <?php echo $url['field']; ?>" class="wal_sidebar_text"><img src="<?php echo $url['image']; ?>/Field Expense.png" width="19px" class="wal_sidebar_icons"> Field Expenses</a></div>
+               <div class="item"><a href=" <?php echo $url['addmoney']; ?>" class="wal_sidebar_text"><img src=" <?php echo $url['image']; ?>/Add-Money.svg" width="19px" class="wal_sidebar_icons">Add Money</a></div>
 
                <hr class="style1">
 
