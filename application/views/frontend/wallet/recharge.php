@@ -1,4 +1,19 @@
 <style>
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+   background-color: crimson;
+    border: 2px solid crimson;
+    color: white !important;
+    outline: none;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+   background-color: transparent;
+    border: 2px solid crimson !important;
+    color: white !important;
+    
+    outline: none;
+}
+
+
    /* modal  */
    .nav {
       height: 6rem;

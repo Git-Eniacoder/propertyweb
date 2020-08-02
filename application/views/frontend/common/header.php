@@ -27,7 +27,7 @@
   z-index: 1;
   top: 0;
   right: 0px;
-  background-color: crimson;
+  background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -37,13 +37,15 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: white;
+  color: grey;
   display: block;
-  transition: 0.3s;
+ 
+  transition: transform .2s;
 }
 
 .sidenav a:hover {
-  color: rgb( 245, 57, 61 );
+  transform: scale(1.1);
+  color: crimson;
 }
 
 .sidenav .closebtn {
@@ -175,6 +177,7 @@
               <div class="nav_list_icons">
                 <a href="#" id="navbardrop" data-toggle="dropdown" class="wal_nav_links dropdown-toggle"><?php echo 'Hey, ' . $uname; ?></a>
                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="<?php echo $url['profile']; ?>">My Profile</a>
                     <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
                     <a class="dropdown-item" href="<?php echo $url['support']; ?>">Raise Ticket</a>
                     <a class="dropdown-item" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
@@ -204,6 +207,7 @@
               <div class="">
                 <a href="#" id="navbardrop" data-toggle="dropdown" class="side_link dropdown-toggle"><?php echo 'Hey, ' . $uname; ?></a>
                 <div class="dropdown-menu">
+                <a class="dropdown-item wal_mob_dd" href="<?php echo $url['profile']; ?>">My Profile</a>
                     <a class="dropdown-item wal_mob_dd" href="<?php echo $url['wallet']; ?>">Wallet</a>
                     <a class="dropdown-item wal_mob_dd" href="<?php echo $url['support']; ?>">Raise Ticket</a>
                     <a class="dropdown-item wal_mob_dd" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>

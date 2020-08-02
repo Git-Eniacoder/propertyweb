@@ -44,8 +44,25 @@ $config['wallet'] = base_url().'wallet/recharge';   // Done
 // support
 $config['support'] = base_url().'wallet/ticket/';
 
+// term and condotion
+$config['term'] = base_url().'term';
+
+// user profile
+$config['profile'] = base_url().'userprofile';
+
 //image url
 $config['image'] = base_url().'assets/img/';
+
+
+
+// addmoney wallet
+$config['addmoney'] = base_url().'wallet/addmoney';
+
+// refer wallet
+$config['refer'] = base_url().'wallet/refer';
+
+// field wallet
+$config['field'] = base_url().'wallet/field';
 
 
 //Referand earn

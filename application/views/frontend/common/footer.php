@@ -156,10 +156,10 @@ $(".nav_bar_click").click(function(){
           <hr class="style1">
           <div class="links">
 
-            <a href="#">About Us</a></br>
-            <a href="#">Refer and Earn</a></br>
-            <a href="#">Privacy Policy</a></br>
-            <a href="#">Terms and Condition</a></br>
+            <a href="<?php echo base_url() . 'about' ?>">About Us</a></br>
+            <a href="<?php echo $url['referandearn']; ?>">Refer and Earn</a></br>
+            <a href="<?php echo base_url() . 'policy' ?>">Privacy Policy</a></br>
+            <a href="<?php echo $url['term']; ?>">Terms and Condition</a></br>
             <a href="#">Sitemap</a></br>
             <a href="#">Blogs</a></br>
           </div>

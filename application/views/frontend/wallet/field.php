@@ -171,7 +171,7 @@
       <div class="col-md-3">
         <div class="card">
           <h4 class="wal_side_head">Field Wallet</h4>
-          <button class="refer_wallet-btn" style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button>
+          <a href="recharge"><button class="refer_wallet-btn" style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button></a>
           <!--button class="refer_wallet-btn"><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Amount</button>-->
           <button class="refer_wallet-btn"><img src="../assets/img/trans.png" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfered</button>
           <button class="refer_wallet-btn" data-toggle="modal" data-target="#myModal"><img src="../assets/img/tobank.webp" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfer to Bank</button>

@@ -137,14 +137,14 @@
                <hr class="style1">
 
                <div class="item"><a class="wal_sidebar_text" href="<?php echo $url['support']; ?>"><i class="fa fa-envelope" style="color: white;" aria-hidden="true" width="20px" style="margin-right: 8px;"></i> Support</a></div>
-               <div class="item"><a class="wal_sidebar_text"><img src="../assets/img/about.svg" width="20px" style="margin-top:-5px; margin-right: 5px;"> About Us</a></div>
+               <div class="item"><a class="wal_sidebar_text" href="<?php echo base_url() . 'about' ?>"><img src="<?php echo $url['image']; ?>/about.svg" width="20px" style="margin-top:-5px; margin-right: 5px;"> About Us</a></div>
                <hr class="style1">
                <div style="padding-left: 1rem; color:grey; font-size:1.3rem;">connect & share on</div>
                <div style="padding-left: 1rem;">
-                  <a href="#" class="ic fa fa-facebook"></a>
-                  <a href="#" class="ic fa fa-instagram"></a>
-                  <a href="#" class="ic fa fa-youtube"></a>
-                  <a href="#" class="ic fa fa-twitter"></a>
+                  <a href="<?php echo $social['facebook_url']; ?>" target="_blank" class="ic fa fa-facebook"></a>
+                  <a href="<?php echo $social['instagram_url']; ?>" target="_blank" class="ic fa fa-instagram"></a>
+                  <a href="<?php echo $social['youtube_url']; ?>" target="_blank" class="ic fa fa-youtube"></a>
+                  <a href="<?php echo $social['twitter_url']; ?>" target="_blank" class="ic fa fa-twitter"></a>
                </div>
 
 
