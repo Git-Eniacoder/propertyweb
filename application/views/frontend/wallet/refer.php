@@ -1,5 +1,19 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+   background-color: crimson;
+    border: 2px solid crimson;
+    color: white !important;
+    outline: none;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+   border-bottom: none;
+   color: grey;
+}
   .modal-confirm {
     color: #636363;
     width: 325px;
@@ -231,20 +245,20 @@
   <div class="container">
     <div class="row wallet_options justify-content-center">
       <div class="col-md-3 wallet_op_bx">
-        <center><span class="wallet_amt" style="color: white; margin-top:5px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
-        <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn "><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px">Recharge wallet</button></a>
+        <center><span class="wallet_amt" style="color: white; margin-top:5px; font-size:23px;"> &#x20B9;<?php echo $post["all_data"][0]->recharge_wallet; ?></span></center>
+        <a href="<?php echo $url['wallet']; ?>"><button class="wallet_op_btn "><img class="mx-2 wallet_mob_img" src="../assets/img/recharge_wallet.svg" width="25px" style="margin-top: -10px;">Recharge wallet</button></a>
       </div>
       <div class="col-md-3 wallet_op_bx">
-        <center><span class="wallet_amt" style="color: white;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
-        <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn active"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px">Refer & Earn wallet</button></a>
+        <center><span class="wallet_amt" style="color: white; font-size:23px; ">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
+        <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn active"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer & Earn wallet</button></a>
       </div>
       <div class="col-md-3 wallet_op_bx">
-        <center><span class="wallet_amt" style="color: white;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
-        <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px">Field Expenses</button></a>
+        <center><span class="wallet_amt" style="color: white; font-size:23px;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
+        <a href="<?php echo $url['field-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/Field Expense.png" width="25px" style="margin-top: -10px;">Field Expenses</button></a>
       </div>
 
       <div class="col-md-3 wallet_op_bx wallet_op_bx-money">
-        <center><img src="../assets/img/Add-Money.svg" width="25px" class="wallet_mob_img"></center>
+        <center><img src="../assets/img/Add-Money.svg" width="30px" class="wallet_mob_img"></center>
         <a href="addmoney"><button class="wallet_op_btn">Add Money</button></a>
       </div>
     </div>
