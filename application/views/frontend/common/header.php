@@ -39,11 +39,12 @@
   font-size: 25px;
   color: white;
   display: block;
-  transition: 0.3s;
+ 
+  transition: transform .2s;
 }
 
 .sidenav a:hover {
-  color: rgb( 245, 57, 61 );
+  transform: scale(1.1);
 }
 
 .sidenav .closebtn {
