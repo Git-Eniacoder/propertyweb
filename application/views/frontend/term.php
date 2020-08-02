@@ -20,7 +20,7 @@
 <div class="term">
     <div class="container">
         <div class="card">
-            <h3>Term-conditions</h3>
+            <h3>Term-and-Conditions</h3>
             <hr>
             <p>Welcome to Oxigen Wallet. Your use of Oxigen Wallet on our Website or Mobile App is governed by the following terms and conditions (Terms) which are incorporated herein by way of reference. The Terms are effective upon acceptance of usage of our platform, and governs the relationship between the users of this platform (&ldquo;You&rdquo;, &ldquo;Your&rdquo;, &ldquo;Yours&rdquo; or the &ldquo;User&rdquo; as the context may necessitate) and Oxigen Services (India) Pvt Ltd. (&ldquo;Oxigen Wallet&rdquo;, &ldquo;Us&rdquo;, &ldquo;Our&rdquo; or &ldquo;We&rdquo; as the context may necessitate).</p>
 

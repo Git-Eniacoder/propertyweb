@@ -2251,6 +2251,7 @@ margin-top: 2rem;
 }
 
 .hero_service_bx {
+  text-decoration: none !important;
   background-color: #fff;
   border: 1px solid #c9c7c7;
   position: relative;
@@ -2274,7 +2275,7 @@ margin-top: 2rem;
 }
 
 .hero_ser_link {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #5e5e5e;
 }
 
@@ -2572,6 +2573,24 @@ margin-top: 2rem;
 
 .wal_level_contain{
   margin-top: 1rem !important;
+}
+
+.card_head_text{
+  text-decoration: none !important;
+  color: #1e2229;
+}
+
+.card_head_text:hover{
+  color: #1e2229;
+}
+
+.wal_mob_dd:active{
+  background-color: #fff !important;
+}
+
+.wal_mob_dd:link{
+  background-color: #fff !important;
+  color: #212529;
 }
 
 

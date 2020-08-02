@@ -206,11 +206,11 @@
                 <?php foreach($post as $value){ ?>
                     <!-- new Card  -->
                     <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                       <a href=""><img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt=""></a> 
                         <div class="card-body">
                             <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
                             <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></span></p>
-                            <h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4>
+                          <a href="" class="card_head_text"><h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4></a>  
                             <p class="prop_lists_add">in <?php echo $value["list_city"]?> for <?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></p>
                             <p class="prop_lists_add"><?php echo $value["list_date"]?> </p>
                             <p><span class="prop_lists_rent"><?php echo $value["list_name"]?></span></p>
