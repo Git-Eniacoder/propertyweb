@@ -138,7 +138,18 @@
 
                <div class="item"><a class="wal_sidebar_text" href="<?php echo $url['support']; ?>"><i class="fa fa-envelope" style="color: white;" aria-hidden="true" width="20px" style="margin-right: 8px;"></i> Support</a></div>
                <div class="item"><a class="wal_sidebar_text" href="<?php echo base_url() . 'about' ?>"><img src="<?php echo $url['image']; ?>/about.svg" width="20px" style="margin-top:-5px; margin-right: 5px;"> About Us</a></div>
+
                <hr class="style1">
+
+               <div class="wal_log_out">
+                  <div class="item"><a class="wal_sidebar_text wal_logout" href="<?php echo $url['support']; ?>">Logout</a></div>
+                  <hr class="style1">
+               </div>
+
+
+
+
+
                <div style="padding-left: 1rem; color:grey; font-size:1.3rem;">connect & share on</div>
                <div style="padding-left: 1rem;">
                   <a href="<?php echo $social['facebook_url']; ?>" target="_blank" class="ic fa fa-facebook"></a>

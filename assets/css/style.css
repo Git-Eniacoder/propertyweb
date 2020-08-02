@@ -1461,6 +1461,15 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding: 1rem 0;
 }
 
+.wal_logout{
+  padding-left: 2rem;
+
+}
+
+.wal_log_out{
+  display: none;
+}
+
 
 /* // end of show property CSS */
 
@@ -1577,6 +1586,11 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
    .policy_page_head{
      width: 100%;
    }
+
+   .wal_log_out{
+    display: block;
+  }
+  
 
 }
 
@@ -1994,7 +2008,7 @@ margin-top: 2rem;
 
     #items {
       
-      top: 55% !important;
+      top: 63% !important;
       
       }
 
