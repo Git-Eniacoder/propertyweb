@@ -84,8 +84,10 @@
 
                     </div> -->
                 </div>
-                <div class=" row flex align-items-center">
-                    <div class="col-md-4">
+
+                <div class="row justify-content-center align-items-center">
+
+                    <div class="col-md-4 about_mob_v">
                         <div class="card" style="width: 17rem; margin-bottom:1rem;">
                             <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
@@ -96,7 +98,7 @@
                         </div>
 
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 about_mob_v">
                         
                         <div class="card" style="width: 17rem; margin-bottom:1rem;">
                             <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">

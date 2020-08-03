@@ -1,18 +1,19 @@
 <style>
+   .dataTables_wrapper .dataTables_paginate .paginate_button {
+      background-color: crimson;
+      border: 2px solid crimson;
+      color: white !important;
+      outline: none;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+   }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button{
-   background-color: crimson;
-    border: 2px solid crimson;
-    color: white !important;
-    outline: none;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
+   table.dataTable thead th,
+   table.dataTable thead td {
+      border-bottom: none;
+      color: grey;
+   }
 
-table.dataTable thead th, table.dataTable thead td {
-   border-bottom: none;
-   color: grey;
-}
    .add-money {
       width: 100%;
       height: auto;
@@ -168,14 +169,16 @@ table.dataTable thead th, table.dataTable thead td {
       <div class="row">
          <div class="col-md-3">
             <div class="card" style="margin-bottom: 2rem;">
-               <h4 style="text-align:left; margin-left: 1rem;">Add Money</h4>
-               <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);"> <img src="../assets/img/buy.png" width="20px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Buy plan 960</button>
+               <h4 class="text-center">Add Money</h4>
+               <div class="text-center">
+                  <button style="border-top: 1px solid rgba(233, 227, 227, 0.836);" class="text-center"> <img src="../assets/img/buy.png" width="20px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Buy plan 960</button>
+               </div>
             </div>
          </div>
 
          <div class="col-md-9">
-         <div class="card" style="margin-bottom: 2rem; padding-top:2rem; padding-bottom:2rem;">
-         <p style="text-align: center;" class="card-text">Scan Qr code for buy plan</p>
+            <div class="card" style="margin-bottom: 2rem; padding-top:2rem; padding-bottom:2rem;">
+               <p style="text-align: center;" class="card-text">Scan Qr code for buy plan</p>
                <h4>Scan Qr code</h4>
                <center><img width="200px;" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt=""></center>
                <div class="card-body py-0">
@@ -209,7 +212,7 @@ table.dataTable thead th, table.dataTable thead td {
                   </tbody>
                </table>
             </div>
-            
+
          </div>
       </div>
    </div>
