@@ -2279,6 +2279,10 @@ margin-top: 2rem;
   color: #5e5e5e;
 }
 
+.hero_ser_link:hover{
+  color: #5e5e5e !important;
+}
+
 .home_subhead {
   width: 100%;
   margin: 4rem auto;
@@ -2597,6 +2601,9 @@ margin-top: 2rem;
   display: none;
 }
 
+.about_mentor {
+  font-size: 1.2rem;
+}
 
 @media screen and (max-width: 900px) {
 
