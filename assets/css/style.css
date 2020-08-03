@@ -2597,6 +2597,7 @@ margin-top: 2rem;
   display: none;
 }
 
+
 @media screen and (max-width: 900px) {
 
   .wal_bal{
@@ -2672,6 +2673,10 @@ margin-top: 2rem;
 
   .hero_post_bx_btn{
     width: 18rem !important;
+  }
+
+  .about_contain {
+    padding: 2rem 23px;
   }
 }
 
