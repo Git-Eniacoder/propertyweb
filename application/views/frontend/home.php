@@ -1,4 +1,40 @@
+<style>
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
 
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+
+</style>    
 <main class="sub-main">
 
     <section class="hero">
@@ -161,10 +197,9 @@
     </section>
 
     <!-- Trending Properties -->
-
     <section class="trending top_trend">
-        <div class="container">
-            <div class="home_subhead">
+    <div class="container text-center my-3">
+        <div class="home_subhead">
                 <div class="row justify-content-start align-items-center">
                     <div class="col-sm-3 ">
                         <h2 class="home_subhead_text text-center text-start">Trending Properties</h2>
@@ -173,36 +208,12 @@
                         <hr class="home_subhead_line">
                     </div>
                 </div>
-            </div>
-
-            <!-- Trending Row -->
-            <div class="home_row">
-                <div class="flex justify-content-center">
-
-                    <!-- <div class="card ">
-                        <div class="property_price">
-                            <p>&#8377; 60,000 (Negotiable)</p>
-                        </div>
-                        <img class="card-img-top" src="assets/img/homeimgs/youtube.jpg" alt="">
-                        <div class="card-body trending_card">
-                            <h4 class="property_text">3 BHK appartment 180 (sq-ft)</h4>
-                            <span class="property_text_person"> by Vikas</span>
-
-                            <div class="property_text_city">
-                                <div class="row justify-content-between align-items-center">
-                                    <div class="col-9">
-                                        <span><i class="fa fa-map-marker prop_loc" aria-hidden="true"></i> Model
-                                            Town, Jaipur</span>
-
-                                    </div>
-                                    <div class="col ">
-                                        <a href=""><img src="assets/img/homeimgs/callprop.svg" alt="" class="call_prop"></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div> -->
+        </div>
+    <div class="home_row">        
+    <div class="row">
+        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+                <div class="carousel-item active">
                 <?php foreach($post as $value){ ?>
                     <!-- new Card  -->
                     <div class="card text-left prop_lists">
@@ -221,65 +232,125 @@
                         </div>
                     </div>
                 <?php } ?>
-                    <!-- new Card  -->
-                    <!-- <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                        <div class="card-body">
-                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-                            <p class="prop_lists_rent"><span>Rent</span></p>
-                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
-                            <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
-                            </div>
-
-                        </div>
-                    </div> -->
-
-                    <!-- new Card  -->
-                    <!-- <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                        <div class="card-body">
-                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-                            <p class="prop_lists_rent"><span>Rent</span></p>
-                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
-                            <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
-                            </div>
-
-                        </div>
-                    </div> -->
-
-                    <!-- new Card  -->
-                    <!-- <div class="card text-left prop_lists">
-                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                        <div class="card-body">
-                            <span class="prop_lists_price">&#8377; 60,000 - &#8377; 80,000</span>
-                            <p class="prop_lists_rent"><span>Rent</span></p>
-                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
-                            <p class="prop_lists_add">in Alsanatham for Sale
-                                Within 3-6 months</p>
-                            <p><span class="prop_lists_rent">By Anshul</span></p>
-                            <div class="text-center">
-                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button>
-                            </div>
-
-                        </div>
-                    </div> -->
-
-
-
-
                 </div>
+                <div class="carousel-item">
+                <?php foreach($post as $value){ ?>
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                       <a href=""><img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt=""></a> 
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></span></p>
+                          <a href="" class="card_head_text"><h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4></a>  
+                            <p class="prop_lists_add">in <?php echo $value["list_city"]?> for <?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></p>
+                            <p class="prop_lists_add"><?php echo $value["list_date"]?> </p>
+                            <p><span class="prop_lists_rent"><?php echo $value["list_name"]?></span></p>
+                            <div class="text-center">
+                            <a href="tel:+91<?php echo $value["list_mobile"] ?>"> <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
+                            </div>
 
+                        </div>
+                    </div>
+                <?php } ?>
+                </div>
+                <div class="carousel-item">
+                <?php foreach($post as $value){ ?>
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                       <a href=""><img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt=""></a> 
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></span></p>
+                          <a href="" class="card_head_text"><h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4></a>  
+                            <p class="prop_lists_add">in <?php echo $value["list_city"]?> for <?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></p>
+                            <p class="prop_lists_add"><?php echo $value["list_date"]?> </p>
+                            <p><span class="prop_lists_rent"><?php echo $value["list_name"]?></span></p>
+                            <div class="text-center">
+                            <a href="tel:+91<?php echo $value["list_mobile"] ?>"> <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php } ?>
+                </div>
+                <div class="carousel-item">
+                <?php foreach($post as $value){ ?>
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                       <a href=""><img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt=""></a> 
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></span></p>
+                          <a href="" class="card_head_text"><h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4></a>  
+                            <p class="prop_lists_add">in <?php echo $value["list_city"]?> for <?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></p>
+                            <p class="prop_lists_add"><?php echo $value["list_date"]?> </p>
+                            <p><span class="prop_lists_rent"><?php echo $value["list_name"]?></span></p>
+                            <div class="text-center">
+                            <a href="tel:+91<?php echo $value["list_mobile"] ?>"> <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php } ?>
+                </div>
+                <div class="carousel-item">
+                <?php foreach($post as $value){ ?>
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                       <a href=""><img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt=""></a> 
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></span></p>
+                          <a href="" class="card_head_text"><h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4></a>  
+                            <p class="prop_lists_add">in <?php echo $value["list_city"]?> for <?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></p>
+                            <p class="prop_lists_add"><?php echo $value["list_date"]?> </p>
+                            <p><span class="prop_lists_rent"><?php echo $value["list_name"]?></span></p>
+                            <div class="text-center">
+                            <a href="tel:+91<?php echo $value["list_mobile"] ?>"> <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php } ?>
+                </div>
+                <div class="carousel-item">
+                <?php foreach($post as $value){ ?>
+                    <!-- new Card  -->
+                    <div class="card text-left prop_lists">
+                       <a href=""><img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt=""></a> 
+                        <div class="card-body">
+                            <span class="prop_lists_price">&#8377; <?php echo $value["list_price"]?></span>
+                            <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></span></p>
+                          <a href="" class="card_head_text"><h4 class=" prop_lists_text"><?php echo $value["list_bhk"]=="non-selected" ? $value["list_unit"]." 180 (sq-ft)" : $value["list_bhk"]." BHK appartment"  ?>  </h4></a>  
+                            <p class="prop_lists_add">in <?php echo $value["list_city"]?> for <?php echo $value["list_rent_flag"]==0 ? "Rent": "sale"?></p>
+                            <p class="prop_lists_add"><?php echo $value["list_date"]?> </p>
+                            <p><span class="prop_lists_rent"><?php echo $value["list_name"]?></span></p>
+                            <div class="text-center">
+                            <a href="tel:+91<?php echo $value["list_mobile"] ?>"> <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php } ?>
+                </div>
             </div>
+            <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-    </section>
+    </div>
+    
+</div>
+    
+            
+
+            <!-- Trending Row -->
+           
 
 
 
@@ -512,3 +583,29 @@ $("#click").keypress(function(){
         </div>
     </div>
 </div> -->
+
+
+<script>
+$('#recipeCarousel').carousel({
+  interval: 10000
+})
+
+$('.carousel .carousel-item').each(function(){
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (var i=0;i<minPerSlide;i++) {
+        next=next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+        
+        next.children(':first-child').clone().appendTo($(this));
+      }
+});
+
+</script>

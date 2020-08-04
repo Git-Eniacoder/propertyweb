@@ -161,7 +161,7 @@
           <div class="wal_nav_list">
             <div class="wal_nav_list_left">
               <div class="nav_list_icons">
-                <a href="<?php echo $url['referandearn']; ?>" class="wal_nav_links wal_mob_off">Refer and Earn</a>
+                <!--a href="<?php echo $url['referandearn']; ?>" class="wal_nav_links wal_mob_off">Refer and Earn</a-->
               </div>
               <div class="nav_list_icons">
                 <a href="<?php echo $url['list']; ?>" class="wal_nav_links wal_mob_off">List Property</a>
@@ -198,10 +198,15 @@
               <div class="">
                 <!-- <span></span> -->
                 <!-- <span><a href="#" data-toggle="modal" data-target="#login"  class="side_link">Login /</a><a href="#" data-toggle="modal" data-target="#register" class="side_link">Sign up</a></span> -->
-                <span><a href="#" data-toggle="modal" data-target="#login"  class="side_link">Login /</a></span><span><a href="#" data-toggle="modal" data-target="#register" class="side_link">Sign up</a></span>
+                <a href="#" data-toggle="modal" data-target="#login"  class="side_link">Login / Signup</a>
                
               </div>
-
+              <div class="">
+                <!-- <span></span> -->
+                <!-- <span><a href="#" data-toggle="modal" data-target="#login"  class="side_link">Login /</a><a href="#" data-toggle="modal" data-target="#register" class="side_link">Sign up</a></span> -->
+                <a href="<?php echo base_url(); ?>"  class="side_link" >Home</a>
+               
+              </div>
 
               <?php }else{ ?>
               <div class="">
@@ -215,10 +220,10 @@
               </div>
               <?php } ?>
               </div>
-              
+              <a href="<?php echo base_url(); ?>"   class="side_link">Home</a>
               <a href="<?php echo $url['list']; ?>" class="side_link">List Property</a>
               <a href="<?php echo $url['post_property']; ?>" class="side_link">Post Property</a>
-              <a href="<?php echo $url['referandearn']; ?>" class="side_link mob_on">Refer and Earn</a>
+              
               <a href="<?php echo base_url() . 'about' ?>" class="side_link">About Us</a>
               <a href="<?php echo base_url() . 'policy' ?>" class="side_link">Privacy Policy</a>
               <a href="<?php echo base_url() . 'contact' ?>" class="side_link">Contact</a>

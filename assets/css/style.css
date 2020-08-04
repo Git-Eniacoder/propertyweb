@@ -1461,24 +1461,10 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
   padding: 1rem 0;
 }
 
-.wal_logout{
-  padding-left: 2rem;
-
-}
-
-.wal_log_out{
-  display: none;
-}
-
 
 /* // end of show property CSS */
 
-@media screen and (max-width: 700px){
-
-  .about_mob_v{
-    width: 78% !important;
-  }
-
+@media screen and (max-width: 600px){
   .meu .mmvv{
     display: block !important;
     
@@ -1492,7 +1478,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
   #items {
     
-    top: 55%;
+    top: 67%;
     
     }
 
@@ -1591,11 +1577,6 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
    .policy_page_head{
      width: 100%;
    }
-
-   .wal_log_out{
-    display: block;
-  }
-  
 
 }
 
@@ -1917,7 +1898,7 @@ opacity: 1;
 
 #items {
 position: relative;
-top: 45%;
+top: 60% !important;
 -webkit-transform: translateY(-50%);
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
@@ -1996,16 +1977,8 @@ margin-top: 2rem;
   color: #fff !important;
 }
 
-.wal_level_contain{
-  display: none;
-}
-
 
 @media screen and (max-width: 600px) {
-
-  .wal_level_contain{
-    display: block;
-  }
 
     .meu .mmvv{
       display: block;
@@ -2013,7 +1986,7 @@ margin-top: 2rem;
 
     #items {
       
-      top: 63% !important;
+      top: 55%;
       
       }
 
@@ -2081,10 +2054,6 @@ margin-top: 2rem;
 
   .main_list {
     padding: 0 1.5rem 2rem;
-  }
-
-  .wal_level_mob{
-    display: block;
   }
 
 } 
@@ -2256,7 +2225,6 @@ margin-top: 2rem;
 }
 
 .hero_service_bx {
-  text-decoration: none !important;
   background-color: #fff;
   border: 1px solid #c9c7c7;
   position: relative;
@@ -2280,12 +2248,8 @@ margin-top: 2rem;
 }
 
 .hero_ser_link {
-  text-decoration: none !important;
+  text-decoration: none;
   color: #5e5e5e;
-}
-
-.hero_ser_link:hover{
-  color: #5e5e5e !important;
 }
 
 .home_subhead {
@@ -2309,16 +2273,11 @@ margin-top: 2rem;
   width: 100%;
   height: auto;
 }
-.home_row .flex {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px auto;
-  
-}
-.home_row .flex .card {
+
+.home_row   .card {
   
   height: auto;
-  width:  15.3rem;
+  width:  100rem;
   box-shadow: 0px 0px 10px 2px rgba( 0, 0, 0 , 0.2);
   margin-left: 1rem;
   margin-right: 1rem;
@@ -2447,7 +2406,7 @@ margin-top: 2rem;
 
 
 .wal_nav_list {
-  width: 30rem;
+  width: 21rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2572,60 +2531,8 @@ margin-top: 2rem;
   color: rgb( 65, 65, 65 );
 }
 
-.wal_level_mob{
-  display: none;
-}
-
-.wal_name{
-  padding-bottom: .7rem;
-}
-
-.wal_level_contain{
-  margin-top: 1rem !important;
-}
-
-.card_head_text{
-  text-decoration: none !important;
-  color: #1e2229;
-}
-
-.card_head_text:hover{
-  color: #1e2229;
-}
-
-.wal_mob_dd:active{
-  background-color: #fff !important;
-}
-
-.wal_mob_dd:link{
-  background-color: #fff !important;
-  color: #212529;
-}
-
-.wal_bal{
-  display: none;
-}
-
-.about_mentor {
-  font-size: 1.2rem;
-}
-
-@media screen and (max-width: 900px) {
-
-  .wal_bal{
-    padding-top: .4rem;
-    display: block;
-  }
-}
-
 
 @media screen and (max-width: 600px) {
-
-  .wal_logo_main{
-    width: 85px !important;
-    margin-left: 40px !important;
-    margin-top: 0.6rem !important;
-  }
   
   .hero {
     min-height: 68rem;
@@ -2686,10 +2593,6 @@ margin-top: 2rem;
   .hero_post_bx_btn{
     width: 18rem !important;
   }
-
-  .about_contain {
-    padding: 2rem 23px;
-  }
 }
 
 /*# sourceMappingURL=wallet.css.map */
@@ -2701,10 +2604,6 @@ margin-top: 2rem;
 
 
 @media screen and (max-width: 950px) and (min-width: 600px) {
-
-  .wal_level_contain{
-    display: block;
-  }
   .recha .dex{
     display: none;
   
@@ -2712,9 +2611,4 @@ margin-top: 2rem;
   .recha .scrolling-wrapper{
     display: block;
   }
-
-  .wal_bal{
-    display: block;
-  }
-  
 }  

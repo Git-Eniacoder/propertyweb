@@ -1,3 +1,26 @@
+<style>
+.about-box .card {
+    width:  100%;
+    height: auto;
+    border: none;
+    background-color: #FFFBFB;
+    transition: transform .2s;
+    box-shadow: 0px 0px 10px 2px rgba( 0, 0, 0 , 0.2);
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  } 
+  .about-box .flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    
+  }
+  .about-box .card:hover{
+    transform: scale(1.06);
+  }
+</style>
+
 <main class="sub-main">
     <section class="getintouch">
         <div class="container">
@@ -10,7 +33,7 @@
 
     <section class="about">
         <div class="container">
-            <div class="about-box">
+            <div class="about-box" style="padding-bottom: 2rem;">
                 <div class="row justify-content-center">
                     <div class="col about-head text-center">
                         <img src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="">
@@ -85,10 +108,10 @@
                     </div> -->
                 </div>
 
-                <div class="row justify-content-center align-items-center">
+                <div class="flex justify-content-center ">
 
-                    <div class="col-md-4 about_mob_v">
-                        <div class="card" style="width: 17rem; margin-bottom:1rem;">
+                    
+                        <div class="card" style="width: 17rem; ">
                             <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="about_mentor">Sh. Radha Kishan Kaushik</h3>
@@ -97,10 +120,10 @@
                             </div>
                         </div>
 
-                    </div>
-                    <div class="col-md-4 about_mob_v">
+                 
+                    
                         
-                        <div class="card" style="width: 17rem; margin-bottom:1rem;">
+                        <div class="card" style="width: 17rem; ">
                             <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h3 class="about_mentor">Anoopnandan Kaushik</h3>
@@ -109,7 +132,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    
                     <!-- <div class="col-md-4">
                         <div class="card" style="width: 17rem; margin-bottom:1rem;">
                             <img class="card-img-top" src="assets/img/per1.jpg" alt="Card image cap">
