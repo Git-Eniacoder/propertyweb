@@ -651,6 +651,7 @@ table.dataTable thead th, table.dataTable thead td {
          dataType: "json",
          data: form_data,
       }).done(function(response) {
+      
          $('.modal').modal('hide');
          $('.modal-backdrop').hide();
          if (response.failed) {
