@@ -120,7 +120,7 @@
             <div id="items">
                <div class="item wal_level_contain">
                   <div class="wal_name">
-                     <span class="wal_sidebar_text">Hi! Navneet</span>
+                     <span class="wal_sidebar_text"><?php echo 'Hey, ' . $uname; ?></span>
                   </div>
                   <div class="wal_level">
                      <a title="Balance" href="#" class="nav-link wal_level">
@@ -142,7 +142,7 @@
                <hr class="style1">
 
                <div class="wal_log_out">
-                  <div class="item"><a class="wal_sidebar_text wal_logout" href="<?php echo $url['support']; ?>">Logout</a></div>
+                  <div class="item"><a class="wal_sidebar_text wal_logout" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a></div>
                   <hr class="style1">
                </div>
 

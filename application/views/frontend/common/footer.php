@@ -157,7 +157,7 @@ $(".nav_bar_click").click(function(){
           <div class="links">
 
             <a href="<?php echo base_url() . 'about' ?>">About Us</a></br>
-            <a href="<?php echo $url['referandearn']; ?>">Refer and Earn</a></br>
+           
             <a href="<?php echo base_url() . 'policy' ?>">Privacy Policy</a></br>
             <a href="<?php echo $url['term']; ?>">Terms and Condition</a></br>
             <a href="#">Sitemap</a></br>
