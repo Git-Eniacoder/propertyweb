@@ -74,14 +74,19 @@
 
         public function check_balance($id,$amount){
             $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
+            date_default_timezone_set('Asia/Kolkata');
             if(intval($balance['recharge_wallet']) >= intval($amount) ){
-             if(intval($amount)<=300-intval($balance['month_limit'])){   
+             if($balance['month_start_date']=='0000-00-00'){
+                $table_data_update=array('month_limit'=>0,'month_start_date'=>date('y-m-d'));
+                $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
+                return 1;
+             }
+             else if(intval($amount)<=300-intval($balance['month_limit'])){   
                 return 1;
              }
              else{
-                date_default_timezone_set('Asia/Kolkata');
                 $datediff = $this->dateDiff($balance['month_start_date'],date('y-m-d'));
-                if($datediff>30)
+                if($datediff>30 )
                 {
                     $table_data_update=array('month_limit'=>0,'month_start_date'=>date('y-m-d'));
                     $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
