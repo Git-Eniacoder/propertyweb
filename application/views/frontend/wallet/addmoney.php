@@ -144,7 +144,7 @@
          </div>
          <div class="col-md-3 wallet_op_bx">
             <center><span class="wallet_amt" style="color: white; font-size:23px;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
-            <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer & Earn wallet</button></a>
+            <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer wallet</button></a>
          </div>
          <div class="col-md-3 wallet_op_bx">
             <center><span class="wallet_amt" style="color: white; font-size:23px;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
