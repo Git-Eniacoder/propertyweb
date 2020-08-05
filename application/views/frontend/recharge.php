@@ -17,10 +17,11 @@
 <style>
 .tab-custom{
     color: gray;
-    padding: 7px;
+    padding: 3px;
 }
 a.active{
     /* color: blue !important; */
+   
     border-bottom: 2px solid red;
 }
 .tab-custom:hover{

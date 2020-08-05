@@ -86,19 +86,20 @@
                         <div class="group-form">
                             <div class="screen-reader-response" aria-live="polite"></div>
   
-                            <span id="success_m" class="text-success"></span>
-                                <input class="lis" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name Here">
+                            <span id="success_m" class="text-success"><?php echo $res!="NA"?$res:"" ?></span>
+                                <form action="<?php echo base_url().'/contact/sendmail'?>" method="post">
+                                <input class="lis" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name Here" required>
                                 <span id="name_error" class="text-danger m-0 p-0"></span></br>
-                                <input class="lis" type="email" name="mail" value="" size="40"  placeholder="Enter Your Mail">
+                                <input class="lis" type="email" name="email" value="" size="40"  placeholder="Enter Your Mail" required>
                                 <span id="email_error" class="text-danger m-0 p-0"></span></br>
-                                <input class="lis" type="tel" name="tel" value="" size="40" aria-invalid="false" placeholder="Enter Your Mobile Number">
+                                <input class="lis" type="tel" name="mobile" value="" size="40" aria-invalid="false" placeholder="Enter Your Mobile Number" required>
                                 <span id="tel_error" class="text-danger m-0 p-0"></span></br>
                                 
                                 
-                                <textarea class="lis" name="text" cols="40" rows="10"  aria-invalid="false" placeholder="Brief Requirement"></textarea>
+                                <textarea class="lis" name="message" cols="40" rows="10"  aria-invalid="false" placeholder="Brief Requirement" required></textarea>
                                 <span id="text_error" class="text-danger m-0 p-0"></span></br>
                                 <input type="submit" name="formSubmit"  class="bu crimson_background"  />
-
+                                </form>
                          
                         </div>
 

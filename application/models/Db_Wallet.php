@@ -58,22 +58,44 @@
             $this->db->trans_start();
             $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
             $total = intval($balance['recharge_wallet']) - intval($amt);
-            $this->db->where('mobileno',$id)->update('user_wallet',array('recharge_wallet' => $total));
+            $mothly_limit=intval($balance['month_limit'])+intval($amt);
+            $table_data_update=array('recharge_wallet' => $total,'month_limit'=>$mothly_limit);
+            $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
             $this->db->trans_complete();
             if($this->db->trans_status()){
                 return true;
             }else{
                 return false;
             }
-            
         }
         public function history_rec($data){
            return $this->db->insert('recharge_history',$data);
         }
+
         public function check_balance($id,$amount){
             $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
-            if(intval($balance['recharge_wallet']) >= intval($amount)){
-                return true;
+            date_default_timezone_set('Asia/Kolkata');
+            if(intval($balance['recharge_wallet']) >= intval($amount) ){
+             if($balance['month_start_date']=='0000-00-00'){
+                $table_data_update=array('month_limit'=>0,'month_start_date'=>date('y-m-d'));
+                $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
+                return 1;
+             }
+             else if(intval($amount)<=300-intval($balance['month_limit'])){   
+                return 1;
+             }
+             else{
+                $datediff = $this->dateDiff($balance['month_start_date'],date('y-m-d'));
+                if($datediff>30 )
+                {
+                    $table_data_update=array('month_limit'=>0,'month_start_date'=>date('y-m-d'));
+                    $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
+                    return 1;
+                }
+                else{
+                    return 2;
+                }
+             }
             }else{
                 return false;
             }
@@ -91,6 +113,14 @@
                 $this->db->where("id",$data);
                 $this->db->update('user_wallet', $toggle);
                 $this->index();
+        }
+
+        public 	function dateDiff($date1, $date2) 
+        {
+          $date1_ts = strtotime($date1);
+          $date2_ts = strtotime($date2);
+          $diff = $date2_ts - $date1_ts;
+          return round($diff / 86400);
         }
     }
 

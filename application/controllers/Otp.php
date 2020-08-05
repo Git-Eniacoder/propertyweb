@@ -36,7 +36,7 @@ class Otp extends My_Controller {
             }else{
                 $array = array(
                     'otp'   => true,
-                    'msg'   => '<p class="text-center text-danger">Wrong Otp</p>',
+                    'msg'   => '<p class="text-center text-danger"> Wrong Otp  </p> <span > Please fill the correct Otp to verify</span>',
                    );
             }
         } else {
