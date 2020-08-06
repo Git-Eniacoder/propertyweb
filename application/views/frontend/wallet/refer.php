@@ -254,7 +254,7 @@ table.dataTable thead th, table.dataTable thead td {
       </div>
       <div class="col-md-3 wallet_op_bx">
         <center><span class="wallet_amt" style="color: white; font-size:23px; ">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
-        <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn active"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer & Earn wallet</button></a>
+        <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn active"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer wallet</button></a>
       </div>
       <div class="col-md-3 wallet_op_bx">
         <center><span class="wallet_amt" style="color: white; font-size:23px;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
@@ -345,14 +345,14 @@ table.dataTable thead th, table.dataTable thead td {
             </div>
             <!-- <p>Login with mobile</p> -->
                <p class="text-danger text-center"> Note* : Minimum Threshold is 1200 Points</p>
-               <div class="response">
-                                
-              </div>
+               
             <form action="<?php echo base_url().'wallet/refer/rafer_money_transfer' ?>" method="post">
 
               <input type="number" name="amount" placeholder="Enter Amount" class="login_inp" required>
       
               <div>
+              <?php echo ($this->session->flashdata('response'))? $this->session->flashdata('response') : '' ?>
+
                 <button class="login_btn">Transfer</button>
               </div>
             </form>
@@ -449,3 +449,4 @@ if($this->session->flashdata('response')){ ?>
     });
   });
 </script>
+<?php echo ($this->session->flashdata('response'))? '<script>$("#myModal").modal("show")</script>' : '' ?>

@@ -269,10 +269,8 @@
     font-size: 1.2rem;
   }
   
-  
-  
   .wal_nav_list {
-    width: 30rem;
+    width: 23rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -335,7 +333,7 @@
 
   .prop_lists_rent{
     padding: 0 !important;
-    margin-bottom: .6rem !important;
+    margin-bottom: .5rem !important;
     color: rgb(133, 129, 129);
     font-size: .9rem;
   }
@@ -368,7 +366,8 @@
   }
 
   .prop_lists2{
-    width: 20rem;
+    width: 18rem;
+    margin-left: 1.5rem;
   }
 
   .side_link{
@@ -401,7 +400,10 @@
     display: none;
   }
 
-
+.poster_name{
+  color: rgb(182, 180, 180);
+  padding-right: .8rem;
+}
 
 
 

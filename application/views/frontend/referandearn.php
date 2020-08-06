@@ -38,10 +38,7 @@
                                             <input type="text" name="" id="" class="contact_inp"
                                                 placeholder="Your Friends Mobile" aria-describedby="helpId">
                                         </div>
-                                        <div class="">
-                                            <input type="text" name="" id="" class="contact_inp"
-                                                placeholder="Your Friends Mobile" aria-describedby="helpId">
-                                        </div>
+                                        
                                         <div class="">
                                             <input type="text" name="" id="" class="contact_inp"
                                                 placeholder="Your Mobile" aria-describedby="helpId">

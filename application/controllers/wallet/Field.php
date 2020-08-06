@@ -29,22 +29,15 @@ class Field extends My_Controller {
              $data['account_name'] = $this->input->post('hname');
 
              if($this->db_wallet->account_insert($data)){
-                $array = array(
-                    'failed'   => true,
-                    'msg'   => 'success',
-                    
-                );
+                $this->session->set_flashdata('response', '<p class="text-center text-success">Account Transfer Requested</p>');
+                redirect(base_url().'wallet/field');
              }else{
                  redirect(base_url().'error_show');
              }
          } else {
-            $array = array(
-                'failed'   => true,
-                'msg'   => validation_errors(),
-                
-            );
+            $this->session->set_flashdata('response', '<p class="text-center text-danger">Fill All Fields</p>');
+                redirect(base_url().'wallet/field');
          }
-         echo json_encode($array);
 
      }
     public function index()

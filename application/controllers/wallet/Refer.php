@@ -30,25 +30,21 @@ class Refer extends My_Controller {
             $data['amount'] = $this->input->post('amount');
             if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['amount'],1)){
                 if($this->db_wallet->update_single_history($this->session->userdata("user_id"),$data['amount'])){
-                    $array = array(
-                        'failed'   => true,
-                        'msg'   => 'transfered',
-                        
-                    );
+                    $this->session->set_flashdata('response', '<p class="text-center text-success">Transfered To Recharge Wallet</p>');
+                     redirect(base_url().'wallet/refer');
                 }else{
-                    redirect(base_url().'error_show');
+                    $this->session->set_flashdata('response', '<p class="text-center text-success">Transfered To Recharge Wallet</p>');
+                     redirect(base_url().'wallet/refer');
                 }
             }else{
                 redirect(base_url().'error_show');
             }
         } else {
-            $array = array(
-                'failed'   => true,
-                'msg'   => validation_errors(),
-                
-            );
+            $this->session->set_flashdata('response', '<p class="text-center text-danger">'.validation_errors().'</p>');
+                redirect(base_url().'wallet/refer');
+         
         }
-        echo json_encode($array);
+     
      }
     public function index()
     {
