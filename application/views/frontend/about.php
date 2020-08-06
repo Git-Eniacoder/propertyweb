@@ -34,28 +34,9 @@
     <section class="about">
         <div class="container">
             <div class="about-box" style="padding-bottom: 2rem;">
-                <div class="row justify-content-center">
-                    <div class="col about-head text-center">
-                        <img src="<?php echo $url['image'] . 'logo/' . $site['site_logo'] ?>" alt="">
-                    </div>
-                </div>
+                
 
-                <div class="row justify-content-center about_contain">
-                    <!-- <div class="col-md-5">
-
-                    <p>Students are tomorrow's leaders" our mission is to provide spiritual growth,mental and physical growth in today's world.True education is complete education. Right or complete education can produce ideal individuals.</p>
-
-                    </div> -->
-                    <div class="col-md-7">
-                        <div class="about_text text-center">
-                            <div class="about_subhead">
-                                <h2>New <span class="about-head-h2">Beginning</span> starts</h2>
-                            </div>
-                            <p>Students are tomorrow's leaders" our mission is to provide spiritual growth,mental and physical growth in today's world.True education is complete education. Right or complete education can produce ideal individuals.</p>
-                        </div>
-
-                    </div>
-                </div>
+                
 
                 <div class="row justify-content-center about_contain">
                     <div class="col-md-7">

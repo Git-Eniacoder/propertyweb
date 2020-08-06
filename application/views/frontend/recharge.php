@@ -15,6 +15,15 @@
   }
 ?>
 <style>
+  @media screen and (max-width: 381px) {
+    .tab-custom{
+      margin-top: -23px;
+    
+    }
+    .pp{
+      padding-top: 2rem;
+    }
+  }
 .tab-custom{
     color: gray;
     padding: 3px;
@@ -63,7 +72,7 @@ a.active{
                 </div>
                
             </div>
-            <div class="col-md-8 bg-white">
+            <div class="col-md-8 bg-white pp">
                 <nav>
                     <div class="nav nav-tabs p-3 text-center" id="nav-tab" role="tablist">
                       <a class="nav-item w-50 active tab-custom" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">How to Avail Offer</a>

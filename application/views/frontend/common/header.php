@@ -204,7 +204,7 @@
               <div class="">
                 <!-- <span></span> -->
                 <!-- <span><a href="#" data-toggle="modal" data-target="#login"  class="side_link">Login /</a><a href="#" data-toggle="modal" data-target="#register" class="side_link">Sign up</a></span> -->
-                <a href="<?php echo base_url(); ?>"  class="side_link" >Home</a>
+                <!--a href="<?php echo base_url(); ?>"  class="side_link" >Home</a-->
                
               </div>
 
