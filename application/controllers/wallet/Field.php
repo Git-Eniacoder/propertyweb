@@ -15,7 +15,38 @@ class Field extends My_Controller {
        // $this->load->model('pages/Db_postreq');
         
      }
+     public function add_bank(){
+         $this->form_validation->set_rules('ano', 'Account Number', 'trim|required');
+        //  $this->form_validation->set_rules('cano', 'Confirm Account Number', 'trim|required|matches["ano"]');
+         $this->form_validation->set_rules('ifsc', 'Ifsc Code', 'trim|required');
+         $this->form_validation->set_rules('hname', 'Holder Name', 'trim|required');
 
+         
+         if ($this->form_validation->run()) {
+            $data['user_id'] = $this->session->userdata('user_id');
+             $data['account_number'] = $this->input->post('ano');
+             $data['account_ifsc'] = $this->input->post('ifsc');
+             $data['account_name'] = $this->input->post('hname');
+
+             if($this->db_wallet->account_insert($data)){
+                $array = array(
+                    'failed'   => true,
+                    'msg'   => 'success',
+                    
+                );
+             }else{
+                 redirect(base_url().'error_show');
+             }
+         } else {
+            $array = array(
+                'failed'   => true,
+                'msg'   => validation_errors(),
+                
+            );
+         }
+         echo json_encode($array);
+
+     }
     public function index()
     {
         

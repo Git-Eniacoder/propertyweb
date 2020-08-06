@@ -1,3 +1,4 @@
+
 <style>
 .dataTables_wrapper .dataTables_paginate .paginate_button{
    background-color: crimson;
@@ -563,8 +564,10 @@ table.dataTable thead th, table.dataTable thead td {
                      <?php foreach ($history as $value) { ?>
                         <tr>
                            <td><?php echo $value['trans_id'] ?></td>
-                           <td>-<?php echo $value['recharge_amount'] ?></td>
-                           <?php if ($value['recharge_status'] == 'Failed') { ?>
+                           <td><?php echo ($value['recharge_status'] == 'Amount Added')? '+' : '-' ?><?php echo $value['recharge_amount'] ?></td>
+                           <?php if ($value['recharge_status'] == 'Amount Added') { ?>
+                              <td class="text-success"><?php echo $value['recharge_status'] ?></td>
+                           <?php } else if ($value['recharge_status'] == 'Failed') { ?>
                               <td class="text-danger"><?php echo $value['recharge_status'] ?></td>
                            <?php } else if ($value['recharge_status'] == 'Request Accepted') { ?>
                               <td class="text-warning"><?php echo $value['recharge_status'] ?></td>

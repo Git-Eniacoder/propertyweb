@@ -2,7 +2,7 @@
 // Account details
 $apiKey = urlencode("+tnkyt2mkYg-5bbCwuqI4TyLPnUfMMCo9SQfPf4Klh");
 // Message details
-$numbers = urlencode("8949715939");
+$numbers = urlencode("9784020309");
 $sender = urlencode("TXTLCL");
 $message = rawurlencode("This is your message");
  

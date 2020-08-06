@@ -67,7 +67,7 @@ class Recharge extends My_Controller {
             $feed = json_decode('{"STATUS":"Success","MOBILE":"8949715939","AMOUNT":"50","RPID":"2072822391582368C4","AGENTID":"HRI49036","OPID":"BR0004ZHL2X6","BAL":494834.19,"MSG":"Success"}');
             
             if($feed->STATUS == 'Success'){
-                if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['recharge_amount'])){
+                if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['recharge_amount'],0)){
                     $data['recharge_status'] = $feed->STATUS;
                     $data['recharge_msg'] = $feed->MSG;
                     $data['imWallet_id'] = $feed->OPID;
@@ -184,6 +184,7 @@ class Recharge extends My_Controller {
         $this->db_wallet->unset_notification($_GET['var1']);
     }
 
+   
 
     
 }   

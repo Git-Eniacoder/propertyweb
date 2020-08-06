@@ -22,7 +22,34 @@ class Refer extends My_Controller {
        // $this->load->model('pages/Db_postreq');
         
      }
-
+    //  Transfer Money From Referal Wallet to Recharge wallet
+     public function rafer_money_transfer(){
+        $this->form_validation->set_rules('amount', 'Amount', 'trim|required|greater_than_equal_to[1200]');
+        
+        if ($this->form_validation->run()) {
+            $data['amount'] = $this->input->post('amount');
+            if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['amount'],1)){
+                if($this->db_wallet->update_single_history($this->session->userdata("user_id"),$data['amount'])){
+                    $array = array(
+                        'failed'   => true,
+                        'msg'   => 'transfered',
+                        
+                    );
+                }else{
+                    redirect(base_url().'error_show');
+                }
+            }else{
+                redirect(base_url().'error_show');
+            }
+        } else {
+            $array = array(
+                'failed'   => true,
+                'msg'   => validation_errors(),
+                
+            );
+        }
+        echo json_encode($array);
+     }
     public function index()
     {
 
