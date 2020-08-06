@@ -48,6 +48,10 @@
         public function refer_history($id){
         return $this->db->where('referal_id',$id)->or_where('referal_id','Transfered')->get('payment_history')->result_array();
         }
+
+        public function refer_history_by_id($id,$referid){
+           return $this->db->where('referal_id',$referid)->or_where('user_id',$id)->where('referal_id','Transfered')->get('payment_history')->result_array();
+        }
         public function recharge_history($id){
             return $this->db->where('user_id',$id)->get('payment_history')->result_array();
         }
