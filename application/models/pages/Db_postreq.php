@@ -107,7 +107,7 @@ class Db_postreq extends CI_Model {
 
     public function fetch_list()
     {
-        return  $this->db->get("list_property")->result_array();
+        return  $this->db->order_by('property_id desc')->get("list_property")->result_array();
         // prnt($a);
         // print_r($a);die;
     }

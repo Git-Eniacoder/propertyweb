@@ -24,25 +24,30 @@ class Refer extends My_Controller {
      }
     //  Transfer Money From Referal Wallet to Recharge wallet
      public function rafer_money_transfer(){
+        $this->data['post'] = $this->db_wallet->get_balance($this->session->userdata("user_id"));
         $this->form_validation->set_rules('amount', 'Amount', 'trim|required|greater_than_equal_to[1200]');
-        
-        if ($this->form_validation->run()) {
-            $data['amount'] = $this->input->post('amount');
-            if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['amount'],1)){
-                if($this->db_wallet->update_single_history($this->session->userdata("user_id"),$data['amount'])){
-                    $this->session->set_flashdata('response', '<p class="text-center text-success">Transfered To Recharge Wallet</p>');
-                     redirect(base_url().'wallet/refer');
+        if($this->data['post']['all_data'][0]->refferal_wallet >= $this->input->post('amount'))
+            if ($this->form_validation->run()) {
+                $data['amount'] = $this->input->post('amount');
+                if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['amount'],1)){
+                    if($this->db_wallet->update_single_history($this->session->userdata("user_id"),$data['amount'])){
+                        $this->session->set_flashdata('response', '<p class="text-center text-success">Transfered To Recharge Wallet</p>');
+                        redirect(base_url().'wallet/refer');
+                    }else{
+                        $this->session->set_flashdata('response', '<p class="text-center text-success">Transfered To Recharge Wallet</p>');
+                        redirect(base_url().'wallet/refer');
+                    }
                 }else{
-                    $this->session->set_flashdata('response', '<p class="text-center text-success">Transfered To Recharge Wallet</p>');
-                     redirect(base_url().'wallet/refer');
+                    redirect(base_url().'error_show');
                 }
-            }else{
-                redirect(base_url().'error_show');
+            } else {
+                $this->session->set_flashdata('response', '<p class="text-center text-danger">'.validation_errors().'</p>');
+                    redirect(base_url().'wallet/refer');
+            
             }
-        } else {
-            $this->session->set_flashdata('response', '<p class="text-center text-danger">'.validation_errors().'</p>');
-                redirect(base_url().'wallet/refer');
-         
+        else{
+            $this->session->set_flashdata('response', "<p class='text-center text-danger'>Don't have enough Amount to transfer</p>");
+                        redirect(base_url().'wallet/refer');
         }
      
      }
