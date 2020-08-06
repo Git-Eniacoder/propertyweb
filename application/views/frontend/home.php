@@ -143,11 +143,11 @@
 
             <!-- Search  -->
             <div class="hero_service">
-                <div class="row justify-content-center align-items-center hero_ser_shadow">
+                <div class="row justify-content-center align-items-center ">
 
-                    <div class="col-md-3  hero_service_bx">
+                    <div class="col-md-3  hero_service_bx hero_ser_shadow" data-toggle="modal" data-target="#exampleModal">
 
-                        <a href="<?php echo $url['list']; ?>" class="hero_ser_link">
+                        <a href="#" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Rental Portal</p>
@@ -157,7 +157,7 @@
 
                     </div>
 
-                    <div class="col-md-3  hero_service_bx">
+                    <div class="col-md-3  hero_service_bx hero_ser_shadow">
                         <a href="<?php echo $url['recharge']; ?>" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rechargep.png" alt="" class="hero_ser_img">
@@ -168,18 +168,17 @@
 
 
                     </div>
-                    <div class="col-md-3  hero_service_bx">
+                    <!-- <div class="col-md-3  hero_service_bx">
 
                         <a href="<?php echo $url['post_property']; ?>" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/postp.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Post Requirement</p>
-                                <!-- <a href="" class="hero_ser_text">Post Requirement</a> -->
                             </div>
                         </a>
 
-                    </div>
-                    <div class="col-md-3  hero_service_bx">
+                    </div> -->
+                    <div class="col-md-3  hero_service_bx hero_ser_shadow">
                         <a href="<?php echo base_url() . 'shopping' ?>" class="hero_ser_link">
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rentp.png" alt="" class="hero_ser_img">
@@ -196,6 +195,40 @@
 
 
     </section>
+
+    <!-- HERO btn Modal Pop Up -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content property_modal">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> -->
+                <div class="modal-body text-center">
+                    <div>
+                        <a name="" id="" class="btn list_btns" href="<?php echo $url['post_property']; ?>" role="button">Post Requirement</a>
+                    </div>
+                    <div>
+                        <a name="" id="" class="btn list_btns" href="<?php echo $url['list']; ?>" role="button">List Property</a>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
 
     <!-- Trending Properties -->
     <section class="trending top_trend">
@@ -251,165 +284,171 @@
 
             </div> -->
 
-            <div class="row mx-auto my-auto">
-                <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-                    <div class="carousel-inner w-100" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+            <div class="row mx-auto my-auto trend_contain">
+                <div id="recipeCarousel" class="carousel carousel slide w-100" data-ride="carousel">
+                    <div class="inner_container">
+                        <div class="carousel-inner w-100" role="listbox">
+                            <div class="carousel-item carousel-item active">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
+                        <!-- <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span> -->
                     </a>
+
                     <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                        <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
+                        <!-- <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span> -->
                     </a>
                 </div>
-
             </div>
+
         </div>
     </section>
 
@@ -432,168 +471,177 @@
                 </div>
             </div>
 
-            <div class="row mx-auto my-auto">
+
+            <div class="row mx-auto my-auto trend_contain">
                 <div id="recipeCarousel2" class="carousel carousel2 slide w-100" data-ride="carousel">
-                    <div class="carousel-inner w-100" role="listbox">
-                        <div class="carousel-item carousel-item2 active">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                    <div class="inner_container">
+                        <div class="carousel-inner w-100" role="listbox">
+                            <div class="carousel-item carousel-item2 active">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item .carousel-item2">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item2">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item .carousel-item2">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item2">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item .carousel-item2">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item2">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item .carousel-item2">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item2">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item .carousel-item2">
-                            <div class="col-md-4">
-                                <div class="card text-left prop_lists prop_lists2">
-                                    <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
-                                    <div class="card-body">
-                                        <h4 class=" prop_lists_text ">Radhika Appartments</h4>
-                                        <p class="prop_lists_add">in Alsanatham for Sale
-                                            Within 3-6 months</p>
-                                        <p><span>Vaishali Nagar</span></p>
+                            <div class="carousel-item .carousel-item2">
+                                <div class="col-md-4">
+                                    <div class="card text-left prop_lists prop_lists2">
+                                        <img class="card-img-top" src="assets/img/homeimgs/flat1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class=" prop_lists_text ">Radhika Appartments</h4>
+                                            <p class="prop_lists_add">in Alsanatham for Sale
+                                                Within 3-6 months</p>
+                                            <p><span>Vaishali Nagar</span></p>
 
-                                        <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
+                                            <h4 class=" prop_lists_text">3 BHK appartment 180 (sq-ft)</h4>
 
 
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
-                                        <p class="prop_lists_rent"><span>Rent</span></p>
-                                        <div class="text-start">
-                                            <span class="poster_name">By Anshul</span>
-                                            <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                            <p class="prop_lists_rent"><span>Rent</span></p>
+                                            <div class="text-start">
+                                                <span class="poster_name">By Anshul</span>
+                                                <button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button>
+                                            </div>
+
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <a class="carousel-control-prev w-auto" href="#recipeCarousel2" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
+                        <!-- <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span> -->
                     </a>
+
                     <a class="carousel-control-next w-auto" href="#recipeCarousel2" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                        <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
+                        <!-- <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span> -->
                     </a>
                 </div>
             </div>
+        </div>
 
 
-            <!-- new Card  -->
-            <!-- <?php foreach ($post as $value) { ?>
+
+        <!-- new Card  -->
+        <!-- <?php foreach ($post as $value) { ?>
                               
                                 <div class="card text-left prop_lists">
                                     <a href="<?php echo base_url() . 'single_property/fetch/' . $value["property_id"] ?>"><img class="card-img-top" height="188px" src="<?php $img = explode(",", $value["list_images"]);

@@ -2536,6 +2536,10 @@ margin-top: 2rem;
   color: rgb( 65, 65, 65 );
 }
 
+.trend_contain{
+  width: 96%;
+}
+
 
 @media screen and (max-width: 600px) {
   
