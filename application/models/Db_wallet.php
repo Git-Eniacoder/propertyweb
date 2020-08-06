@@ -46,7 +46,7 @@
             
         }
         public function refer_history($id){
-        return $this->db->where('referal_id',$id)->get('payment_history')->result_array();
+        return $this->db->where('referal_id',$id)->or_where('referal_id','Transfered')->get('payment_history')->result_array();
         }
         public function recharge_history($id){
             return $this->db->where('user_id',$id)->get('payment_history')->result_array();
@@ -54,26 +54,65 @@
         public function rech_his($id){
             return $this->db->where('user_id',$id)->get('recharge_history')->result_array();
         }
-        public function update_balance($id,$amt){
+        // Updating wallet balance $opt = option to perform
+        public function update_balance($id,$amt,$opt){ 
+        if($opt==0){
             $this->db->trans_start();
             $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
             $total = intval($balance['recharge_wallet']) - intval($amt);
-            $this->db->where('mobileno',$id)->update('user_wallet',array('recharge_wallet' => $total));
+            $mothly_limit=intval($balance['month_limit'])+intval($amt);
+            $table_data_update=array('recharge_wallet' => $total,'month_limit'=>$mothly_limit);
+            $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
             $this->db->trans_complete();
             if($this->db->trans_status()){
                 return true;
             }else{
                 return false;
             }
+        }
+        else if($opt==1){
+            $this->db->trans_start();
+            $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
+            $refer = intval($balance['refferal_wallet']) - intval($amt);
+            $rech = intval($balance['recharge_wallet']) + intval($amt);
+            $this->db->where('mobileno',$id)->update('user_wallet',array('recharge_wallet' => $rech,'refferal_wallet'=>$refer));
+            $this->db->trans_complete();
+            if($this->db->trans_status()){
+                return true;
+            }else{
+                return false;
+            }
+        }
             
         }
         public function history_rec($data){
            return $this->db->insert('recharge_history',$data);
         }
+
         public function check_balance($id,$amount){
             $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
-            if(intval($balance['recharge_wallet']) >= intval($amount)){
-                return true;
+            date_default_timezone_set('Asia/Kolkata');
+            if(intval($balance['recharge_wallet']) >= intval($amount) ){
+             if($balance['month_start_date']=='0000-00-00'){
+                $table_data_update=array('month_limit'=>0,'month_start_date'=>date('y-m-d'));
+                $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
+                return 1;
+             }
+             else if(intval($amount)<=300-intval($balance['month_limit'])){   
+                return 1;
+             }
+             else{
+                $datediff = $this->dateDiff($balance['month_start_date'],date('y-m-d'));
+                if($datediff>30 )
+                {
+                    $table_data_update=array('month_limit'=>0,'month_start_date'=>date('y-m-d'));
+                    $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
+                    return 1;
+                }
+                else{
+                    return 2;
+                }
+             }
             }else{
                 return false;
             }
@@ -91,6 +130,43 @@
                 $this->db->where("id",$data);
                 $this->db->update('user_wallet', $toggle);
                 $this->index();
+        }
+        public function update_single_history($id,$amt){
+            $this->db->trans_start();
+            $data['user_id'] = $id;
+            $data['referal_refer'] = $amt;
+            $data['payment_status'] = 1;
+            $data['payment_type'] = false;
+            $data['referal_id'] = 'Transfered';
+            $recharge['recharge_status'] = 'Amount Added';
+            $recharge['recharge_amount'] = $amt;
+            $recharge['user_id'] = $id;
+            $recharge['recharge_msg'] = 'Wallet Transfer';
+            $recharge['trans_id'] = 'HRI'.date("dmYis").rand(1,9);
+           
+            $this->db->insert('payment_history',$data);
+            $this->db->insert('recharge_history',$recharge);
+            $this->db->trans_complete();
+           
+
+
+        }
+        public function account_insert($data){
+            $this->db->insert('account_transfer',$data);
+            if($this->db->insert_id()){
+                return true;
+            }else{
+                return false;
+            }
+            
+            
+        }
+        public 	function dateDiff($date1, $date2) 
+        {
+          $date1_ts = strtotime($date1);
+          $date2_ts = strtotime($date2);
+          $diff = $date2_ts - $date1_ts;
+          return round($diff / 86400);
         }
     }
 

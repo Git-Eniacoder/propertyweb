@@ -144,7 +144,7 @@
          </div>
          <div class="col-md-3 wallet_op_bx">
             <center><span class="wallet_amt" style="color: white; font-size:23px;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
-            <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer & Earn wallet</button></a>
+            <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer wallet</button></a>
          </div>
          <div class="col-md-3 wallet_op_bx">
             <center><span class="wallet_amt" style="color: white; font-size:23px;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
@@ -194,21 +194,21 @@
                <table class="table table-fluid" id="myTable">
                   <thead>
                      <tr class="bg-white">
-                        <th>Refered Person</th>
+                        <th>Mobile no</th>
                         <th>Amount</th>
                         <th>Status</th>
                         <th>Date</th>
                      </tr>
                   </thead>
                   <tbody>
-                     <?php foreach ($history as $value) { ?>
+                     <?php foreach ($history as $value) { if(!$value['payment_amount']){continue;}else{?>
                         <tr>
                            <td><?php echo $value['user_id']; ?></td>
                            <td>+<?php echo $value['payment_amount']; ?></td>
                            <td class="text-success">success</td>
                            <td><?php echo $value['payment_date']; ?></td>
                         </tr>
-                     <?php } ?>
+                     <?php }}?>
                   </tbody>
                </table>
             </div>

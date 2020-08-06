@@ -36,7 +36,7 @@ class Otp extends My_Controller {
             }else{
                 $array = array(
                     'otp'   => true,
-                    'msg'   => '<p class="text-center text-danger">Wrong Otp</p>',
+                    'msg'   => '<p class="text-center text-danger"> Wrong Otp  </p> <span > Please fill the correct Otp to verify</span>',
                    );
             }
         } else {
@@ -63,25 +63,25 @@ class Otp extends My_Controller {
                 $_SESSION['name'] = $name;
                 $_SESSION['number'] = $number;
                 $_SESSION['pass'] = $password;
-                // Account details
-                // $apiKey = urlencode('AatJnvXT+aY-938RJaCG444fzTalb9slE32x4suSln');
+              
+                $apiKey = urlencode('+tnkyt2mkYg-5bbCwuqI4TyLPnUfMMCo9SQfPf4Klh');
                 
-                // // Message details
-                // $numbers = urlencode($number);
-                // $sender = urlencode('TXTLCL');
-                // $message = rawurlencode('Dear customer, your OTP for registration is '.$rand);
+                // Message details
+                $numbers = urlencode($number);
+                $sender = urlencode('TXTLCL');
+                $message = rawurlencode('Dear customer, your OTP for registration is '.$rand);
         
-                // $data = 'apikey=' . $apiKey . '&numbers=' . $numbers . "&sender=" . $sender . "&message=" . $message;
+                $data = 'apikey=' . $apiKey . '&numbers=' . $numbers . "&sender=" . $sender . "&message=" . $message;
             
         
-                // $ch = curl_init('https://api.textlocal.in/send/?' . $data);
-                // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                // $response = curl_exec($ch);
-                // curl_close($ch);
+                $ch = curl_init('https://api.textlocal.in/send/?' . $data);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                $response = curl_exec($ch);
+                curl_close($ch);
 
                 $array = array(
                     'status'   => true,
-                    'msg'   => $rand,
+                    'msg'   => $response,
                 );
             } else {
                 $array = array(
@@ -153,7 +153,7 @@ class Otp extends My_Controller {
                 
                 if($this->db_register->reset_password($send['mobile_no'],$send['password'])){
                     
-            $apiKey = urlencode('AatJnvXT+aY-938RJaCG444fzTalb9slE32x4suSln');
+            $apiKey = urlencode('+tnkyt2mkYg-5bbCwuqI4TyLPnUfMMCo9SQfPf4Klh');
             
             // Message details
             $numbers = urlencode($send['mobile_no']);
@@ -171,7 +171,7 @@ class Otp extends My_Controller {
                     $array = array(
                         'otp'   => true,
                         'msg'   => '<p class="text-center text-success">Password Sent To Registered Mobile No.</p>',
-                        'password' => $response,
+                        'password' => $data,
                     );
                 }else{
                     $array = array(

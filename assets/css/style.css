@@ -2273,11 +2273,16 @@ margin-top: 2rem;
   width: 100%;
   height: auto;
 }
-
-.home_row   .card {
+.home_row .flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  
+}
+.home_row .flex .card {
   
   height: auto;
-  width:  100rem;
+  width:  15.3rem;
   box-shadow: 0px 0px 10px 2px rgba( 0, 0, 0 , 0.2);
   margin-left: 1rem;
   margin-right: 1rem;
@@ -2529,6 +2534,10 @@ margin-top: 2rem;
   padding: 1rem 0 .8rem 0;
   font-size: 1.2rem;
   color: rgb( 65, 65, 65 );
+}
+
+.trend_contain{
+  width: 96%;
 }
 
 

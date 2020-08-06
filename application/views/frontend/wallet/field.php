@@ -161,7 +161,7 @@ table.dataTable thead th, table.dataTable thead td {
       </div>
       <div class="col-md-3 wallet_op_bx">
         <center><span class="wallet_amt" style="color: white; font-size:23px;">&#x20B9;<?php echo $post["all_data"][0]->refferal_wallet; ?></span></center>
-        <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer & Earn wallet</button></a>
+        <a href="<?php echo $url['refer-wallet']; ?>"><button class="wallet_op_btn"><img class="mx-2 wallet_mob_img" src="../assets/img/refer.svg" width="25px" style="margin-top: -10px;">Refer wallet</button></a>
       </div>
       <div class="col-md-3 wallet_op_bx">
         <center><span class="wallet_amt" style="color: white; font-size:23px;"> &#x20B9;<?php echo $post["all_data"][0]->filed_wallet; ?></span></center>
@@ -187,7 +187,7 @@ table.dataTable thead th, table.dataTable thead td {
           <h4 class="wal_side_head">Field Wallet</h4>
           <a href="recharge"><button class="refer_wallet-btn" style="border-top: 1px solid rgba(233, 227, 227, 0.836);"><img src="../assets/img/Mob.png" width="13px" style="margin-top:-5px; margin-left:4px; margin-right: 20px;">Recharge & PayBills</button></a>
           <!--button class="refer_wallet-btn"><img src="../assets/img/totaljpg.jpg" width="25px" style="margin-top:-5px; margin-right: 10px;">Total Amount</button>-->
-          <button class="refer_wallet-btn"><img src="../assets/img/trans.png" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfered</button>
+          <!--button class="refer_wallet-btn"><img src="../assets/img/trans.png" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfered</button-->
           <button class="refer_wallet-btn" data-toggle="modal" data-target="#myModal"><img src="../assets/img/tobank.webp" width="25px" style="margin-top:-5px; margin-right: 10px;">Transfer to Bank</button>
         </div>
       </div>
@@ -240,12 +240,12 @@ table.dataTable thead th, table.dataTable thead td {
               <h5>Transfer to Bank</h5>
             </div>
             <!-- <p>Login with mobile</p> -->
-
-            <form>
-              <input type="password" placeholder="Account Number" class="login_inp">
-              <input type="number" placeholder="Re-enter Account Number" class="login_inp">
-              <input type="text" placeholder="IFSC code" class="login_inp">
-              <input type="text" placeholder="Holder Name" class="login_inp">
+                <?php echo ($this->session->flashdata('response'))? $this->session->flashdata('response') : '' ?>
+            <form action="<?php echo base_url().'wallet/field/add_bank' ?>" method="post">
+              <input type="password" name="ano" placeholder="Account Number" class="login_inp">
+              <!-- <input type="number" name="cano" placeholder="Re-enter Account Number" class="login_inp"> -->
+              <input type="text" name="ifsc" placeholder="IFSC code" class="login_inp">
+              <input type="text" name="hname" placeholder="Holder Name" class="login_inp">
               <div>
                 <button class="login_btn">Submit</button>
               </div>
@@ -293,6 +293,8 @@ table.dataTable thead th, table.dataTable thead td {
     }
   });
 </script>
+<?php echo ($this->session->flashdata('response'))? '<script>$("#myModal").modal("show")</script>' : '' ?>
+
 <script>
   $(document).ready(function() {
     $('#myTable').DataTable({

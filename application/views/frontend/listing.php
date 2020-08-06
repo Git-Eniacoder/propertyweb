@@ -1,4 +1,15 @@
 <style>
+    
+    .bor{
+  border-left: 1px solid #ccc;
+  display: block;
+}
+@media screen and (max-width: 600px){
+  .bor{
+  
+  display:none ;
+}
+}  
     .post-requirment input {
         padding: 0;
         margin: 0;
@@ -155,7 +166,7 @@
                 </form>
 
             </div>
-            <div style="border-left: 1px solid #ccc; background-color: #fafafa;" class="col-md-3 py-4 text-center">
+            <div style=" background-color: #fafafa;" class="bor col-md-3 py-4 text-center">
                 <h4 class="text-secondary py-3">List your property here</h4>
                 <div class="card post-card">
                     <div class="card-image">

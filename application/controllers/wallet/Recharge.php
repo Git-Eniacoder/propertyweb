@@ -32,6 +32,8 @@ class Recharge extends My_Controller {
         $this->load->view('frontend/wallet/recharge',$this->data);
         $this->load->view('frontend/common/footer',$this->data);
     }
+
+    //function for recharge 
     public function mobile($id=null){
         if(!$id){
             $this->form_validation->set_rules('circle', 'Circle', 'required');
@@ -50,7 +52,16 @@ class Recharge extends My_Controller {
             $data['recharge_opt'] = $this->input->post('company');
             $data['user_id']  = $this->session->userdata("user_id");
             $data['user_name']  = $this->session->userdata("user_name");
-        if($this->db_wallet->check_balance($this->session->userdata("user_id"),$data['recharge_amount'])){
+            $OutPut=$this->db_wallet->check_balance($this->session->userdata("user_id"),$data['recharge_amount']);
+            if($OutPut==2){
+                $array = array(
+                    'failed'   => true,
+                    'msg'   => 'Monthly 300 Limit has over',
+                    'he'    => 'Balance',
+                    'ico'   => '<i class="fa fa-times"></i>',
+                );
+            }
+            else if($OutPut==1  ){
             // $userid = urlencode('7392900007');
             // $pass = urlencode('693655');
             // $numbers = urlencode($data['recharge_no']);
@@ -67,11 +78,11 @@ class Recharge extends My_Controller {
             $feed = json_decode('{"STATUS":"Success","MOBILE":"8949715939","AMOUNT":"50","RPID":"2072822391582368C4","AGENTID":"HRI49036","OPID":"BR0004ZHL2X6","BAL":494834.19,"MSG":"Success"}');
             
             if($feed->STATUS == 'Success'){
-                if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['recharge_amount'])){
+                if($this->db_wallet->update_balance($this->session->userdata("user_id"),$data['recharge_amount'],0)){
                     $data['recharge_status'] = $feed->STATUS;
                     $data['recharge_msg'] = $feed->MSG;
                     $data['imWallet_id'] = $feed->OPID;
-                $this->db_wallet->history_rec($data);
+                //$this->db_wallet->history_rec($data);
                 $array = array(
                     'success'   => true,
                     'msg'   => $feed->MSG,
@@ -79,7 +90,14 @@ class Recharge extends My_Controller {
                     'ico'   => '<i class="fa fa-check"></i>',
                 );
                 }
-                
+                else{
+                        $array = array(
+                            'failed'   => true,
+                            'msg'   => 'Balance is Shorter',
+                            'he'    => 'Balance',
+                            'ico'   => '<i class="fa fa-times"></i>',
+                        );
+                    }
             }
             else if($feed->STATUS == 'Request Accepted'){
                 $data['recharge_status'] = $feed->STATUS;
@@ -102,7 +120,8 @@ class Recharge extends My_Controller {
                     'ico'   => '<i class="fa fa-times"></i>',
                 );
             }
-        }else{
+        }
+        else{
             $array = array(
                 'failed'   => true,
                 'msg'   => 'Balance is Shorter',
@@ -184,6 +203,7 @@ class Recharge extends My_Controller {
         $this->db_wallet->unset_notification($_GET['var1']);
     }
 
+   
 
     
 }   

@@ -131,6 +131,11 @@
     text-decoration: none;
     color: #5e5e5e;
   }
+
+  .hero_ser_link:hover{
+    text-decoration: none;
+    color: crimson;
+  }
   
   .home_subhead {
     width: 100%;
@@ -269,10 +274,8 @@
     font-size: 1.2rem;
   }
   
-  
-  
   .wal_nav_list {
-    width: 30rem;
+    width: 23rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -335,7 +338,7 @@
 
   .prop_lists_rent{
     padding: 0 !important;
-    margin-bottom: .6rem !important;
+    margin-bottom: .5rem !important;
     color: rgb(133, 129, 129);
     font-size: .9rem;
   }
@@ -368,7 +371,8 @@
   }
 
   .prop_lists2{
-    width: 20rem;
+    width: 18rem;
+    margin-left: .5rem;
   }
 
   .side_link{
@@ -401,49 +405,93 @@
     display: none;
   }
 
+.poster_name{
+  color: rgb(182, 180, 180);
+  padding-right: .8rem;
+}
+
+.list_btns{
+  width: 78%;
+  background-color: crimson;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: .8rem;
+}
+
+.list_btns:hover{
+  border: 1px solid crimson;
+  color: crimson;
+  background-color: #fff;
+}
+
+.home_arrow_left{
+  font-size: 2rem !important;
+  color: crimson;
+}
+.home_arrow_right{
+  font-size: 2rem !important;
+  color: crimson;
+  padding-left: 1rem;
+}
+
+.property_modal{
+  /* padding: 2rem 0; */
+}
+
+.property_modal{
+  width: 70% !important;
+  margin: auto !important;
+}
+
+.inner_container{
+  width: 95%;
+  margin: 0 auto;
+}
 
 
 
 
+@media screen and (max-width: 1200px) {
 
-  @media screen and (max-width: 1200px) {
-
-    .wal_mob_view{
-      display: block;
-    }
-
-    .sb_2{
-      width: 34.3% !important;
-    }
-
-    .searchbar_bx{
-      width: 96%;
-    }
-
-    .hero_post_bx{
-      width: 56%;
-    }
-  
-
-    .hero_ser_text {
-      padding-left: 0.5rem;
-    }
-
-    .hero_ser_img{
-      width: 3rem;
-    }
-
-    .sb_2::placeholder {
-      padding-left: 0rem !important;
-    }
-
-
-  
-  
+  .wal_mob_view{
+    display: block;
   }
+
+  .sb_2{
+    width: 34.3% !important;
+  }
+
+  .searchbar_bx{
+    width: 96%;
+  }
+
+  .hero_post_bx{
+    width: 56%;
+  }
+
+
+  .hero_ser_text {
+    padding-left: 0.5rem;
+  }
+
+  .hero_ser_img{
+    width: 3rem;
+  }
+
+  .sb_2::placeholder {
+    padding-left: 0rem !important;
+  }
+
+}
+
+
   
   @media screen and (max-width: 700px) {
 
+
+    .property_modal{
+      width: 90% !important;
+    }
     .hero{
       min-height: 50rem;
     }
@@ -484,7 +532,7 @@
     }
 
     .hero_service_bx {
-      width: 50%;
+      width: 53%;
     }
 
     .post_mob{
@@ -492,7 +540,7 @@
     }
 
     .prop_lists{
-      width: 17.5rem !important;
+      width: 17rem !important;
     }
   }
   
@@ -518,7 +566,7 @@
       font-size: 1.5rem;
     }
     .hero_service {
-      padding: 2rem 0;
+      /* padding: 2rem 0; */
       margin: 0 1.3rem;
     }
     .property_card {

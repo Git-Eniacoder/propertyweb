@@ -11,7 +11,7 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-
+  <script src="https://kit.fontawesome.com/36a236c794.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo $url['stylecss']; ?>">
   <link rel="stylesheet" href="<?php echo $url['newhomecss']; ?>">
@@ -177,7 +177,7 @@
               <div class="nav_list_icons">
                 <a href="#" id="navbardrop" data-toggle="dropdown" class="wal_nav_links dropdown-toggle"><?php echo 'Hey, ' . $uname; ?></a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="<?php echo $url['profile']; ?>">My Profile</a>
+                    <!-- <a class="dropdown-item" href="">My Profile</a> -->
                     <a class="dropdown-item" href="<?php echo $url['wallet']; ?>">Wallet</a>
                     <a class="dropdown-item" href="<?php echo $url['support']; ?>">Raise Ticket</a>
                     <a class="dropdown-item" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a>
