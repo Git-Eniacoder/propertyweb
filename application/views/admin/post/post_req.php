@@ -27,7 +27,7 @@
                                                 <td><?php echo $value['post_date'] ; ?></td>
                                                 <td class="d-flex">
                                                     <!-- <a class="btn btn-success mx-1" href="<?php //echo base_url() ; ?>admin/pages/new_page/update/<?php //echo $value['page_id'] ; ?>"><i class="fa fa-edit" aria-hidden="true"></i></a> -->
-                                                    <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/post_req/update_fetch/'.$value['post_id'] ; ?>"><i  class="fa fa-eye" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-success mx-1 text-white del"   href="<?php echo base_url().'admin/post/post_req/update_fetch/'.$value['post_id'] ; ?>"><i  class="fa fa-eye" aria-hidden="true"></i></a>
                                                     <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/post_req/delete_row/'.$value['post_id'] ; ?>"><i  class="fa fa-trash" aria-hidden="true"></i></a>
                                                 </td>
                                             </tr>
@@ -69,6 +69,7 @@
             <p><span font-weight:bold;>post name : </span><?php echo $update['post_name'] ;?></p>
             <p><span font-weight:bold;>post email : </span><?php echo $update['post_email'] ;?></p>
             <p><span font-weight:bold;>post phone : </span><?php echo $update['post_phone'] ;?></p>
+            <p><span font-weight:bold;>Need For : </span><?php echo $update['post_need'] ;?></p>
             <p><span font-weight:bold;>post date : </span><?php echo $update['post_date'] ;?></p>
         </div>
         

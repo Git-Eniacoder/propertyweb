@@ -39,8 +39,8 @@
                 
 
                 <div class="row justify-content-center about_contain">
-                    <div class="col-md-7">
-                        <div class="about_text text-center">
+                    <div class="col-md-12">
+                        <div class="about_text">
                             <div class="about_subhead">
                                 <h2>About the<span class="about-head-h2"> Company</span></h2>
                             </div>
@@ -59,9 +59,9 @@
                     <!-- <div class="col-md-5">
                         
                     </div> -->
-                    <div class="col-md-7">
+                    <div class="col-md-12">
 
-                        <div class="about_text text-center">
+                        <div class="about_text">
                             <div class="about_subhead">
                                 <h2>Our <span class="about-head-h2"> Mission</span></h2>
                             </div>
@@ -73,8 +73,8 @@
                 </div>
 
                 <div class="row justify-content-center about_contain">
-                    <div class="col-md-7">
-                        <div class="about_text text-center">
+                    <div class="col-md-12">
+                        <div class="about_text">
                             <div class="about_subhead">
                                 <h2>Our <span class="about-head-h2"> Vision</span></h2>
                             </div>

@@ -68,7 +68,7 @@
           <!-- Form-row 1 -->
           <div class="form-row">
             <!-- Property Type -->
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
               <select id="protype" name="post_type" onchange="myFunction()" class="form-control">
                 <option disabled value="" selected>Property Type*</option>
                 <option value="commercial">Commercial</option>
@@ -78,7 +78,7 @@
             </div>
 
             <!-- BHK new -->
-            <div class="form-group col-md-6">
+            <!-- <div class="form-group col-md-6">
               <select id="protype" name="BHK" onchange="myFunction()" class="form-control">
                 <option disabled value="" selected>BHK*</option>
                 <option value="1BHK">1 BHK</option>
@@ -87,7 +87,7 @@
                 <option value="4BHK">4 BHK</option>
               </select>
               <?php echo form_error('BHK') ? '<span class=" text-danger">' . form_error('BHK') . '</span>' : ''; ?>
-            </div>
+            </div> -->
 
           </div>
 
@@ -135,12 +135,12 @@
           <!-- Form-row 3 -->
           <div class="form-row">
             <!-- Build Up Area  New-->
-            <div class="form-group col-md-6">
+            <!-- <div class="form-group col-md-6">
               <input type="text" name="build_area" class="form-control" placeholder="Build Up Area (sq.ft) *">
               <?php echo form_error('build_area') ? '<span class=" text-danger">' . form_error('build_area') . '</span>' : ''; ?>
-            </div>
+            </div> -->
             <!-- Need For  New-->
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
               <select id="protype" name="need_for" onchange="myFunction()" class="form-control">
                 <option disabled value="" selected>Need for*</option>
                 <option value="girls">Girls</option>
@@ -166,30 +166,11 @@
 
           <div id="unit">
             <div class="form-row">
-              <div class="form-group col-md-4">
-                <!-- <label for="inputState">State</label> -->
-                <select name="post_unit" class="form-control">
-                  <option selected>Select Unit*</option>
-                  <option value="Sq.ft.">Sq.ft.</option>
-                  <option value="Cent">Cent</option>
-                  <option value="Sq. Yards">Sq. Yards</option>
-                  <option value="Ares">Ares</option>
-                  <option value="Acre">Acre</option>
-                  <option value="Sq. Meter">Sq. Meter</option>
-                  <option value="Bigha">Bigha</option>
-                  <option value="Hectares">Hectares</option>
-                  <option value="Guntha">Guntha</option>
-                  <option value="Marla">Marla</option>
-                  <option value="Dismil">Dismil</option>
-                  <option value="Biswa">Biswa</option>
-                </select>
+              
+              <div class="form-group col-md-6">
+                <input type="text" name="post_req_min" class="form-control" placeholder="Build Up Area (sq.ft) *">
               </div>
-              <div class="form-group col-md-2">
-                <input type="text" name="post_req_min" class="form-control" placeholder="Min">
-              </div>
-              <div class="form-group col-md-2">
-                <input type="text" name="post_req_max" class="form-control" placeholder="Max">
-              </div>
+              
             </div>
           </div>
           <div id="bhk" class="form-row">
