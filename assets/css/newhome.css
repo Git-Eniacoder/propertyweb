@@ -484,6 +484,14 @@
 
 }
 
+@media screen and (max-width: 800px) {
+
+  .hero{
+
+    height: 54.6rem;
+  }
+
+}
 
   
   @media screen and (max-width: 700px) {
@@ -532,7 +540,7 @@
     }
 
     .hero_service_bx {
-      width: 53%;
+      width: 67%;
     }
 
     .post_mob{
@@ -540,7 +548,8 @@
     }
 
     .prop_lists{
-      width: 17rem !important;
+      width: 15rem !important;
+      margin: auto;
     }
   }
   
