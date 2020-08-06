@@ -371,7 +371,6 @@
   }
 
   .prop_lists2{
-    width: 18rem;
     margin-left: .5rem;
   }
 
@@ -540,7 +539,9 @@
     }
 
     .prop_lists{
-      width: 17rem !important;
+      width: 90%;
+      margin: 3px auto;
+  
     }
   }
   
