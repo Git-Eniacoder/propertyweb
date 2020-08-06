@@ -508,7 +508,8 @@
                     </div> -->
 
                     <!-- new Card  -->
-                    <?php foreach($post as $value){ ?>
+                    <?php $i=0; foreach($post as $value){if($i>4){break;}?>
+
                     <!-- new Card  -->
                     <div class="card text-left prop_lists">
                        <a href="<?php echo base_url().'single_property/fetch/'.$value["property_id"] ?>"><img class="card-img-top" height="188px" src="<?php $img = explode(",",$value["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a> 
@@ -525,7 +526,7 @@
 
                         </div>
                     </div>
-                <?php } ?>
+                <?php  $i++; } ?>
 
 
                 </div>

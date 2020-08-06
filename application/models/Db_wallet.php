@@ -1,7 +1,7 @@
     <?php
     defined('BASEPATH') or exit('No direct script access allowed');
 
-    class Db_Wallet extends CI_Model
+    class Db_wallet extends CI_Model
     {
         public function get_balance($mobile)
         {
