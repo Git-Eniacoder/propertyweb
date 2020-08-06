@@ -130,7 +130,7 @@ table{
                 </div>
             </div>
             <div class="container">
-                <div class="contact_bx">
+                <div style="padding-top: 1rem;">
                     <!-- <div class="row justify-content-start">
                         <div class="col-md-8"> -->
                             <div class="tickect-bx bg-white" style="margin-bottom: 2rem;">
@@ -202,7 +202,7 @@ table{
                             
                         </div> -->
                     <!-- </div> -->
-                    <div class="container py-3">
+                    <div class=" py-3">
                     <div class=" container bg-white  table-responsive" style="padding-top: 1rem;  padding-bottom:1rem; margin-bottom:2rem;">
                                 <table id="example" class="table table-fluid" >
                                     <thead>
