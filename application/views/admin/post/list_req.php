@@ -27,7 +27,7 @@
                                                 <td><?php echo $value['list_date'] ; ?></td>
                                                 <td class="d-flex">
                                                     <!-- <a class="btn btn-success mx-1" href="<?php //echo base_url() ; ?>admin/pages/new_page/update/<?php //echo $value['page_id'] ; ?>"><i class="fa fa-edit" aria-hidden="true"></i></a> -->
-                                                    <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/list_req/update_fetch/'.$value['property_id'] ; ?>"><i  class="fa fa-eye" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-success mx-1 text-white del"   href="<?php echo base_url().'admin/post/list_req/update_fetch/'.$value['property_id'] ; ?>"><i  class="fa fa-eye" aria-hidden="true"></i></a>
                                                     <a class="btn btn-danger mx-1 text-white del"   href="<?php echo base_url().'admin/post/list_req/delete_row/'.$value['property_id'] ; ?>"><i  class="fa fa-trash" aria-hidden="true"></i></a>
                                                 </td>
                                             </tr>
