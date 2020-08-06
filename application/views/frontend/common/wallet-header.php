@@ -21,7 +21,15 @@
          border-radius: 50%;
          padding: 4px 6px;
       }
+      #box::-webkit-scrollbar {
+          display: none;
+      }
 
+/* Hide scrollbar for IE, Edge and Firefox */
+      #box {
+          -ms-overflow-style: none;  /* IE and Edge */
+         scrollbar-width: none;  /* Firefox */
+         }
       .plans {
          max-height: 380px;
          overflow: hidden;
@@ -50,7 +58,9 @@
          background-color: transparent !important;
          color: #3D3D3D !important;
       }
-
+      .wal_level_contain{
+         display : none;
+      }
       .ic {
          padding: 10px;
          font-size: 20px;
@@ -104,6 +114,11 @@
          background: #125688;
          color: white;
       }
+      @media only screen and (max-width: 600px) {
+         .wal_level_contain {
+    display : block;
+  }
+}
    </style>
 
 </head>

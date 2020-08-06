@@ -56,7 +56,7 @@ $(".nav_bar_click").click(function(){
           $('#reg').html('<input type="text" class="login_inp" placholder="Enter Otp" name="otp" required><button class="login_btn">Verify Otp</button>');
         }
         if (response.otp) {
-          $('#reg').html('');
+          $('#status').html('');
           $('#status').html(response.msg);
         }
       });

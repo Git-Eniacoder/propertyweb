@@ -1,6 +1,10 @@
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
-
+.response{
+        text-align : center;
+        color : red;
+    }
 .dataTables_wrapper .dataTables_paginate .paginate_button{
    background-color: crimson;
     border: 2px solid crimson;
@@ -303,8 +307,16 @@ table.dataTable thead th, table.dataTable thead td {
             <tbody>
               <?php foreach ($history as $value) { ?>
                 <tr>
+                  <?php if($value['referal_id'] == 'Transfered'){?>
+                    <td class="text-danger">Transfered</td>
+                  <?php }else{ ?>
                   <td><?php echo $value['user_id']; ?></td>
+                  <?php } ?>
+                  <?php if($value['referal_id'] == 'Transfered'){?>
+                    <td>-<?php echo $value['referal_refer']; ?></td>
+                    <?php }else{ ?>
                   <td>+<?php echo $value['referal_refer']; ?></td>
+                    <?php } ?>
                   <td class="text-success">success</td>
                   <td><?php echo $value['payment_date']; ?></td>
                 </tr>
@@ -332,14 +344,16 @@ table.dataTable thead th, table.dataTable thead td {
               <h5>Transfer to Wallet</h5>
             </div>
             <!-- <p>Login with mobile</p> -->
+               <p class="text-danger text-center"> Note* : Minimum Threshold is 1200 Points</p>
+               
+            <form action="<?php echo base_url().'wallet/refer/rafer_money_transfer' ?>" method="post">
 
-            <form>
-
-              <input type="number" placeholder="Enter Amount" class="login_inp">
-              <input type="password" placeholder="Enter password" class="login_inp">
-
+              <input type="number" name="amount" placeholder="Enter Amount" class="login_inp" required>
+      
               <div>
-                <button href="#confirm" class=" login_btn" data-toggle="modal">Transfer</button>
+              <?php echo ($this->session->flashdata('response'))? $this->session->flashdata('response') : '' ?>
+
+                <button class="login_btn">Transfer</button>
               </div>
             </form>
 
@@ -353,6 +367,8 @@ table.dataTable thead th, table.dataTable thead td {
     </div>
   </div>
 </div>
+<?php
+if($this->session->flashdata('response')){ ?>
 <div id="confirm" class="modal fade">
   <div class="modal-dialog modal-confirm">
     <div class="modal-content">
@@ -363,7 +379,7 @@ table.dataTable thead th, table.dataTable thead td {
         <h4 class="modal-title w-100">Awesome!</h4>
       </div>
       <div class="modal-body">
-        <p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
+        <p class="text-center"><?php if($this->session->flashdata('response')){ echo $this->session->flashdata('response'); }?></p>
       </div>
       <div class="modal-footer">
         <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
@@ -371,6 +387,7 @@ table.dataTable thead th, table.dataTable thead td {
     </div>
   </div>
 </div>
+<?php } ?>
 <div id="cancle" class="modal fade">
   <div class="modal-dialog modal-confirm">
     <div class="modal-content">
@@ -432,3 +449,4 @@ table.dataTable thead th, table.dataTable thead td {
     });
   });
 </script>
+<?php echo ($this->session->flashdata('response'))? '<script>$("#myModal").modal("show")</script>' : '' ?>

@@ -240,12 +240,12 @@ table.dataTable thead th, table.dataTable thead td {
               <h5>Transfer to Bank</h5>
             </div>
             <!-- <p>Login with mobile</p> -->
-
-            <form>
-              <input type="password" placeholder="Account Number" class="login_inp">
-              <input type="number" placeholder="Re-enter Account Number" class="login_inp">
-              <input type="text" placeholder="IFSC code" class="login_inp">
-              <input type="text" placeholder="Holder Name" class="login_inp">
+                <?php echo ($this->session->flashdata('response'))? $this->session->flashdata('response') : '' ?>
+            <form action="<?php echo base_url().'wallet/field/add_bank' ?>" method="post">
+              <input type="password" name="ano" placeholder="Account Number" class="login_inp">
+              <!-- <input type="number" name="cano" placeholder="Re-enter Account Number" class="login_inp"> -->
+              <input type="text" name="ifsc" placeholder="IFSC code" class="login_inp">
+              <input type="text" name="hname" placeholder="Holder Name" class="login_inp">
               <div>
                 <button class="login_btn">Submit</button>
               </div>
@@ -293,6 +293,8 @@ table.dataTable thead th, table.dataTable thead td {
     }
   });
 </script>
+<?php echo ($this->session->flashdata('response'))? '<script>$("#myModal").modal("show")</script>' : '' ?>
+
 <script>
   $(document).ready(function() {
     $('#myTable').DataTable({

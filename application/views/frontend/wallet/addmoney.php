@@ -194,21 +194,21 @@
                <table class="table table-fluid" id="myTable">
                   <thead>
                      <tr class="bg-white">
-                        <th>Refered Person</th>
+                        <th>Mobile no</th>
                         <th>Amount</th>
                         <th>Status</th>
                         <th>Date</th>
                      </tr>
                   </thead>
                   <tbody>
-                     <?php foreach ($history as $value) { ?>
+                     <?php foreach ($history as $value) { if(!$value['payment_amount']){continue;}else{?>
                         <tr>
                            <td><?php echo $value['user_id']; ?></td>
                            <td>+<?php echo $value['payment_amount']; ?></td>
                            <td class="text-success">success</td>
                            <td><?php echo $value['payment_date']; ?></td>
                         </tr>
-                     <?php } ?>
+                     <?php }}?>
                   </tbody>
                </table>
             </div>
