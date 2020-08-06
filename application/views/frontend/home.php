@@ -228,12 +228,16 @@
                         <div class="carousel-inner w-100" role="listbox">
                             <div class="carousel-item carousel-item2 justify-content-center active">
                             <div class="row justify-content-center">
-                            <?php for($i=0; $i<3; $i++){?>
+                            <?php for($i=0; $i<3; $i++){
+                                if(count($property)<=$i){
+                                    break;
+                                }
+                                ?>
                                 <div class="col-md-4">
                                     <div class="card text-left prop_lists prop_lists2">
                                        <a href="<?php echo base_url().'single_property/fetch/'.$property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",",$property[$i]["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a>
                                         <div class="card-body">
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                             <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'].', '.$property[$i]['list_furnished_type'] ;?></p>
                                             <p><span><?php echo $property[$i]['list_locality'].','.$property[$i]['list_city'] ;?></span></p>
                                             <h4 class=" prop_lists_text"><?php  echo ($property[$i]['list_property_type']=='commercial')? $property[$i]['list_unit'].' (sq-ft)': $property[$i]['list_bhk'].' BHK appartment'?></h4>
@@ -251,12 +255,16 @@
                             </div>
                             <div class="carousel-item .carousel-item2">
                             <div class="row justify-content-center">
-                            <?php for($i=0; $i<3; $i++){?>
+                            <?php for($i=0; $i<3; $i++){
+                                if(count($property)<=$i){
+                                break;
+                            }
+                                ?>
                                 <div class="col-md-4">
                                     <div class="card text-left prop_lists prop_lists2">
                                        <a href="<?php echo base_url().'single_property/fetch/'.$property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",",$property[$i]["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a>
                                         <div class="card-body">
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                             <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'].', '.$property[$i]['list_furnished_type'] ;?></p>
                                             <p><span><?php echo $property[$i]['list_locality'].','.$property[$i]['list_city'] ;?></span></p>
                                             <h4 class=" prop_lists_text"><?php  echo ($property[$i]['list_property_type']=='commercial')? $property[$i]['list_unit'].' (sq-ft)': $property[$i]['list_bhk'].' BHK appartment'?></h4>
@@ -274,12 +282,16 @@
                             </div>
                             <div class="carousel-item .carousel-item2">
                             <div class="row justify-content-center">
-                            <?php for($i=3; $i<6; $i++){?>
+                            <?php for($i=3; $i<6; $i++){
+                                if(count($property)<=$i){
+                                break;
+                            }
+                                ?>
                                 <div class="col-md-4">
                                     <div class="card text-left prop_lists prop_lists2">
                                        <a href="<?php echo base_url().'single_property/fetch/'.$property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",",$property[$i]["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a>
                                         <div class="card-body">
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                        <span class="prop_lists_price">&#8377;<?php echo $property[$i]['list_price'] ?></span>
                                             <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'].', '.$property[$i]['list_furnished_type'] ;?></p>
                                             <p><span><?php echo $property[$i]['list_locality'].','.$property[$i]['list_city'] ;?></span></p>
                                             <h4 class=" prop_lists_text"><?php  echo ($property[$i]['list_property_type']=='commercial')? $property[$i]['list_unit'].' (sq-ft)': $property[$i]['list_bhk'].' BHK appartment'?></h4>
@@ -331,7 +343,11 @@
             <div id="trendig" class="carousel carousel2 slide w-100" data-ride="carousel">
                     <div class="inner_container">
                         <div class="carousel-inner w-100" role="listbox">
-                        <?php for($i=0; $i<5; $i++){?>
+                        <?php for($i=0; $i<5; $i++){
+                            if(count($property)<=$i){
+                            break;
+                        }
+                            ?>
                             <div class="carousel-item carousel-item2 justify-content-center <?php echo ($i==0)? 'active' : '' ?>">
                             <div class="row justify-content-center">
                             
@@ -339,7 +355,7 @@
                                     <div class="card text-left prop_lists prop_lists2">
                                        <a href="<?php echo base_url().'single_property/fetch/'.$property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",",$property[$i]["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a>
                                         <div class="card-body">
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                             <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'].', '.$property[$i]['list_furnished_type'] ;?></p>
                                             <p><span><?php echo $property[$i]['list_locality'].','.$property[$i]['list_city'] ;?></span></p>
                                             <h4 class=" prop_lists_text"><?php  echo ($property[$i]['list_property_type']=='commercial')? $property[$i]['list_unit'].' (sq-ft)': $property[$i]['list_bhk'].' BHK appartment'?></h4>
@@ -400,12 +416,16 @@
                         <div class="carousel-inner w-100" role="listbox">
                             <div class="carousel-item carousel-item2 justify-content-center active">
                             <div class="row justify-content-center">
-                            <?php for($i=0; $i<3; $i++){?>
+                            <?php for($i=0; $i<3; $i++){
+                                if(count($property)<=$i){
+                                break;
+                            }
+                                ?>
                                 <div class="col-md-4">
                                     <div class="card text-left prop_lists prop_lists2">
                                        <a href="<?php echo base_url().'single_property/fetch/'.$property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",",$property[$i]["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a>
                                         <div class="card-body">
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                             <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'].', '.$property[$i]['list_furnished_type'] ;?></p>
                                             <p><span><?php echo $property[$i]['list_locality'].','.$property[$i]['list_city'] ;?></span></p>
                                             <h4 class=" prop_lists_text"><?php  echo ($property[$i]['list_property_type']=='commercial')? $property[$i]['list_unit'].' (sq-ft)': $property[$i]['list_bhk'].' BHK appartment'?></h4>
@@ -423,12 +443,16 @@
                             </div>
                             <div class="carousel-item .carousel-item2">
                             <div class="row justify-content-center">
-                            <?php for($i=0; $i<3; $i++){?>
+                            <?php for($i=0; $i<3; $i++){
+                                if(count($property)<=$i){
+                                break;
+                            }
+                                ?>
                                 <div class="col-md-4">
                                     <div class="card text-left prop_lists prop_lists2">
                                        <a href="<?php echo base_url().'single_property/fetch/'.$property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",",$property[$i]["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a>
                                         <div class="card-body">
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                             <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'].', '.$property[$i]['list_furnished_type'] ;?></p>
                                             <p><span><?php echo $property[$i]['list_locality'].','.$property[$i]['list_city'] ;?></span></p>
                                             <h4 class=" prop_lists_text"><?php  echo ($property[$i]['list_property_type']=='commercial')? $property[$i]['list_unit'].' (sq-ft)': $property[$i]['list_bhk'].' BHK appartment'?></h4>
@@ -446,12 +470,16 @@
                             </div>
                             <div class="carousel-item .carousel-item2">
                             <div class="row justify-content-center">
-                            <?php for($i=3; $i<6; $i++){?>
+                            <?php for($i=3; $i<6; $i++){
+                                if(count($property)<=$i){
+                                break;
+                            }
+                                ?>
                                 <div class="col-md-4">
                                     <div class="card text-left prop_lists prop_lists2">
                                        <a href="<?php echo base_url().'single_property/fetch/'.$property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",",$property[$i]["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a>
                                         <div class="card-body">
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                             <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'].', '.$property[$i]['list_furnished_type'] ;?></p>
                                             <p><span><?php echo $property[$i]['list_locality'].','.$property[$i]['list_city'] ;?></span></p>
                                             <h4 class=" prop_lists_text"><?php  echo ($property[$i]['list_property_type']=='commercial')? $property[$i]['list_unit'].' (sq-ft)': $property[$i]['list_bhk'].' BHK appartment'?></h4>
@@ -504,7 +532,11 @@
                 <div id="recen" class="carousel carousel2 slide w-100" data-ride="carousel">
                     <div class="inner_container">
                         <div class="carousel-inner w-100" role="listbox">
-                        <?php for($i=0; $i<5; $i++){?>
+                        <?php for($i=0; $i<5; $i++){
+                            if(count($property)<=$i){
+                            break;
+                        }
+                            ?>
                             <div class="carousel-item carousel-item2 justify-content-center <?php echo ($i==0)? 'active' : '' ?>">
                             <div class="row justify-content-center">
                             
@@ -512,7 +544,7 @@
                                     <div class="card text-left prop_lists prop_lists2">
                                        <a href="<?php echo base_url().'single_property/fetch/'.$property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",",$property[$i]["list_images"]); echo base_url().'assets/img/property_list/'.$img[0] ;?>" alt=""></a>
                                         <div class="card-body">
-                                        <span class="prop_lists_price">&#8377; 60,000 (Negotiable)</span>
+                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                             <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'].', '.$property[$i]['list_furnished_type'] ;?></p>
                                             <p><span><?php echo $property[$i]['list_locality'].','.$property[$i]['list_city'] ;?></span></p>
                                             <h4 class=" prop_lists_text"><?php  echo ($property[$i]['list_property_type']=='commercial')? $property[$i]['list_unit'].' (sq-ft)': $property[$i]['list_bhk'].' BHK appartment'?></h4>

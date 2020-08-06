@@ -61,7 +61,7 @@
             </div>
             <div class="row prop_detail_text">
                 <div class="col">
-                    <h2 class="prop_detail_text-h2"><?php echo $single['list_bhk']; ?> BHK - <span class="prop_detail_text-span"><?php echo $single['list_unit'] ?> sq ft</span> </h2>
+                    <h2 class="prop_detail_text-h2"><?php echo $single['list_bhk']; ?> BHK  <span class="prop_detail_text-span"><?php echo $single['list_unit']=="non-selected"?"":'-'.$single['list_unit'].'sq ft' ?> </span> </h2>
                     <p class="prop_detail_text-p" prop_detail_text><?php echo $single['list_locality'] ?>, <?php echo $single['list_city'] ;?></p>
                 </div>
             </div>

@@ -34,6 +34,8 @@ class Listing extends My_Controller
        $this->form_validation->set_rules('list_furnished', 'Furnished Type', 'required');
        $this->form_validation->set_rules('list_willing', 'Willing Out', 'required');
        $this->form_validation->set_rules('list_messages', 'Message', 'required');
+       $this->form_validation->set_rules('expected_rent', 'Rent', 'required');
+       
         
         if ($this->form_validation->run()) {
             $filesCount = count($_FILES['files']['name']); 
@@ -69,6 +71,8 @@ class Listing extends My_Controller
         $data['list_city'] = $this->input->post('list_city');
         $data['list_locality'] = $this->input->post('list_locality');
         $data['list_property_type'] = $this->input->post('list_type');
+        $data['list_price'] = $this->input->post('expected_rent');
+        
         if($this->input->post('list_type')=="commercial")
             {
                 $data['list_unit'] = $this->input->post('list_area');
