@@ -186,8 +186,12 @@
   }
   
   .trending {
-    margin: 2rem 0 0 0;
-    padding-bottom: 2rem;
+    margin: .5rem 0 0 0;
+    padding-bottom: .5rem;
+  }
+
+  .trending2{
+    padding-bottom: 4rem;
   }
   
   .prop_loc {

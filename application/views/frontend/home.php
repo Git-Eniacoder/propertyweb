@@ -458,7 +458,7 @@
 
     <!-- Recently Added Properties -->
 
-    <section class="trending">
+    <section class="trending2">
         <div class="container">
             <div class="home_subhead">
                 <div class="row justify-content-start align-items-center">
