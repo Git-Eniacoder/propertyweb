@@ -2504,7 +2504,7 @@ margin-top: 2rem;
 }
 
 .prop_detail_text-price{
-  width: 70%;
+  width: 83%;
 }
 
 .prop_detail_text-other{
@@ -2542,6 +2542,30 @@ margin-top: 2rem;
   height: 12rem !important;
 }
 
+.single_page_head{
+  padding: 1.6rem 0;
+}
+
+.single_page_h1{
+  font-size: 1.3rem !important;
+  color: #636363;
+}
+
+.property_bottom_bx{
+  display: flex;
+}
+
+.prop_detail_text-h2{
+  font-size: 1.5rem;
+}
+
+.single_subhead{
+  margin: 2rem 0;
+}
+
+.prop_card_name{
+  width: 40%;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -2604,6 +2628,10 @@ margin-top: 2rem;
 
   .hero_post_bx_btn{
     width: 18rem !important;
+  }
+
+  .prop_detail_img {
+    height: 15rem !important;
   }
 }
 

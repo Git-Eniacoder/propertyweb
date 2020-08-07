@@ -459,6 +459,15 @@
   color: rgb(46, 46, 46);
 }
 
+.prop_call_btn{
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.prop_sing_btn{
+  width: 8rem;
+}
+
 
 
 @media screen and (max-width: 1200px) {
