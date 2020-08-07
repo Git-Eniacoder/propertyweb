@@ -24,7 +24,7 @@ class Otp extends My_Controller {
                 
                 if($this->db_register->register($send)){
                     $array = array(
-                        'otp'   => true,
+                        'verifcation'   => true,
                         'msg'   => '<p class="text-center text-success">Registered Successfully</p>',
                     );
                 }else{
