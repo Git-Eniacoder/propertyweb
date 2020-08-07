@@ -26,10 +26,20 @@
     }
 </style>
 
+<?php
+
+
+// echo "<pre>";
+// print_r($single["list_images"]);
+// echo "</pre>";
+
+
+?>
+
 <div class="main_list">
 
     <div class="container">
-        
+
         <div class="prop_detail_head">
 
         </div>

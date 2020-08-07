@@ -2538,6 +2538,12 @@ margin-top: 2rem;
 }
 
 
+.card-img-top{
+  height: 12rem !important;
+}
+
+
+
 @media screen and (max-width: 600px) {
   
   .hero {
