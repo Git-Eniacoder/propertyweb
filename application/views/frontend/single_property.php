@@ -1,33 +1,45 @@
 <style>
     .prop_detail_img {
-  width:640px;
-  height:20rem;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  background-size: 100%, 100%;
+        width: 640px;
+        height: 360px;
+    }
 
-  background-image: none;
-}
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 100px;
+        width: 100px;
+        background-size: 100%, 100%;
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: red;
-}
+        background-image: none;
+    }
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: red;
-}
+    .carousel-control-next-icon:after {
+        content: '>';
+        font-size: 55px;
+        color: red;
+    }
+
+    .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 55px;
+        color: red;
+    }
 </style>
-<div class="main_list p-4">
+
+<?php
+
+
+// echo "<pre>";
+// print_r($single["list_images"]);
+// echo "</pre>";
+
+
+?>
+
+<div class="main_list">
 
     <div class="container">
+
         <div class="prop_detail_head">
 
         </div>
@@ -38,13 +50,15 @@
                     <!-- <img src="assets/img/homeimgs/flat1.jpg" alt="" class="prop_detail_img"> -->
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                        <?php $img = explode(",",$single["list_images"]); ?>
-                        <?php for($i=0; $i<count($img); $i++) {?>
-                            <div class="carousel-item <?php if($i==0){ echo "active" ;} ?>">
-                                <img class="d-block w-100 prop_detail_img" src="<?php echo base_url().'assets/img/property_list/'.$img[$i] ;?>" alt="First slide">
-                            </div>
-                        <?php } ?>
-                
+                            <?php $img = explode(",", $single["list_images"]); ?>
+                            <?php for ($i = 0; $i < count($img); $i++) { ?>
+                                <div class="carousel-item <?php if ($i == 0) {
+                                                                echo "active";
+                                                            } ?>">
+                                    <img class="d-block w-100 prop_detail_img" src="<?php echo base_url() . 'assets/img/property_list/' . $img[$i]; ?>" alt="First slide">
+                                </div>
+                            <?php } ?>
+
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

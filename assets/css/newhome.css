@@ -452,6 +452,13 @@
 }
 
 
+.search_prop_count{
+  font-size: 1.7rem !important;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  color: rgb(46, 46, 46);
+}
+
 
 
 @media screen and (max-width: 1200px) {

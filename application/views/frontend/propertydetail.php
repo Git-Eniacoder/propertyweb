@@ -2,13 +2,17 @@
 <section style="margin:0 !important" class="trending top_trend">
    <div class="container">
       <div class="home_subhead">
-         <div class="row justify-content-start align-items-center">
+         <!-- <div class="row justify-content-start align-items-center">
             <div class="col-sm-3 ">
                <h2 class="home_subhead_text text-center text-start">Searched Properties</h2>
             </div>
             <div class="col-sm-9">
                <hr class="home_subhead_line">
             </div>
+         </div> -->
+
+         <div class="row">
+            <h2 class="search_prop_count">10 Properties For Rent in Jaipur </h2>
          </div>
       </div>
       <!-- Trending Row -->
