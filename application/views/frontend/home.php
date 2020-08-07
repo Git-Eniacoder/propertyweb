@@ -334,9 +334,11 @@
                             </div>
                         </div>
                     </div>
+
+                    
                     <a class="carousel-control-prev w-auto" href="#trending" role="button" data-slide="prev">
 
-                        <div class="home_arrow_new">
+                        <div class="home_arrow_new hrn_left">
                             <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
                         </div>
 
@@ -344,7 +346,7 @@
                     </a>
 
                     <a class="carousel-control-next w-auto" href="#trending" role="button" data-slide="next">
-                    <div class="home_arrow_new">
+                    <div class="home_arrow_new hrn_right">
                         <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
                     </div>
 
@@ -413,14 +415,14 @@
                     </div>
 
                     <a class="carousel-control-prev w-auto" href="#trendig" role="button" data-slide="prev">
-                    <div class="home_arrow_new">
+                    <div class="home_arrow_new hrn_left">
                         <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
                     </div>
 
                     </a>
 
                     <a class="carousel-control-next w-auto" href="#trendig" role="button" data-slide="next">
-                    <div class="home_arrow_new">
+                    <div class="home_arrow_new hrn_right">
                         <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
                     </div>
 
@@ -562,14 +564,14 @@
                     </div>
 
                     <a class="carousel-control-prev w-auto" href="#recent" role="button" data-slide="prev">
-                    <div class="home_arrow_new">
+                    <div class="home_arrow_new hrn_left">
                         <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
                     </div>
 
                     </a>
 
                     <a class="carousel-control-next w-auto" href="#recent" role="button" data-slide="next">
-                    <div class="home_arrow_new">
+                    <div class="home_arrow_new hrn_right">
                         <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
                     </div>
 
@@ -638,14 +640,14 @@
                     </div>
 
                     <a class="carousel-control-prev w-auto" href="#recen" role="button" data-slide="prev">
-                    <div class="home_arrow_new">
+                    <div class="home_arrow_new hrn_left">
                         <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
                     </div>
 
                     </a>
 
                     <a class="carousel-control-next w-auto" href="#recen" role="button" data-slide="next">
-                    <div class="home_arrow_new">
+                    <div class="home_arrow_new hrn_right">
                         <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
                     </div>
 

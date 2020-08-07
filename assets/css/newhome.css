@@ -484,6 +484,15 @@
   border: 1px solid rgb(175, 175, 175);
   border-radius: 50%;
   position: relative;
+
+}
+
+.hrn_left{
+  margin-left: .2rem !important;
+}
+
+.hrn_right{
+  margin-right: -.3rem !important;
 }
 
 
@@ -532,6 +541,9 @@
   
   @media screen and (max-width: 700px) {
 
+    .hrn_left {
+      margin-left: -0.7rem !important;
+    }
 
     .property_modal{
       width: 90% !important;
