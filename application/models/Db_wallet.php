@@ -126,6 +126,8 @@
             return $this->db->get('recharge_history')->result_array();
             }else if($check == 2){
             return $this->db->get('payment_history')->result_array();
+            }else if($check == 3){
+            return $this->db->get('account_transfer')->result_array();
             }
         }
         
@@ -171,6 +173,16 @@
           $date2_ts = strtotime($date2);
           $diff = $date2_ts - $date1_ts;
           return round($diff / 86400);
+        }
+        public function change_status($id){
+            $this->db->where('account_id',$id)->update('account_transfer',array('account_status' => true));
+            
+            if($this->db->affected_rows()){
+                return true;
+            }else{
+                return false;
+            }
+            
         }
     }
 

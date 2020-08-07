@@ -49,14 +49,18 @@ $(".nav_bar_click").click(function(){
         if (response.form) {
           $('#status').html(response.msg);
         }
-        if (response.status) {
+        else if (response.status) {
           console.log(response);
           $('#status').html('');
           $('#reg').attr('action', '<?php echo base_url() . "otp/verify"; ?>');
           $('#reg').html('<input type="text" class="login_inp" placholder="Enter Otp" name="otp" required><button class="login_btn">Verify Otp</button>');
         }
-        if (response.otp) {
+        else if (response.otp) {
           $('#status').html('');
+          $('#status').html(response.msg);
+        }
+        else if(response.verifcation){
+          $('#reg').html('');
           $('#status').html(response.msg);
         }
       });
@@ -84,7 +88,7 @@ $(".nav_bar_click").click(function(){
           $('#logsts').html(response.msg);
         }
         if (response.error == false) {
-          location.reload(true);
+          $(location).attr('href', response.msg)
         }
 
       });
@@ -108,13 +112,13 @@ $(".nav_bar_click").click(function(){
         if (response.form) {
           $('#resetid').html(response.msg);
         }
-        if (response.status) {
+        else if (response.status) {
           console.log(response);
           $('#resetid').html('');
           $('#frest').attr('action', '<?php echo base_url() . "otp/verify_reset"; ?>');
           $('#frest').html('<input type="text" name="rotp" placeholder="Enter Otp" required><button class="login_btn">Verify Otp</button>');
         }
-        if (response.otp) {
+        else if (response.otp) {
           console.log(response);
           $('#resetid').html(response.msg);
 

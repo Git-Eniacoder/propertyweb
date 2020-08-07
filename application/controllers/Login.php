@@ -66,7 +66,7 @@ class Login extends CI_Controller {
                 $this->session->set_userdata("user_name",$check['user_name']);
                 $array = array(
                     'error'   => false,
-                    'msg'     => $check,
+                    'msg'     => base_url().'wallet/recharge',
                 );
             }
             else

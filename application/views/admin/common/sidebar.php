@@ -36,6 +36,7 @@
                                     <a class="nav-link" href="<?php echo base_url();?>admin/payment/recharge_history">Recharge History</a>
                                     <a class="nav-link" href="<?php echo base_url();?>admin/payment/referal">Referal History</a>
                                     <a class="nav-link" href="<?php echo base_url();?>admin/payment/field">Field Expenses</a>
+                                    <a class="nav-link" href="<?php echo base_url();?>admin/payment/bank">Bank Transfer</a>
                                 </nav>
                             </div>
                             

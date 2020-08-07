@@ -137,7 +137,11 @@
                     </div>
 
                     <div class="col-md-3  hero_service_bx hero_ser_shadow">
+                    <?php if ($status == false) {?>
+                        <a href="" data-toggle="modal" data-target="#login" class="hero_ser_link">
+                    <?php }else {?>
                         <a href="<?php echo $url['recharge']; ?>" class="hero_ser_link">
+                    <?php } ?>
                             <div class="ser">
                                 <img src="assets/img/homeimgs/rechargep.png" alt="" class="hero_ser_img">
                                 <p class="hero_ser_text">Recharge Portal</p>

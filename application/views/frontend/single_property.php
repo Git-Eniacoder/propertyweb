@@ -1,7 +1,7 @@
 <style>
     .prop_detail_img {
   width:640px;
-  height:360px;
+  height:20rem;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -25,7 +25,7 @@
   color: red;
 }
 </style>
-<div class="main_list">
+<div class="main_list p-4">
 
     <div class="container">
         <div class="prop_detail_head">
@@ -61,7 +61,7 @@
             </div>
             <div class="row prop_detail_text">
                 <div class="col">
-                    <h2 class="prop_detail_text-h2"><?php echo $single['list_bhk']; ?> BHK  <span class="prop_detail_text-span"><?php echo $single['list_unit']=="non-selected"?"":'-'.$single['list_unit'].'sq ft' ?> </span> </h2>
+                    <h2 class="prop_detail_text-h2"><?php  echo ($single['list_property_type']=='commercial')? $single['list_unit'].' (sq-ft)': $single['list_bhk'].' BHK appartment'?></h2>
                     <p class="prop_detail_text-p" prop_detail_text><?php echo $single['list_locality'] ?>, <?php echo $single['list_city'] ;?></p>
                 </div>
             </div>
@@ -74,12 +74,14 @@
                 <div class="col prop_detail_text-obx">
                     <p><span class="prop_detail_text-other"><?php echo $single['list_furnished_type'] ?></span></p>
                 </div>
-                <!-- <div class="col prop_detail_text-obx">
-                   <p><span class="prop_detail_text-other" >Semi-Furnished</span></p>
-                </div> -->
+
                 <div class="col prop_detail_text-obx">
                     <p><span class="prop_detail_text-other">By <?php echo $single['list_name'] ?></span></p>
                 </div>
+                <div class="col prop_detail_text-obx">
+                <a href="tel:+91<?php echo $single['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
+                </div>                
+
 
             </div>
 
