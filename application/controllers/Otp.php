@@ -70,7 +70,7 @@ class Otp extends My_Controller {
                 $numbers = urlencode($number);
                 $sender = urlencode('TXTLCL');
                 $message = rawurlencode('Dear customer, your OTP for registration is '.$rand);
-        
+                
                 $data = 'apikey=' . $apiKey . '&numbers=' . $numbers . "&sender=" . $sender . "&message=" . $message;
             
         
@@ -81,7 +81,7 @@ class Otp extends My_Controller {
 
                 $array = array(
                     'status'   => true,
-                    'msg'   => $response,
+                    'msg'   => $rand,
                 );
             } else {
                 $array = array(

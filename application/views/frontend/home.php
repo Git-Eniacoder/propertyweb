@@ -1,3 +1,18 @@
+<?php
+  if(isset($_GET["id"]))
+  {
+    $refer_id=$_GET["id"];
+    setcookie('referid',$_GET["id"],time() + (86400 * 30), "/");
+  }
+  else if(isset($_COOKIE['referid'])){
+    $refer_id=$_COOKIE['referid'];
+  }
+  else
+  {
+    $refer_id=NULL;
+    echo $refer_id;
+  }
+?>
 <style>
     .mobi {
         display: none;
