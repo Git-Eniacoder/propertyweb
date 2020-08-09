@@ -66,17 +66,8 @@ class Payment extends CI_Controller {
                 $refer_id='NA';
             }
             if($this->db_wallet->update_wallet($user_id,$update_bal,$refer_id,$update_data_refer)){
-                
             //update support ticket
-                if($this->db_support->payment_update($data,$id)){
-                    if($depart==2){
-                        redirect(base_url().'/admin/support/payment');
-                    }else if($depart==0){
-                         redirect(base_url().'/admin/support/technical');
-                    }else if($depart==1){
-                         redirect(base_url().'/admin/support/billing');
-                    }
-                }else{
+                if(!$this->db_support->payment_update($data,$id)){
                     if($depart==2){
                         redirect(base_url().'/admin/support/payment');
                     }else if($depart==0){
@@ -96,6 +87,7 @@ class Payment extends CI_Controller {
                 }
             }
             //updating history
+            
             $this->payment_history(array($user_id,$refer_id,$data['support_status'],1200,$next_level_points[1],$next_level_points[2]));
             if($depart==2){
                 redirect(base_url().'/admin/support/payment');
@@ -187,6 +179,7 @@ class Payment extends CI_Controller {
         }
      }
      public function payment_history($payment){
+         
          $this->db_wallet->payment_history($payment);
     }
 

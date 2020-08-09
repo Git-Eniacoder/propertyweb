@@ -42,7 +42,7 @@
         public function payment_history($payment){
             $data = array('user_id'=>$payment[0],'payment_amount'=>$payment[3],
             'payment_status'=>$payment[2],'referal_id'=>$payment[1],'referal_refer'=>$payment[4],'referal_field'=>$payment[5]);
-            $this->db->insert('payment_history',$data);
+            return $this->db->insert('payment_history',$data);
             
         }
         public function refer_history($id){
@@ -135,7 +135,6 @@
                 $toggle=array("level_up"=>0);
                 $this->db->where("id",$data);
                 $this->db->update('user_wallet', $toggle);
-                $this->index();
         }
         public function update_single_history($id,$amt){
             $this->db->trans_start();
