@@ -145,7 +145,7 @@ class Payment extends CI_Controller {
         if($total_count<pow(6,2)){
             if($total_count==pow(6,1))
             {
-                return array(3,4320,10000,1);
+                return array(3,900,10000,1);
             }
             return array(2,900,0,0);
         }
