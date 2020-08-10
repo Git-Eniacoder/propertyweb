@@ -4,7 +4,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-// Handler Anshul
 
 class Ticket extends My_Controller {
 

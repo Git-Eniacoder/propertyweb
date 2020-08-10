@@ -1,12 +1,10 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php 
 
-class Listing extends My_Controller
-{
-    // Handler Himanshu Goyal
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 
+class Listing extends My_Controller{
     public function __construct()
     {
-
         parent::__construct();
 
         $this->load->model('db_property');
@@ -62,7 +60,6 @@ class Listing extends My_Controller
                    $this->session->set_flashdata('response', '<p class="text-center text-danger">'.display_errors().'</p>');
                    redirect(base_url().'list_mod/listing');
 
-                break;
             }
         }
         $data['list_name'] = $this->input->post('list_name');
@@ -93,7 +90,7 @@ class Listing extends My_Controller
 
             }
         }else { 
-                $this->index();
+            redirect(base_url().'list_mod/listing');
             }
             
        
