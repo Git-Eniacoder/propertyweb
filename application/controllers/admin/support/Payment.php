@@ -56,7 +56,8 @@ class Payment extends CI_Controller {
                 $update_data_refer=array('refferal_wallet'=> $refer_data["all_data"][0]->refferal_wallet+$next_level_points[1],
                                         "filed_wallet"=>$refer_data["all_data"][0]->filed_wallet+$next_level_points[2],
                                         "total_referal"=>$refer_data["all_data"][0]->total_referal+1,
-                                        "level_up"=>$next_level_points[3]);
+                                        "level_up"=>$next_level_points[3],
+                                        "total_limit"=>$refer_data["all_data"][0]->total_referal%2==0?$refer_data["all_data"][0]->total_limit:$refer_data["all_data"][0]->total_limit+300);
                
             }
             else{
@@ -66,7 +67,7 @@ class Payment extends CI_Controller {
                 $refer_id='NA';
             }
             if($this->db_wallet->update_wallet($user_id,$update_bal,$refer_id,$update_data_refer)){
-            //update support ticket
+            //update support ticket payment is successful 
                 if(!$this->db_support->payment_update($data,$id)){
                     if($depart==2){
                         redirect(base_url().'/admin/support/payment');
