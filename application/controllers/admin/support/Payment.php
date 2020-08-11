@@ -66,17 +66,8 @@ class Payment extends CI_Controller {
                 $refer_id='NA';
             }
             if($this->db_wallet->update_wallet($user_id,$update_bal,$refer_id,$update_data_refer)){
-                
             //update support ticket
-                if($this->db_support->payment_update($data,$id)){
-                    if($depart==2){
-                        redirect(base_url().'/admin/support/payment');
-                    }else if($depart==0){
-                         redirect(base_url().'/admin/support/technical');
-                    }else if($depart==1){
-                         redirect(base_url().'/admin/support/billing');
-                    }
-                }else{
+                if(!$this->db_support->payment_update($data,$id)){
                     if($depart==2){
                         redirect(base_url().'/admin/support/payment');
                     }else if($depart==0){
@@ -96,6 +87,7 @@ class Payment extends CI_Controller {
                 }
             }
             //updating history
+            
             $this->payment_history(array($user_id,$refer_id,$data['support_status'],1200,$next_level_points[1],$next_level_points[2]));
             if($depart==2){
                 redirect(base_url().'/admin/support/payment');
@@ -153,40 +145,41 @@ class Payment extends CI_Controller {
         if($total_count<pow(6,2)){
             if($total_count==pow(6,1))
             {
-                return array(3,4320,10000,1);
+                return array(3,50,10000,1);
             }
-            return array(2,900,0,0);
+            return array(2,50,0,0);
         }
         if($total_count<pow(6,3)){
             if($total_count==pow(6,2))
             {
-                return array(3,4320,10000,1);
+                return array(3,50,10000,1);
             }
-            return array(3,4320,0,0);
+            return array(3,50,0,0);
         }
         if($total_count<pow(6,4)){
             if($total_count==pow(6,3))
             {
-                return array(4,12960,25000,1);
+                return array(4,50,25000,1);
             }
-            return array(4,12960,0,0);
+            return array(4,50,0,0);
         }
         if($total_count<pow(6,5)){
             if($total_count==pow(6,4))
             {
-                return array(5,38880,50000,1);
+                return array(5,50,50000,1);
             }
-            return array(5,38880,0,0);
+            return array(5,50,0,0);
         }
         if($total_count<pow(6,6)){
             if($total_count==pow(6,5))
             {
-                return array(6,233280,75000,1);
+                return array(6,50,75000,1);
             }
-            return array(6,233280,0,0);
+            return array(6,50,0,0);
         }
      }
      public function payment_history($payment){
+         
          $this->db_wallet->payment_history($payment);
     }
 

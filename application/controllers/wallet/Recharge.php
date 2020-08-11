@@ -201,6 +201,7 @@ class Recharge extends My_Controller {
 
     public function unset_notification(){
         $this->db_wallet->unset_notification($_GET['var1']);
+        $this->index();
     }
 
    
