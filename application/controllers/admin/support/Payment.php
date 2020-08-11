@@ -145,37 +145,37 @@ class Payment extends CI_Controller {
         if($total_count<pow(6,2)){
             if($total_count==pow(6,1))
             {
-                return array(3,900,10000,1);
+                return array(3,50,10000,1);
             }
-            return array(2,900,0,0);
+            return array(2,50,0,0);
         }
         if($total_count<pow(6,3)){
             if($total_count==pow(6,2))
             {
-                return array(3,4320,10000,1);
+                return array(3,50,10000,1);
             }
-            return array(3,4320,0,0);
+            return array(3,50,0,0);
         }
         if($total_count<pow(6,4)){
             if($total_count==pow(6,3))
             {
-                return array(4,12960,25000,1);
+                return array(4,50,25000,1);
             }
-            return array(4,12960,0,0);
+            return array(4,50,0,0);
         }
         if($total_count<pow(6,5)){
             if($total_count==pow(6,4))
             {
-                return array(5,38880,50000,1);
+                return array(5,50,50000,1);
             }
-            return array(5,38880,0,0);
+            return array(5,50,0,0);
         }
         if($total_count<pow(6,6)){
             if($total_count==pow(6,5))
             {
-                return array(6,233280,75000,1);
+                return array(6,50,75000,1);
             }
-            return array(6,233280,0,0);
+            return array(6,50,0,0);
         }
      }
      public function payment_history($payment){
