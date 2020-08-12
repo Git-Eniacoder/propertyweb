@@ -29,7 +29,6 @@
         $update_data=array("recharge_wallet"=>$balance);
         if($this->db->update('user_wallet', $update_data)){
             if($referid!=NULL&& $update_data_refer!=0){
-                echo "omom";
                 $this->db->where('referid', $referid);
                 return $this->db->update('user_wallet', $update_data_refer);
             }
@@ -42,7 +41,7 @@
         public function payment_history($payment){
             $data = array('user_id'=>$payment[0],'payment_amount'=>$payment[3],
             'payment_status'=>$payment[2],'referal_id'=>$payment[1],'referal_refer'=>$payment[4],'referal_field'=>$payment[5]);
-            $this->db->insert('payment_history',$data);
+            return $this->db->insert('payment_history',$data);
             
         }
         public function refer_history($id){
@@ -102,14 +101,14 @@
                 $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
                 return 1;
              }
-             else if(intval($amount)<=300-intval($balance['month_limit'])){   
+             else if(intval($amount)<=intval($balance['total_limit'])-intval($balance['month_limit'])){   
                 return 1;
              }
              else{
                 $datediff = $this->dateDiff($balance['month_start_date'],date('y-m-d'));
                 if($datediff>30 )
                 {
-                    $table_data_update=array('month_limit'=>0,'month_start_date'=>date('y-m-d'));
+                    $table_data_update=array('month_limit'=>0,'total_limit'=>300,'month_start_date'=>date('y-m-d'));
                     $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
                     return 1;
                 }
@@ -135,7 +134,6 @@
                 $toggle=array("level_up"=>0);
                 $this->db->where("id",$data);
                 $this->db->update('user_wallet', $toggle);
-                $this->index();
         }
         public function update_single_history($id,$amt){
             $this->db->trans_start();

@@ -64,7 +64,7 @@
                                         <div class="">
                                                 <input type="text" name="" id="myInput" class=" contact_inp"
                                                     placeholder="Your Friends Name" aria-describedby="helpId"
-                                                    value="https://hellorentindia.com/?id=<?php echo $post["all_data"][0]->referid;?>" disabled>
+                                                    value="http://hellorentindia.com/?id=<?php echo $post["all_data"][0]->referid;?>" disabled>
                                             <div class="contact_btn_bx">
                                             <!-- <p id="">Text</p> -->
                                             <button class="btn btn-primary send_invite" onclick="copyToClipboard('#myInput')">Copy Link</button>

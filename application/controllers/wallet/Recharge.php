@@ -56,7 +56,7 @@ class Recharge extends My_Controller {
             if($OutPut==2){
                 $array = array(
                     'failed'   => true,
-                    'msg'   => 'Monthly 300 Limit has over',
+                    'msg'   => 'Monthly Limit has over',
                     'he'    => 'Balance',
                     'ico'   => '<i class="fa fa-times"></i>',
                 );
@@ -82,7 +82,7 @@ class Recharge extends My_Controller {
                     $data['recharge_status'] = $feed->STATUS;
                     $data['recharge_msg'] = $feed->MSG;
                     $data['imWallet_id'] = $feed->OPID;
-                //$this->db_wallet->history_rec($data);
+                $this->db_wallet->history_rec($data);
                 $array = array(
                     'success'   => true,
                     'msg'   => $feed->MSG,
@@ -201,6 +201,7 @@ class Recharge extends My_Controller {
 
     public function unset_notification(){
         $this->db_wallet->unset_notification($_GET['var1']);
+        $this->index();
     }
 
    
