@@ -96,24 +96,25 @@
             $balance = $this->db->where('mobileno',$id)->get('user_wallet')->row_array();
             date_default_timezone_set('Asia/Kolkata');
             if(intval($balance['recharge_wallet']) >= intval($amount) ){
-             if($balance['month_start_date']=='0000-00-00'){
+                if(intval($amount)>intval($balance['total_limit'])-intval($balance['month_limit'])){
+                  return 2;//limit not exist
+                }
+             else if($balance['month_start_date']=='0000-00-00'){
+                 //first time payment && payment limit check
                 $table_data_update=array('month_limit'=>0,'month_start_date'=>date('y-m-d'));
                 $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
                 return 1;
              }
-             else if(intval($amount)<=intval($balance['total_limit'])-intval($balance['month_limit'])){   
-                return 1;
-             }
-             else{
+             else{//second time
                 $datediff = $this->dateDiff($balance['month_start_date'],date('y-m-d'));
                 if($datediff>30 )
-                {
+                {// one month over for last limit condition
                     $table_data_update=array('month_limit'=>0,'total_limit'=>300,'month_start_date'=>date('y-m-d'));
                     $this->db->where('mobileno',$id)->update('user_wallet',$table_data_update);
                     return 1;
                 }
                 else{
-                    return 2;
+                    return 1;//if one month not over and limit exist 
                 }
              }
             }else{
