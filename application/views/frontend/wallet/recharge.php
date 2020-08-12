@@ -328,6 +328,8 @@ table.dataTable thead th, table.dataTable thead td {
                      </li>
                   </ul>
                </div>
+               <div id="logsts" class="text-center text-danger"></div>
+
                <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                      <div class="radi">
@@ -661,17 +663,14 @@ table.dataTable thead th, table.dataTable thead td {
       var request_method = $(this).attr("method");
       var form_data = $(this).serialize();
       console.log(form_data)
-      $('#rechargeModal').modal('show')
-      $('.modal-backdrop').show();
+      $('#logsts').html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
       $.ajax({
          url: post_url,
          type: request_method,
          dataType: "json",
          data: form_data,
       }).done(function(response) {
-      
-         $('.modal').modal('hide');
-         $('.modal-backdrop').hide();
+         $('#logsts').html('');
          if (response.failed) {
             $('.jq').css("background-color", "red");
             $('#myModal').modal('show');

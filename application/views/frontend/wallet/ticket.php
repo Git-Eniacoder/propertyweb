@@ -14,7 +14,6 @@
   else
   {
     $refer_id=NULL;
-    echo $refer_id;
   }
 ?>
 

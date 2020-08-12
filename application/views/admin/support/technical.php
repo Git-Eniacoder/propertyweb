@@ -94,7 +94,7 @@
         <!-- Modal footer -->
         
         <div class="modal-footer">
-          <button class="btn btn-success">Resolve</button>
+          <button id="button" class="btn btn-success">Resolve</button>
           </form>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
@@ -109,3 +109,8 @@
         </script>
         
 <?php } ?>
+<script>
+$('#button').click(function(){
+  $('#update').modal('hide');
+})
+</script>

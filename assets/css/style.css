@@ -49,7 +49,7 @@ input{
 .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: #333;
+  background-color:crimson;
 
   border-radius: 100%;
   display: inline-block;
@@ -2474,7 +2474,7 @@ margin-top: 2rem;
 
 
 .prop_detail_img{
-  width: 100%;
+  width: 100% !important;
   border: 2px solid #eee;
   border-radius: 3px;
 }
@@ -2497,6 +2497,7 @@ margin-top: 2rem;
   font-size: 2rem;
   font-weight: 400;
   color: crimson;
+  margin-bottom: none !important;
 }
 
 .prop_detail_text-detail-rent{
@@ -2504,7 +2505,14 @@ margin-top: 2rem;
 }
 
 .prop_detail_text-price{
-  width: 83%;
+  width: 82%;
+}
+.prop_detail_text-p{
+margin-bottom: .6rem !important;
+}
+
+.price_single_tag{
+  padding-top: 0.4rem;
 }
 
 .prop_detail_text-other{
@@ -2524,6 +2532,7 @@ margin-top: 2rem;
 .prop_detail_bottom{
   background-color: #fff;
   padding: 1rem;
+  width: 50rem;
   /* margin-top: 1rem; */
 }
 
@@ -2567,10 +2576,25 @@ margin-top: 2rem;
   width: 40%;
 }
 
+.prop_call_btn{
+  margin-top: 1rem;
+}
 
 
 
 @media screen and (max-width: 600px) {
+
+  .prop_detail_text-price{
+    width: 112%;
+  }
+
+  .prop_detail_text-detail{
+    font-size: 1.2rem !important;
+  }
+
+  .prop_detail_text-other{
+    font-size: 1rem;
+  }
   
   .hero {
     min-height: 68rem;
