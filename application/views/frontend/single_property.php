@@ -98,35 +98,60 @@
 
 
                 <div class="row prop_detail_text-price">
-                    <div class="col price_single_tag">
-                        <p class="prop_detail_text-p"><span class="prop_detail_text-detail">&#8377; <?php echo $single['list_price'] ?></span></p>
-                        <p><span class="prop_detail_text-detail-rent">Rent (Per Month)</span></p>
-                    </div>
+
+                    
                     <div class="col prop_detail_text-obx">
-                        <p><span class="prop_detail_text-other"><?php echo $single['list_furnished_type'] ?></span></p>
-                        <span class="prop_detail_text-detail-rent">Status</span>
+                        <div class="mb-2">
+                            <span class="prop_detail_text-detail-rent">(Rent Per Month)</span>
+                        </div>
+
+                        <p><span class="prop_detail_text-detail">&#8377; <?php echo $single['list_price'] ?></span></p>
+
                     </div>
 
                     <div class="col prop_detail_text-obx">
+                        <div class="mb-2">
+                            <span class="prop_detail_text-detail-rent">Status</span>
+                        </div>
+
+                        <p><span class="prop_detail_text-other"><?php echo $single['list_furnished_type'] ?></span></p>
+
+                    </div>
+
+                    <div class="col prop_detail_text-obx">
+
+                        <div class="mb-2">
+                            <span class="prop_detail_text-detail-rent">(Owner)</span>
+                        </div>
+
                         <p><span class="prop_detail_text-other">By <?php echo $single['list_name'] ?></span></p>
-                        <span class="prop_detail_text-detail-rent">(Owner)</span>
+
                     </div>
 
                 </div>
 
                 <div class="row prop_detail_text-price">
                     <div class="col prop_detail_text-obx">
+                        <div class="mb-2">
+                            <span class="prop_detail_text-detail-rent">Property Type</span>
+                        </div>
                         <p><span class="prop_detail_text-other"><?php echo $single['list_property_type'] ?></span></p>
-                        <span class="prop_detail_text-detail-rent">Property Type</span>
+
                     </div>
                     <div class="col prop_detail_text-obx">
+                        <div class="mb-2">
+                            <span class="prop_detail_text-detail-rent">Area (sq-ft)</span>
+                        </div>
                         <p><span class="prop_detail_text-other"><?php echo $single['list_unit'] ?></span></p>
-                        <span class="prop_detail_text-detail-rent">Area (sq-ft)</span>
                     </div>
 
                     <div class="col prop_detail_text-obx">
+                        <div class="mb-2">
+                            <span class="prop_detail_text-detail-rent">Possesion For</span>
+                        </div>
+
                         <p><span class="prop_detail_text-other"><?php echo $single['list_rent_out'] ?></span></p>
-                        <span class="prop_detail_text-detail-rent">Possesion For</span>
+
                     </div>
 
                 </div>
