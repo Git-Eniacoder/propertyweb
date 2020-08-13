@@ -49,7 +49,7 @@ input{
 .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: #333;
+  background-color:crimson;
 
   border-radius: 100%;
   display: inline-block;
