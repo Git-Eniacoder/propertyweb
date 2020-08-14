@@ -2480,7 +2480,8 @@ margin-top: 2rem;
 }
 
 .prop_detail_text{
-  padding-top: 2rem;
+  padding-top: .6rem;
+  /* border-bottom: 1px dotted rgb(173, 173, 173); */
 }
 
 .prop_detail_text-span{
@@ -2505,7 +2506,8 @@ margin-top: 2rem;
 }
 
 .prop_detail_text-price{
-  width: 82%;
+  width: 53%;
+  border-bottom: 1px dotted #b8b7b7;
 }
 .prop_detail_text-p{
 margin-bottom: .6rem !important;
@@ -2531,8 +2533,8 @@ margin-bottom: .6rem !important;
 
 .prop_detail_bottom{
   background-color: #fff;
-  padding: 1rem;
-  width: 50rem;
+  /* padding: 1rem; */
+  width: 96%;
   /* margin-top: 1rem; */
 }
 
@@ -2577,9 +2579,39 @@ margin-bottom: .6rem !important;
 }
 
 .prop_call_btn{
-  margin-top: 1rem;
+  margin-top: .6rem;
+  margin-bottom: 1rem;
 }
 
+
+.prop_detail_head{
+ padding-bottom: 2rem;
+}
+
+.prop_sing_btn{
+  
+  font-size: 1.5rem;
+}
+
+.sing_botm{
+  padding: 1.5rem;
+}
+
+.prop_card_link{
+  text-decoration: none;
+  color: #212529;
+}
+
+.prop_card_link:hover{
+  text-decoration: none;
+  color: #212529;
+}
+
+@media screen and (max-width: 800px){
+  .prop_detail_text-price{
+    width: 91%;
+  }
+}
 
 
 @media screen and (max-width: 600px) {
@@ -2649,7 +2681,8 @@ margin-bottom: .6rem !important;
 
   .prop_detail_text{
     padding-top: .8rem;
-    padding-bottom: 1rem;
+    /* border-bottom: 1px dotted rgb(175, 175, 175); */
+    
   }
 
   .hero_post_bx_btn{
@@ -2658,6 +2691,19 @@ margin-bottom: .6rem !important;
 
   .prop_detail_img {
     height: 15rem !important;
+  }
+
+  .prop_detail_bottom{
+    width: 100%;
+  }
+
+  .mob_container{
+    padding-right: none !important;
+    padding-left: none !important;
+  }
+  .sing_botm{
+
+    padding: .8rem;
   }
 }
 

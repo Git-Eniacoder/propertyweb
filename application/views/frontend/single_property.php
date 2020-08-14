@@ -47,20 +47,17 @@
 
 <div class="main_list">
 
-    <div class="container">
+    <div class="container mob_container">
 
         <div class="prop_detail_head">
-            <div class="single_page_head">
+            <!-- <div class="single_page_head">
                 <h1 class="single_page_h1">Properties To Be searched here</h1>
-            </div>
+            </div> -->
         </div>
 
-        <div class="property_bottom_bx justify-content-start">
+        <div class="property_bottom_bx justify-content-center">
             <div class="prop_detail_bottom">
 
-                <div class="row">
-
-                </div>
                 <div class="row">
                     <div class="col">
                         <!-- <img src="assets/img/homeimgs/flat1.jpg" alt="" class="prop_detail_img"> -->
@@ -89,92 +86,93 @@
 
 
                 </div>
-                <div class="row prop_detail_text">
-                    <div class="col">
-                        <h2 class="prop_detail_text-h2"><?php echo $single['list_bhk'] == "non-selected" ? "Area" :  $single['list_bhk'] . ' BHK Apartment' ?><span class="prop_detail_text-span"><?php echo $single['list_unit'] == "non-selected" ? "" : ' - ' . $single['list_unit'] . ' (sq.ft)' ?> </span> </h2>
-                        <p class="prop_detail_text-p" prop_detail_text><?php echo $single['list_locality'] ?>, <?php echo $single['list_city']; ?></p>
+
+
+                <div class="sing_botm">
+                    <div class="row prop_detail_text">
+                        <div class="col">
+                            <h2 class="prop_detail_text-h2"><?php echo $single['list_bhk'] == "non-selected" ? "Area" :  $single['list_bhk'] . ' BHK Apartment' ?><span class="prop_detail_text-span"><?php echo $single['list_unit'] == "non-selected" ? "" : ' - ' . $single['list_unit'] . ' (sq.ft)' ?> </span> </h2>
+                            <p class="prop_detail_text-p" prop_detail_text><?php echo $single['list_locality'] ?>, <?php echo $single['list_city']; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="row prop_detail_text-price">
+
+
+                        <div class="col prop_detail_text-obx">
+                            <div class="mb-2">
+                                <span class="prop_detail_text-detail-rent">(Rent Per Month)</span>
+                            </div>
+
+                            <p><span class="prop_detail_text-detail">&#8377; <?php echo $single['list_price'] ?></span></p>
+
+                        </div>
+
+                        <div class="col prop_detail_text-obx">
+                            <div class="mb-2">
+                                <span class="prop_detail_text-detail-rent">Status</span>
+                            </div>
+
+                            <p><span class="prop_detail_text-other"><?php echo $single['list_furnished_type'] ?></span></p>
+
+                        </div>
+
+                        <div class="col prop_detail_text-obx">
+
+                            <div class="mb-2">
+                                <span class="prop_detail_text-detail-rent">(Owner)</span>
+                            </div>
+
+                            <p><span class="prop_detail_text-other">By <?php echo $single['list_name'] ?></span></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row prop_detail_text-price">
+                        <div class="col prop_detail_text-obx">
+                            <div class="mb-2">
+                                <span class="prop_detail_text-detail-rent">Property Type</span>
+                            </div>
+                            <p><span class="prop_detail_text-other"><?php echo $single['list_property_type'] ?></span></p>
+
+                        </div>
+                        <div class="col prop_detail_text-obx">
+                            <div class="mb-2">
+                                <span class="prop_detail_text-detail-rent">Area (sq-ft)</span>
+                            </div>
+                            <p><span class="prop_detail_text-other"><?php echo $single['list_unit'] ?></span></p>
+                        </div>
+
+                        <div class="col prop_detail_text-obx">
+                            <div class="mb-2">
+                                <span class="prop_detail_text-detail-rent">Possesion For</span>
+                            </div>
+
+                            <p><span class="prop_detail_text-other"><?php echo $single['list_rent_out'] ?></span></p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row prop_call_btn">
+                        <a href="tel:+91<?php echo $single["list_mobile"] ?>"> <button class="btn prop_lists_btn prop_sing_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
+                    </div>
+
+                    <div class="row prop_detail_text">
+                        <div class="col">
+                            <h3 class="prop_detail_">Description</h3>
+                            <p><?php echo $single['list_description'] ?></p>
+                        </div>
                     </div>
                 </div>
 
 
-                <div class="row prop_detail_text-price">
-
-                    
-                    <div class="col prop_detail_text-obx">
-                        <div class="mb-2">
-                            <span class="prop_detail_text-detail-rent">(Rent Per Month)</span>
-                        </div>
-
-                        <p><span class="prop_detail_text-detail">&#8377; <?php echo $single['list_price'] ?></span></p>
-
-                    </div>
-
-                    <div class="col prop_detail_text-obx">
-                        <div class="mb-2">
-                            <span class="prop_detail_text-detail-rent">Status</span>
-                        </div>
-
-                        <p><span class="prop_detail_text-other"><?php echo $single['list_furnished_type'] ?></span></p>
-
-                    </div>
-
-                    <div class="col prop_detail_text-obx">
-
-                        <div class="mb-2">
-                            <span class="prop_detail_text-detail-rent">(Owner)</span>
-                        </div>
-
-                        <p><span class="prop_detail_text-other">By <?php echo $single['list_name'] ?></span></p>
-
-                    </div>
-
-                </div>
-
-                <div class="row prop_detail_text-price">
-                    <div class="col prop_detail_text-obx">
-                        <div class="mb-2">
-                            <span class="prop_detail_text-detail-rent">Property Type</span>
-                        </div>
-                        <p><span class="prop_detail_text-other"><?php echo $single['list_property_type'] ?></span></p>
-
-                    </div>
-                    <div class="col prop_detail_text-obx">
-                        <div class="mb-2">
-                            <span class="prop_detail_text-detail-rent">Area (sq-ft)</span>
-                        </div>
-                        <p><span class="prop_detail_text-other"><?php echo $single['list_unit'] ?></span></p>
-                    </div>
-
-                    <div class="col prop_detail_text-obx">
-                        <div class="mb-2">
-                            <span class="prop_detail_text-detail-rent">Possesion For</span>
-                        </div>
-
-                        <p><span class="prop_detail_text-other"><?php echo $single['list_rent_out'] ?></span></p>
-
-                    </div>
-
-                </div>
 
 
 
 
-                <!-- <div class="col prop_detail_text-obx">
-                <a href="tel:+91<?php echo $single['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
-                </div>                 -->
-
-
-                <div class="row prop_call_btn">
-                    <a href="tel:+91<?php // echo $value["list_mobile"] 
-                                    ?>"> <button class="btn prop_lists_btn prop_sing_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact</button></a>
-                </div>
-
-                <div class="row prop_detail_text">
-                    <div class="col">
-                        <h3 class="prop_detail_">Description</h3>
-                        <p><?php echo $single['list_description'] ?></p>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -189,3 +187,8 @@
 <!-- <div class="col prop_detail_text-obx">
                    <p><span class="prop_detail_text-other" >Semi-Furnished</span></p>
 </div> -->
+
+
+<!-- <div class="col prop_detail_text-obx">
+                <a href="tel:+91<?php echo $single['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
+                </div>                 -->

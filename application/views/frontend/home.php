@@ -1,17 +1,12 @@
 <?php
-  if(isset($_GET["id"]))
-  {
-    $refer_id=$_GET["id"];
-    setcookie('referid',$_GET["id"],time() + (86400 * 30), "/");
-  }
-  else if(isset($_COOKIE['referid'])){
-    $refer_id=$_COOKIE['referid'];
-  }
-  else
-  {
-    $refer_id=NULL;
-  
-  }
+if (isset($_GET["id"])) {
+    $refer_id = $_GET["id"];
+    setcookie('referid', $_GET["id"], time() + (86400 * 30), "/");
+} else if (isset($_COOKIE['referid'])) {
+    $refer_id = $_COOKIE['referid'];
+} else {
+    $refer_id = NULL;
+}
 ?>
 <style>
     .mobi {
@@ -250,7 +245,7 @@
                                     <option value="KEDARNATH">KEDARNATH</option>
                                     <option value="KHAJJIAR">KHAJJIAR</option>
                                     <option value="KHAJURAHO">KHAJURAHO</option>
-                                    
+
                                     <option value="KHANDALA">KHANDALA</option>
                                     <option value="KHIMSAR">KHIMSAR</option>
                                     <option value="KOCHIN">KOCHIN</option>
@@ -401,7 +396,7 @@
                                     <option value="SILIGURI">SILIGURI</option>
                                     <option value="SILVASSA">SILVASSA</option>
                                     <option value="SIVAGANGA DISTRICT">SIVAGANGA DISTRICT</option>
-                                    
+
                                     <option value="SOLAN">SOLAN</option>
                                     <option value="SONAULI">SONAULI</option>
                                     <option value="SRINAGAR">SRINAGAR</option>
@@ -532,6 +527,8 @@
 
     </section>
 
+
+
     <!-- HERO btn Modal Pop Up -->
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -591,28 +588,31 @@
                                         }
                                     ?>
                                         <div class="col-md-4">
-                                            <div class="card text-left prop_lists prop_lists2">
-                                                <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
-                                                                                                                                                                                echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
-                                                <div class="card-body">
-                                                    <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
-                                                    <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
-                                                    <p><span><?php echo $property[$i]['list_locality'] . ',' . $property[$i]['list_city']; ?></span></p>
-                                                    <h4 class=" prop_lists_text"><?php echo ($property[$i]['list_property_type'] == 'commercial') ? $property[$i]['list_unit'] . ' (sq-ft)' : $property[$i]['list_bhk'] . ' BHK appartment' ?></h4>
+                                            <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>" class="prop_card_link">
+                                                <div class="card text-left prop_lists prop_lists2">
 
-                                                    <div class="row flex justify-content-between align-items-center">
-                                                        <div class="col">
-                                                            <span class="poster_name">By <?php echo $property[$i]['list_name'] ?></span>
-                                                        </div>
+                                                    <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
+                                                                                    echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt="">
+                                                    <div class="card-body">
+                                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
+                                                        <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
+                                                        <p><span><?php echo $property[$i]['list_locality'] . ',' . $property[$i]['list_city']; ?></span></p>
+                                                        <h4 class=" prop_lists_text"><?php echo ($property[$i]['list_property_type'] == 'commercial') ? $property[$i]['list_unit'] . ' (sq-ft)' : $property[$i]['list_bhk'] . ' BHK appartment' ?></h4>
 
-                                                        <div class="col text-right">
-                                                            <a href="tel:+91<?php echo $property[$i]['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
+                                                        <div class="row flex justify-content-between align-items-center">
+                                                            <div class="col">
+                                                                <span class="poster_name">By <?php echo $property[$i]['list_name'] ?></span>
+                                                            </div>
+
+                                                            <div class="col text-right">
+                                                                <a href="tel:+91<?php echo $property[$i]['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
+                                                            </div>
+
                                                         </div>
 
                                                     </div>
-
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -625,28 +625,30 @@
                                         }
                                     ?>
                                         <div class="col-md-4">
-                                            <div class="card text-left prop_lists prop_lists2">
-                                                <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
-                                                                                                                                                                                echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
-                                                <div class="card-body">
-                                                    <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
-                                                    <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
-                                                    <p><span><?php echo $property[$i]['list_locality'] . ',' . $property[$i]['list_city']; ?></span></p>
-                                                    <h4 class=" prop_lists_text"><?php echo ($property[$i]['list_property_type'] == 'commercial') ? $property[$i]['list_unit'] . ' (sq-ft)' : $property[$i]['list_bhk'] . ' BHK appartment' ?></h4>
+                                            <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>" class="prop_card_link">
+                                                <div class="card text-left prop_lists prop_lists2">
+                                                    <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
+                                                                                    echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt="">
+                                                    <div class="card-body">
+                                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
+                                                        <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
+                                                        <p><span><?php echo $property[$i]['list_locality'] . ',' . $property[$i]['list_city']; ?></span></p>
+                                                        <h4 class=" prop_lists_text"><?php echo ($property[$i]['list_property_type'] == 'commercial') ? $property[$i]['list_unit'] . ' (sq-ft)' : $property[$i]['list_bhk'] . ' BHK appartment' ?></h4>
 
-                                                    <div class="row flex justify-content-between align-items-center">
-                                                        <div class="col">
-                                                            <span class="poster_name">By <?php echo $property[$i]['list_name'] ?></span>
-                                                        </div>
+                                                        <div class="row flex justify-content-between align-items-center">
+                                                            <div class="col">
+                                                                <span class="poster_name">By <?php echo $property[$i]['list_name'] ?></span>
+                                                            </div>
 
-                                                        <div class="col text-right">
-                                                            <a href="tel:+91<?php echo $property[$i]['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
+                                                            <div class="col text-right">
+                                                                <a href="tel:+91<?php echo $property[$i]['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
+                                                            </div>
+
                                                         </div>
 
                                                     </div>
-
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -688,7 +690,7 @@
                         </div>
                     </div>
 
-                    
+
                     <a class="carousel-control-prev w-auto" href="#trending" role="button" data-slide="prev">
 
                         <div class="home_arrow_new hrn_left">
@@ -699,9 +701,9 @@
                     </a>
 
                     <a class="carousel-control-next w-auto" href="#trending" role="button" data-slide="next">
-                    <div class="home_arrow_new hrn_right">
-                        <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
-                    </div>
+                        <div class="home_arrow_new hrn_right">
+                            <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
+                        </div>
 
                     </a>
                 </div>
@@ -738,28 +740,30 @@
                                     <div class="row justify-content-center">
 
                                         <div class="col-md-4">
-                                            <div class="card text-left prop_lists prop_lists2">
-                                                <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
-                                                                                                                                                                                echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
-                                                <div class="card-body">
-                                                    <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
-                                                    <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
-                                                    <p><span><?php echo $property[$i]['list_locality'] . ',' . $property[$i]['list_city']; ?></span></p>
-                                                    <h4 class=" prop_lists_text"><?php echo ($property[$i]['list_property_type'] == 'commercial') ? $property[$i]['list_unit'] . ' (sq-ft)' : $property[$i]['list_bhk'] . ' BHK appartment' ?></h4>
+                                            <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>" class="prop_card_link">
+                                                <div class="card text-left prop_lists prop_lists2">
+                                                    <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
+                                                                                    echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt="">
+                                                    <div class="card-body">
+                                                        <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
+                                                        <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
+                                                        <p><span><?php echo $property[$i]['list_locality'] . ',' . $property[$i]['list_city']; ?></span></p>
+                                                        <h4 class=" prop_lists_text"><?php echo ($property[$i]['list_property_type'] == 'commercial') ? $property[$i]['list_unit'] . ' (sq-ft)' : $property[$i]['list_bhk'] . ' BHK appartment' ?></h4>
 
-                                                    <div class="row flex justify-content-between align-items-center">
-                                                        <div class="col">
-                                                            <span class="poster_name">By <?php echo $property[$i]['list_name'] ?></span>
-                                                        </div>
+                                                        <div class="row flex justify-content-between align-items-center">
+                                                            <div class="col">
+                                                                <span class="poster_name">By <?php echo $property[$i]['list_name'] ?></span>
+                                                            </div>
 
-                                                        <div class="col text-right">
-                                                            <a href="tel:+91<?php echo $property[$i]['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
+                                                            <div class="col text-right">
+                                                                <a href="tel:+91<?php echo $property[$i]['list_mobile'] ?>"><button class="btn prop_lists_btn"><i class="fa fa-phone" aria-hidden="true"></i> Contact </button></a>
+                                                            </div>
+
                                                         </div>
 
                                                     </div>
-
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -768,16 +772,16 @@
                     </div>
 
                     <a class="carousel-control-prev w-auto" href="#trendig" role="button" data-slide="prev">
-                    <div class="home_arrow_new hrn_left">
-                        <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
-                    </div>
+                        <div class="home_arrow_new hrn_left">
+                            <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
+                        </div>
 
                     </a>
 
                     <a class="carousel-control-next w-auto" href="#trendig" role="button" data-slide="next">
-                    <div class="home_arrow_new hrn_right">
-                        <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
-                    </div>
+                        <div class="home_arrow_new hrn_right">
+                            <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
+                        </div>
 
                     </a>
                 </div>
@@ -819,9 +823,9 @@
                                         }
                                     ?>
                                         <div class="col-md-4">
+                                        <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>" class="prop_card_link">
                                             <div class="card text-left prop_lists prop_lists2">
-                                                <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
-                                                                                                                                                                                echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
+                                                 <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]); echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt="">
                                                 <div class="card-body">
                                                     <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                                     <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
@@ -841,6 +845,7 @@
 
                                                 </div>
                                             </div>
+                                        </a>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -853,9 +858,9 @@
                                         }
                                     ?>
                                         <div class="col-md-4">
+                                        <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>" class="prop_card_link">
                                             <div class="card text-left prop_lists prop_lists2">
-                                                <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
-                                                                                                                                                                                echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
+                                                 <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]); echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt="">
                                                 <div class="card-body">
                                                     <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                                     <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
@@ -875,6 +880,7 @@
 
                                                 </div>
                                             </div>
+                                        </a>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -887,9 +893,9 @@
                                         }
                                     ?>
                                         <div class="col-md-4">
+                                        <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>" class="prop_card_link">
                                             <div class="card text-left prop_lists prop_lists2">
-                                                <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
-                                                                                                                                                                                echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
+                                                 <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]); echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt="">
                                                 <div class="card-body">
                                                     <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                                     <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
@@ -909,6 +915,7 @@
 
                                                 </div>
                                             </div>
+                                        </a>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -917,16 +924,16 @@
                     </div>
 
                     <a class="carousel-control-prev w-auto" href="#recent" role="button" data-slide="prev">
-                    <div class="home_arrow_new hrn_left">
-                        <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
-                    </div>
+                        <div class="home_arrow_new hrn_left">
+                            <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
+                        </div>
 
                     </a>
 
                     <a class="carousel-control-next w-auto" href="#recent" role="button" data-slide="next">
-                    <div class="home_arrow_new hrn_right">
-                        <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
-                    </div>
+                        <div class="home_arrow_new hrn_right">
+                            <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
+                        </div>
 
                     </a>
                 </div>
@@ -963,9 +970,9 @@
                                     <div class="row justify-content-center">
 
                                         <div class="col-md-4">
+                                        <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>" class="prop_card_link">
                                             <div class="card text-left prop_lists prop_lists2">
-                                                <a href="<?php echo base_url() . 'single_property/fetch/' . $property[$i]["property_id"] ?>"> <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]);
-                                                                                                                                                                                echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
+                                                 <img class="card-img-top" src="<?php $img = explode(",", $property[$i]["list_images"]); echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt="">
                                                 <div class="card-body">
                                                     <span class="prop_lists_price">&#8377; <?php echo $property[$i]['list_price'] ?></span>
                                                     <p class="prop_lists_add"> <?php echo $property[$i]['list_property_type'] . ', ' . $property[$i]['list_furnished_type']; ?></p>
@@ -985,6 +992,7 @@
 
                                                 </div>
                                             </div>
+                                        </a>
                                         </div>
                                     </div>
                                 </div>
@@ -993,16 +1001,16 @@
                     </div>
 
                     <a class="carousel-control-prev w-auto" href="#recen" role="button" data-slide="prev">
-                    <div class="home_arrow_new hrn_left">
-                        <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
-                    </div>
+                        <div class="home_arrow_new hrn_left">
+                            <span class="home_arrow_left"><i class="fas fa-angle-left "></i></span>
+                        </div>
 
                     </a>
 
                     <a class="carousel-control-next w-auto" href="#recen" role="button" data-slide="next">
-                    <div class="home_arrow_new hrn_right">
-                        <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
-                    </div>
+                        <div class="home_arrow_new hrn_right">
+                            <span class="home_arrow_right"><i class="fas fa-angle-right "></i></span>
+                        </div>
 
                     </a>
                 </div>
