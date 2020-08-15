@@ -1,8 +1,8 @@
 <?php
 
-echo "<pre>";
-print_r($searched);
-echo "</pre>";
+// echo "<pre>";
+// print_r($searched);
+// echo "</pre>";
 
 
 ?>
@@ -21,12 +21,12 @@ echo "</pre>";
 
          <div class="row">
 
-            <?php if (!isset($searched)) { ?>
-               <h2 class="search_prop_count">No property has found</h2>
+            <?php if ($searched) { ?>
+               <h2 class="search_prop_count">Properties for rent in <?= $searched[0]['list_city'] ?></h2>
             <?php } else { ?>
-               <h2 class="search_prop_count">Properties For Rent in <?= $searched[0]['list_city'] ?></h2>
+               <h2 class="search_prop_count">No property has found</h2>
             <?php } ?>
-            
+
          </div>
       </div>
       <!-- Trending Row -->
