@@ -1,9 +1,8 @@
-
 <?php
 
-   // echo "<pre>";
-   // print_r ($searched);
-   // echo "</pre>";
+echo "<pre>";
+print_r($searched);
+echo "</pre>";
 
 
 ?>
@@ -21,7 +20,13 @@
          </div> -->
 
          <div class="row">
-            <h2 class="search_prop_count">Properties For Rent in jaipur </h2>
+
+            <?php if (!isset($searched)) { ?>
+               <h2 class="search_prop_count">No property has found</h2>
+            <?php } else { ?>
+               <h2 class="search_prop_count">Properties For Rent in <?= $searched[0]['list_city'] ?></h2>
+            <?php } ?>
+            
          </div>
       </div>
       <!-- Trending Row -->
@@ -31,7 +36,7 @@
                <!-- new Card  -->
                <div class="card text-left prop_lists">
                   <a href="<?php echo base_url() . 'single_property/fetch/' . $value["property_id"] ?>"> <img class="card-img-top" height="138px" src="<?php $img = explode(",", $value["list_images"]);
-                                                                                                                                                   echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
+                                                                                                                                                         echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
                   <div class="card-body">
                      <span class="prop_lists_price">&#8377; <?php echo $value["list_price"] ?></span>
                      <p class="prop_lists_rent"><span><?php echo $value["list_rent_flag"] == 0 ? "Rent" : "sale" ?></span></p>

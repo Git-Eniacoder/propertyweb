@@ -2616,6 +2616,10 @@ margin-bottom: .6rem !important;
 
 @media screen and (max-width: 600px) {
 
+  .prop_lists{
+    width: 100% !important;
+  }
+
   .prop_detail_text-price{
     width: 112%;
   }
