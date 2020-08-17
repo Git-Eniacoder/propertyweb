@@ -44,7 +44,7 @@
         </div>
 
     </div>
-    
+
 
     <!-- Bottom Part -->
 
@@ -95,11 +95,11 @@
                     <div class="contain_bx contain_bx_2">
 
                         <div class="row align-items-center">
-                            <div class="col">
+                            <div class="col-5">
                                 <p class="dealer_name"><?php echo $single['list_name'] ?></p>
                                 <span class="detail_tags">Posted By</span>
                             </div>
-                            <div class="col text-right">
+                            <div class="col-7 text-right">
                                 <a href="tel:+91<?php echo $single["list_mobile"] ?>" class="connect">Let's Connect</a>
                             </div>
                         </div>
