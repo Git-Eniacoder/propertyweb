@@ -56,7 +56,7 @@
                 <div class="col-lg-8">
                     <div class="contain_bx contain_bx_1">
                         <h2 class="sing_rent">&#8377; <?php echo $single['list_price'] ?> <span class="rent_tag">/ Month</span></h2>
-                        <p class="detail_text_area">3 BHK Appartment | <span>1,850 sq.ft</span></p>
+                        <p class="detail_text_area"><?php echo $single['list_bhk'] == "non-selected" ? "Area" :  $single['list_bhk'] . ' BHK Apartment' ?><span class="prop_detail_text-span"><?php echo $single['list_unit'] == "non-selected" ? "" : ' - ' . $single['list_unit'] . ' (sq.ft)' ?></span></p>
                         <p><?php echo $single['list_locality'] ?>, <span><?php echo $single['list_city']; ?></span></p>
                     </div>
                     <div class="contain_bx">
