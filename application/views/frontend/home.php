@@ -87,13 +87,14 @@ if (isset($_GET["id"])) {
                     </div>
 
                 </div> -->
-
+                
                 <div class="row justify-content-center align-items-center">
                     <div class="col text-center">
                         <div class="searchbar_bx">
                             <form method="post" action="<?php echo base_url() . 'propertydetail/search_single'; ?>">
-                                <select name="city" id="city" class="searchbar sb_1">
-                                    <option selected disabled value="">CHOOSE CITY</option>
+                            <input list="city" name="city" class="searchbar sb_1" placeholder="CHOOSE CITY" >    
+                            <datalist name="city" id="city" >
+                                    
                                     <option value="AGARTALA">AGARTALA</option>
                                     <option value="AGRA">AGRA</option>
                                     <option value="AHMEDABAD">AHMEDABAD</option>
@@ -434,7 +435,7 @@ if (isset($_GET["id"])) {
                                     <option value="YAMUNOTRI">YAMUNOTRI</option>
                                     <option value="YERCAUD">YERCAUD</option>
                                     <option value="YUKSOM">YUKSOM</option>
-                                </select>
+                            </datalist>
                                 <input list="searches" type="text" id="click" class="searchbar sb_2" placeholder="SEARCH LOCALITY">
                                 <datalist id="searches">
 
