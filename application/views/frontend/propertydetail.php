@@ -39,7 +39,7 @@
                                                                                                                                                          echo base_url() . 'assets/img/property_list/' . $img[0]; ?>" alt=""></a>
                   <div class="card-body">
                   
-                                                                  
+
 
                      
 
