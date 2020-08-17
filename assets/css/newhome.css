@@ -139,12 +139,12 @@
   
   .home_subhead {
     width: 100%;
-    margin: 4rem auto;
+    margin: 2.8rem auto;
   }
   
   .home_subhead_text {
     font-size: 1.7rem;
-    color: crimson;
+    color: #685054;
   }
   
   .home_subhead_line {
@@ -634,7 +634,7 @@
       margin: 1rem;
     }
     .home_subhead {
-      margin: 3rem 0;
+      margin: 1.8rem 0;
     }
     .wal_nav_list {
       width: 4rem;

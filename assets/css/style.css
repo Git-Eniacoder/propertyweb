@@ -2256,7 +2256,7 @@ margin-top: 2rem;
 
 .home_subhead_text {
   font-size: 1.7rem;
-  color: crimson;
+  color: #685054;
 }
 
 .home_subhead_line {
@@ -2605,6 +2605,11 @@ margin-bottom: .6rem !important;
 .prop_card_link:hover{
   text-decoration: none;
   color: #212529;
+}
+
+
+.prop_lists_single{
+  width: 19rem !important;
 }
 
 
