@@ -50,7 +50,7 @@ class Listing extends My_Controller{
 
             $config['upload_path']           = "./assets/img/property_list/" ;
             $config['file_name']            = 'list_property'.rand().'.png';
-            $config['allowed_types']        = 'jpg|png';
+            $config['allowed_types']        = 'jpg|png|jpeg';
 
             $this->load->library('upload', $config); 
             $this->upload->initialize($config); 
