@@ -2607,6 +2607,150 @@ margin-bottom: .6rem !important;
   color: #212529;
 }
 
+
+
+
+
+/* New Single page */
+
+.head_crousal{
+  background-color: #222222;
+  height: 30rem;
+}
+
+.sing_page_img{
+  height: 30rem !important;
+}
+
+
+p{
+  padding: none !important;
+  margin-bottom: none !important;
+}
+
+.contain_bx{
+
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  background-color: #fff;
+
+}
+
+.single_head{
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail_text{
+  font-size: 1.1rem;
+  color: #1e2229;
+}
+
+.detail_text_area{
+
+  margin-bottom: .3rem;
+  font-size: 1.1rem;
+  color: crimson;
+}
+
+.sing_details{
+  width: 65%;
+  /* padding-left: 1rem; */
+}
+
+.sing_details_bx{
+  /* padding: .8rem 0; */
+}
+
+.detail_tags{
+  color: rgb(141, 140, 140);
+  margin-bottom: .4rem;
+}
+
+.dealer_name{
+  font-size: 1.2rem;
+  margin-bottom: .3rem;
+}
+
+.sing_rent{
+  font-size: 1.7rem;
+  color: #1e2229;
+  margin-bottom: .8rem;
+}
+
+.rent_tag{
+  font-size: 1rem;
+  color: rgb(141, 140, 140);
+  font-weight: 400;
+}
+
+.connect{
+  color: #fff;
+  background-color: crimson;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: .5rem;
+  transition: all .1s ease;
+}
+
+.connect-2{
+  color: #fff;
+  width: 100% !important;
+  text-align: center;
+  background-color: crimson;
+  border-radius: 1px;
+  font-size: 1rem;
+  padding: .4rem;
+  margin-bottom: 1rem;
+  transition: all .1s ease;
+}
+
+.connect:hover{
+  background-color: #fff;
+  color: crimson;
+  border: 1px solid crimson;
+  text-decoration: none;
+}
+.connect-2:hover{
+  background-color: #fff;
+  color: crimson;
+  border: 1px solid crimson;
+  text-decoration: none;
+}
+
+input{
+  border-radius: none !important;
+}
+
+.contact_inp2{
+  padding: .5rem 0 !important;
+  border: none !important;
+  border-radius: none !important;
+  border-bottom: 1px solid #818181 !important;
+  color: rgb(189, 189, 189);
+
+}
+
+.mobile_inp{
+  padding-left: .1rem !important;
+}
+
+.contact_inp2::placeholder{
+  color: rgb(207, 206, 206);
+  font-size: 1rem;
+}
+
+.detail_form_text{
+  font-weight: 400;
+
+}
+
+.crousal_btn{
+  font-size: 2rem !important;
+}
+
+
+
 @media screen and (max-width: 800px){
   .prop_detail_text-price{
     width: 91%;
@@ -2615,6 +2759,34 @@ margin-bottom: .6rem !important;
 
 
 @media screen and (max-width: 600px) {
+
+
+  /* New Single page Design */
+
+  .head_crousal{
+    height: 20rem;
+  }
+
+  .sing_page_img {
+    height: 20rem !important;
+  }
+
+  .sing_details {
+    width: 100%;
+  }
+  
+  .connect{
+    font-size: 1.1rem !important;
+  }
+
+
+
+
+
+
+
+
+
 
   .prop_lists{
     width: 100% !important;
